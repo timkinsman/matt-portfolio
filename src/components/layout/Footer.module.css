@@ -1,0 +1,23 @@
+.justify {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+    padding: 10px 0;
+}
+
+.container {
+    background: #211d23;
+    padding: 60px 0;
+    width: -webkit-fill-available;
+}
+
+.link {
+    color: white;
+    padding: 0 10px;
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}

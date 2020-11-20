@@ -1,0 +1,12 @@
+.container {
+    height: 100vh;
+    width: -webkit-fill-available;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    width: 50vw;
+}
