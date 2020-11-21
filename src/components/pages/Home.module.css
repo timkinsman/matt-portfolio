@@ -1,5 +1,38 @@
 .landing {
     height: 100vh;
-    width: -webkit-fill-available0vw;
+    width: -webkit-fill-available;
     background: #211D23;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.content {
+    width: -webkit-fill-available;
+    padding: 100px; 
+}
+
+.landingtext {
+    font-size: 40px;
+    color: #fff;
+    margin: 100px 0;
+}
+
+.link {
+    color: #949AAC;
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.spotifycontainer {
+    align-self: flex-start;
+    padding: 0 100px;
+    position: relative;
+    font-size: 24px;
+    color: #fff;
+    align-items: center;
 }

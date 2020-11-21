@@ -7,6 +7,24 @@
     justify-content: center;
 }
 
-.content {
+.textcontainer {
     width: 50vw;
+    padding-left: 100px;
+    color: white;
+}
+
+.imgcontainer {
+    width: 50vw;
+}
+
+.header {
+    font-size: 20px;
+}
+
+.body {
+    font-size: 40px;
+}
+
+.link {
+    font-size: 20px;
 }

@@ -5,13 +5,17 @@ import styles from './Panel.module.css';
 function Panel(props: {background: string}) {
   return (
     <div className={styles.container} style={{background: props.background}}>
-        <div className={styles.content}>
-            <p>City of Port Phillip</p>
-            <p>For the everyday member, BankVic’s existing website was confusing and complex.</p>
-            <p>View Case Study</p>
+        <div className={styles.textcontainer}>
+            <p className={styles.header}>City of Port Phillip</p>
+            <p className={styles.body}>
+              For the everyday member,<br />
+              BankVic’s existing website was<br />
+              confusing and complex.
+            </p>
+            <p className={styles.link}>View Case Study →</p>
         </div>
-        <div className={styles.content}>
-            img
+        <div className={styles.imgcontainer}>
+            
         </div>
     </div>
   );

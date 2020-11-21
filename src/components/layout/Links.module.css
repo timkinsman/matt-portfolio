@@ -1,0 +1,18 @@
+.container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    height: 100vh;
+    justify-content: center;
+    color: #7A777B;
+}
+
+.icon {
+    margin: 5px 0;
+    color: #7a777b;
+}
+
+.icon:hover {
+    color: #fff;
+}

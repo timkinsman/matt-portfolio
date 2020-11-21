@@ -10,11 +10,20 @@ function Navbar() {
         <Link className={styles.link} to="/">Matthew Kinsman</Link>
 
         <div style={{ marginLeft: 'auto', display: 'flex' }}>
-            <div style={{ padding: '0 10px' }}>
-                <Link className={styles.link} to="/about">About</Link>
-            </div>
-            <div style={{ padding: '0 10px' }}>
+            <div style={{ padding: '0 20px' }}>
                 <Link className={styles.link} to="/work">Work</Link>
+            </div>
+            <div style={{ padding: '0 20px' }}>
+                <Link className={styles.link} to="/about">About Me</Link>
+            </div>
+            <div style={{ padding: '0 20px' }}>
+                <Link className={styles.link} to="/whatido">What I Do</Link>
+            </div>
+            <div style={{ padding: '0 20px' }}>
+                <Link className={styles.link} to="/blog">Blog</Link>
+            </div>
+            <div style={{ padding: '0 20px' }}>
+                <Link className={styles.link} to="/contact">Contact</Link>
             </div>
         </div>
     </div>

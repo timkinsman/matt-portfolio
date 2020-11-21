@@ -1,7 +1,7 @@
 .justify {
     display: flex;
     justify-content: center;
-    color: white;
+    color: #fff;
     font-size: 16px;
     padding: 10px 0;
 }
@@ -13,9 +13,10 @@
 }
 
 .link {
-    color: white;
-    padding: 0 10px;
+    color: #fff;
+    margin: 0 20px;
     text-decoration: none;
+    font-size: 16px;
 }
 
 .link:hover {
