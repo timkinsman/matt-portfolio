@@ -16,17 +16,3 @@
     width: -webkit-fill-available;
     margin: auto;
 }
-
-.text {
-    font-size: 40px;
-    color: #fff;
-}
-
-.link {
-    color: #949AAC;
-    text-decoration: none;
-}
-
-.link:hover {
-    text-decoration: underline;
-}

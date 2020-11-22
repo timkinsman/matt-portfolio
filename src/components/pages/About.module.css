@@ -1,0 +1,25 @@
+.container {
+    padding: 60px 100px;
+}
+
+.content {
+    padding: 30px 0;
+}
+
+.header {
+    font-size: 40px;
+}
+
+.body {
+    font-size: 32px;
+}
+
+.gridcontainer {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.gridcontent {
+    width: -webkit-fill-available;
+    font-size: 32px;
+}

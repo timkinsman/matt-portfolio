@@ -1,0 +1,20 @@
+.container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    color: #7A777B;
+    right: 0;
+    padding-right: 20px;
+}
+
+.icon {
+    margin: 5px 0;
+    color: #7a777b;
+    font-size: 12px;
+}
+
+.icon:hover {
+    color: #fff;
+}

@@ -2,9 +2,9 @@ import React from 'react';
 
 import styles from './Panel.module.css';
 
-function Panel(props: {background: string}) {
+function Panel(props: {background: string, id: string}) {
   return (
-    <div className={styles.container} style={{background: props.background}}>
+    <div className={styles.container} style={{background: props.background}} id={props.id}>
         <div className={styles.textcontainer}>
             <p className={styles.header}>City of Port Phillip</p>
             <p className={styles.body}>

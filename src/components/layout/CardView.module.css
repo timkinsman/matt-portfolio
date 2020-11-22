@@ -7,6 +7,12 @@
     font-size: 24px;
 }
 
-/*@media (min-width: 600px) {
-    .cards { grid-template-columns: repeat(2, 1fr); }
-}*/
+.filters {
+    margin: 80px 0;
+}
+
+.cardview {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 80px;
+}

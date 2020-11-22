@@ -1,12 +1,9 @@
 .container {
-    position: absolute;
     display: flex;
-    padding: 60px 100px;
     width: -webkit-fill-available;
 }
 
 .link {
-    color: white;
     font-size: 24px;
     text-decoration: none;
 }

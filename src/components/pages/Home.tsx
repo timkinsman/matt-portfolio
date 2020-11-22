@@ -2,33 +2,43 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import Panel from '../layout/Panel';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSpotify } from '@fortawesome/free-brands-svg-icons'
 import styles from './Home.module.css';
 import CardView from '../layout/CardView';
+import Navbar from '../layout/Navbar';
+import Footer from '../layout/Footer';
+import Spotify from '../layout/Spotify';
+import Pagnation from '../layout/Pagnation';
 
 function Home() {
   return (
-    <div>
+    <div style={{background: "#211D23"}}>
+      <Pagnation />
+      
+      <div className={styles.container} id="one">
         <div className={styles.landing}>
+          <Navbar color="#FFFFFF" />
+
           <div className={styles.content}>
-              <p className={styles.landingtext}>
+              <p className={styles.text}>
                 Hello, my name is <Link className={styles.link} to="/about">Matthew Kinsman</Link>,<br />
                 I’m a multi-disciplinary experience<br />
                 designer currently living in Melbourne<br />
                 and working at <a className={styles.link} href="https://versa.agency" target="_blank">Versa Agency</a>.
               </p>
           </div>
-          <div className={styles.spotifycontainer}>
-            <FontAwesomeIcon icon={faSpotify} style={{color: '#1DB954'}} />
-            <span style={{padding: '0 10px'}}>Blush, Vynehall</span>
-          </div>
+
+          <Spotify />
         </div>
-        <Panel background="#71B1D8" />
-        <Panel background="#0A252F" />
-        <Panel background="#FC98BF" />
-        <Panel background="#2C3163" />
-        <CardView />
+      </div>
+
+      <Panel background="#71B1D8" id="two"/>
+      <Panel background="#0A252F" id="three"/>
+      <Panel background="#FC98BF" id="four"/>
+      <Panel background="#2C3163" id="five"/>
+
+      <CardView id="six" />
+
+      <Footer color="#FFFFFF" />
     </div>
   );
 }

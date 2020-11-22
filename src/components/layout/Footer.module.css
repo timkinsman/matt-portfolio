@@ -1,19 +1,16 @@
+.container {
+    width: -webkit-fill-available;
+    padding: 60px 100px;
+}
+
 .justify {
     display: flex;
     justify-content: center;
-    color: #fff;
     font-size: 16px;
     padding: 10px 0;
 }
 
-.container {
-    background: #211d23;
-    padding: 60px 0;
-    width: -webkit-fill-available;
-}
-
 .link {
-    color: #fff;
     margin: 0 20px;
     text-decoration: none;
     font-size: 16px;
