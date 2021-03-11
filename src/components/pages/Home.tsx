@@ -11,19 +11,19 @@ import Pagnation from '../layout/Pagnation';
 
 function Home() {
   return (
-    <div style={{background: "#211D23"}}>
+    <div>
       <Pagnation />
       
-      <div className={styles.container} id="one">
-        <div className={styles.landing}>
-          <Navbar color="#FFFFFF" />
+      <div className={styles["home-container"]} id="one">
+        <div className={styles["home-div"]}>
+          <Navbar />
 
-          <div className={styles.content}>
-              <p className={styles.text}>
-                Hello, my name is <Link className={styles.link} to="/about">Matthew Kinsman</Link>,<br />
+          <div className={styles["home-content"]}>
+              <p className={styles["home-text"]}>
+                Hello, my name is <Link className={styles["home-link"]} to="/about">Matthew Kinsman</Link>,<br />
                 I’m a multi-disciplinary experience<br />
                 designer currently living in Melbourne<br />
-                and working at <a className={styles.link} href="https://versa.agency" target="_blank">Versa Agency</a>.
+                and working at <a className={styles["home-link"]} href="https://versa.agency" target="_blank">Versa Agency</a>.
               </p>
           </div>
 
@@ -38,7 +38,7 @@ function Home() {
 
       <CardView id="six" />
 
-      <Footer color="#FFFFFF" />
+      <Footer />
     </div>
   );
 }

@@ -2,11 +2,14 @@ import React from 'react';
 import Footer from '../layout/Footer';
 import Navbar from '../layout/Navbar';
 
+import styles from "./Blog.module.css";
+
 function Blog() {
   return (
-    <div>
-      <Navbar color="#000000"/>
-      <Footer color="#000000"/>
+    <div className={styles["blog-container"]}>
+      <Navbar />
+        <div className={styles["blog-banner"]} />
+      <Footer />
     </div>
   );
 }

@@ -1,18 +1,19 @@
-.container {
+.links-container {
     position: fixed;
     display: flex;
     flex-direction: column;
-    padding-left: 20px;
+    padding-left: 75px;
     height: 100vh;
     justify-content: center;
-    color: #7A777B;
 }
 
-.icon {
-    margin: 5px 0;
-    color: #7a777b;
+.links-icon {
+    color: #ffffff;
+    margin: 7.5px 0;
+    opacity: 40%;
 }
 
-.icon:hover {
-    color: #fff;
+.links-icon:hover {
+    cursor: pointer;
+    opacity: 1;
 }

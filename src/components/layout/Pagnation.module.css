@@ -4,17 +4,18 @@
     flex-direction: column;
     height: 100vh;
     justify-content: center;
-    color: #7A777B;
     right: 0;
-    padding-right: 20px;
+    padding-right: 75px;
 }
 
 .icon {
-    margin: 5px 0;
-    color: #7a777b;
-    font-size: 12px;
+    color: #ffffff;
+    font-size: 10px;
+    opacity: 40%;
+    margin: 7.5px 0;
 }
 
 .icon:hover {
-    color: #fff;
+    cursor: pointer;
+    opacity: 1;
 }

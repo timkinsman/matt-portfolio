@@ -1,32 +1,31 @@
-.container {
+.home-container {
     height: 100vh;
-    width: -webkit-fill-available;
 }
 
-.landing {
+.home-div {
+    padding: 60px 200px;
     height: -webkit-fill-available;
-    width: -webkit-fill-available;
-    padding: 60px 100px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 
-.content {
+.home-content {
     width: -webkit-fill-available;
     margin: auto;
 }
 
-.text {
+.home-text {
     font-size: 40px;
     color: #fff;
+    padding: 20px;
 }
 
-.link {
-    color: #949AAC;
+.home-link {
+    color: #ffffff;
+    opacity: 40%;
     text-decoration: none;
 }
 
-.link:hover {
-    text-decoration: underline;
+.home-link:hover {
+    opacity: 1;
 }

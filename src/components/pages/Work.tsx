@@ -7,18 +7,10 @@ import styles from './Work.module.css'
 
 function Work() {
   return (
-    <div style={{background: "#211D23"}}>
-
-      <div className={styles.container}>
-        <div className={styles.landing}>    
-          <Navbar color="#FFFFFF" />
-          <div className={styles.content}></div>
-        </div>
-      </div>
-
-      <CardView id="two" />
-
-      <Footer color="#FFFFFF" />
+    <div className={styles["work-container"]}>
+      <Navbar />
+        <div className={styles["work-banner"]} />
+      <Footer />
     </div>
   );
 }

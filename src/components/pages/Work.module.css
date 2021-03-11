@@ -1,18 +1,7 @@
-.container {
+.work-container {
+    padding: 60px 200px;
+}
+
+.work-banner {
     height: 100vh;
-    width: -webkit-fill-available;
-}
-
-.landing {
-    height: -webkit-fill-available;
-    width: -webkit-fill-available;
-    padding: 60px 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.content {
-    width: -webkit-fill-available;
-    margin: auto;
 }

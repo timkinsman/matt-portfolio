@@ -8,12 +8,12 @@ import styles from './Links.module.css';
 
 function Links() {
   return (
-    <div className={styles.container}>       
-        <a className={styles.icon} href="#"><FontAwesomeIcon icon={faPaperPlane} /></a>
-        <a className={styles.icon} href="#"><FontAwesomeIcon icon={faBehance} /></a>
-        <a className={styles.icon} href="#"><FontAwesomeIcon icon={faLinkedin} /></a>
-        <a className={styles.icon} href="#"><FontAwesomeIcon icon={faFacebook} /></a>
-        <a className={styles.icon} href="#"><FontAwesomeIcon icon={faSpotify} /></a>
+    <div className={styles["links-container"]}>       
+        <a className={styles["links-icon"]} href="mailto:mskinsm@gmail.com" target="_blank"><FontAwesomeIcon icon={faPaperPlane} /></a>
+        <a className={styles["links-icon"]} href="https://www.behance.net/matthewkinsman" target="_blank"><FontAwesomeIcon icon={faBehance} /></a>
+        <a className={styles["links-icon"]} href="https://www.linkedin.com/in/matthew-kinsman/" target="_blank"><FontAwesomeIcon icon={faLinkedin} /></a>
+        <a className={styles["links-icon"]} href="https://www.facebook.com/mskinsm/" target="_blank"><FontAwesomeIcon icon={faFacebook} /></a>
+        <a className={styles["links-icon"]} href="https://open.spotify.com/user/mskinsm" target="_blank"><FontAwesomeIcon icon={faSpotify} /></a>
     </div>
   );
 }

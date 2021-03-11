@@ -9,8 +9,8 @@
 
 .textcontainer {
     width: 50vw;
-    padding-left: 100px;
     color: white;
+    margin: auto 0 100px 200px;
 }
 
 .imgcontainer {
