@@ -36,9 +36,10 @@ function Home() {
       <Panel background="#FC98BF" id="four"/>
       <Panel background="#2C3163" id="five"/>
 
-      <CardView id="six" />
-
-      <Footer />
+      <div style={{padding: '0 450px'}}>
+        <CardView id="six" />
+        <Footer />
+      </div>
     </div>
   );
 }

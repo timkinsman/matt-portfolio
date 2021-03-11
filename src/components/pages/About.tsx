@@ -7,8 +7,9 @@ import styles from "./About.module.css";
 function About() {
   return (
     <div className={styles["about-container"]}>
-      <Navbar />
-        <div className={styles["about-banner"]} />
+      <div className={styles["about-banner"]}>
+        <Navbar />
+      </div>
       <Footer />
     </div>
   );

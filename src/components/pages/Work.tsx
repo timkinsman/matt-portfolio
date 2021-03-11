@@ -8,8 +8,9 @@ import styles from './Work.module.css'
 function Work() {
   return (
     <div className={styles["work-container"]}>
-      <Navbar />
-        <div className={styles["work-banner"]} />
+      <div className={styles["work-banner"]}>
+        <Navbar />
+      </div>
       <Footer />
     </div>
   );

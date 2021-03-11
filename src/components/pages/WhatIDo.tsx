@@ -7,8 +7,9 @@ import styles from "./WhatIDo.module.css";
 function WhatIDo() {
   return (
     <div className={styles["whatido-container"]}>
-      <Navbar />
-        <div className={styles["whatido-banner"]} />
+      <div className={styles["whatido-banner"]}>
+        <Navbar />
+      </div>
       <Footer />
     </div>
   );

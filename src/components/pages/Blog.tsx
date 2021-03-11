@@ -7,8 +7,9 @@ import styles from "./Blog.module.css";
 function Blog() {
   return (
     <div className={styles["blog-container"]}>
-      <Navbar />
-        <div className={styles["blog-banner"]} />
+      <div className={styles["blog-banner"]}>
+        <Navbar />
+      </div>
       <Footer />
     </div>
   );
