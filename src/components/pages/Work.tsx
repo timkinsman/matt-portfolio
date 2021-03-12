@@ -10,8 +10,12 @@ function Work() {
     <div className={styles["work-container"]}>
       <div className={styles["work-banner"]}>
         <Navbar />
+        <div style={{padding: '0 250px'}}>
+          <p className={styles["work-p"]}>Work</p>
+          <CardView id="null" />
+          <Footer />
+        </div>
       </div>
-      <Footer />
     </div>
   );
 }

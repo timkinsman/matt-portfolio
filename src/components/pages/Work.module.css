@@ -37,6 +37,10 @@
 
 
 .work-banner {
-    height: 100vh;
-    padding: 60px 200px;
+    padding: 60px 200px 0 200px;
+}
+
+.work-p {
+    font-size: 60px;
+    color: #ffffff;
 }
