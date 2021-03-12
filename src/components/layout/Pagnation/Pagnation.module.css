@@ -1,19 +1,23 @@
-.links-container {
+.container {
     position: fixed;
     display: flex;
     flex-direction: column;
-    padding-left: 75px;
     height: 100vh;
     justify-content: center;
+    right: 0;
+    padding-right: 75px;
 }
 
-.links-icon {
+.icon {
     color: #ffffff;
-    margin: 7.5px 0;
+    font-size: 10px;
     opacity: 0.4;
+    transition: opacity 1s;
+    margin: 7.5px 0;
 }
 
-.links-icon:hover {
+.icon:hover {
     cursor: pointer;
+    transition: opacity 1s;
     opacity: 1;
 }

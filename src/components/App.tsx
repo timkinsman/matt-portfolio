@@ -2,14 +2,12 @@ import React from 'react';
 
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
-import Links from './layout/Links';
-
-import About from './pages/About';
-import Home from './pages/Home';
-import Work from './pages/Work';
-import WhatIDo from './pages/WhatIDo';
-import Blog from './pages/Blog';
-import Contact from './pages/Contact';
+import About from './pages/About/About';
+import Home from './pages/Home/Home';
+import Work from './pages/Work/Work';
+import WhatIDo from './pages/WhatIDo/WhatIDo';
+import Blog from './pages/Blog/Blog';
+import Contact from './pages/Contact/Contact';
 
 function App() {
   return (

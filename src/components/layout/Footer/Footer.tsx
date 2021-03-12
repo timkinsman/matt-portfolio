@@ -7,7 +7,7 @@ function Footer() {
   return (
     <div className={styles["footer-container"]}>
         <div className={styles["footer-outerdiv"]}>
-          <div>
+          <div className={styles["footer-left"]}>
             <p className={styles["footer-p"]}>Go to</p>
             <div className={styles["footer-grid"]}>
               <Link className={styles["footer-a"]} to="/">Home</Link>

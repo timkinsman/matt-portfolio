@@ -8,9 +8,11 @@
     opacity: 0.4;
     padding: 0 20px;
     text-decoration: none;
+    transition: opacity 1s;
 }
 
 .navbar-link:hover {
+    transition: opacity 1s;
     opacity: 1;
 }
 

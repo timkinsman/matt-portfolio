@@ -8,9 +8,8 @@
 .footer-outerdiv {
     align-items: center;
     border-top: 1px solid rgba(255, 255, 255, .4);
-    display: grid;
-    grid-gap: 200px;
-    grid-template-columns: auto auto;
+    display: flex;
+    width: -webkit-fill-available;
     padding: 75px 0;
 }
 
@@ -25,21 +24,31 @@
     color: #ffffff;
     opacity: 0.4;
     text-decoration: none;
+    font-size: 20px;
+    transition: opacity 1s;
 }
 
 .footer-a:hover {
-    opacity: 0.1;
+    opacity: 1;
+    transition: opacity 1s;
 }
 
 .footer-p {
     color: #ffffff;
+    font-size: 24px;
 }
 
 .footer-small {
-    font-size: small;
+    font-size: 16px !important;
     display: block;
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
+}
+
+.footer-left{
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
 }

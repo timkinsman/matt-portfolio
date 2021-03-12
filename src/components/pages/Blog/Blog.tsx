@@ -1,7 +1,6 @@
 import React from 'react';
-import Footer from '../layout/Footer';
-import Links from '../layout/Links';
-import Navbar from '../layout/Navbar';
+import Footer from '../../layout/Footer/Footer';
+import Navbar from '../../layout/Navbar/Navbar';
 
 import styles from "./Blog.module.css";
 

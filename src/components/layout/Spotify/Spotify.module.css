@@ -1,6 +1,6 @@
 .spotify-container {
     font-size: 24px;
-    padding: 20px;
+    padding: 0 20px;
 }
 
 .spotify-span {
@@ -10,9 +10,11 @@
 
 .spotify-current {
     opacity: 0.4;
+    transition: opacity 1s;
 }
 
 .spotify-current:hover {
     opacity: 1;
+    transition: opacity 1s;
     text-decoration: underline;
 }
