@@ -2,6 +2,7 @@
     flex: 1 0 45%;
     height: 330px;
     border-radius: 12px;
+    transition: background 1s;
 }
 
 .card:hover {

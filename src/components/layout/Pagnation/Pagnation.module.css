@@ -12,10 +12,12 @@
     color: #ffffff;
     font-size: 10px;
     opacity: 0.4;
+    transition: opacity 1s;
     margin: 7.5px 0;
 }
 
 .icon:hover {
     cursor: pointer;
+    transition: opacity 1s;
     opacity: 1;
 }

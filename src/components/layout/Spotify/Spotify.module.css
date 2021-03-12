@@ -10,9 +10,11 @@
 
 .spotify-current {
     opacity: 0.4;
+    transition: opacity 1s;
 }
 
 .spotify-current:hover {
     opacity: 1;
+    transition: opacity 1s;
     text-decoration: underline;
 }
