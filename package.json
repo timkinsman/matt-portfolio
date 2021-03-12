@@ -16,6 +16,7 @@
     "@types/react": "^16.9.56",
     "@types/react-dom": "^16.9.9",
     "@types/react-router-dom": "^5.1.6",
+    "axios": "^0.21.1",
     "express": "^4.17.1",
     "flexboxgrid": "^6.3.1",
     "jquery": "^3.5.1",

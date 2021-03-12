@@ -4,27 +4,17 @@ import { Link } from 'react-router-dom'
 
 import styles from './Navbar.module.css';
 
-function Navbar(props: {color: string}) {
+function Navbar() {
   return (
-    <div className={styles.container}>
-        <Link className={styles.link} style={{color: props.color}} to="/">Matthew Kinsman</Link>
+    <div className={styles["navbar-container"]}>
+        <Link className={styles["navbar-link"]}  to="/">Matthew Kinsman</Link>
 
-        <div style={{ marginLeft: 'auto', display: 'flex' }}>
-            <div style={{ padding: '0 20px' }}>
-                <Link className={styles.link} style={{color: props.color}} to="/work">Work</Link>
-            </div>
-            <div style={{ padding: '0 20px' }}>
-                <Link className={styles.link} style={{color: props.color}} to="/about">About Me</Link>
-            </div>
-            <div style={{ padding: '0 20px' }}>
-                <Link className={styles.link} style={{color: props.color}} to="/whatido">What I Do</Link>
-            </div>
-            <div style={{ padding: '0 20px' }}>
-                <Link className={styles.link} style={{color: props.color}} to="/blog">Blog</Link>
-            </div>
-            <div style={{ padding: '0 20px' }}>
-                <Link className={styles.link} style={{color: props.color}} to="/contact">Contact</Link>
-            </div>
+        <div className={styles["navbar-right"]}>
+            <Link className={styles["navbar-link"]} to="/work">Work</Link>
+            <Link className={styles["navbar-link"]} to="/about">About Me</Link>
+            <Link className={styles["navbar-link"]} to="/whatido">What I Do</Link>
+            <Link className={styles["navbar-link"]} to="/blog">Stuff</Link>
+            <Link className={styles["navbar-link"]} to="/contact">Contact</Link>
         </div>
     </div>
   )
