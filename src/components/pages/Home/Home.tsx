@@ -1,14 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import Panel from '../layout/Panel';
+import Panel from '../../layout/Panel/Panel';
+import CardView from '../../layout/CardView/CardView';
+import Navbar from '../../layout/Navbar/Navbar';
+import Footer from '../../layout/Footer/Footer';
+import Spotify from '../../layout/Spotify/Spotify';
+import Pagnation from '../../layout/Pagnation/Pagnation';
+import Links from '../../layout/Links/Links';
+
 import styles from './Home.module.css';
-import CardView from '../layout/CardView';
-import Navbar from '../layout/Navbar';
-import Footer from '../layout/Footer';
-import Spotify from '../layout/Spotify';
-import Pagnation from '../layout/Pagnation';
-import Links from '../layout/Links';
+import Clients from '../../layout/Clients/Clients';
+import Awards from '../../layout/Awards/Awards';
+import Testimonials from '../../layout/Testimonials/Testimonials';
 
 function Home() {
   return (
@@ -40,6 +44,9 @@ function Home() {
 
       <div style={{padding: '0 450px'}}>
         <CardView id="six" />
+        <Clients />
+        <Awards />
+        <Testimonials />
         <Footer />
       </div>
     </div>

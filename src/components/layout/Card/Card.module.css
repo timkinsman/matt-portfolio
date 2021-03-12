@@ -1,8 +1,7 @@
 .card {
-    width: 450px;
+    flex: 1 0 45%;
     height: 330px;
     border-radius: 12px;
-    margin: 10px;
 }
 
 .card:hover {
