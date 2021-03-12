@@ -59,13 +59,13 @@
 
 .home-link {
     color: #ffffff;
-    opacity: 40%;
+    opacity: 0.4;
     text-decoration: none;
     transition: opacity 1s;
 }
 
 .home-link:hover {
-    opacity: 1;
+    opacity: 0.1;
     text-decoration: underline;
     transition: opacity 1s;
 }
