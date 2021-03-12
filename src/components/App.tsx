@@ -14,7 +14,6 @@ import Contact from './pages/Contact';
 function App() {
   return (
     <Router>
-      <Links />
       <Switch>
         <Route exact path="/about" component={About} />
         <Route exact path="/work" component={Work} />

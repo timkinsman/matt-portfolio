@@ -11,7 +11,8 @@
 }
 
 .cardview {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }

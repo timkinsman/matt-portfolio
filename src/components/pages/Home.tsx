@@ -8,10 +8,12 @@ import Navbar from '../layout/Navbar';
 import Footer from '../layout/Footer';
 import Spotify from '../layout/Spotify';
 import Pagnation from '../layout/Pagnation';
+import Links from '../layout/Links';
 
 function Home() {
   return (
-    <div>
+    <div className={styles["home-page"]}>
+      <Links />
       <Pagnation />
       
       <div className={styles["home-container"]} id="one">

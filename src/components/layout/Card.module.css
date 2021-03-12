@@ -1,5 +1,12 @@
 .card {
-    width: -webkit-fill-available;
+    width: 450px;
     height: 330px;
     border-radius: 12px;
+    margin: 10px;
+}
+
+.card:hover {
+    background: #ffffff !important;
+    cursor: pointer;
+    transition: background 1s;
 }

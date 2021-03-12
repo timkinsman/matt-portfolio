@@ -1,5 +1,18 @@
-.container {
-    color: #ffffff;
+.spotify-container {
     font-size: 24px;
     padding: 20px;
+}
+
+.spotify-span {
+    color: #ffffff;
+    padding-left: 10px;
+}
+
+.spotify-current {
+    opacity: 0.4;
+}
+
+.spotify-current:hover {
+    opacity: 1;
+    text-decoration: underline;
 }

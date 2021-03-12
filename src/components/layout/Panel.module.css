@@ -27,4 +27,13 @@
 
 .link {
     font-size: 20px;
+    opacity: 40%;
+    transition: opacity 1s;
+}
+
+.link:hover {
+    cursor: pointer;
+    font-size: 20px;
+    opacity: 1;
+    transition: opacity 1s;
 }
