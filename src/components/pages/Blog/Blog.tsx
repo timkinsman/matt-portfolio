@@ -9,8 +9,11 @@ function Blog() {
     <div className={styles["blog-container"]}>
       <div className={styles["blog-banner"]}>
         <Navbar />
+        <div style={{padding: '100px 250px 0 250px'}}>
+          <p className={styles["blog-p"]}>Stuff</p>
+          <Footer />
+        </div>
       </div>
-      <Footer />
     </div>
   );
 }

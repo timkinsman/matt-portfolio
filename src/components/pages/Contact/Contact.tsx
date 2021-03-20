@@ -1,6 +1,7 @@
 import React from 'react';
 import Footer from '../../layout/Footer/Footer';
 import Navbar from '../../layout/Navbar/Navbar';
+import Socials from '../../layout/Socials/Socials';
 
 import styles from "./Contact.module.css";
 
@@ -15,7 +16,7 @@ function Contact() {
             <p>Get in touch</p>
             <p>If you have any questions or want to collaborate please don't hesitate to get in touch.</p>
           </div>
-          <div>
+          <div style={{display: "flex", gap: "150px"}}>
             <div>
               <p>Email</p>
               <p>hello@matthewkinsman.com</p>
@@ -30,8 +31,7 @@ function Contact() {
             </div>
           </div>
           <div>
-            <p>Socials</p>
-            
+            <Socials />
           </div>
           <Footer />
         </div>
