@@ -8,18 +8,21 @@ import Work from './pages/Work/Work';
 import WhatIDo from './pages/WhatIDo/WhatIDo';
 import Blog from './pages/Blog/Blog';
 import Contact from './pages/Contact/Contact';
+import ScrollToTop from './util/ScrollToTop';
 
 function App() {
   return (
     <Router>
-      <Switch>
-        <Route exact path="/about" component={About} />
-        <Route exact path="/work" component={Work} />
-        <Route exact path="/whatido" component={WhatIDo} />
-        <Route exact path="/blog" component={Blog} />
-        <Route exact path="/contact" component={Contact} />
-        <Route component={Home} />
-      </Switch>
+      <ScrollToTop>
+        <Switch>
+          <Route exact path="/about" component={About} />
+          <Route exact path="/work" component={Work} />
+          <Route exact path="/whatido" component={WhatIDo} />
+          <Route exact path="/blog" component={Blog} />
+          <Route exact path="/contact" component={Contact} />
+          <Route component={Home} />
+        </Switch>
+      </ScrollToTop>
     </Router>
   );
 }

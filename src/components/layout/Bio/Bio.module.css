@@ -1,0 +1,25 @@
+.bio-container {
+    display:flex;
+}
+
+.bio-left {
+    width: 50%;
+}
+
+.bio-right {
+    width: 50%;
+}
+
+.bio-header {
+    color: #ffffff;
+    font-size: 24px;
+}
+
+.bio-content {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.bio-img {
+    border-radius: 20px;
+}

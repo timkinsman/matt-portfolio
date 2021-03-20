@@ -4,6 +4,7 @@
         -ms-animation: fadein 2s; /* Internet Explorer */
          -o-animation: fadein 2s; /* Opera < 12.1 */
             animation: fadein 2s;
+    color: #ffffff;
 }
 
 @keyframes fadein {
@@ -39,4 +40,9 @@
 .contact-banner {
     height: 100vh;
     padding: 60px 200px;
+}
+
+.contact-p {
+    font-size: 60px;
+    color: #ffffff;
 }

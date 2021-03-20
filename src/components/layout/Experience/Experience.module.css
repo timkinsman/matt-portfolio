@@ -1,0 +1,11 @@
+.experience-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 25px;  
+}
+
+.experience-header {
+    color: #ffffff;
+    font-size: 24px;
+}
