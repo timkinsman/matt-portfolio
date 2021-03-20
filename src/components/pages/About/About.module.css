@@ -39,3 +39,13 @@
     height: 100vh;
     padding: 60px 200px;
 }
+
+.about-p {
+    font-size: 60px;
+    color: #ffffff;
+}
+
+.about-quote {
+    color: #ffffff;
+    font-size: 28px;
+}

@@ -2,3 +2,26 @@
     color: #ffffff;
     font-size: 24px;
 }
+
+.awards-awards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 25px;  
+}
+
+.awards-img {
+    height: 130px;
+    width: 130px;
+    opacity: 0.2;
+}
+
+.awards-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.awards-p{
+    font-size: 16px;
+}

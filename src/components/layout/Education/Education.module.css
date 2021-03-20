@@ -1,0 +1,8 @@
+.education-container {
+    display: flex;
+}
+
+.education-header {
+    color: #ffffff;
+    font-size: 24px;
+}

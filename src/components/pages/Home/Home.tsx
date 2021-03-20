@@ -43,10 +43,12 @@ function Home() {
       <Panel background="#2C3163" id="five"/>
 
       <div style={{padding: '0 450px'}}>
-        <CardView id="six" />
-        <Clients />
-        <Awards />
-        <Testimonials />
+        <div style={{padding: '75px 0'}}>
+          <CardView id="six" />
+          <Clients />
+          <Awards />
+          <Testimonials />
+        </div>
         <Footer />
       </div>
     </div>
