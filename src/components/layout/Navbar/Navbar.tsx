@@ -13,7 +13,7 @@ function Navbar() {
             <Link className={styles["navbar-link"]} to="/work">Work</Link>
             <Link className={styles["navbar-link"]} to="/about">About Me</Link>
             <Link className={styles["navbar-link"]} to="/whatido">What I Do</Link>
-            <Link className={styles["navbar-link"]} to="/blog">Stuff</Link>
+            {/*<Link className={styles["navbar-link"]} to="/blog">Stuff</Link>*/}
             <Link className={styles["navbar-link"]} to="/contact">Contact</Link>
         </div>
     </div>
