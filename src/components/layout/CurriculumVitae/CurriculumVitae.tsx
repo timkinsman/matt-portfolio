@@ -6,7 +6,7 @@ const CurriculumVitae = () => {
     return (
         <div>
             <div className={styles["curriculum-vitae-header"]}>
-                <p>CurriculumVitae</p>
+                <p>Curriculum Vitae</p>
             </div>
             <div className={styles["curriculum-vitae-content"]}>
                 <p>Request to view</p>
