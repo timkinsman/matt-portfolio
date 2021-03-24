@@ -13,7 +13,7 @@ function Footer() {
               <Link className={styles["footer-a"]} to="/">Home</Link>
               <Link className={styles["footer-a"]} to="/whatido">What I Do</Link>
               <Link className={styles["footer-a"]} to="/work">Work</Link>
-              <Link className={styles["footer-a"]} to="/blog">Stuff</Link>
+              {/*<Link className={styles["footer-a"]} to="/blog">Stuff</Link>*/}
               <Link className={styles["footer-a"]} to="/about">About Me</Link>
               <Link className={styles["footer-a"]} to="/contact">Contact</Link>
             </div>
