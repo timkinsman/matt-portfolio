@@ -1,15 +1,24 @@
-.container {
+.div {
     display: flex;
-    flex-direction: column;
-    color: white;
-    padding: 75px 0;
-    font-size: 24px;
+    padding: 60px 0;
+    gap: 30px;
 }
 
-.filters {
-    margin: 0 0 80px 0;
-    font-size: large;
+.div > p {
+    margin: 0;
+    font-size: 20px;
+}
+
+.div > a {
     opacity: 0.4;
+    transition: opacity 1s;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.div > a:hover {
+    opacity: 1;
+    transition: opacity 1s;
 }
 
 .cardview {

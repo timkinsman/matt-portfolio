@@ -4,8 +4,8 @@ import styles from './Testimonials.module.css'
 
 const Testimonials = () => {
     return (
-        <div>
-            <div className={styles["testimonials-header"]}>
+        <div className="global-wrapper">
+            <div className="global-header">
                 <p>Testimonials</p>
             </div>
             <div className={styles["testimonials-content"]}>

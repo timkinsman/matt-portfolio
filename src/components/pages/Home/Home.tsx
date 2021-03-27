@@ -16,7 +16,7 @@ import Testimonials from '../../layout/Testimonials/Testimonials';
 
 function Home() {
   return (
-    <div className={styles["home-page"]}>
+    <div className="global-fadein">
       <Links />
       <Pagnation />
       

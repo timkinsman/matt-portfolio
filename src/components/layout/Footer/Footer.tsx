@@ -17,7 +17,7 @@ function Footer() {
               <Link className={styles["footer-a"]} to="/about">About Me</Link>
               <Link className={styles["footer-a"]} to="/contact">Contact</Link>
             </div>
-            <p className={`${styles["footer-p"]} ${styles["footer-small"]}`}>© 2021 Matthew Kinsman, Melbourne, Australia</p>
+            <p className={styles["footer-small"]}>Developement by <a className={styles["footer-tim"]} href="https://timkinsman.com" target="_blank">Tim Kinsman</a></p>
           </div>
           <div>
             <p className={styles["footer-p"]}>Get in touch</p>
@@ -29,7 +29,7 @@ function Footer() {
               <a className={styles["footer-a"]} href="https://www.linkedin.com/in/matthew-kinsman/" target="_blank">LinkedIn</a>
               <a className={styles["footer-a"]} href="https://open.spotify.com/user/mskinsm" target="_blank">Spotify</a>
             </div>
-            <a className={`${styles["footer-a"]} ${styles["footer-small"]}`} href="https://timkinsman.com" target="_blank">Developement by Tim Kinsman</a>
+            <p className={`${styles["footer-p"]} ${styles["footer-small"]}`}>© 2021 Matthew Kinsman, Melbourne, Australia</p>
           </div>
         </div>
     </div>

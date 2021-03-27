@@ -1,8 +1,3 @@
-.awards-header {
-    color: #ffffff;
-    font-size: 24px;
-}
-
 .awards-awards {
     display: flex;
     flex-wrap: wrap;
@@ -13,7 +8,6 @@
 .awards-img {
     height: 130px;
     width: 130px;
-    opacity: 0.2;
 }
 
 .awards-img-container {

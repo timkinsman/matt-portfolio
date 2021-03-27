@@ -1,11 +1,8 @@
-.experience-container {
+.experience-space-between {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 25px;  
+    justify-content: space-between;
 }
 
-.experience-header {
-    color: #ffffff;
-    font-size: 24px;
+.experience-space-between > div {
+    flex: 1 1 33%;
 }

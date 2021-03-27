@@ -5,9 +5,13 @@ import styles from './CardView.module.css'
 
 function CardView(props: {id: string}) {
   return (
-    <div className={styles.container} id={props.id}>
-        <div className={styles.filters}>
-          Filter by    /    Capability ↓    Research ↓    Industry ↓    Client ↓
+    <div className="global-wrapper" id={props.id}>
+        <div className={styles.div}>
+          <p>Filter by</p>
+          <p>/</p>
+          <a>Capability ↓</a>
+          <a>Industry ↓</a>
+          <a>Client ↓</a>
         </div>
         <div className={styles.cardview}>
           <Card background="#5DE3DB" />

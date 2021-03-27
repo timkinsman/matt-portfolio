@@ -6,11 +6,11 @@ import styles from "./Blog.module.css";
 
 function Blog() {
   return (
-    <div className={styles["blog-container"]}>
-      <div className={styles["blog-banner"]}>
+    <div className="global-fadein">
+      <div className="global-container">
         <Navbar />
-        <div style={{padding: '100px 250px 0 250px'}}>
-          <p className={styles["blog-p"]}>Stuff</p>
+        <div className="global-inner-container">
+          <p className="global-title">Stuff</p>
           <Footer />
         </div>
       </div>
