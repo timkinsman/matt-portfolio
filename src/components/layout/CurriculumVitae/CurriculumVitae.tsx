@@ -4,13 +4,9 @@ import styles from './CurriculumVitae.module.css'
 
 const CurriculumVitae = () => {
     return (
-        <div>
-            <div className={styles["curriculum-vitae-header"]}>
-                <p>Curriculum Vitae</p>
-            </div>
-            <div className={styles["curriculum-vitae-content"]}>
-                <p>Request to view</p>
-            </div>
+        <div className="global-wrapper">
+            <p className="global-header">Curriculum Vitae</p>
+            <a className={styles["curriculum-vitae-a"]} href="mailto:mskinsm@gmail.com?subject=CV request">Request to view</a>
         </div>
     )
 }

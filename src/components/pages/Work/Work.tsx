@@ -7,11 +7,11 @@ import styles from './Work.module.css'
 
 function Work() {
   return (
-    <div className={styles["work-container"]}>
-      <div className={styles["work-banner"]}>
+    <div className="global-fadein">
+      <div className="global-container">
         <Navbar />
-        <div style={{padding: '100px 250px 0 250px'}}>
-          <p className={styles["work-p"]}>Work</p>
+        <div className="global-inner-container">
+          <p className="global-title">Work</p>
           <CardView id="null" />
           <Footer />
         </div>

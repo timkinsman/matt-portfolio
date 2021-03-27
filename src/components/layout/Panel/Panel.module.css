@@ -29,6 +29,7 @@
     font-size: 20px;
     opacity: 0.4;
     transition: opacity 1s;
+    text-decoration: none;
 }
 
 .link:hover {

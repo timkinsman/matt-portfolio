@@ -13,20 +13,20 @@ import Experience from '../../layout/Experience/Experience';
 
 function About() {
   return (
-    <div className={styles["about-container"]}>
-      <div className={styles["about-banner"]}>
+    <div className="global-fadein">
+      <div className="global-container">
         <Navbar />
-        <div style={{padding: '100px 250px 0 250px'}}>
-          <p className={styles["about-p"]}>About Me</p>
+        <div className="global-inner-container">
+          <p className="global-title">About Me</p>
           <div style={{padding: '75px 0'}}>
-            <p className={styles["about-quote"]}>“It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has normal distribution.” – Jarad Spool</p>
-            <Bio />
-            <Education />
-            <Experience />
-            <Clients />
-            <Awards />
-            <CurriculumVitae />
+            <p className={styles["about-quote"]}>“Intuitive design happens when current knowledge is the same as the target knowledge.” – Jarad Spool</p>
           </div>
+          <Bio />
+          <Education />
+          <Experience />
+          <Clients />
+          <Awards />
+          <CurriculumVitae />
           <Footer />
         </div>
       </div>

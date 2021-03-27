@@ -7,32 +7,32 @@ import styles from "./Contact.module.css";
 
 function Contact() {
   return (
-    <div className={styles["contact-container"]}>
-      <div className={styles["contact-banner"]}>
-      <Navbar />
-        <div style={{padding: '100px 250px 0 250px'}}>
-          <p className={styles["contact-p"]}>Contact</p>
-          <div>
-            <p>Get in touch</p>
-            <p>If you have any questions or want to collaborate please don't hesitate to get in touch.</p>
+    <div className="global-fadein">
+      <div className="global-container">
+        <Navbar />
+        <div className="global-inner-container">
+          <p className="global-title">Contact</p>
+          <div className="global-wrapper">
+            <p className="global-header">Get in touch</p>
+            <p className="global-content">If you have any questions or want to collaborate please don't hesitate to get in touch.</p>
           </div>
-          <div style={{display: "flex", gap: "150px"}}>
-            <div>
-              <p>Email</p>
-              <p>hello@matthewkinsman.com</p>
-            </div>
-            <div>
-              <p>Phone</p>
-              <p>+61 424 792 708</p>
-            </div>
-            <div>
-              <p>Enquiries</p>
-              <p>Client brief form</p>
+          <div className="global-wrapper">
+            <div className={styles["content-space-between"]}>
+              <div>
+                <p className="global-header">Email</p>
+                <p className="global-content">hello@matthewkinsman.com</p>
+              </div>
+              <div>
+                <p className="global-header">Phone</p>
+                <p className="global-content">+61 424 792 708</p>
+              </div>
+              <div>
+                <p className="global-header">Enquiries</p>
+                <p className="global-content">Client brief form</p>
+              </div>
             </div>
           </div>
-          <div>
-            <Socials />
-          </div>
+          <Socials />
           <Footer />
         </div>
       </div>

@@ -1,12 +1,11 @@
 .navbar-container {
     display: flex;
+    padding: 60px 0;
 }
 
 .navbar-link {
-    color: #ffffff;
     font-size: 24px;
     opacity: 0.4;
-    padding: 0 20px;
     text-decoration: none;
     transition: opacity 1s;
 }
@@ -19,4 +18,5 @@
 .navbar-right {
     display: flex;
     margin-left: auto;
+    gap: 60px;
 }

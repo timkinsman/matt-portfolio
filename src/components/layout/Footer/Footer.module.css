@@ -3,6 +3,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-top: 100px;
 }
 
 .footer-outerdiv {
@@ -10,7 +11,7 @@
     border-top: 1px solid rgba(255, 255, 255, .4);
     display: flex;
     width: -webkit-fill-available;
-    padding: 75px 0;
+    padding: 120px 0;
 }
 
 .footer-grid {
@@ -21,7 +22,6 @@
 }
 
 .footer-a {
-    color: #ffffff;
     opacity: 0.4;
     text-decoration: none;
     font-size: 20px;
@@ -33,8 +33,19 @@
     transition: opacity 1s;
 }
 
+.footer-tim {
+    opacity: 0.4;
+    text-decoration: none;
+    font-size: 16px;
+    transition: opacity 1s;
+}
+
+.footer-tim:hover {
+    opacity: 1;
+    transition: opacity 1s;
+}
+
 .footer-p {
-    color: #ffffff;
     font-size: 24px;
     margin: 0;
 }

@@ -1,18 +1,8 @@
-.item-container {
-    /*padding-right: 100px;*/
-}
-
-.item-container p {
-    margin: 0;
-}
-
-.item-header {
-    color: #ffffff;
-    font-size: 20px;
-}
-
 .item-content {
-    color: #ffffff;
     opacity: 0.8;
     font-size: 16px;
+}
+
+.item-img {
+    height: 40px;
 }

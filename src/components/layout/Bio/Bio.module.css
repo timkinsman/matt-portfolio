@@ -1,23 +1,10 @@
-.bio-container {
-    display:flex;
+.bio-space-between {
+    display: flex;
+    justify-content: space-between;
 }
 
-.bio-left {
-    width: 50%;
-}
-
-.bio-right {
-    width: 50%;
-}
-
-.bio-header {
-    color: #ffffff;
-    font-size: 24px;
-}
-
-.bio-content {
-    color: #ffffff;
-    font-size: 20px;
+.bio-space-between > div {
+    flex: 1 1 50%;
 }
 
 .bio-img {

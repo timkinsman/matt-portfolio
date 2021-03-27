@@ -14,9 +14,14 @@ import Clients from '../../layout/Clients/Clients';
 import Awards from '../../layout/Awards/Awards';
 import Testimonials from '../../layout/Testimonials/Testimonials';
 
+import studies from '../../../studies';
+
 function Home() {
+  const renderPanel = (index: any, id: string) => {
+      return <Panel background={studies[index].color} id={id} title={studies[index].title} slogan={studies[index].slogan} redirect={studies[index].redirect} />
+  }
   return (
-    <div className={styles["home-page"]}>
+    <div className="global-fadein">
       <Links />
       <Pagnation />
       
@@ -37,18 +42,16 @@ function Home() {
         </div>
       </div>
 
-      <Panel background="#71B1D8" id="two"/>
-      <Panel background="#0A252F" id="three"/>
-      <Panel background="#FC98BF" id="four"/>
-      <Panel background="#2C3163" id="five"/>
+      {renderPanel(4, "two") /**cityofportphillip */}
+      {renderPanel(0, "three") /**bankvic */}
+      {renderPanel(10, "four") /**opencourts */}
+      {renderPanel(1, "five") /**beyondblue */}
 
-      <div style={{padding: '0 450px'}}>
-        <div style={{padding: '75px 0'}}>
-          <CardView id="six" />
-          <Clients />
-          <Awards />
-          <Testimonials />
-        </div>
+      <div style={{padding: '0 457px'}}>
+        <CardView id="six" />
+        <Clients />
+        <Awards />
+        <Testimonials />
         <Footer />
       </div>
     </div>

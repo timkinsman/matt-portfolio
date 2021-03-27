@@ -1,8 +1,3 @@
-.clients-header {
-    color: #ffffff;
-    font-size: 24px;
-}
-
 .clients-clients {
     display: flex;
     flex-wrap: wrap;
@@ -13,15 +8,10 @@
 .clients-img {
     height: 130px;
     width: 130px;
-    opacity: 0.2;
 }
 
 .clients-img-container {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.clients-p{
-    font-size: 16px;
 }
