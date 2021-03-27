@@ -29,3 +29,12 @@
     text-decoration: underline;
     transition: opacity 1s;
 }
+
+.home-arrow {
+    font-size: 24px;
+    padding: 60px 0;
+    position: absolute;
+    right: 200px;
+    bottom: 0;
+    height: 55px;
+}

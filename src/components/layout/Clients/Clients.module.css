@@ -3,6 +3,7 @@
     flex-wrap: wrap;
     align-items: center;
     gap: 25px;  
+    justify-content: center;
 }
 
 .clients-img {
