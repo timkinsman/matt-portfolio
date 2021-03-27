@@ -64,6 +64,7 @@ a:focus {
 
 .global-inner-container {
   padding: 0 257px;
+  padding-top: 212px;
 }
 
 .global-title {
@@ -84,4 +85,15 @@ a:focus {
 
 .global-wrapper {
   padding: 20px 0;
+}
+
+.global-link {
+  opacity: 0.4;
+  transition: opacity 1s;
+}
+
+.global-link:hover {
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 1s;
 }

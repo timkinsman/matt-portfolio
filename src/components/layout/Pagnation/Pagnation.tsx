@@ -9,10 +9,10 @@ import $ from 'jquery';
 
 function Pagnation() {
 
-    const handleOnClick = (id: string) => {
-        $('html,body').animate({
-            scrollTop: $(id).offset()?.top}, 'slow');
-    }
+  const handleOnClick = (id: string) => {
+    $('html,body').animate({
+        scrollTop: $(id).offset()?.top}, 'slow');
+  }
 
   return (
     <div className={styles.container}>

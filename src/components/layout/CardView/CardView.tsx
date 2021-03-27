@@ -17,7 +17,7 @@ function CardView(props: {id: string}) {
         </div>
         <div className={styles.cardview}>
           {studies.map(study => {
-            return <Card background={study.color} img={study.img} />
+            return <Card study={study} />
           })}
         </div>
     </div>

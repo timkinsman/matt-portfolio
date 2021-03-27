@@ -3,7 +3,14 @@ import React from 'react';
 import styles from './Footer.module.css';
 import { Link } from "react-router-dom"
 
+import $ from 'jquery'
+
 function Footer() {
+  const handleOnClick = () => {
+    $('html,body').animate({
+        scrollTop: 0}, 'slow');
+  }
+
   return (
     <div className={styles["footer-container"]}>
         <div className={styles["footer-outerdiv"]}>
@@ -31,6 +38,7 @@ function Footer() {
             </div>
             <p className={`${styles["footer-p"]} ${styles["footer-small"]}`}>© 2021 Matthew Kinsman, Melbourne, Australia</p>
           </div>
+          <div><p onClick={handleOnClick} className={styles["footer-a"]} style={{margin: '0 0 0 auto'}}>🡡</p></div>
         </div>
     </div>
   );

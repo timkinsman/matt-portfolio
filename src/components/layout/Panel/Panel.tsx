@@ -5,13 +5,13 @@ import styles from './Panel.module.css';
 
 function Panel(props: any) {
   return (
-    <div className={styles.container} style={{background: props.background}} id={props.id}>
+    <div className={styles.container} style={{background: props.study.color}} id={props.id}>
         <div className={styles.textcontainer}>
-            <p className={styles.header}>{props.title}</p>
+            <p className={styles.header}>{props.study.title}</p>
             <p className={styles.body}>
-              {props.slogan}
+              {props.study.slogan}
             </p>
-            <Link className={styles.link} to={`/works/${props.redirect}`}>View Case Study →</Link>
+            <Link className={styles.link}  to={{pathname: '/study', hash: `#${props.study.redirect}`, state: { study: props.study }}}>View Case Study →</Link>
         </div>
         <div className={styles.imgcontainer}>
             
