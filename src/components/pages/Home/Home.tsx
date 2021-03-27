@@ -18,7 +18,7 @@ import studies from '../../../studies';
 
 function Home() {
   const renderPanel = (index: any, id: string) => {
-      return <Panel background={studies[index].color} id={id} title={studies[index].title} slogan={studies[index].slogan} redirect={studies[index].redirect} />
+      return <Panel study={studies[index]} id={id} />
   }
   return (
     <div className="global-fadein">

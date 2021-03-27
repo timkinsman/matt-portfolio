@@ -31,6 +31,7 @@ function Footer() {
             </div>
             <p className={`${styles["footer-p"]} ${styles["footer-small"]}`}>© 2021 Matthew Kinsman, Melbourne, Australia</p>
           </div>
+          <div><p onClick={() => window.scrollTo(0, 0)} className={styles["footer-a"]} style={{margin: '0 0 0 auto', fontSize: '30px'}}>↑</p></div>
         </div>
     </div>
   );

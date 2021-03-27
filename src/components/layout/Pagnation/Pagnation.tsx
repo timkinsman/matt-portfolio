@@ -10,8 +10,8 @@ import $ from 'jquery';
 function Pagnation() {
 
     const handleOnClick = (id: string) => {
-        $('html,body').animate({
-            scrollTop: $(id).offset()?.top}, 'slow');
+      const y = $(id).offset()?.top as number
+      window.scrollTo(0, y)
     }
 
   return (

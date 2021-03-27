@@ -1,6 +1,10 @@
 .navbar-container {
     display: flex;
     padding: 60px 0;
+    position: absolute;
+    left: 200px;
+    right: 200px;
+    top: 0;
 }
 
 .navbar-link {

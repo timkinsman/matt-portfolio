@@ -9,6 +9,7 @@ import WhatIDo from './pages/WhatIDo/WhatIDo';
 import Blog from './pages/Blog/Blog';
 import Contact from './pages/Contact/Contact';
 import ScrollToTop from './util/ScrollToTop';
+import Study from './pages/Study/Study';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route exact path="/whatido" component={WhatIDo} />
           {/* <Route exact path="/blog" component={Blog} /> */}
           <Route exact path="/contact" component={Contact} />
+          <Route exact path="/study" component={Study} />
           <Route component={Home} />
         </Switch>
       </ScrollToTop>

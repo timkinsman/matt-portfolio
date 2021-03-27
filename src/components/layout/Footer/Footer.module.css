@@ -7,7 +7,6 @@
 }
 
 .footer-outerdiv {
-    align-items: center;
     border-top: 1px solid rgba(255, 255, 255, .4);
     display: flex;
     width: -webkit-fill-available;
@@ -26,6 +25,7 @@
     text-decoration: none;
     font-size: 20px;
     transition: opacity 1s;
+    cursor: pointer;
 }
 
 .footer-a:hover {

@@ -1,0 +1,36 @@
+.study-container {
+    height: 100vh;
+}
+
+.study-div {
+    padding: 0 200px;
+    height: -webkit-fill-available;
+    display: flex;
+    flex-direction: column;
+}
+
+.study-content {
+    width: -webkit-fill-available;
+    margin: auto;
+}
+
+.study-summary {
+    font-size: 32px;
+}
+
+.study-space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.study-space-between > div {
+    flex: 1 1 33%;
+}
+
+.img-div {
+    height: 457px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+}
