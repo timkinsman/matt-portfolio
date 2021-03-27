@@ -1,15 +1,34 @@
 .card {
-    flex: 1 0 45%;
+    flex: 1 1 45%;
     height: 330px;
     border-radius: 12px;
     transition: background 1s;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: rgba(0, 0, 0, 0);
+    position: relative;
 }
 
 .card:hover {
     background: #ffffff !important;
+    color: rgba(0, 0, 0, 1);
     cursor: pointer;
     transition: background 1s;
+    transition: color 1s;
+}
+
+.card-container {
+    display: flex;
+    height: 330px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.card-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 30px;
 }

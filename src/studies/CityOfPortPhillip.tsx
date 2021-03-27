@@ -18,5 +18,6 @@ export default {
     deliverables: ["App UI design (Both iOS and Android platforms)", "Responsive website design", "Email marketing campaigns", "Editing and exporting of 1000+ Workout videos", "Physical products and apparel", "Signage for launch campaign"],
     information: "The Sweat app can be downloaded from the Apple Store here and the Google Play Store here The Sweat website can be viewed here The Sweat Facebook page can be viewed here",
     recognitions: ["2016 Apple Watch App of the Year"],
-    credits: ["Trainer photography by Jeremy Simons", "Back-end development by PixelForce"]
+    credits: ["Trainer photography by Jeremy Simons", "Back-end development by PixelForce"],
+    shortsummary: "A 10 year contract supporting the development of the City's future core web framework, a custom pattern library supporting 14 sites."
 }

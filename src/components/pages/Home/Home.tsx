@@ -16,10 +16,18 @@ import Testimonials from '../../layout/Testimonials/Testimonials';
 
 import studies from '../../../studies';
 
+import $ from 'jquery'
+
 function Home() {
   const renderPanel = (index: any, id: string) => {
       return <Panel study={studies[index]} id={id} />
   }
+
+  const handleOnClick = (id: string) => {
+    $('html,body').animate({
+        scrollTop: $(id).offset()?.top}, 'slow');
+  }
+
   return (
     <div className="global-fadein">
       <Links />
@@ -39,6 +47,9 @@ function Home() {
           </div>
 
           <Spotify />
+          <div className={styles["home-arrow"]}>
+            <p className="global-link" onClick={() => handleOnClick("#two")}>🡣</p>
+          </div>
         </div>
       </div>
 
