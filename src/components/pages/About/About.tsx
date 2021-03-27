@@ -19,7 +19,7 @@ function About() {
         <div className="global-inner-container">
           <p className="global-title">About Me</p>
           <div style={{padding: '75px 0'}}>
-            <p className={styles["about-quote"]}>“It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has normal distribution.” – Jarad Spool</p>
+            <p className={styles["about-quote"]}>“Intuitive design happens when current knowledge is the same as the target knowledge.” – Jarad Spool</p>
           </div>
           <Bio />
           <Education />

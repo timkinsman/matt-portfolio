@@ -3,6 +3,9 @@
     height: 330px;
     border-radius: 12px;
     transition: background 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .card:hover {

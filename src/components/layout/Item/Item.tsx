@@ -6,7 +6,7 @@ function Item(props: any) {
 
     const renderImg = (emoji: string) => {
         if(emoji){
-            return <img src={emoji} />
+            return <img className={styles['item-img']} src={emoji} />
         }
         return null
     }
@@ -18,8 +18,8 @@ function Item(props: any) {
                     <p>{props.header}</p>
                 </div>
                 <div className={styles["item-content"]}>
-                    <p>{props.content}</p>
-                    <p>{props.footer}</p>
+                    <p className="global content">{props.content}</p>
+                    <p className="global footer">{props.footer}</p>
                 </div>
             </div>
     );

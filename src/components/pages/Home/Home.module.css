@@ -16,11 +16,9 @@
 
 .home-text {
     font-size: 40px;
-    color: #fff;
 }
 
 .home-link {
-    color: #ffffff;
     opacity: 0.4;
     text-decoration: none;
     transition: opacity 1s;
