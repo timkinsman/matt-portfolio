@@ -6,7 +6,7 @@ import styles from './Card.module.css';
 function Card(props: any) {
   return (
     <Link to={{pathname: '/study', hash: `#${props.study.redirect}`, state: { study: props.study }}} className={styles["card"]} style={{background: props.study.color}}>
-      <img src={props.study.img} alt="img" />
+      <img src={props.study.img} alt="img" style={{height: '100%'}} />
       <div className={styles["card-content"]}>
         <p className="global-content" style={{fontSize: '32px', margin: '0'}}>{props.study.title}</p>
         <p className="global-footer">{props.study.industry} · {props.study.capabilites}</p>

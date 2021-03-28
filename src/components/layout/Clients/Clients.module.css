@@ -1,9 +1,6 @@
 .clients-clients {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 25px;  
-    justify-content: center;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
 }
 
 .clients-img {

@@ -4,10 +4,8 @@
 }
 
 .tools-tools {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 25px;  
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
 }
 
 .tools-img {

@@ -21,10 +21,22 @@
     transition: opacity 1s;
 }
 
-.cardview {
+.card-view {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 30px;
+}
+
+.card-view-filter {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-row-gap: 40px;
+    padding-bottom: 100px;
+}
+
+.card-view-filter-apply {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 25px;
+    gap: 30px;
+    padding-bottom: 60px;
 }

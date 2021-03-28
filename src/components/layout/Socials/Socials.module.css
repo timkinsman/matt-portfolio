@@ -1,8 +1,6 @@
 .socials-socials {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 25px;  
-    justify-content: center;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
 }
 
 .socials-img {
