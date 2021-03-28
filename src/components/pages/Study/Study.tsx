@@ -14,6 +14,10 @@ const Study = (props: any) => {
 
     const study = props.location.state.study
 
+    const renderArr = (arr: Array<string>) => {
+        return arr.join(", ")
+    }
+
     return (
         <div className="global-fadein">
             <Links />
@@ -35,9 +39,9 @@ const Study = (props: any) => {
 
                 <div className="global-wrapper">
                     <div className={styles["study-space-between"]}>
-                        <Item emoji="" header="Industry" content={study.industry} footer="" />
-                        <Item emoji="" header="Capabilites" content={study.capabilites} footer="" />
-                        <Item emoji="" header="Research" content={study.research} footer="" />
+                        <Item emoji="" header="Industry" content={renderArr(study.industry)} footer="" />
+                        <Item emoji="" header="Capabilites" content={renderArr(study.capabilites)} footer="" />
+                        <Item emoji="" header="Research" content={renderArr(study.researchMethods)} footer="" />
                     </div>
                 </div>
 
