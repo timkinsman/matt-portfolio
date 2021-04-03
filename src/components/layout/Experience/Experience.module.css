@@ -1,4 +1,4 @@
 .experience-space-between {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 33.3% 33.3% 33.3%;
 }

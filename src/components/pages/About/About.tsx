@@ -15,7 +15,7 @@ function About() {
   return (
     <div className="global-fadein">
       <div className="global-container">
-        <Navbar />
+        <Navbar selected="about" />
         <div className="global-inner-container">
           <p className="global-title">About Me</p>
           <div className="global-wrapper">

@@ -18,6 +18,8 @@ import studies from '../../../studies';
 
 import $ from 'jquery'
 
+import arrow from '../../../images/arrow-down.svg'
+
 function Home() {
   const renderPanel = (index: any, id: string) => {
       return <Panel study={studies[index]} id={id} />
@@ -35,7 +37,7 @@ function Home() {
       
       <div className={styles["home-container"]} id="one">
         <div className={styles["home-div"]}>
-          <Navbar />
+          <Navbar selected="home" />
 
           <div className={styles["home-content"]}>
               <p className={styles["home-text"]}>
@@ -48,7 +50,7 @@ function Home() {
 
           <Spotify />
           <div className={styles["home-arrow"]}>
-            <p className="global-link" onClick={() => handleOnClick("#two")}>🡣</p>
+            <p className="global-link" onClick={() => handleOnClick("#two")}><img src={arrow} alt="🡣" /></p>
           </div>
         </div>
       </div>
@@ -60,9 +62,9 @@ function Home() {
 
       <div style={{padding: '0 457px'}}>
         <CardView id="six" />
-        <Clients />
-        <Awards />
-        <Testimonials />
+          <Clients />
+          <Awards />
+          <Testimonials />
         <Footer />
       </div>
     </div>

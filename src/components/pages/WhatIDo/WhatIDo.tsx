@@ -11,7 +11,7 @@ function WhatIDo() {
   return (
     <div className="global-fadein">
       <div className="global-container">
-        <Navbar />
+        <Navbar selected="whatido" />
         <div className="global-inner-container">
           <p className="global-title">What I Do</p>
           

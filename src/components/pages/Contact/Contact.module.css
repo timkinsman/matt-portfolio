@@ -2,3 +2,17 @@
     display: grid;
     grid-template-columns: auto auto auto;
 }
+
+.contact-a {
+    opacity: 0.4;
+    text-decoration: none;
+    font-size: 20px;
+    transition: opacity 1s;
+    cursor: pointer;
+}
+
+.contact-a:hover {
+    border-bottom: 1px solid #fff;
+    opacity: 1;
+    transition: opacity 1s;
+}

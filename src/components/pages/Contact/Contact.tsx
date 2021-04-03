@@ -9,7 +9,7 @@ function Contact() {
   return (
     <div className="global-fadein">
       <div className="global-container">
-        <Navbar />
+        <Navbar selected="contact" />
         <div className="global-inner-container">
           <p className="global-title">Contact</p>
           <div className="global-wrapper">
@@ -20,7 +20,7 @@ function Contact() {
             <div className={styles["content-space-between"]}>
               <div>
                 <p className="global-header">Email</p>
-                <p className="global-content">hello@matthewkinsman.com</p>
+                <a className={styles["contact-a"]} href="mailto:hello@matthewkinsman.com">hello@matthewkinsman.com</a>
               </div>
               <div>
                 <p className="global-header">Phone</p>
@@ -28,7 +28,7 @@ function Contact() {
               </div>
               <div>
                 <p className="global-header">Enquiries</p>
-                <p className="global-content">Client brief form</p>
+                <a className={styles["contact-a"]} href="https://www.google.com.au/forms/about/" target="_blank">Client brief form</a>
               </div>
             </div>
           </div>
