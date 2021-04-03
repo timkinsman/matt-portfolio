@@ -9,7 +9,7 @@ function Work() {
   return (
     <div className="global-fadein">
       <div className="global-container">
-        <Navbar />
+        <Navbar selected="work" />
         <div className="global-inner-container">
           <p className="global-title">Work</p>
           <CardView id="null" />

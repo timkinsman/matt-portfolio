@@ -130,8 +130,8 @@ function CardView(props: {id: string}) {
         {arr.map((str: any) => {
           return (
             <div>
-              <input type="checkbox" onChange={(e) => handleOnChange(str, e)} checked={filter.includes(str)} />
-              <label>{str}</label>
+              <input className={styles["card-view-chkbox"]} type="checkbox" onChange={(e) => handleOnChange(str, e)} checked={filter.includes(str)} id={str} />
+              <label className={styles["card-view-label"]} htmlFor={str}>{str}</label>
             </div>
           )
         })}
@@ -167,7 +167,17 @@ function CardView(props: {id: string}) {
       return (
         <div className={styles["card-view-filter-apply"]}>
             {filterApply.map((filter: string) => {
-              return <a className="global-link" onClick={() => setFilterApply(filterApply.filter(e => e !== filter))}>{filter} ✕</a>
+              return (
+                <div className={styles["card-view-filter-apply-div"]}  onClick={() => setFilterApply(filterApply.filter(e => e !== filter))}>
+                  <a style={{
+                    display: 'flex',
+                    alignItems: 'center'
+                  }}>{filter}<span style={{
+                    padding: '0 10px 0 15px',
+                    fontSize: '12px'
+                  }}>✕</span></a>
+                </div>
+              )
             })}
         </div>
       )

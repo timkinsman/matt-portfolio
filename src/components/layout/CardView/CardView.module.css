@@ -40,3 +40,83 @@
     gap: 30px;
     padding-bottom: 60px;
 }
+
+.card-view-label {
+    opacity: 0.4;
+    padding-left: 10px;
+    transition: opacity 1s;
+}
+
+.card-view-chkbox:checked + .card-view-label {
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.card-view-chkbox {
+    position: absolute; 
+    opacity: 0;
+}
+  
+.card-view-chkbox + label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+}
+
+.card-view-chkbox + label:before {
+    content: '';
+    margin-right: 10px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background:none;
+    border: 1px solid #fff;
+    border-radius: 2px;
+}
+
+
+.card-view-chkbox:hover + label:before {
+    background: #fff;
+}
+
+
+.card-view-chkbox:focus + label:before {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+}
+
+.card-view-chkbox:checked + label:before {
+    background: #fff;
+}
+
+.card-view-chkbox:disabled + label {
+    color: #fff;
+    cursor: auto;
+}
+
+.card-view-chkbox:disabled + label:before {
+    box-shadow: none;
+    background: #fff;
+}
+
+.card-view-chkbox:checked + label:after {
+    color: #0B0B0C;
+    content: '✓';
+    font-size: 14px;
+    left: 0;
+    position: absolute;
+    top: 1px;
+}
+
+.card-view-filter-apply-div {
+    border: 1px solid #fff;
+    opacity: 0.4;
+    border-radius: 50px;
+    padding: 5px 10px;
+    transition: opacity 1s
+}
+
+.card-view-filter-apply-div:hover {
+    cursor: pointer;
+    opacity: 1 !important;
+    transition: opacity 1s
+}

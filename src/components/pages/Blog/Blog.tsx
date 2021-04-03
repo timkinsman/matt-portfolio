@@ -8,7 +8,7 @@ function Blog() {
   return (
     <div className="global-fadein">
       <div className="global-container">
-        <Navbar />
+        <Navbar selected="stuff" />
         <div className="global-inner-container">
           <p className="global-title">Stuff</p>
           <Footer />

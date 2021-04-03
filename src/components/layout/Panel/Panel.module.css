@@ -1,39 +1,33 @@
-.container {
+.panel-container {
     height: 100vh;
     width: -webkit-fill-available;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    padding: 0 200px;
 }
 
-.textcontainer {
-    width: 50vw;
-    color: white;
-    margin: auto 0 100px 200px;
+.panel-left {
+    margin: auto 0 60px;
 }
 
-.imgcontainer {
-    width: 50vw;
-}
-
-.header {
+.panel-header {
     font-size: 20px;
 }
 
-.body {
+.panel-body {
     font-size: 40px;
 }
 
-.link {
+.panel-link {
     font-size: 20px;
     opacity: 0.4;
-    transition: opacity 1s;
     text-decoration: none;
+    transition: opacity 1s;
 }
 
-.link:hover {
+.panel-link:hover {
     cursor: pointer;
+    border-bottom: 1px solid #fff;
     font-size: 20px;
     opacity: 1;
     transition: opacity 1s;

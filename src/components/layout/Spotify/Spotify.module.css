@@ -14,11 +14,12 @@
 .spotify-current {
     opacity: 0.4;
     transition: opacity 1s;
+    text-decoration: none;
 }
 
 .spotify-current:hover {
+    border-bottom: 1px solid #fff;
+    cursor: pointer;
     opacity: 1;
     transition: opacity 1s;
-    text-decoration: underline;
-    cursor: pointer;
 }

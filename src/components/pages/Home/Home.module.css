@@ -25,8 +25,8 @@
 }
 
 .home-link:hover {
+    border-bottom: 2px solid #fff;
     opacity: 1;
-    text-decoration: underline;
     transition: opacity 1s;
 }
 
