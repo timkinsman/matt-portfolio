@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Footer from '../../layout/Footer/Footer'
 import Item from '../../layout/Item/Item'
 import Links from '../../layout/Links/Links'
@@ -7,7 +7,19 @@ import Home from '../Home/Home'
 
 import styles from './Study.module.css'
 
-const Study = (props: any) => {
+import studies from '../../../studies'
+import Card from '../../layout/Card/Card'
+
+import $ from 'jquery'
+
+const Study = (props: any) => {  
+    const [limit, setLimit] = useState(2)
+
+    useEffect(() => { //reset
+        $("#divMore").show()
+        setLimit(2)
+    }, [props.location.state])
+
     if(props.location.state === undefined){
         return <Home />
     }
@@ -16,6 +28,34 @@ const Study = (props: any) => {
 
     const renderArr = (arr: Array<string>) => {
         return arr.join(", ")
+    }
+
+    const renderContent = (which: string) => {
+        return (
+            <React.Fragment>
+                <div className="global-wrapper">
+                    <p className={`${styles["study-capitalize"]} global-header`}>{which}</p>
+                    {study[which].map((content: string) => {
+                        return (
+                            <p className="global-content">{content}</p>
+                        )
+                    })}
+                </div>
+
+                {study[which + "Img"] !== undefined && study[which + "Img"].map((src: string) => {
+                    return (
+                        <div className="global-wrapper">
+                            <div className={styles["img-div"]} style={{background: '#151416'}}></div>
+                        </div>
+                    )
+                })}
+            </React.Fragment>
+        )
+    }
+
+    const renderMore = () => {
+        $("#divMore").hide()
+        setLimit(studies.length)
     }
 
     return (
@@ -51,35 +91,10 @@ const Study = (props: any) => {
                     </div>
                 </div>
 
-                <div className="global-wrapper">
-                    <p className="global-header">About</p>
-                    <p className="global-content">{study.about}</p>
-                </div>
-
-                <div className="global-wrapper">
-                    <div className={styles["img-div"]} style={{background: '#151416'}}></div>
-                </div>
-
-                <div className="global-wrapper">
-                    <p className="global-header">Brief</p>
-                    <p className="global-content">{study.brief}</p>
-                </div>
-
-                <div className="global-wrapper">
-                    <div className={styles["img-div"]} style={{background: '#151416'}}></div>
-                </div>
-
-                <div className="global-wrapper">
-                    <div className={styles["img-div"]} style={{background: '#151416'}}></div>
-                </div>
-
-                <div className="global-wrapper">
-                    <div className={styles["img-div"]} style={{background: '#151416'}}></div>
-                </div>
-
-                <div className="global-wrapper">
-                    <div className={styles["img-div"]} style={{background: '#151416'}}></div>
-                </div>
+                {renderContent("about")}
+                {renderContent("brief")}
+                {renderContent("background")}
+                {renderContent("challenge")}
 
                 <div className="global-wrapper">
                     <p className="global-header">Objective</p>
@@ -148,9 +163,18 @@ const Study = (props: any) => {
                     <div className={styles["img-div"]} style={{background: '#151416'}}></div>
                 </div>
 
-                <div className="global-wrapper" style={{paddingTop: '100px', justifyContent: "center", display: "flex"}}>
-                    <p className="global-link global-header">Show more projects</p>
+                <div className="global-wrapper">
+                    <div className={styles["study-card-view"]}>
+                        {studies.slice(0, limit).map(study => {
+                            return <Card study={study} />
+                        })}
+                    </div>
                 </div>
+
+                <div id="divMore" className="global-wrapper" style={{paddingTop: '100px', justifyContent: "center", display: "flex"}}>
+                    <a onClick={renderMore} className="global-link global-header">Show more case studies</a>
+                </div>
+
                 <Footer />
             </div>
         </div>

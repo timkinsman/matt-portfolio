@@ -3,8 +3,6 @@ import Card from '../Card/Card';
 
 import styles from './CardView.module.css'
 
-import studies from '../../../studies'
-
 import {
   Animation___Motion_Graphics,
   Art_Direction,
@@ -189,7 +187,7 @@ function CardView(props: {id: string}) {
 
   const renderStudy = (study: any) => {
     if(filterApply.length > 0){
-      let arr = [...study.capabilites, ...study.industry, ...study.title]
+      let arr = [...study.capabilites, ...study.industry, study.title]
       if(arr.some(f => filterApply.includes(f))){
         return <Card study={study} />
       }

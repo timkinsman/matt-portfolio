@@ -1,8 +1,15 @@
-.whatido-wrap {
-    display: flex;
-    flex-wrap: wrap;
+.whatido-grid-two {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 60px;
 }
 
-.whatido-wrap > div {
-    flex: 1 1 33%;
+.whatido-grid-three {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 60px;
+}
+
+.whatido-added-margin {
+    margin-bottom: 50px;
 }

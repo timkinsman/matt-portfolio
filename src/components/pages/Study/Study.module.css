@@ -19,12 +19,8 @@
 }
 
 .study-space-between {
-    display: flex;
-    justify-content: space-between;
-}
-
-.study-space-between > div {
-    flex: 1 1 33%;
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
 }
 
 .img-div {
@@ -33,4 +29,14 @@
     justify-content: center;
     align-items: center;
     border-radius: 12px;
+}
+
+.study-capitalize {
+    text-transform: capitalize;
+}
+
+.study-card-view{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 30px;
 }

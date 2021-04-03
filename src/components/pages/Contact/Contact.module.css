@@ -1,8 +1,4 @@
 .content-space-between {
-    display: flex;
-    justify-content: space-between;
-}
-
-.content-space-between > div {
-    flex: 1 1 33%;
+    display: grid;
+    grid-template-columns: auto auto auto;
 }

@@ -16,7 +16,7 @@ function WhatIDo() {
           <p className="global-title">What I Do</p>
           
           <div className="global-wrapper">
-            <div className={styles["whatido-wrap"]}>
+            <div className={styles["whatido-grid-two"]}>
               <div>
                 <p className="global-header">What I Try to do</p>
                 <p className="global-footer">Listen, have at least showered before my first zoom call, solve complex problems, have fun, grab the bull by the horns, question everything, create transformative and memorable experiences, enable meaningful conversations between client and their customers, tell a story, create profits for business’, communicate clearly, consider everyone for accessibility, ask the right questions, make a positive impact.</p>
@@ -29,8 +29,8 @@ function WhatIDo() {
           </div>
 
           <div className="global-wrapper">
-            <p className="global-header">Principles</p>
-            <div className={styles["whatido-wrap"]}>
+            <p className={`${styles["whatido-added-margin"]} global-header`}>Principles</p>
+            <div className={styles["whatido-grid-three"]}>
               <Item emoji={images.curious} header="Be curious" content="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using content here." footer=""/>
               <Item emoji={images.proactive} header="First proactive, then reative" content="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'," footer=""/>
               <Item emoji={images.systemsthinking} header="Systems thinking" content="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution. The point of using Lorem Ipsum." footer=""/>
@@ -41,8 +41,8 @@ function WhatIDo() {
           </div>
 
           <div className="global-wrapper">
-            <p className="global-header">Process</p>
-            <div className={styles["whatido-wrap"]}>
+            <p className={`${styles["whatido-added-margin"]} global-header`}>Process</p>
+            <div className={styles["whatido-grid-three"]}>
               <Item emoji={images.strategy} header="1. Strategy" content="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using content here." footer=""/>
               <Item emoji={images.research} header="2. Research" content="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English." footer=""/>
               <Item emoji={images.analyse} header="3. Analyse" content="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution." footer=""/>
@@ -53,8 +53,8 @@ function WhatIDo() {
           </div>
 
           <div className="global-wrapper">
-            <p className="global-header">Methods</p>
-            <div className={styles["whatido-wrap"]}>
+            <p className={`${styles["whatido-added-margin"]} global-header`}>Methods</p>
+            <div className={styles["whatido-grid-three"]}>
               <div>
                 <p className="global-content">A/B Testing</p>
                 <p className="global-content">Accessibility Testing</p>
