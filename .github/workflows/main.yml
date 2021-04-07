@@ -1,0 +1,14 @@
+name: discord message
+on: [deployment]
+jobs:
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - name: Discord notification
+      env:
+        DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+      uses: Ilshidur/action-discord@master
+      with:
+        args: '🚀 https://mskinsm-portfolio.herokuapp.com/ 🚀'
