@@ -1,16 +1,14 @@
-on:
-  deployment
-
-name: Discord Notification
-
+name: discord message
+on: [deployment]
 jobs:
-  notify:
-    name: Discord Notification
+
+  build:
+    name: Build
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - uses: fateyan/action-discord-notifier@v1
-        with:
-          message-title: 🚀
-          webhook: ${{ secrets.DISCORD_WEBHOOK }}
+    - name: Discord notification
+      env:
+        DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+      uses: Ilshidur/action-discord@master
+      with:
+        args: '🚀{{ EVENT_PAYLOAD.repository.full_name }} has been deployed.🚀'
