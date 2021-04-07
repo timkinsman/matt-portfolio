@@ -12,6 +12,10 @@ import ScrollToTop from './util/ScrollToTop';
 import Study from './pages/Study/Study';
 
 function App() {
+  window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  }
+  
   return (
     <Router>
       <ScrollToTop>

@@ -10,10 +10,10 @@ function Navbar(props: any) {
         <Link className={props.selected === "home" ? styles["navbar-selected"] : styles["navbar-link"]}  to="/">Matthew Kinsman</Link>
 
         <div className={styles["navbar-right"]}>
-            <Link className={props.selected === "work" ? styles["navbar-selected"] : styles["navbar-link"]} to="/casestudies">Case Studies</Link>
+            <Link className={props.selected === "work" ? styles["navbar-selected"] : styles["navbar-link"]} to="/casestudies">Case studies</Link>
             <Link className={props.selected === "about" ? styles["navbar-selected"] : styles["navbar-link"]} to="/about">About me</Link>
             <Link className={props.selected === "whatido" ? styles["navbar-selected"] : styles["navbar-link"]} to="/whatido">What I do</Link>
-            <Link className={props.selected === "stuff" ? styles["navbar-selected"] : styles["navbar-link"]} to="/otherwork">Other Work</Link>
+            <Link className={props.selected === "stuff" ? styles["navbar-selected"] : styles["navbar-link"]} to="/otherwork">Other work</Link>
             <Link className={props.selected === "contact" ? styles["navbar-selected"] : styles["navbar-link"]} to="/contact">Contact</Link>
         </div>
     </div>

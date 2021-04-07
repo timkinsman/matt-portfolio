@@ -29,11 +29,13 @@ const Clients = () => {
     return (
         <div className="global-wrapper">
             <p className="global-header">Selected Clients</p>
-            <div className={styles["clients-clients"]}>
-                {firstHalf()}
-            </div>
-            <div className={styles["clients-clients"]}>
-                {secondHalf()}
+            <div style={{position: 'relative'}}>
+                <div className={styles["clients-clients"]}>
+                    {firstHalf()}
+                </div>
+                <div className={styles["clients-clients-second"]}>
+                    {secondHalf()}
+                </div>
             </div>
         </div>
     )

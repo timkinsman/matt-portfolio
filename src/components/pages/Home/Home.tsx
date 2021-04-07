@@ -21,8 +21,8 @@ import $ from 'jquery'
 import arrow from '../../../images/arrow-down.svg'
 
 function Home() {
-  const renderPanel = (index: any, id: string) => {
-      return <Panel study={studies[index]} id={id} />
+  const renderPanel = (index: any, id: string, next: string) => {
+      return <Panel study={studies[index]} id={id} next={next} />
   }
 
   const handleOnClick = (id: string) => {
@@ -55,10 +55,10 @@ function Home() {
         </div>
       </div>
 
-      {renderPanel(4, "two") /**cityofportphillip */}
-      {renderPanel(0, "three") /**bankvic */}
-      {renderPanel(10, "four") /**opencourts */}
-      {renderPanel(1, "five") /**beyondblue */}
+      {renderPanel(4, "two", "three") /**cityofportphillip */}
+      {renderPanel(0, "three", "four") /**bankvic */}
+      {renderPanel(10, "four", "five") /**opencourts */}
+      {renderPanel(1, "five", "six") /**beyondblue */}
 
       <div style={{padding: '0 457px'}}>
         <CardView id="six" />

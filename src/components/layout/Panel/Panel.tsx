@@ -3,7 +3,16 @@ import { Link } from 'react-router-dom';
 
 import styles from './Panel.module.css';
 
+import arrow from '../../../images/arrow-down.svg'
+
+import $ from 'jquery'
+
 function Panel(props: any) {
+  const handleOnClick = (id: string) => {
+    $('html,body').animate({
+        scrollTop: $(id).offset()?.top}, 'slow');
+  }
+
   return (
     <div className={styles["panel-container"]} style={{background: props.study.color}} id={props.id}>
         <div className={styles["panel-left"]}>
@@ -11,10 +20,12 @@ function Panel(props: any) {
             <p className={styles["panel-body"]}>
               {props.study.slogan}
             </p>
-            <Link className={styles["panel-link"]}  to={{pathname: '/study', hash: `#${props.study.redirect}`, state: { study: props.study }}}>View Case Study →</Link>
+            <Link className={styles["panel-link"]} to={{pathname: '/study', hash: `#${props.study.redirect}`, state: { study: props.study }}}>View Case Study →</Link>
         </div>
-        <div>
-            
+        <div style={{position: 'relative'}}>
+          <div className={styles["panel-arrow"]}>
+            <p className="global-link" onClick={() => handleOnClick(`#${props.next}`)}><img src={arrow} alt="🡣" /></p>
+          </div>
         </div>
     </div>
   );
