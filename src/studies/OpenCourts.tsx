@@ -24,7 +24,7 @@ export default {
     color: OPEN_COURTS, //color
     img,
     redirect: "op",
-    title: "Open Courts",
+    title: "OpenCourts",
 
     //tagging
     capabilites: [Strategy, UI___UX],

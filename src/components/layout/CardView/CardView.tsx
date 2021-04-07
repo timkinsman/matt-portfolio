@@ -148,9 +148,6 @@ function CardView(props: {id: string}) {
   }
 
   const handleOnClear = () => {
-    setShowCapability(false)
-    setShowClient(false)
-    setShowIndustry(false)
     setFilter([])
   }
 

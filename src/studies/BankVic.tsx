@@ -26,7 +26,7 @@ export default {
     color: BANK_VIC, //color
     img,
     redirect: "bv",
-    title: "Bank Vic",
+    title: "BankVic",
 
     //tagging
     capabilites: [Branding___Identity, Strategy, UI___UX],

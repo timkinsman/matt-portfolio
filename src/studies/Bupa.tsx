@@ -24,7 +24,7 @@ export default {
     color: BUPA, //color
     img,
     redirect: "b",
-    title: "BUPA",
+    title: "Bupa",
 
     //tagging
     capabilites: [Strategy, UI___UX],

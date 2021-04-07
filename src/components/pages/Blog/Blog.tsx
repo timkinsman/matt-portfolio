@@ -10,7 +10,7 @@ function Blog() {
       <div className="global-container">
         <Navbar selected="stuff" />
         <div className="global-inner-container">
-          <p className="global-title">Stuff</p>
+          <p className="global-title">Other Work</p>
           <Footer />
         </div>
       </div>
