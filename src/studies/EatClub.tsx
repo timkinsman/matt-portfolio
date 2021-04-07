@@ -24,7 +24,7 @@ export default {
     color: EAT_CLUB, //color
     img,
     redirect: "ec",
-    title: "Eat Club",
+    title: "EatClub",
 
     //tagging
     capabilites: [Strategy, UI___UX],

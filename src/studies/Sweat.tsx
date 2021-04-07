@@ -24,7 +24,7 @@ export default {
     color: SWEAT, //color
     img,
     redirect: "s",
-    title: "Sweat",
+    title: "SWEAT",
 
     //tagging
     capabilites: [Strategy, UI___UX],

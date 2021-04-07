@@ -11,7 +11,7 @@ function Work() {
       <div className="global-container">
         <Navbar selected="work" />
         <div className="global-inner-container">
-          <p className="global-title">Work</p>
+          <p className="global-title">Case Studies</p>
           <CardView id="null" />
           <Footer />
         </div>

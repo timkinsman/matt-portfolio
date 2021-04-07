@@ -13,7 +13,7 @@ function WhatIDo() {
       <div className="global-container">
         <Navbar selected="whatido" />
         <div className="global-inner-container">
-          <p className="global-title">What I Do</p>
+          <p className="global-title">What I do</p>
           
           <div className="global-wrapper">
             <div className={styles["whatido-grid-two"]}>

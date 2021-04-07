@@ -20,13 +20,13 @@ function Footer() {
             <p className={styles["footer-p"]}>Go to</p>
             <div className={styles["footer-grid"]}>
               <Link className={styles["footer-a"]} to="/"><span className={styles["footer-span"]}>Home</span></Link>
-              <Link className={styles["footer-a"]} to="/whatido"><span className={styles["footer-span"]}>What I Do</span></Link>
-              <Link className={styles["footer-a"]} to="/work"><span className={styles["footer-span"]}>Work</span></Link>
-              {/*<Link className={styles["footer-a"]} to="/blog">Stuff</Link>*/}
-              <Link className={styles["footer-a"]} to="/about"><span className={styles["footer-span"]}>About Me</span></Link>
+              <Link className={styles["footer-a"]} to="/casestudies"><span className={styles["footer-span"]}>Case Studies</span></Link>
+              <Link className={styles["footer-a"]} to="/about"><span className={styles["footer-span"]}>About me</span></Link>
+              <Link className={styles["footer-a"]} to="/whatido"><span className={styles["footer-span"]}>What I do</span></Link>
+              <Link className={styles["footer-a"]} to="/otherwork">Other Work</Link>
               <Link className={styles["footer-a"]} to="/contact"><span className={styles["footer-span"]}>Contact</span></Link>
             </div>
-            <p className={styles["footer-small"]}>Developement by <span className={styles["footer-span"]}><a className={styles["footer-tim"]} href="https://timkinsman.com" target="_blank">Tim Kinsman</a></span></p>
+            <p className={styles["footer-small"]}>Developed by <span className={styles["footer-span"]}><a className={styles["footer-tim"]} href="https://timkinsman.com" target="_blank">Tim Kinsman</a></span></p>
           </div>
           <div>
             <p className={styles["footer-p"]}>Get in touch</p>
