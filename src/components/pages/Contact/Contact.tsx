@@ -24,7 +24,7 @@ function Contact() {
               </div>
               <div>
                 <p className="global-header">Phone</p>
-                <p className="global-content">+61 424 792 708</p>
+                <a className={styles["contact-a"]} href="tel:+61424792708" target="_blank">+61 424 792 708</a>
               </div>
               <div>
                 <p className="global-header">Enquiries</p>

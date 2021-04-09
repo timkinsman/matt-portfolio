@@ -17,6 +17,7 @@ const Study = (props: any) => {
 
     useEffect(() => { //reset
         $("#divMore").show()
+        $("#divLess").hide()
         setLimit(2)
     }, [props.location.state])
 
@@ -55,7 +56,14 @@ const Study = (props: any) => {
 
     const renderMore = () => {
         $("#divMore").hide()
+        $("#divLess").show()
         setLimit(studies.length)
+    }
+
+    const renderLess = () => {
+        $("#divMore").show()
+        $("#divLess").hide()
+        setLimit(2)
     }
 
     return (
@@ -171,8 +179,12 @@ const Study = (props: any) => {
                     </div>
                 </div>
 
-                <div id="divMore" className="global-wrapper" style={{paddingTop: '100px', justifyContent: "center", display: "flex"}}>
+                <div id="divMore" className="global-wrapper" style={{justifyContent: "center", display: "flex"}}>
                     <a onClick={renderMore} className="global-link global-header">Show more case studies</a>
+                </div>
+
+                <div id="divLess" className="global-wrapper" style={{justifyContent: "center", display: "flex"}}>
+                    <a onClick={renderLess} className="global-link global-header">Show Less case studies</a>
                 </div>
 
                 <Footer />

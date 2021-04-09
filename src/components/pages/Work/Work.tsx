@@ -12,6 +12,7 @@ function Work() {
         <Navbar selected="work" />
         <div className="global-inner-container">
           <p className="global-title">Case Studies</p>
+          <p className="global-content">With over six years of experience in the industry, I have been fortunate enough to work with 25+ brands. Endeavouring to produce solutions to problems that enable and inspire others.</p>
           <CardView id="null" />
           <Footer />
         </div>

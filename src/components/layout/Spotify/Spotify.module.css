@@ -4,6 +4,8 @@
     position: absolute;
     left: 200px;
     bottom: 0;
+    align-items: center;
+    display: flex;
 }
 
 .spotify-span {

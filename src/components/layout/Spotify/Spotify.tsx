@@ -26,7 +26,7 @@ function Spotify() {
 
   return (
     <div className={styles["spotify-container"]}>
-        <FontAwesomeIcon icon={faSpotify} style={{color: '#1DB954'}} />
+        <FontAwesomeIcon icon={faSpotify} style={{color: '#1ed760', fontSize: '30px'}} />
         <span className={styles["spotify-span"]}><span>Currently listening to </span><span className={styles["spotify-current"]}>Blush, Vynehall</span></span>
     </div>
   );
