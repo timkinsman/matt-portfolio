@@ -1,12 +1,15 @@
-.home-container {
-    height: 100vh;
+.home-arrow {
+    font-size: 24px;
+    padding: 60px 0;
+    position: absolute;
+    right: 200px;
+    bottom: 0;
+    display: flex;
+    align-items: center;
 }
 
-.home-div {
-    padding: 0 200px;
-    height: -webkit-fill-available;
-    display: flex;
-    flex-direction: column;
+.home-container {
+    height: 100vh;
 }
 
 .home-content {
@@ -14,29 +17,9 @@
     margin: auto;
 }
 
-.home-text {
-    font-size: 40px;
-}
-
-.home-link {
-    border-bottom: 3px solid rgba(255, 255, 255, 0);
-    opacity: 0.4;
-    text-decoration: none;
-    transition: opacity 1s, border-bottom 1s;
-}
-
-.home-link:hover {
-    border-bottom: 3px solid #fff;
-    opacity: 1;
-    transition: opacity 1s, border-bottom 1s;
-}
-
-.home-arrow {
-    font-size: 24px;
-    padding: 30px 0;
-    position: absolute;
-    right: 200px;
-    bottom: 0;
+.home-div {
+    padding: 0 200px;
+    height: -webkit-fill-available;
     display: flex;
-    align-items: center;
+    flex-direction: column;
 }

@@ -6,7 +6,7 @@ import styles from './Education.module.css'
 function Education() {
   return (
     <div className="global-wrapper">
-        <p className="global-header">Education</p>
+        <h3>Education</h3>
         <div className={styles["education-space-between"]}>
           <Item emoji="" header="St. Michael's College" content="Year 8 - Year 12" footer="January 2005 - December 2010" />
           <Item emoji="" header="TAFE" content="Certificate IV Visual Arts" footer="January 2011 - December 2011" />

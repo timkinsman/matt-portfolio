@@ -40,17 +40,18 @@ function Home() {
           <Navbar selected="home" />
 
           <div className={styles["home-content"]}>
-              <p className={styles["home-text"]}>
-                Hello, my name is <Link className={styles["home-link"]} to="/about">Matthew Kinsman</Link>,<br />
+              <p className="global-title">
+                Hello, my name is <Link className="global-border-thick" to="/about">Matthew Kinsman</Link>,<br />
                 I’m a multi-disciplinary experience<br />
                 designer currently living in Melbourne<br />
-                and working at <a className={styles["home-link"]} href="https://versa.agency" target="_blank">Versa Agency</a>.
-              </p>
+                and working at <a className="global-border-thick" href="https://versa.agency" target="_blank">Versa Agency</a>.
+              </p> 
           </div>
 
           <Spotify />
+          
           <div className={styles["home-arrow"]}>
-            <p className="global-link" onClick={() => handleOnClick("#two")}><img src={arrow} alt="🡣" /></p>
+            <a onClick={() => handleOnClick("#two")}><img src={arrow} /></a>
           </div>
         </div>
       </div>
@@ -62,9 +63,9 @@ function Home() {
 
       <div style={{padding: '0 457px'}}>
         <CardView id="six" />
-          <Clients />
-          <Awards />
-          <Testimonials />
+        <Clients />
+        <Awards />
+        <Testimonials />
         <Footer />
       </div>
     </div>

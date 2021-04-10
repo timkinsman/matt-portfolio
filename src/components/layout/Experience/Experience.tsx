@@ -6,8 +6,8 @@ import styles from './Experience.module.css'
 function Experience() {
   return (
     <div className="global-wrapper">
-      <p className="global-header">Experience</p>
-      <div className={styles["experience-space-between"]}>
+      <h3>Experience</h3>
+      <div className={styles["experience-grid"]}>
         <Item emoji="" header="Collect" content="Intern Graphic Designer" footer="March 2015 - May 2015" />
         <Item emoji="" header="Sweat" content="Graphic Designer" footer="July 2015 - January 2016" />
         <Item emoji="" header="Sweat" content="Senior Graphic Designer" footer="January 2016 - February 2018" />

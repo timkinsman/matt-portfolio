@@ -5,7 +5,7 @@ import { faSpotify } from '@fortawesome/free-brands-svg-icons'
 
 import styles from './Spotify.module.css'
 
-import axios from 'axios';
+//import axios from 'axios';
 
 function Spotify() {
   /*useEffect(() => {
@@ -26,8 +26,8 @@ function Spotify() {
 
   return (
     <div className={styles["spotify-container"]}>
-        <FontAwesomeIcon icon={faSpotify} style={{color: '#1ed760', fontSize: '30px'}} />
-        <span className={styles["spotify-span"]}><span>Currently listening to </span><span className={styles["spotify-current"]}>Blush, Vynehall</span></span>
+        <FontAwesomeIcon icon={faSpotify} className={styles["spotify-icon"]} />
+        <h3>Currently listening to <a className="global-border-thin">Blush, Vynehall</a></h3>
     </div>
   );
 }

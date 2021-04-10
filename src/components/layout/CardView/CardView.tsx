@@ -126,7 +126,7 @@ function CardView(props: {id: string}) {
 
   const renderMap = (arr: Array<string>) => {
     return (
-      <div className={styles["card-view-filter"]}>
+      <div className={`${styles["card-view-filter"]} global-fadein`}>
         {arr.map((str: any) => {
           return (
             <div>
@@ -166,13 +166,7 @@ function CardView(props: {id: string}) {
             {filterApply.map((filter: string) => {
               return (
                 <div className={styles["card-view-filter-apply-div"]}  onClick={() => setFilterApply(filterApply.filter(e => e !== filter))}>
-                  <a style={{
-                    display: 'flex',
-                    alignItems: 'center'
-                  }}>{filter}<span style={{
-                    padding: '0 10px 0 15px',
-                    fontSize: '12px'
-                  }}>✕</span></a>
+                  <p className={styles["card-view-filter-p"]}>{filter} ✕</p>
                 </div>
               )
             })}
@@ -185,8 +179,8 @@ function CardView(props: {id: string}) {
     if(filter.length > 0){
       return (
         <React.Fragment>
-          <a style={{marginLeft: 'auto'}} onClick={handleOnClear}>Clear ✕</a>
-          <a onClick={handleOnApply}>Apply ✓</a>
+          <h4 style={{marginLeft: 'auto'}}><a onClick={handleOnClear}>Clear ✕</a></h4>
+          <h4><a onClick={handleOnApply}>Apply ✓</a></h4>
         </React.Fragment>
       )
     }
@@ -205,12 +199,12 @@ function CardView(props: {id: string}) {
 
   return (
     <div className="global-wrapper" id={props.id}>
-        <div className={styles.div}>
-          <p>Filter by</p>
-          <p>/</p>
-          <a onClick={() => handleOnClick("capability")}>Capability {showCapability === true ? "↑" : "↓"}</a>
-          <a onClick={() => handleOnClick("industry")}>Industry {showIndustry === true ? "↑" : "↓"}</a>
-          <a onClick={() => handleOnClick("client")}>Client {showClient === true ? "↑" : "↓"}</a>
+        <div className={styles["card-view-filter-by"]}>
+          <h4>Filter by</h4>
+          <h4>/</h4>
+          <h4><a onClick={() => handleOnClick("capability")}>Capability {showCapability === true ? "↑" : "↓"}</a></h4>
+          <h4><a onClick={() => handleOnClick("industry")}>Industry {showIndustry === true ? "↑" : "↓"}</a></h4>
+          <h4><a onClick={() => handleOnClick("client")}>Client {showClient === true ? "↑" : "↓"}</a></h4>
           {renderOptions()}
         </div>
         {render()}

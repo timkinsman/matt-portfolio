@@ -4,6 +4,10 @@ import './index.css';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 
+import './fonts//Moderat-Light.ttf';
+import './fonts//Moderat-Regular.ttf';
+import './fonts//Moderat-Thin.ttf';
+
 ReactDOM.render(
   <React.StrictMode>
     <App />

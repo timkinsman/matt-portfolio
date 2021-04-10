@@ -16,15 +16,13 @@ function Panel(props: any) {
   return (
     <div className={styles["panel-container"]} style={{background: props.study.color}} id={props.id}>
         <div className={styles["panel-left"]}>
-            <p className={styles["panel-header"]}>{props.study.title}</p>
-            <p className={styles["panel-body"]}>
-              {props.study.slogan}
-            </p>
-            <Link className={styles["panel-link"]} to={{pathname: '/study', hash: `#${props.study.redirect}`, state: { study: props.study }}}>View Case Study →</Link>
+            <h4>{props.study.title}</h4>
+            <h1>{props.study.slogan}</h1>
+            <h4><Link className="global-border-thin" to={{pathname: '/study', hash: `#${props.study.redirect}`, state: { study: props.study }}}>View Case Study →</Link></h4>
         </div>
         <div style={{position: 'relative'}}>
           <div className={styles["panel-arrow"]}>
-            <p className="global-link" onClick={() => handleOnClick(`#${props.next}`)}><img src={arrow} alt="🡣" /></p>
+            <a className="global-arrow" onClick={() => handleOnClick(`#${props.next}`)}><img src={arrow} /></a>
           </div>
         </div>
     </div>

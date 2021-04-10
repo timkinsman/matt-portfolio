@@ -1,5 +1,5 @@
-.experience-space-between {
+.experience-grid {
     display: grid;
-    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-columns: 1fr 1fr 1fr;
     row-gap: 30px;
 }

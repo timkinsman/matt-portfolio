@@ -1,31 +1,14 @@
-.testimonials-header {
-    font-size: 24px;
-}
-
-.testimonials-content {
-    font-size: 32px;
-}
-
-.testimonials-footer > p {
-    opacity: 0.8;
-    font-size: 16px;
-}
-
 .icon {
-    color: #ffffff;
     font-size: 10px;
-    opacity: 0.4;
-    transition: opacity 1s;
     margin: 0 12px;
-}
-
-.icon:hover {
-    cursor: pointer;
-    transition: opacity 1s;
-    opacity: 1;
 }
 
 .testimonials-container {
     display: flex;
     align-items: center;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: 10fr 2fr;
 }

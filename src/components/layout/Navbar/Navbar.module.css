@@ -1,41 +1,14 @@
 .navbar-container {
     display: flex;
-    padding: 60px 0;
+    padding: 36px 0;
     position: absolute;
     left: 200px;
     right: 200px;
     top: 0;
 }
 
-.navbar-link {
-    border-bottom: 1px solid rgba(255, 255, 255, 0);
-    font-size: 24px;
-    opacity: 0.4;
-    text-decoration: none;
-    transition: opacity 1s, border-bottom 1s;
-}
-
-.navbar-link:hover {
-    border-bottom: 1px solid #fff;
-    opacity: 1;
-    transition: opacity 1s border-bottom 1s;
-}
-
 .navbar-right {
     display: flex;
     gap: 60px;
     margin-left: auto;
-}
-
-.navbar-selected {
-    border-bottom: 1px solid rgba(255, 255, 255, 0);
-    font-size: 24px;
-    text-decoration: none;
-    opacity: 1;
-    transition: border-bottom 1s;
-}
-
-.navbar-selected:hover {
-    border-bottom: 1px solid #fff;
-    transition: border-bottom 1s;
 }

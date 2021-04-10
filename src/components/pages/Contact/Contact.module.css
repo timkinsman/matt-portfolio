@@ -1,19 +1,4 @@
-.content-space-between {
+.contact-grid {
     display: grid;
-    grid-template-columns: auto auto auto;
-}
-
-.contact-a {
-    opacity: 0.4;
-    text-decoration: none;
-    font-size: 20px;
-    transition: opacity 1s, border-bottom 1s;
-    cursor: pointer;
-    border-bottom: 1px solid rgba(255, 255, 255, 0);
-}
-
-.contact-a:hover {
-    border-bottom: 1px solid #fff;
-    opacity: 1;
-    transition: opacity 1s, border-bottom 1s;
+    grid-template-columns: 1fr 1fr 1fr;
 }

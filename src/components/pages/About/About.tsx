@@ -3,7 +3,6 @@ import React from 'react';
 import Navbar from '../../layout/Navbar/Navbar';
 import Footer from '../../layout/Footer/Footer';
 
-import styles from "./About.module.css";
 import Clients from '../../layout/Clients/Clients';
 import Awards from '../../layout/Awards/Awards';
 import CurriculumVitae from '../../layout/CurriculumVitae/CurriculumVitae';
@@ -19,7 +18,7 @@ function About() {
         <div className="global-inner-container">
           <p className="global-title">About me</p>
           <div className="global-wrapper">
-            <p className={styles["about-quote"]}>“Intuitive design happens when current knowledge is the same as the target knowledge.” – Jarad Spool</p>
+            <h2>“Intuitive design happens when current knowledge is the same as the target knowledge.” – Jarad Spool</h2>
           </div>
           <Bio />
           <Education />

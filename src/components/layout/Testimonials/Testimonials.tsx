@@ -51,13 +51,10 @@ const Testimonials = () => {
         return testimonials.map((testimonial: any) => {
             if(testimonial.id === currTestimonial){
                 return (
-                    <div className="global-fadein" style={{width: '80%'}}>
-                        <div className={styles["testimonials-content"]}>
-                            <p>{testimonial.quote}</p>
-                        </div>
-                        <div className={styles["testimonials-footer"]}>
-                            <p>{testimonial.from}</p>
-                            <p>{testimonial.details}</p>
+                    <div className={styles["testimonials-grid"]}>
+                        <div className="global-fadein">
+                            <h2>{testimonial.quote}</h2>
+                            <p style={{opacity: "0.8"}}>{testimonial.from}<br />{testimonial.details}</p>
                         </div>
                     </div>
                 )
@@ -84,9 +81,7 @@ const Testimonials = () => {
     return (
         <div className="global-wrapper">
             <div className={styles["testimonials-container"]}>
-                <div className="global-header">
-                    <p>Testimonials</p>
-                </div>
+                <h3>Testimonials</h3>
                 <div style={{marginLeft: 'auto'}}>
                     {renderCarousel()}
                 </div>

@@ -10,12 +10,4 @@
 .links-icon {
     font-size: 20px;
     margin: 12px 0;
-    opacity: 0.4;
-    transition: opacity 1s;
-}
-
-.links-icon:hover {
-    cursor: pointer;
-    opacity: 1;
-    transition: opacity 1s;
 }

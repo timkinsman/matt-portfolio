@@ -1,6 +1,13 @@
+@font-face {
+  font-family: "Moderat";
+  src: local("Moderat"),
+    url("./fonts/Moderat-Light.ttf") format("truetype");
+  font-weight: normal;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: Moderat, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -14,11 +21,89 @@ code {
 }
 
 a {
-  color: #ffffff
+  color: #ffffff;
+  opacity: 0.4;
+  text-decoration: none;
+  transition: opacity 1s;
 }
 
 a:focus {
   outline: none;
+}
+
+a:hover {
+  cursor: pointer;
+  opacity: 1 !important;
+  transition: opacity 1s;
+}
+
+a.global-border-thin {
+  border-bottom: 2px solid rgba(255, 255, 255, 0);
+  transition: opacity 1s, border-bottom 1s;
+}
+
+a.global-border-thin:hover {
+  border-bottom: 2px solid rgba(255, 255, 255, 1);
+  transition: opacity 1s, border-bottom 1s;
+}
+
+a.global-border-thick {
+  border-bottom: 4px solid rgba(255, 255, 255, 0);
+  transition: opacity 1s, border-bottom 1s;
+}
+
+a.global-border-thick:hover {
+  border-bottom: 4px solid rgba(255, 255, 255, 1);
+  transition: opacity 1s, border-bottom 1s;
+}
+
+.global-container {
+  padding: 0 200px;
+}
+
+.global-inner-container {
+  padding: 0 257px;
+  padding-top: 212px;
+}
+
+.global-title {
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 80px;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 56px;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 48px;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.global-wrapper {
+  padding: 60px 0;
 }
 
 .global-fadein {
@@ -56,44 +141,4 @@ a:focus {
 @-o-keyframes fadein {
   from { opacity: 0; }
   to   { opacity: 1; }
-}
-
-.global-container {
-  padding: 0 200px;
-}
-
-.global-inner-container {
-  padding: 0 257px;
-  padding-top: 212px;
-}
-
-.global-title {
-  font-size: 60px;
-}
-
-.global-header {
-  font-size: 24px;
-}
-
-.global-content {
-  font-size: 20px;
-}
-
-.global-footer {
-  font-size: 16px;
-}
-
-.global-wrapper {
-  padding: 60px 0;
-}
-
-.global-link {
-  opacity: 0.4;
-  transition: opacity 1s;
-}
-
-.global-link:hover {
-  cursor: pointer;
-  opacity: 1;
-  transition: opacity 1s;
 }

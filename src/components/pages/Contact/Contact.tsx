@@ -13,22 +13,22 @@ function Contact() {
         <div className="global-inner-container">
           <p className="global-title">Contact</p>
           <div className="global-wrapper">
-            <p className="global-header">Get in touch</p>
+            <h3>Get in touch</h3>
             <p className="global-content">If you have any questions or want to collaborate please don't hesitate to get in touch.</p>
           </div>
           <div className="global-wrapper">
-            <div className={styles["content-space-between"]}>
+            <div className={styles["contact-grid"]}>
               <div>
-                <p className="global-header">Email</p>
-                <a className={styles["contact-a"]} href="mailto:hello@matthewkinsman.com">hello@matthewkinsman.com</a>
+                <h3>Email</h3>
+                <h4><a className="global-border-thin" href="mailto:hello@matthewkinsman.com">hello@matthewkinsman.com</a></h4>
               </div>
               <div>
-                <p className="global-header">Phone</p>
-                <a className={styles["contact-a"]} href="tel:+61424792708" target="_blank">+61 424 792 708</a>
+                <h3>Phone</h3>
+                <h4><a className="global-border-thin" href="tel:+61424792708" target="_blank">+61 424 792 708</a></h4>
               </div>
               <div>
-                <p className="global-header">Enquiries</p>
-                <a className={styles["contact-a"]} href="https://www.google.com.au/forms/about/" target="_blank">Client brief form</a>
+                <h3>Enquiries</h3>
+                <h4><a className="global-border-thin" href="https://www.google.com.au/forms/about/" target="_blank">Client brief form</a></h4>
               </div>
             </div>
           </div>

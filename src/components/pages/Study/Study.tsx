@@ -43,10 +43,10 @@ const Study = (props: any) => {
         return (
             <React.Fragment>
                 <div className="global-wrapper">
-                    <p className={`${styles["study-capitalize"]} global-header`}>{which}</p>
+                    <h3 className={styles["study-capitalize"]}>{which}</h3>
                     {study[which].map((content: string) => {
                         return (
-                            <p className="global-content">{content}</p>
+                            <h4 style={{opacity: "0.8"}}>{content}</h4>
                         )
                     })}
                 </div>
@@ -83,12 +83,12 @@ const Study = (props: any) => {
                     <Navbar />
                     <div style={{padding: '0 257px', height: '100vh', display: 'flex'}}>
                         <div className={styles["study-content"]}>
-                            <p className={styles["study-summary"]}>{study.summary}</p>
+                            <h3>{study.summary}</h3>
                         </div>
                     </div>
                     <div style={{position: 'relative'}}>
                         <div className={styles["panel-arrow"]}>
-                            <p className="global-link" onClick={() => handleOnClick('#content')}><img src={arrow} alt="🡣" /></p>
+                            <a className="global-arrow" onClick={() => handleOnClick('#content')}><img src={arrow} /></a>
                         </div>
                     </div>
                 </div>
@@ -98,11 +98,19 @@ const Study = (props: any) => {
                     <p className="global-title">{study.title}</p>
                 </div>
 
-                <div className="global-wrapper">
-                    <div className={styles["study-space-between"]}>
-                        <Item emoji="" header="Industry" content={renderArr(study.industry)} footer="" />
-                        <Item emoji="" header="Capabilites" content={renderArr(study.capabilites)} footer="" />
-                        <Item emoji="" header="Research" content={renderArr(study.researchMethods)} footer="" />
+                
+                <div className={styles["study-space-between"]}>
+                    <div>
+                        <h3>Industry</h3>
+                        <h4 style={{opacity: "0.4"}}>{renderArr(study.industry)}</h4>
+                    </div>
+                    <div>
+                        <h3>Capabilites</h3>
+                        <h4 style={{opacity: "0.4"}}>{renderArr(study.capabilites)}</h4>
+                    </div>
+                    <div>
+                        <h3>Research</h3>
+                        <h4 style={{opacity: "0.4"}}>{renderArr(study.researchMethods)}</h4>
                     </div>
                 </div>
 
@@ -118,8 +126,8 @@ const Study = (props: any) => {
                 {renderContent("challenge")}
 
                 <div className="global-wrapper">
-                    <p className="global-header">Objective</p>
-                    <p className="global-content">{study.objective}</p>
+                    <h3>Objective</h3>
+                    <h4 style={{opacity: "0.8"}}>{study.objective}</h4>
                 </div>
 
                 <div className="global-wrapper">
@@ -131,8 +139,8 @@ const Study = (props: any) => {
                 </div>
 
                 <div className="global-wrapper">
-                    <p className="global-header">Results</p>
-                    <p className="global-content">{study.results}</p>
+                    <h3>Results</h3>
+                    <h4 style={{opacity: "0.8"}}>{study.results}</h4>
                 </div>
 
                 <div className="global-wrapper">
@@ -144,8 +152,8 @@ const Study = (props: any) => {
                 </div>
 
                 <div className="global-wrapper">
-                    <p className="global-header">What I Learnt</p>
-                    <p className="global-content">{study.whatilearnt}</p>
+                    <h3>What I Learnt</h3>
+                    <h4 style={{opacity: "0.8"}}>{study.whatilearnt}</h4>
                 </div>
 
                 <div className="global-wrapper">
@@ -157,26 +165,26 @@ const Study = (props: any) => {
                 </div>
 
                 <div className="global-wrapper">
-                <p className="global-header">Deliverables</p>
+                <h3>Deliverables</h3>
                     <ul style={{paddingLeft: '20px'}}>
                         {study.deliverables !== undefined && study.deliverables.map((deliverable: string) => {
-                            return <li><p className="global-content" style={{margin: '5px 0'}}>{deliverable}</p></li>
+                            return <li><h4 style={{margin: '5px 0'}}>{deliverable}</h4></li>
                         })}
                     </ul>
-                    <p className="global-content">{study.information}</p>
+                    <h4 style={{opacity: "0.8"}}>{study.information}</h4>
                 </div>
 
                 <div className="global-wrapper">
-                    <p className="global-header">Recognition</p>
+                    <h3>Recognition</h3>
                     {study.recognitions !== undefined && study.recognitions.map((recognition: string) => {
-                        return <p className="global-content">{recognition}</p>
+                        return <h4 style={{opacity: "0.8"}}>{recognition}</h4>
                     })}
                 </div>
 
                 <div className="global-wrapper">
-                    <p className="global-header">Credits</p>
+                    <h3>Credits</h3>
                     {study.credits !== undefined && study.credits.map((credit: string) => {
-                        return <p className="global-content">{credit}</p>
+                        return <h4 style={{opacity: "0.8"}}>{credit}</h4>
                     })}
                 </div>
 
@@ -193,11 +201,11 @@ const Study = (props: any) => {
                 </div>
 
                 <div id="divMore" className="global-wrapper" style={{justifyContent: "center", display: "flex"}}>
-                    <a onClick={renderMore} className="global-link global-header">Show more case studies</a>
+                    <h3><a onClick={renderMore}>Show more case studies</a></h3>
                 </div>
 
                 <div id="divLess" className="global-wrapper" style={{justifyContent: "center", display: "flex"}}>
-                    <a onClick={renderLess} className="global-link global-header">Show Less case studies</a>
+                    <h3><a onClick={renderLess}>Show less case studies</a></h3>
                 </div>
 
                 <Footer />

@@ -14,13 +14,10 @@
     margin: auto;
 }
 
-.study-summary {
-    font-size: 32px;
-}
-
 .study-space-between {
     display: grid;
-    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 60px;
 }
 
 .img-div {
@@ -37,7 +34,7 @@
 
 .study-card-view{
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
     grid-gap: 30px;
 }
 

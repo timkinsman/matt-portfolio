@@ -28,7 +28,7 @@ const Clients = () => {
 
     return (
         <div className="global-wrapper">
-            <p className="global-header">Selected Clients</p>
+            <h3>Selected Clients</h3>
             <div style={{position: 'relative'}}>
                 <div className={styles["clients-clients"]}>
                     {firstHalf()}

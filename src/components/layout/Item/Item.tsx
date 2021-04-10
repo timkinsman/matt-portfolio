@@ -13,14 +13,9 @@ function Item(props: any) {
 
     return (
             <div>
-                <div className="global-content">
-                    {renderImg(props.emoji)}
-                    <p>{props.header}</p>
-                </div>
-                <div className={styles["item-content"]}>
-                    <p className="global content">{props.content}</p>
-                    <p className="global footer">{props.footer}</p>
-                </div>
+                {renderImg(props.emoji)}
+                <h4>{props.header}</h4>
+                <p style={{opacity: "0.8"}}>{props.content}<br />{props.footer}</p>
             </div>
     );
 }

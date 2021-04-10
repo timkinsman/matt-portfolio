@@ -1,20 +1,28 @@
 .card {
-    flex: 1 1 45%;
     height: 330px;
     border-radius: 12px;
     transition: background 1s, color 1s;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0) ;
     position: relative;
 }
 
 .card:hover {
     background: #ffffff !important;
-    color: rgba(0, 0, 0, 1);
-    cursor: pointer;
+    color: rgba(0, 0, 0, 1) ;
     transition: background 1s, color 1s;
+}
+
+.card p > a {
+    color: rgba(0, 0, 0, 0) !important;
+    transition: color 1s, opacity 1s;
+}
+
+.card:hover p > a {
+    color: rgba(0, 0, 0, 1) !important;
+    transition: color 1s, opacity 1s;
 }
 
 .card-container {
@@ -30,4 +38,7 @@
     top: 0;
     left: 0;
     padding: 30px;
+    display: flex;
+    flex-direction: column;
+    height: -webkit-fill-available;
 }
