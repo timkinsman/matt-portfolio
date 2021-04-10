@@ -19,10 +19,11 @@
 }
 
 .panel-link {
+    border-bottom: 1px solid rgba(255, 255, 255, 0);
     font-size: 20px;
     opacity: 0.4;
     text-decoration: none;
-    transition: opacity 1s;
+    transition: opacity 1s, border-bottom 1s;
 }
 
 .panel-link:hover {
@@ -30,7 +31,7 @@
     border-bottom: 1px solid #fff;
     font-size: 20px;
     opacity: 1;
-    transition: opacity 1s;
+    transition: opacity 1s, border-bottom 1s;
 }
 
 .panel-arrow {

@@ -23,7 +23,7 @@ function Footer() {
               <Link className={styles["footer-a"]} to="/casestudies"><span className={styles["footer-span"]}>Case studies</span></Link>
               <Link className={styles["footer-a"]} to="/about"><span className={styles["footer-span"]}>About me</span></Link>
               <Link className={styles["footer-a"]} to="/whatido"><span className={styles["footer-span"]}>What I do</span></Link>
-              <Link className={styles["footer-a"]} to="/otherwork">Other work</Link>
+              <Link className={styles["footer-a"]} to="/otherwork"><span className={styles["footer-span"]}>Other work</span></Link>
               <Link className={styles["footer-a"]} to="/contact"><span className={styles["footer-span"]}>Contact</span></Link>
             </div>
             <p className={styles["footer-small"]}>Developed by <span className={styles["footer-span"]}><a className={styles["footer-tim"]} href="https://timkinsman.com" target="_blank">Tim Kinsman</a></span></p>

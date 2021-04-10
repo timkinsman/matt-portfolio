@@ -10,7 +10,7 @@ import googleforms from "./tools-googleforms.svg";
 import googlesheets from "./tools-googlesheets.svg";
 import hotjar from "./tools-hotjar.svg";
 import jira from "./tools-jira.svg";
-import keynote from "./tools-keynote.svg";
+import keynote from "./tools-keynote.png";
 import mailchimp from "./tools-mailchimp.svg";
 import miro from "./tools-miro.svg";
 import mural from "./tools-mural.svg";

@@ -24,7 +24,7 @@
 }
 
 .img-div {
-    height: 457px;
+    height: 557px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,4 +39,14 @@
     display: grid;
     grid-template-columns: auto auto;
     grid-gap: 30px;
+}
+
+.panel-arrow {
+    font-size: 24px;
+    padding: 30px 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 0;
 }

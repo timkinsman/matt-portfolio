@@ -8,16 +8,17 @@
 }
 
 .navbar-link {
+    border-bottom: 1px solid rgba(255, 255, 255, 0);
     font-size: 24px;
     opacity: 0.4;
     text-decoration: none;
-    transition: opacity 1s;
+    transition: opacity 1s, border-bottom 1s;
 }
 
 .navbar-link:hover {
     border-bottom: 1px solid #fff;
     opacity: 1;
-    transition: opacity 1s;
+    transition: opacity 1s border-bottom 1s;
 }
 
 .navbar-right {
@@ -27,11 +28,14 @@
 }
 
 .navbar-selected {
+    border-bottom: 1px solid rgba(255, 255, 255, 0);
     font-size: 24px;
     text-decoration: none;
     opacity: 1;
+    transition: border-bottom 1s;
 }
 
 .navbar-selected:hover {
     border-bottom: 1px solid #fff;
+    transition: border-bottom 1s;
 }

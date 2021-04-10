@@ -2,7 +2,7 @@
     flex: 1 1 45%;
     height: 330px;
     border-radius: 12px;
-    transition: background 1s;
+    transition: background 1s, color 1s;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,8 +14,7 @@
     background: #ffffff !important;
     color: rgba(0, 0, 0, 1);
     cursor: pointer;
-    transition: background 1s;
-    transition: color 1s;
+    transition: background 1s, color 1s;
 }
 
 .card-container {

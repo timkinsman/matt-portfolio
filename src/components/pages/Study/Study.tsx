@@ -10,10 +10,18 @@ import styles from './Study.module.css'
 import studies from '../../../studies'
 import Card from '../../layout/Card/Card'
 
+
+import arrow from '../../../images/arrow-down.svg'
+
 import $ from 'jquery'
 
 const Study = (props: any) => {  
     const [limit, setLimit] = useState(2)
+
+    const handleOnClick = (id: string) => {
+        $('html,body').animate({
+            scrollTop: $(id).offset()?.top}, 'slow');
+      }
 
     useEffect(() => { //reset
         $("#divMore").show()
@@ -72,15 +80,20 @@ const Study = (props: any) => {
         
             <div className={styles["study-container"]} style={{background: study.color}}>
                 <div className={styles["study-div"]}>
-                <Navbar />
+                    <Navbar />
                     <div style={{padding: '0 257px', height: '100vh', display: 'flex'}}>
                         <div className={styles["study-content"]}>
                             <p className={styles["study-summary"]}>{study.summary}</p>
                         </div>
                     </div>
+                    <div style={{position: 'relative'}}>
+                        <div className={styles["panel-arrow"]}>
+                            <p className="global-link" onClick={() => handleOnClick('#content')}><img src={arrow} alt="🡣" /></p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div style={{padding: '0 457px'}}>
+            <div id="content" style={{padding: '0 457px'}}>
                 <div className="global-wrapper">
                     <p className="global-title">{study.title}</p>
                 </div>

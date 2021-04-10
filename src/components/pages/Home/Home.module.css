@@ -19,15 +19,16 @@
 }
 
 .home-link {
+    border-bottom: 3px solid rgba(255, 255, 255, 0);
     opacity: 0.4;
     text-decoration: none;
-    transition: opacity 1s;
+    transition: opacity 1s, border-bottom 1s;
 }
 
 .home-link:hover {
     border-bottom: 3px solid #fff;
     opacity: 1;
-    transition: opacity 1s;
+    transition: opacity 1s, border-bottom 1s;
 }
 
 .home-arrow {
