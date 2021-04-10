@@ -7,7 +7,7 @@ import images from "../../../images/Tools"
 const Tools = () => {
     return (
         <div className="global-wrapper">
-            <p className="global-header">Tools</p>
+            <h3>Tools</h3>
             <div className={styles["tools-tools"]}>
                 {images.map((img) => {
                     return (

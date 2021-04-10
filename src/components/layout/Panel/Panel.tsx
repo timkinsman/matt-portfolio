@@ -22,7 +22,7 @@ function Panel(props: any) {
         </div>
         <div style={{position: 'relative'}}>
           <div className={styles["panel-arrow"]}>
-            <a className="global-arrow" onClick={() => handleOnClick(`#${props.next}`)}><img src={arrow} /></a>
+            <a onClick={() => handleOnClick(`#${props.next}`)}><img src={arrow} /></a>
           </div>
         </div>
     </div>

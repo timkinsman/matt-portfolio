@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Moderat";
   src: local("Moderat"),
-    url("./fonts/Moderat-Light.ttf") format("truetype");
+    url("./fonts/Moderat-Regular.ttf") format("truetype");
   font-weight: normal;
 }
 
@@ -12,7 +12,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #ffffff;
+  color: #ffffff; /* here */
 }
 
 code {
@@ -21,7 +21,7 @@ code {
 }
 
 a {
-  color: #ffffff;
+  color: #ffffff; /* here */
   opacity: 0.4;
   text-decoration: none;
   transition: opacity 1s;
@@ -38,22 +38,22 @@ a:hover {
 }
 
 a.global-border-thin {
-  border-bottom: 2px solid rgba(255, 255, 255, 0);
+  border-bottom: 2px solid rgba(255, 255, 255, 0); /* here */
   transition: opacity 1s, border-bottom 1s;
 }
 
 a.global-border-thin:hover {
-  border-bottom: 2px solid rgba(255, 255, 255, 1);
+  border-bottom: 2px solid rgba(255, 255, 255, 1); /* here */
   transition: opacity 1s, border-bottom 1s;
 }
 
 a.global-border-thick {
-  border-bottom: 4px solid rgba(255, 255, 255, 0);
+  border-bottom: 4px solid rgba(255, 255, 255, 0); /* here */
   transition: opacity 1s, border-bottom 1s;
 }
 
 a.global-border-thick:hover {
-  border-bottom: 4px solid rgba(255, 255, 255, 1);
+  border-bottom: 4px solid rgba(255, 255, 255, 1); /* here */
   transition: opacity 1s, border-bottom 1s;
 }
 

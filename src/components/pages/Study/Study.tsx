@@ -88,7 +88,7 @@ const Study = (props: any) => {
                     </div>
                     <div style={{position: 'relative'}}>
                         <div className={styles["panel-arrow"]}>
-                            <a className="global-arrow" onClick={() => handleOnClick('#content')}><img src={arrow} /></a>
+                            <a onClick={() => handleOnClick('#content')}><img src={arrow} /></a>
                         </div>
                     </div>
                 </div>
