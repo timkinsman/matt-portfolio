@@ -14,7 +14,7 @@ function Contact() {
           <p className="global-title">Contact</p>
           <div className="global-wrapper">
             <h3>Get in touch</h3>
-            <p className="global-content">If you have any questions or want to collaborate please don't hesitate to get in touch.</p>
+            <h4>If you have any questions or want to collaborate please don't hesitate to get in touch.</h4>
           </div>
           <div className="global-wrapper">
             <div className={styles["contact-grid"]}>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircle } from '@fortawesome/free-solid-svg-icons'
@@ -15,7 +15,7 @@ function Pagnation() {
         scrollTop: $(id).offset()?.top}, 'slow');
   }
   
-  document.addEventListener('scroll', function(e) {
+  const onScroll = () => {
     if(_scrollTop("#one", "#two")){
       setCurrent("#one")
     }else if(_scrollTop("#two", "#three")){
@@ -29,7 +29,13 @@ function Pagnation() {
     }else{
       setCurrent("#six")
     }
-  });
+  }
+
+  useEffect(() => {
+    document.addEventListener('scroll', onScroll);
+
+    return () => { window.removeEventListener('scroll', onScroll) } 
+  }, [])
 
   const _scrollTop = (id: string, idNext: string) => {
     const strDocTop = $(document).scrollTop();
