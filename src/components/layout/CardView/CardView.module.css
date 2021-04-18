@@ -1,6 +1,7 @@
 .card-view-filter-by {
     display: flex;
     gap: 30px;
+    padding-bottom: 30px; 
 }
 
 .card-view {

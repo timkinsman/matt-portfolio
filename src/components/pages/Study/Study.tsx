@@ -83,7 +83,7 @@ const Study = (props: any) => {
                     <Navbar />
                     <div style={{padding: '0 257px', height: '100vh', display: 'flex'}}>
                         <div className={styles["study-content"]}>
-                            <h3>{study.summary}</h3>
+                            <h2>{study.summary}</h2>
                         </div>
                     </div>
                     <div style={{position: 'relative'}}>
@@ -200,12 +200,12 @@ const Study = (props: any) => {
                     </div>
                 </div>
 
-                <div id="divMore" className="global-wrapper" style={{justifyContent: "center", display: "flex"}}>
-                    <h3><a onClick={renderMore}>Show more case studies</a></h3>
+                <div id="divMore" className="global-wrapper" style={{justifyContent: "center", display: "flex", paddingTop: '0'}}>
+                    <h3><a onClick={renderMore}>Show more</a></h3>
                 </div>
 
-                <div id="divLess" className="global-wrapper" style={{justifyContent: "center", display: "flex"}}>
-                    <h3><a onClick={renderLess}>Show less case studies</a></h3>
+                <div id="divLess" className="global-wrapper" style={{justifyContent: "center", display: "flex", paddingTop: '0'}}>
+                    <h3><a onClick={renderLess}>Show less</a></h3>
                 </div>
 
                 <Footer />

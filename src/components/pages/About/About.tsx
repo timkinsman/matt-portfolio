@@ -17,7 +17,7 @@ function About() {
         <Navbar selected="about" />
         <div className="global-inner-container">
           <p className="global-title">About me</p>
-          <div className="global-wrapper">
+          <div className="global-wrapper" style={{paddingBottom: '0'}}>
             <h2>“Intuitive design happens when current knowledge is the same as the target knowledge.” – Jarad Spool</h2>
           </div>
           <Bio />

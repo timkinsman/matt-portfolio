@@ -21,6 +21,7 @@ import {
 } from '../tagging/researchMethods'
 
 export default {
+    cardSummary: "A 10 year contact supporting the development of the City's future core web framework.. a custom pattern library supporting 14 sites.",
     color: HOMELY, //color
     img,
     redirect: "h",
@@ -65,7 +66,6 @@ export default {
     objective: "I played the principal role of successfully leading the design team whilst forming strong relations with the engineer developers to collaboratively produce the product. Very tight deadlines were needed to be met in an lean working environment, to allow for quick yet high quality succession of results. The general style would change significantly given the rebrand as we moved from one singular trainer to a more encompassing, marketable brand which would house numerous trainers and workout types. This style is evidently more cleaner and minimalistic, allowing it to be characterised by the trainers and the personality of their training styles.",
     recognitions: ["2016 Apple Watch App of the Year"],
     results: "I played the principal role of successfully leading the design team whilst forming strong relations with the engineer developers to collaboratively produce the product. Very tight deadlines were needed to be met in an lean working environment, to allow for quick yet high quality succession of results. The general style would change significantly given the rebrand as we moved from one singular trainer to a more encompassing, marketable brand which would house numerous trainers and workout types. This style is evidently more cleaner and minimalistic, allowing it to be characterised by the trainers and the personality of their training styles.",
-    shortSummary: "A 10 year contract supporting the development of the City's future core web framework, a custom pattern library supporting 14 sites.",
     slogan: "For the everyday Member, BankVic's existing website was confusing and complex.",
     summary: "The City of Port Phillip is an industry leader in both the technology and fitness sectors. Owner of the #1 ranked grossing health and fitness App in the world, Sweat connects women globally by providing them with the tools they need to shape their best and healthiest life.",
     whatILearnt: "I played the principal role of successfully leading the design team whilst forming strong relations with the engineer developers to collaboratively produce the product. Very tight deadlines were needed to be met in an lean working environment, to allow for quick yet high quality succession of results."

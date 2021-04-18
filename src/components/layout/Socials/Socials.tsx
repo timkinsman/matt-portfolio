@@ -7,7 +7,7 @@ import images from "../../../images/Socials"
 const Socials = () => {
     return (
         <div className="global-wrapper">
-            <p className="global-header">Socials</p>
+            <h3>Socials</h3>
             <div className={styles["socials-socials"]}>
                 {images.map((img) => {
                     return (

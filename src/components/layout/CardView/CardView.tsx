@@ -28,7 +28,7 @@ import {
   Health,
   Hospitality___Leisure,
   Legal,
-  Manufacturing___Industrials,
+  Manufacturing,
   NGO___Not_for_profit,
   Publishing,
   Real_Estate,
@@ -74,7 +74,7 @@ function CardView(props: {id: string}) {
     Health,
     Hospitality___Leisure,
     Legal,
-    Manufacturing___Industrials,
+    Manufacturing,
     NGO___Not_for_profit,
     Publishing,
     Real_Estate,
@@ -165,8 +165,8 @@ function CardView(props: {id: string}) {
         <div className={styles["card-view-filter-apply"]}>
             {filterApply.map((filter: string) => {
               return (
-                <div className={styles["card-view-filter-apply-div"]}  onClick={() => setFilterApply(filterApply.filter(e => e !== filter))}>
-                  <p className={styles["card-view-filter-p"]}>{filter} ✕</p>
+                <div style={{padding: '0 16px'}} className={styles["card-view-filter-apply-div"]}  onClick={() => setFilterApply(filterApply.filter(e => e !== filter))}>
+                  <p className={styles["card-view-filter-p"]}>{filter} <span style={{paddingLeft: '8px'}}>✕</span></p>
                 </div>
               )
             })}
@@ -199,17 +199,17 @@ function CardView(props: {id: string}) {
 
   return (
     <div className="global-wrapper" id={props.id}>
-        <div className={styles["card-view-filter-by"]}>
+        <div className={styles["card-view-filter-by"]} style={{paddingBottom: '30px'}}>
           <h4>Filter by</h4>
           <h4>/</h4>
-          <h4><a onClick={() => handleOnClick("capability")}>Capability {showCapability === true ? "↑" : "↓"}</a></h4>
-          <h4><a onClick={() => handleOnClick("industry")}>Industry {showIndustry === true ? "↑" : "↓"}</a></h4>
-          <h4><a onClick={() => handleOnClick("client")}>Client {showClient === true ? "↑" : "↓"}</a></h4>
+          <h4><a onClick={() => handleOnClick("capability")} style={{opacity: showCapability === true ? 1 : 0.4}}>Capability {showCapability === true ? "↑" : "↓"}</a></h4>
+          <h4><a onClick={() => handleOnClick("industry")} style={{opacity: showIndustry === true ? 1 : 0.4}}>Industry {showIndustry === true ? "↑" : "↓"}</a></h4>
+          <h4><a onClick={() => handleOnClick("client")} style={{opacity: showClient === true ? 1 : 0.4}}>Client {showClient === true ? "↑" : "↓"}</a></h4>
           {renderOptions()}
         </div>
         {render()}
         {renderFilterApply()}
-        <div className={styles["card-view"]}>
+        <div className={styles["card-view"]} style={{paddingTop: '0'}}>
           {study.map(study => {
             return renderStudy(study)
           })}
