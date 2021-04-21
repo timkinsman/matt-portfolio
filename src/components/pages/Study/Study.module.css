@@ -1,9 +1,12 @@
 .study-container {
     height: 100vh;
+    width: -webkit-fill-available;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .study-div {
-    padding: 0 200px;
     height: -webkit-fill-available;
     display: flex;
     flex-direction: column;
@@ -46,4 +49,5 @@
     align-items: center;
     position: absolute;
     right: 0;
+    padding-right: 60px;
 }

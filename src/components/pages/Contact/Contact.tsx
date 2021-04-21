@@ -8,7 +8,6 @@ import styles from "./Contact.module.css";
 function Contact() {
   return (
     <div className="global-fadein">
-      <div className="global-container">
         <Navbar selected="contact" />
         <div className="global-inner-container">
           <p className="global-title">Contact</p>
@@ -35,7 +34,6 @@ function Contact() {
           <Socials />
           <Footer />
         </div>
-      </div>
     </div>
   );
 }

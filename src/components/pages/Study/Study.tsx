@@ -81,19 +81,17 @@ const Study = (props: any) => {
             <div className={styles["study-container"]} style={{background: study.color}}>
                 <div className={styles["study-div"]}>
                     <Navbar />
-                    <div style={{padding: '0 257px', height: '100vh', display: 'flex'}}>
+                    <div className="global-inner-container" style={{paddingTop: '0', margin: 'auto'}}>
                         <div className={styles["study-content"]}>
                             <h2>{study.summary}</h2>
                         </div>
                     </div>
-                    <div style={{position: 'relative'}}>
-                        <div className={styles["panel-arrow"]}>
-                            <a onClick={() => handleOnClick('#content')}><img src={arrow} /></a>
-                        </div>
+                    <div className={styles["panel-arrow"]}>
+                        <a onClick={() => handleOnClick('#content')}><img src={arrow} /></a>
                     </div>
                 </div>
             </div>
-            <div id="content" style={{padding: '0 457px'}}>
+            <div id="content" className="global-inner-container" style={{paddingTop: '0'}}>
                 <div className="global-wrapper">
                     <p className="global-title">{study.title}</p>
                 </div>

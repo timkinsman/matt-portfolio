@@ -61,7 +61,7 @@ function Home() {
       {renderPanel(10, "four", "five") /**opencourts */}
       {renderPanel(1, "five", "six") /**beyondblue */}
 
-      <div style={{padding: '0 457px'}}>
+      <div className="global-inner-container">
         <CardView id="six" />
         <Clients />
         <Awards />

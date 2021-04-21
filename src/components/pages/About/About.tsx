@@ -13,7 +13,6 @@ import Experience from '../../layout/Experience/Experience';
 function About() {
   return (
     <div className="global-fadein">
-      <div className="global-container">
         <Navbar selected="about" />
         <div className="global-inner-container">
           <p className="global-title">About me</p>
@@ -28,7 +27,6 @@ function About() {
           <CurriculumVitae />
           <Footer />
         </div>
-      </div>
     </div>
   );
 }

@@ -1,10 +1,10 @@
 .navbar-container {
     display: flex;
-    padding: 36px 0;
+    padding: 36px 60px;
     position: absolute;
-    left: 200px;
-    right: 200px;
     top: 0;
+    left: 0;
+    width: -webkit-fill-available;
 }
 
 .navbar-right {
