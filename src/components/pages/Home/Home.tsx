@@ -35,23 +35,23 @@ function Home() {
       <Links />
       <Pagnation />
       
-      <div className={styles["home-container"]} id="one">
+      <div className="global-main-container" style={{height: '100vh'}} id="one">
         <div className={styles["home-div"]}>
           <Navbar selected="home" />
 
-          <div className={styles["home-content"]}>
-              <p className="global-title">
-                Hello, my name is <Link className="global-border-thick" to="/about">Matthew Kinsman</Link>,<br />
-                I’m a multi-disciplinary experience<br />
-                designer currently living in Melbourne<br />
-                and working at <a className="global-border-thick" href="https://versa.agency" target="_blank">Versa Agency</a>.
-              </p> 
-          </div>
+          <h1 style={{margin: 'auto 0'}}>
+            Hello, my name is <Link className="global-border-thick" to="/about">Matthew Kinsman</Link>,<br />
+            I’m a multi-disciplinary experience<br />
+            designer currently living in Melbourne<br />
+            and working at <a className="global-border-thick" href="https://versa.agency" target="_blank">Versa Agency</a>.
+          </h1> 
 
-          <Spotify />
-          
-          <div className={styles["home-arrow"]}>
-            <a onClick={() => handleOnClick("#two")}><img src={arrow} /></a>
+          <div className={styles["home-panel-bottom"]}>
+            <Spotify />
+            
+            <div className={styles["home-arrow"]}>
+              <a onClick={() => handleOnClick("#two")}><img src={arrow} /></a>
+            </div>
           </div>
         </div>
       </div>
@@ -61,7 +61,7 @@ function Home() {
       {renderPanel(10, "four", "five") /**opencourts */}
       {renderPanel(1, "five", "six") /**beyondblue */}
 
-      <div className="global-inner-container">
+      <div className="global-container">
         <CardView id="six" />
         <Clients />
         <Awards />

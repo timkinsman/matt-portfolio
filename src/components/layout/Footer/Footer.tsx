@@ -29,7 +29,7 @@ function Footer() {
               </div>
             </div>
             <div>
-              <h3>Get in touch</h3>
+              <h3>Social</h3>
               <div className={styles["footer-grid"]}>
                 <h4><a href="mailto:mskinsm@gmail.com" target="_blank" className="global-border-thin">Email</a></h4>
                 <h4><a href="https://www.facebook.com/mskinsm/" target="_blank" className="global-border-thin">Facebook</a></h4>

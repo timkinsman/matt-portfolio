@@ -53,8 +53,10 @@ const Testimonials = () => {
                 return (
                     <div className={styles["testimonials-grid"]}>
                         <div className="global-fadein">
-                            <h2>{testimonial.quote}</h2>
-                            <p style={{opacity: "0.8"}}>{testimonial.from}<br />{testimonial.details}</p>
+                            <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'flex-start'}}>
+                                <h2>{testimonial.quote}</h2>
+                                <p style={{opacity: "0.8"}}>{testimonial.from}<br />{testimonial.details}</p>
+                            </div>
                         </div>
                     </div>
                 )

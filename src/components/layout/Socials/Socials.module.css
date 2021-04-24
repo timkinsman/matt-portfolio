@@ -6,12 +6,35 @@
 .socials-img {
     height: 150px;
     width: 150px;
+    opacity: 1;
+    transition: opacity 1s;
+    z-index: 1;
+}
+
+.socials-img:hover{
+    opacity: 0;
+    transition: opacity 1s;
+    
+}
+
+.socials-img:hover + .socials-img-text{
+    opacity: 1;
+    transition: opacity 1s;
+    
+}
+
+.socials-img-text{
+    opacity: 0;
+    transition: opacity 1s;
+    position: absolute;
+    text-decoration: underline;
 }
 
 .socials-img-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .socials-p{

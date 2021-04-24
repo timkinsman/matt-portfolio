@@ -12,7 +12,8 @@ const Tools = () => {
                 {images.map((img) => {
                     return (
                         <div className={styles["tools-img-container"]}>
-                            <img src={img} alt="img.svg" className={styles["tools-img"]} />
+                            <img src={img.img} alt="img.svg" className={styles["tools-img"]} />
+                            <p className={styles["tools-img-text"]}>{img.text}</p>
                         </div>
                     )
                 })}

@@ -1,9 +1,9 @@
 .navbar-container {
     display: flex;
-    padding: 36px 60px;
-    position: absolute;
+    height: 120px;
     top: 0;
     left: 0;
+    align-items: center;
     width: -webkit-fill-available;
 }
 

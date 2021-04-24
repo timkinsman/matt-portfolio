@@ -10,16 +10,16 @@ import thedots from "./social-thedots.svg";
 import twitter from "./social-twitter.svg";
 
 const images = [
-    behance,
-    discord,
-    dribbble,
-    facebook,
-    linkedin,
-    loop,
-    medium,
-    pinterest,
-    thedots,
-    twitter
+    {img: behance, text: 'Behance'},
+    {img: discord, text: "Discord"},
+    {img: dribbble, text: "Dribbble"},
+    {img: facebook, text: "Facebook"},
+    {img: linkedin, text: "LinkedIn"},
+    {img: loop, text: "Loop"},
+    {img: medium, text: "Medium"},
+    {img: pinterest, text: "Pinterest"},
+    {img: thedots, text: "The Dots"},
+    {img: twitter, text: 'Twitter'}
 ]
 
 export default images;

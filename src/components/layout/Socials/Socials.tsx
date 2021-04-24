@@ -12,7 +12,8 @@ const Socials = () => {
                 {images.map((img) => {
                     return (
                         <div className={styles["socials-img-container"]}>
-                            <img src={img} alt="img.svg" className={styles["socials-img"]} />
+                            <img src={img.img} alt="img.svg" className={styles["socials-img"]} />
+                            <p className={styles["socials-img-text"]}>{img.text}</p>
                         </div>
                     )
                 })}

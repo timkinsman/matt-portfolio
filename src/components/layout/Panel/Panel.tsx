@@ -15,16 +15,16 @@ function Panel(props: any) {
 
   return (
     <div className={styles["panel-container"]} style={{background: props.study.color}} id={props.id}>
+      <div className="global-main-container" style={{display: 'flex', alignItems: 'flex-end', flexDirection: 'row'}}>
         <div className={styles["panel-left"]}>
             <h4>{props.study.title}</h4>
             <h1>{props.study.slogan}</h1>
             <h4><Link className="global-border-thin" to={{pathname: '/study', hash: `#${props.study.redirect}`, state: { study: props.study }}}>View Case Study →</Link></h4>
         </div>
-        <div style={{position: 'relative'}}>
-          <div className={styles["panel-arrow"]}>
-            <a onClick={() => handleOnClick(`#${props.next}`)}><img src={arrow} /></a>
-          </div>
+        <div className={styles["panel-arrow"]}>
+          <a onClick={() => handleOnClick(`#${props.next}`)}><img src={arrow} /></a>
         </div>
+      </div>
     </div>
   );
 }

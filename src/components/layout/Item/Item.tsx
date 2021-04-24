@@ -10,18 +10,19 @@ function Item(props: any) {
         return null
     }
 
-    const renderTitle = (link: string) => {
+    const renderLink = (link: string) => {
         if(link){
-            return <h4 style={{marginBottom: '0'}}><a href={link} target="_blank" style={{marginBottom: '0'}}>{props.header}</a></h4>
+            return <span><a href={link} target="_blank">View website →</a></span>
         }
-        return <h4 style={{marginBottom: '0'}}>{props.header}</h4>
+        return null
     }
 
     return (
             <div>
                 {renderImg(props.emoji)}
-                {renderTitle(props.link)}
-                <p style={{margin: '5px 0', opacity: "0.8"}}>{props.content}<br />{props.footer}</p>
+                <h4 style={{margin: '4px 0'}}>{props.header}</h4>
+                <p style={{opacity: "0.8"}}>{props.content}<br />{props.footer}</p>
+                {renderLink(props.link)}
             </div>
     );
 }

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import Footer from '../../layout/Footer/Footer'
-import Item from '../../layout/Item/Item'
 import Links from '../../layout/Links/Links'
 import Navbar from '../../layout/Navbar/Navbar'
 import Home from '../Home/Home'
@@ -74,14 +73,18 @@ const Study = (props: any) => {
         setLimit(2)
     }
 
+    const reorder = (data: Array<any>, index: number) => {
+        return data.slice(index).concat(data.slice(0, index))
+    };
+
     return (
         <div className="global-fadein">
             <Links />
         
             <div className={styles["study-container"]} style={{background: study.color}}>
-                <div className={styles["study-div"]}>
+                <div className="global-main-container">
                     <Navbar />
-                    <div className="global-inner-container" style={{paddingTop: '0', margin: 'auto'}}>
+                    <div className="global-container" style={{paddingTop: '0', margin: 'auto'}}>
                         <div className={styles["study-content"]}>
                             <h2>{study.summary}</h2>
                         </div>
@@ -91,7 +94,7 @@ const Study = (props: any) => {
                     </div>
                 </div>
             </div>
-            <div id="content" className="global-inner-container" style={{paddingTop: '0'}}>
+            <div id="content" className="global-container" style={{paddingTop: '0'}}>
                 <div className="global-wrapper">
                     <p className="global-title">{study.title}</p>
                 </div>
@@ -192,8 +195,8 @@ const Study = (props: any) => {
 
                 <div className="global-wrapper">
                     <div className={styles["study-card-view"]}>
-                        {studies.slice(0, limit).map(study => {
-                            return <Card study={study} />
+                        {reorder(studies, studies.findIndex(pstudy => pstudy == study) - 1).filter(pstudy => pstudy !== study).slice(0, limit).map(pstudy => {
+                            return <Card study={pstudy} />
                         })}
                     </div>
                 </div>

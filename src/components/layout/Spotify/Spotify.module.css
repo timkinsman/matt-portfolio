@@ -1,8 +1,4 @@
 .spotify-container {
-    padding: 36px 0;
-    position: absolute;
-    left: 200px;
-    bottom: 0;
     align-items: center;
     display: flex;
 }

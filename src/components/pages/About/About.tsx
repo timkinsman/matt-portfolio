@@ -13,8 +13,9 @@ import Experience from '../../layout/Experience/Experience';
 function About() {
   return (
     <div className="global-fadein">
+      <div className="global-main-container">
         <Navbar selected="about" />
-        <div className="global-inner-container">
+        <div className="global-container">
           <p className="global-title">About me</p>
           <div className="global-wrapper" style={{paddingBottom: '0'}}>
             <h2>“Intuitive design happens when current knowledge is the same as the target knowledge.” – Jarad Spool</h2>
@@ -27,6 +28,7 @@ function About() {
           <CurriculumVitae />
           <Footer />
         </div>
+      </div>
     </div>
   );
 }

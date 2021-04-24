@@ -10,8 +10,9 @@ import images from "../../../images/Emojis"
 function WhatIDo() {
   return (
     <div className="global-fadein">
+      <div className="global-main-container">
         <Navbar selected="whatido" />
-        <div className="global-inner-container">
+        <div className="global-container">
           <p className="global-title">What I do</p>
           
           <div className="global-wrapper">
@@ -90,6 +91,7 @@ function WhatIDo() {
 
           <Footer />
         </div>
+      </div>
     </div>
   );
 }
