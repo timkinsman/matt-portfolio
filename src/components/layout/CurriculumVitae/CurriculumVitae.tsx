@@ -4,7 +4,7 @@ const CurriculumVitae = () => {
     return (
         <div className="global-wrapper">
             <h3>Curriculum Vitae</h3>
-            <a href="mailto:mskinsm@gmail.com?subject=CV request">Request to view</a>
+            <a className="global-border-thin" href="mailto:mskinsm@gmail.com?subject=CV request">Request to view</a>
         </div>
     )
 }

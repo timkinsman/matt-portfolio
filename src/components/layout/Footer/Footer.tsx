@@ -41,7 +41,7 @@ function Footer() {
             </div>
           </div>
           <div className={styles["footer-grid"]} style={{paddingTop: '60px'}}>
-            <p>Developed by <a className="global-border-thin" href="https://timkinsman.com" target="_blank">Tim Kinsman</a></p>
+            <p>Developed by <a className="global-border-thin" href="https://github.com/timkinsman" target="_blank">Tim Kinsman</a></p>
             <p>© 2021 Matthew Kinsman, Melbourne, Australia</p>
           </div>
           <div className={styles["footer-arrow"]}>

@@ -29,7 +29,7 @@ function WhatIDo() {
           </div>
 
           <div className="global-wrapper">
-            <h3 className={styles["whatido-added-margin"]}>Principles</h3>
+            <h3>Principles</h3>
             <div className={styles["whatido-grid-three"]}>
               <Item emoji={images.curious} header="Be curious" content="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using content here." footer=""/>
               <Item emoji={images.proactive} header="First proactive, then reative" content="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'," footer=""/>
@@ -41,7 +41,7 @@ function WhatIDo() {
           </div>
 
           <div className="global-wrapper">
-            <h3 className={styles["whatido-added-margin"]}>Process</h3>
+            <h3>Process</h3>
             <div className={styles["whatido-grid-three"]}>
               <Item emoji={images.strategy} header="1. Strategy" content="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using content here." footer=""/>
               <Item emoji={images.research} header="2. Research" content="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English." footer=""/>
@@ -53,7 +53,7 @@ function WhatIDo() {
           </div>
 
           <div className="global-wrapper">
-            <h3 className={styles["whatido-added-margin"]}>Methods</h3>
+            <h3>Methods</h3>
             <div className={styles["whatido-grid-three"]}>
               <div>
                 <h4>A/B Testing</h4>

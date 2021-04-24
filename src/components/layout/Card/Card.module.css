@@ -42,3 +42,14 @@
     flex-direction: column;
     height: -webkit-fill-available;
 }
+
+.card-view-case {
+    border-bottom: 2px solid rgba(0, 0, 0, 0); /* here */
+    transition: opacity 1s, border-bottom 1s;
+}
+
+.card-view-case:hover {
+    border-bottom: 2px solid rgba(0, 0, 0, 1); /* here */
+    transition: opacity 1s, border-bottom 1s;
+}
+

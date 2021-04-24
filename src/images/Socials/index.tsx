@@ -10,16 +10,16 @@ import thedots from "./social-thedots.svg";
 import twitter from "./social-twitter.svg";
 
 const images = [
-    {img: behance, text: 'Behance'},
-    {img: discord, text: "Discord"},
-    {img: dribbble, text: "Dribbble"},
-    {img: facebook, text: "Facebook"},
-    {img: linkedin, text: "LinkedIn"},
-    {img: loop, text: "Loop"},
-    {img: medium, text: "Medium"},
-    {img: pinterest, text: "Pinterest"},
-    {img: thedots, text: "The Dots"},
-    {img: twitter, text: 'Twitter'}
+    {img: behance, text: 'Behance', link: 'https://www.behance.net/matthewkinsman'},
+    {img: discord, text: "Discord", link: 'https://discordapp.com/users/755313011849166928/'},
+    {img: dribbble, text: "Dribbble", link: 'https://dribbble.com/mskinsm'},
+    {img: facebook, text: "Facebook", link: 'https://www.facebook.com/mskinsm'},
+    {img: linkedin, text: "LinkedIn", link: 'https://www.linkedin.com/in/matthew-kinsman/'},
+    {img: loop, text: "Loop", link: 'https://www.theloop.com.au/kinsmm/portfolio/Graphic-Designer/Adelaide'},
+    {img: medium, text: "Medium", link: 'https://medium.com/@matthewkinsman'},
+    {img: pinterest, text: "Pinterest", link: 'https://www.pinterest.com.au/mskinsm/'},
+    {img: thedots, text: "The Dots", link: 'https://the-dots.com/users/matthew-kinsman-119260#team'},
+    {img: twitter, text: 'Twitter', link: 'https://twitter.com/MatthewKinsman'}
 ]
 
 export default images;

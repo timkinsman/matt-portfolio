@@ -110,7 +110,7 @@ const Study = (props: any) => {
                         <h4 style={{opacity: "0.4"}}>{renderArr(study.capabilites)}</h4>
                     </div>
                     <div>
-                        <h3>Research</h3>
+                        <h3>Research Methods</h3>
                         <h4 style={{opacity: "0.4"}}>{renderArr(study.researchMethods)}</h4>
                     </div>
                 </div>

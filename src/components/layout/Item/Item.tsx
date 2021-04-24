@@ -12,7 +12,7 @@ function Item(props: any) {
 
     const renderLink = (link: string) => {
         if(link){
-            return <span><a href={link} target="_blank">View website →</a></span>
+            return <span><a href={link} target="_blank" className="global-border-thin">View website →</a></span>
         }
         return null
     }

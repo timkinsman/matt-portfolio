@@ -8,35 +8,37 @@
     width: 150px;
     opacity: 1;
     transition: opacity 1s;
-    z-index: 1;
 }
 
 .socials-img:hover{
-    opacity: 0;
+    opacity: 0 !important;
     transition: opacity 1s;
-    
 }
 
 .socials-img:hover + .socials-img-text{
-    opacity: 1;
+    opacity: 0.4;
     transition: opacity 1s;
-    
 }
 
 .socials-img-text{
     opacity: 0;
-    transition: opacity 1s;
     position: absolute;
-    text-decoration: underline;
+    transition: opacity 1s;
+}
+
+.socials-img-text:hover{
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.socials-img-text:hover + .socials-img{
+    opacity: 0;
+    transition: opacity 1s;
 }
 
 .socials-img-container {
+    align-items: center;
     display: flex;
     justify-content: center;
-    align-items: center;
     position: relative;
-}
-
-.socials-p{
-    font-size: 16px;
 }

@@ -19,16 +19,16 @@ function Contact() {
           <div className="global-wrapper">
             <div className={styles["contact-grid"]}>
               <div>
-                <h3>Email</h3>
-                <h4><a className="global-border-thin" href="mailto:hello@matthewkinsman.com">hello@matthewkinsman.com</a></h4>
+                <h3>Enquiries</h3>
+                <h4><a className="global-border-thin" href="https://www.google.com.au/forms/about/" target="_blank">Client brief form</a></h4>
               </div>
               <div>
                 <h3>Phone</h3>
                 <h4><a className="global-border-thin" href="tel:+61424792708" target="_blank">+61 424 792 708</a></h4>
               </div>
               <div>
-                <h3>Enquiries</h3>
-                <h4><a className="global-border-thin" href="https://www.google.com.au/forms/about/" target="_blank">Client brief form</a></h4>
+                <h3>Email</h3>
+                <h4><a className="global-border-thin" href="mailto:hello@matthewkinsman.com">hello@matthewkinsman.com</a></h4>
               </div>
             </div>
           </div>

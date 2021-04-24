@@ -4,16 +4,25 @@ import styles from './Tools.module.css'
 
 import images from "../../../images/Tools"
 
+import $ from 'jquery'
+
 const Tools = () => {
     return (
         <div className="global-wrapper">
             <h3>Tools</h3>
             <div className={styles["tools-tools"]}>
-                {images.map((img) => {
+                {images.map((img, i) => {
+                    $(document).ready(function(){
+                        $(`#a-${i}`).hover(
+                            function(){$(`#img-${i}`).css("opacity", "0")},
+                            function(){$(`#img-${i}`).css("opacity", "1")}
+                        );
+                    });
+
                     return (
                         <div className={styles["tools-img-container"]}>
-                            <img src={img.img} alt="img.svg" className={styles["tools-img"]} />
-                            <p className={styles["tools-img-text"]}>{img.text}</p>
+                            <img id={`img-${i}`} src={img.img} alt="img.svg" className={styles["tools-img"]} />
+                            <a id={`a-${i}`} href={img.link} className={`global-border-thin ${styles["tools-img-text"]}`}>{img.text}</a>
                         </div>
                     )
                 })}

@@ -9,10 +9,10 @@ function Card(props: any) {
       <div className={styles["card"]} style={{background: props.study.color}}>
         <img src={props.study.img} alt="img" style={{height: '100%'}} />
         <div className={styles["card-content"]}>
-          <h2 style={{margin: '0'}}>{props.study.title}</h2>
-          <h4 style={{opacity: "0.8", margin: '0'}}>{props.study.industry} · {props.study.capabilites.join(", ")}</h4>
+          <h2 style={{margin: '0 0 12px 0'}}>{props.study.title}</h2>
+          <h4 style={{opacity: "0.8", margin: '0'}}>{props.study.industry}</h4>
           <p style={{opacity: "0.8"}}>{props.study.cardSummary}</p>
-          <h4 style={{margin: "auto 0 0 0"}}>View case study →</h4>
+          <h4 style={{margin: "auto 0 0 0"}}><span className={styles["card-view-case"]}>View case study →</span></h4>
         </div>
       </div>
     </Link>

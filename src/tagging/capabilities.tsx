@@ -1,4 +1,4 @@
-export const Animation___Motion_Graphics = "Animation & Motion Graphics"
+export const Animation___Motion = "Animation & Motion"
 export const Art_Direction = "Art Direction"
 export const Branding___Identity = "Branding & Identity"
 export const Marketing = "Marketing"

@@ -4,7 +4,7 @@ import Card from '../Card/Card';
 import styles from './CardView.module.css'
 
 import {
-  Animation___Motion_Graphics,
+  Animation___Motion,
   Art_Direction,
   Branding___Identity,
   Marketing,
@@ -50,7 +50,7 @@ function CardView(props: {id: string}) {
   const [showIndustry, setShowIndustry] = useState(false)
 
   const arrCap = [
-    Animation___Motion_Graphics,
+    Animation___Motion,
     Art_Direction,
     Branding___Identity,
     Marketing,
