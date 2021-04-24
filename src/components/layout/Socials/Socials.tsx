@@ -22,7 +22,7 @@ const Socials = () => {
                     return (
                         <div className={styles["socials-img-container"]}>
                             <img id={`img-${i}`} src={img.img} alt="img.svg" className={styles["socials-img"]} />
-                            <a className={`global-border-thin ${styles["socials-img-text"]}`} id={`a-${i}`} href={img.link} target="_blank">{img.text}</a>
+                            <a className={`global-border-thinnest ${styles["socials-img-text"]}`} id={`a-${i}`} href={img.link} target="_blank">{img.text}</a>
                         </div>
                     )
                 })}

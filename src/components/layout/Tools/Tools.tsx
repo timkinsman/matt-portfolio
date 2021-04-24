@@ -22,7 +22,7 @@ const Tools = () => {
                     return (
                         <div className={styles["tools-img-container"]}>
                             <img id={`img-${i}`} src={img.img} alt="img.svg" className={styles["tools-img"]} />
-                            <a id={`a-${i}`} href={img.link} className={`global-border-thin ${styles["tools-img-text"]}`}>{img.text}</a>
+                            <a target="_blank" id={`a-${i}`} href={img.link} className={`global-border-thinnest ${styles["tools-img-text"]}`}>{img.text}</a>
                         </div>
                     )
                 })}

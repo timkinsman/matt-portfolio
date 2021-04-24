@@ -53,7 +53,7 @@ function WhatIDo() {
           </div>
 
           <div className="global-wrapper">
-            <h3>Methods</h3>
+            <h3>Research Methods</h3>
             <div className={styles["whatido-grid-three"]}>
               <div>
                 <h4>A/B Testing</h4>

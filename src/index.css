@@ -37,6 +37,16 @@ a:hover {
   transition: opacity 1s;
 }
 
+a.global-border-thinnest {
+  border-bottom: 1px solid rgba(255, 255, 255, 0); /* here */
+  transition: opacity 1s, border-bottom 1s;
+}
+
+a.global-border-thinnest:hover {
+  border-bottom: 1px solid rgba(255, 255, 255, 1); /* here */
+  transition: opacity 1s, border-bottom 1s;
+}
+
 a.global-border-thin {
   border-bottom: 2px solid rgba(255, 255, 255, 0); /* here */
   transition: opacity 1s, border-bottom 1s;
