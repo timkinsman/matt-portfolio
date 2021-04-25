@@ -12,23 +12,26 @@ function Panel(props: any) {
     $('html,body').animate({
         scrollTop: $(id).offset()?.top}, 'slow');
   }*/
-  
-  const width = $(`#${props.id}-image`).width()
-  const height = $(`#${props.id}-image`).height()
 
   const handleOnMouseMove = (e: any) => {
+    const width = $(`#${props.id}-image`).width()
+    const height = $(`#${props.id}-image`).height()
     if(width && height){
       $(`#${props.id}-image`).css({left: e.clientX - (width / 2), top: e.clientY - (height / 2)});
     }
   }
 
   const handleOnMouseOver = (e: any) => {
+    const width = $(`#${props.id}-image`).width()
+    const height = $(`#${props.id}-image`).height()
     if(width && height){
       $(`#${props.id}-image`).css({opacity: "1", visibility: 'visible', zIndex: 1, left: e.clientX - (width / 2), top: e.clientY - (height / 2)});
     }
   }
 
   const handleOnMouseOut = (e: any) => {
+    const width = $(`#${props.id}-image`).width()
+    const height = $(`#${props.id}-image`).height()
     if(width && height){
       $(`#${props.id}-image`).css({opacity: "0", visibility: 'hidden', zIndex: -1, left: e.clientX - (width / 2), top: e.clientY - (height / 2)});
     }
@@ -42,7 +45,7 @@ function Panel(props: any) {
           <div style={{zIndex: 100}}>
               <h4>{props.study.title}</h4>
               <h1 className={styles["panel-left-slogan"]}>{props.study.slogan}</h1>
-              <h4><Link className="global-border-thin" to={{pathname: '/study', hash: `#${props.study.redirect}`, state: { study: props.study }}}>View Case Study →</Link></h4>
+              <h4><Link className="global-border-thin" to={{pathname: '/study', hash: `#${props.study.redirect}`, state: { study: props.study }}}>View case study →</Link></h4>
           </div>
           {/*<div className={styles["panel-arrow"]}>
             <a onClick={() => handleOnClick(`#${props.next}`)}><img src={arrow} /></a>
