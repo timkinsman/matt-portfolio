@@ -2,22 +2,13 @@ import img from "../images/Clients/client-opencourts.svg";
 
 import {OPEN_COURTS} from "../colors"
 
-import { Government } from '../tagging/industry'
-import { Strategy, UI___UX } from '../tagging/capabilities'
+import { Legal } from '../tagging/industry'
+import { Branding___Identity, UI___UX } from '../tagging/capabilities'
 import { 
     Artefact_Review,
-    Concept_Usability_Testing,
-    Data_Analytics_Review,
-    Heuristics_Evaluation,
-    Card_Sort,
-    Tree_Test,
-    Journey_Mapping,
-    Persona_Development,
     Requirements_Gathering,
     Revised_User_Flows,
     Roadmapping,
-    Stakeholder_Interviews,
-    User_Interviews
 } from '../tagging/researchMethods'
 
 export default {
@@ -28,22 +19,13 @@ export default {
     title: "OpenCourts",
 
     //tagging
-    capabilites: [Strategy, UI___UX],
-    industry: [Government],
+    capabilites: [Branding___Identity, UI___UX],
+    industry: [Legal],
     researchMethods: [
         Artefact_Review,
-        Concept_Usability_Testing,
-        Data_Analytics_Review,
-        Heuristics_Evaluation,
-        Card_Sort,
-        Tree_Test,
-        Journey_Mapping,
-        Persona_Development,
         Requirements_Gathering,
         Revised_User_Flows,
         Roadmapping,
-        Stakeholder_Interviews,
-        User_Interviews
     ],    
 
     //study

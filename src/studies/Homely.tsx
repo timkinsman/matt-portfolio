@@ -2,22 +2,22 @@ import img from "../images/Clients/client-homely.svg";
 
 import {HOMELY} from "../colors"
 
-import { Government } from '../tagging/industry'
-import { Strategy, UI___UX } from '../tagging/capabilities'
+import { Real_Estate } from '../tagging/industry'
 import { 
-    Artefact_Review,
-    Concept_Usability_Testing,
-    Data_Analytics_Review,
-    Heuristics_Evaluation,
-    Card_Sort,
-    Tree_Test,
+    Strategy,
+    UI___UX,
+    Animation___Motion,
+    Marketing,
+    Promotional,
+    Wayfinding___Signage
+} from '../tagging/capabilities'
+import { 
+    A_B_Testing,
+    Competitor_Analysis,
     Journey_Mapping,
-    Persona_Development,
-    Requirements_Gathering,
     Revised_User_Flows,
     Roadmapping,
-    Stakeholder_Interviews,
-    User_Interviews
+    Stakeholder_Interviews
 } from '../tagging/researchMethods'
 
 export default {
@@ -28,22 +28,22 @@ export default {
     title: "Homely",
 
     //tagging
-    capabilites: [Strategy, UI___UX],
-    industry: [Government],
+    capabilites: [
+        Strategy,
+        UI___UX,
+        Animation___Motion,
+        Marketing,
+        Promotional,
+        Wayfinding___Signage
+    ],
+    industry: [Real_Estate],
     researchMethods: [
-        Artefact_Review,
-        Concept_Usability_Testing,
-        Data_Analytics_Review,
-        Heuristics_Evaluation,
-        Card_Sort,
-        Tree_Test,
+        A_B_Testing,
+        Competitor_Analysis,
         Journey_Mapping,
-        Persona_Development,
-        Requirements_Gathering,
         Revised_User_Flows,
         Roadmapping,
-        Stakeholder_Interviews,
-        User_Interviews
+        Stakeholder_Interviews
     ],    
 
     //study

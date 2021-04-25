@@ -2,22 +2,12 @@ import img from "../images/Clients/client-eatclub.svg";
 
 import {EAT_CLUB} from "../colors"
 
-import { Government } from '../tagging/industry'
-import { Strategy, UI___UX } from '../tagging/capabilities'
+import { Food___Beverage } from '../tagging/industry'
+import { Strategy, UI___UX, Marketing, Promotional } from '../tagging/capabilities'
 import { 
-    Artefact_Review,
-    Concept_Usability_Testing,
-    Data_Analytics_Review,
     Heuristics_Evaluation,
-    Card_Sort,
-    Tree_Test,
-    Journey_Mapping,
-    Persona_Development,
-    Requirements_Gathering,
-    Revised_User_Flows,
-    Roadmapping,
-    Stakeholder_Interviews,
-    User_Interviews
+    Competitor_Analysis,
+    Revised_User_Flows
 } from '../tagging/researchMethods'
 
 export default {
@@ -28,22 +18,12 @@ export default {
     title: "EatClub",
 
     //tagging
-    capabilites: [Strategy, UI___UX],
-    industry: [Government],
+    capabilites: [Strategy, UI___UX, Marketing, Promotional],
+    industry: [Food___Beverage],
     researchMethods: [
-        Artefact_Review,
-        Concept_Usability_Testing,
-        Data_Analytics_Review,
         Heuristics_Evaluation,
-        Card_Sort,
-        Tree_Test,
-        Journey_Mapping,
-        Persona_Development,
-        Requirements_Gathering,
-        Revised_User_Flows,
-        Roadmapping,
-        Stakeholder_Interviews,
-        User_Interviews
+        Competitor_Analysis,
+        Revised_User_Flows
     ],    
 
     //study

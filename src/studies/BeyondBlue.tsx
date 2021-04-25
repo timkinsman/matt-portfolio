@@ -2,7 +2,7 @@ import img from "../images/Clients/client-beyondblue.svg";
 
 import {BEYOND_BLUE} from "../colors"
 
-import { Government } from '../tagging/industry'
+import { NGO___Not_for_profit } from '../tagging/industry'
 import { Strategy, UI___UX } from '../tagging/capabilities'
 import { 
     Artefact_Review,
@@ -29,21 +29,8 @@ export default {
 
     //tagging
     capabilites: [Strategy, UI___UX],
-    industry: [Government],
+    industry: [NGO___Not_for_profit],
     researchMethods: [
-        Artefact_Review,
-        Concept_Usability_Testing,
-        Data_Analytics_Review,
-        Heuristics_Evaluation,
-        Card_Sort,
-        Tree_Test,
-        Journey_Mapping,
-        Persona_Development,
-        Requirements_Gathering,
-        Revised_User_Flows,
-        Roadmapping,
-        Stakeholder_Interviews,
-        User_Interviews
     ],    
 
     //study

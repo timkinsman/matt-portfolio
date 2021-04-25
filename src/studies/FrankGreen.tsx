@@ -2,22 +2,9 @@ import img from "../images/Clients/client-frankgreen.svg";
 
 import {FRANK_GREEN} from "../colors"
 
-import { Government } from '../tagging/industry'
-import { Strategy, UI___UX } from '../tagging/capabilities'
-import { 
-    Artefact_Review,
-    Concept_Usability_Testing,
-    Data_Analytics_Review,
-    Heuristics_Evaluation,
-    Card_Sort,
-    Tree_Test,
-    Journey_Mapping,
-    Persona_Development,
-    Requirements_Gathering,
-    Revised_User_Flows,
-    Roadmapping,
-    Stakeholder_Interviews,
-    User_Interviews
+import { Food___Beverage } from '../tagging/industry'
+import { UI___UX } from '../tagging/capabilities'
+import {
 } from '../tagging/researchMethods'
 
 export default {
@@ -28,22 +15,9 @@ export default {
     title: "Frank Green",
 
     //tagging
-    capabilites: [Strategy, UI___UX],
-    industry: [Government],
+    capabilites: [UI___UX],
+    industry: [Food___Beverage],
     researchMethods: [
-        Artefact_Review,
-        Concept_Usability_Testing,
-        Data_Analytics_Review,
-        Heuristics_Evaluation,
-        Card_Sort,
-        Tree_Test,
-        Journey_Mapping,
-        Persona_Development,
-        Requirements_Gathering,
-        Revised_User_Flows,
-        Roadmapping,
-        Stakeholder_Interviews,
-        User_Interviews
     ],    
 
     //study

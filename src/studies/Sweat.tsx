@@ -2,22 +2,20 @@ import img from "../images/Clients/client-sweat.svg";
 
 import {SWEAT} from "../colors"
 
-import { Government } from '../tagging/industry'
-import { Strategy, UI___UX } from '../tagging/capabilities'
+import { Sports___Fitness } from '../tagging/industry'
 import { 
-    Artefact_Review,
-    Concept_Usability_Testing,
-    Data_Analytics_Review,
-    Heuristics_Evaluation,
-    Card_Sort,
-    Tree_Test,
-    Journey_Mapping,
-    Persona_Development,
-    Requirements_Gathering,
-    Revised_User_Flows,
-    Roadmapping,
-    Stakeholder_Interviews,
-    User_Interviews
+    Strategy,
+    UI___UX,
+    Animation___Motion,
+    Art_Direction,
+    Branding___Identity,
+    Marketing,
+    Packaging,
+    Promotional,
+    Wayfinding___Signage
+} from '../tagging/capabilities'
+import { 
+    Competitor_Analysis
 } from '../tagging/researchMethods'
 
 export default {
@@ -28,22 +26,20 @@ export default {
     title: "SWEAT",
 
     //tagging
-    capabilites: [Strategy, UI___UX],
-    industry: [Government],
+    capabilites: [
+        Strategy,
+        UI___UX,
+        Animation___Motion,
+        Art_Direction,
+        Branding___Identity,
+        Marketing,
+        Packaging,
+        Promotional,
+        Wayfinding___Signage
+    ],
+    industry: [Sports___Fitness],
     researchMethods: [
-        Artefact_Review,
-        Concept_Usability_Testing,
-        Data_Analytics_Review,
-        Heuristics_Evaluation,
-        Card_Sort,
-        Tree_Test,
-        Journey_Mapping,
-        Persona_Development,
-        Requirements_Gathering,
-        Revised_User_Flows,
-        Roadmapping,
-        Stakeholder_Interviews,
-        User_Interviews
+        Competitor_Analysis
     ],    
 
     //study

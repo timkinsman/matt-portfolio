@@ -67,10 +67,6 @@ a.global-border-thick:hover {
   transition: opacity 1s, border-bottom 1s;
 }
 
-.global-container {
-  width: 100%;
-}
-
 .global-main-container {
   display: flex;
   flex-direction: column;
@@ -123,12 +119,12 @@ a.global-border-thick:hover {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) { /** Tablet */
-  .global-container {
-      width: 723px;
-  }
-
   .global-main-container {
     width: 723px;
+  }
+
+  .global-container {
+      width: 723px;
   }
 
   .global-hidden {
@@ -137,26 +133,22 @@ a.global-border-thick:hover {
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) { /** Small Monitor */
-  .global-container {
-      width: 933px;
-  }
-
   .global-main-container {
     width: 933px;
   }
 
-  .global-hidden {
-    display: none !important;
+  .global-container {
+      width: 933px;
   }
 }
 
 @media only screen and (min-width: 1200px) { /** Large Monitor */
-  .global-container {
-      width: 1127px;
-  }
-
   .global-main-container {
     width: calc(100% - 376px);
+  }
+
+  .global-container {
+      width: 1127px;
   }
 }
 

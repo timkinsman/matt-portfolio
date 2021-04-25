@@ -12,21 +12,26 @@ function Panel(props: any) {
     $('html,body').animate({
         scrollTop: $(id).offset()?.top}, 'slow');
   }*/
+  
+  const width = $(`#${props.id}-image`).width()
+  const height = $(`#${props.id}-image`).height()
 
   const handleOnMouseMove = (e: any) => {
-    const width = $(`#${props.id}-image`).width()
-    const height = $(`#${props.id}-image`).height()
     if(width && height){
-      $(`#${props.id}-image`).css({left: e.pageX - (width / 2), top: e.pageY - (height / 2)});
+      $(`#${props.id}-image`).css({left: e.clientX - (width / 2), top: e.clientY - (height / 2)});
     }
   }
 
-  const handleOnMouseOver = () => {
-    $(`#${props.id}-image`).css({opacity: "1", visibility: 'visible', zIndex: 1});
+  const handleOnMouseOver = (e: any) => {
+    if(width && height){
+      $(`#${props.id}-image`).css({opacity: "1", visibility: 'visible', zIndex: 1, left: e.clientX - (width / 2), top: e.clientY - (height / 2)});
+    }
   }
 
-  const handleOnMouseOut = () => {
-    $(`#${props.id}-image`).css({opacity: "0", visibility: 'hidden', zIndex: -1});
+  const handleOnMouseOut = (e: any) => {
+    if(width && height){
+      $(`#${props.id}-image`).css({opacity: "0", visibility: 'hidden', zIndex: -1, left: e.clientX - (width / 2), top: e.clientY - (height / 2)});
+    }
   }
 
   return (

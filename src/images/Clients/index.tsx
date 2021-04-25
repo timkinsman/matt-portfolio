@@ -10,9 +10,9 @@ import eatclub from "./client-eatclub.svg";
 import frankgreen from "./client-frankgreen.svg";
 import hesta from "./client-hesta.svg";
 import homely from "./client-homely.svg";
-import local from "./client-local.svg";
+//import local from "./client-local.svg";
 import lxrp from "./client-lxrp.svg";
-import mch from "./client-mch.svg";
+//import mch from "./client-mch.svg";
 import nab from "./client-nab.svg";
 import nissa from "./client-nissa.svg";
 import officeworks from "./client-officeworks.svg";
@@ -20,10 +20,10 @@ import opencourts from "./client-opencourts.svg";
 import smallbusinessvictoria from "./client-smallbusinessvictoria.svg";
 import strokefoundation from "./client-strokefoundation.svg";
 import supremecourt from "./client-supremecourt.svg";
-import sweat from "./client-sweat.svg";
+//import sweat from "./client-sweat.svg";
 import vicstategov from "./client-vicstategov.svg";
 
-import childernscourt from "./client-childrenscourt.svg"
+//import childernscourt from "./client-childrenscourt.svg"
 import lumea from "./client-lumea.svg"
 import transgrid from "./client-transgrid.svg"
 import vicpolice from "./client-vicpolice.svg"

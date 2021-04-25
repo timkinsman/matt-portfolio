@@ -12,18 +12,18 @@ import unlock from "./emoji-unlock.png";
 import validation from "./emoji-validation.png";
 
 const images = {
-    "analyse": analyse,
-    "collaboration": collaboration,
-    "curious": curious,
-    "ideation": ideation,
-    "launch": launch,
-    "measure": measure,
-    "proactive": proactive,
-    "research": research,
-    "strategy": strategy,
-    "systemsthinking": systemsthinking,
-    "unlock": unlock,
-    "validation": validation,
+    analyse,
+    collaboration,
+    curious,
+    ideation,
+    launch,
+    measure,
+    proactive,
+    research,
+    strategy,
+    systemsthinking,
+    unlock,
+    validation,
 }
 
 export default images;

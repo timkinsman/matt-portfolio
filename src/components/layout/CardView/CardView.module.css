@@ -91,7 +91,6 @@
 
 .card-view-chkbox:checked + label:after {
     color: #0B0B0C;
-    content: url(../../../images/tick.svg);
     font-size: 14px;
     left: 0;
     position: absolute;
