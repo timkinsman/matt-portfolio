@@ -6,10 +6,9 @@ import images from "../../../images/Clients"
 
 const Clients = () => {
     const firstHalf = () => {
-        return images.slice(0, Math.ceil(images.length / 2)).map((img) => {
-            console.log(img)
+        return images.slice(0, Math.ceil(images.length / 2)).map((img, i) => {
             return (
-                <div className={styles["clients-img-container"]}>
+                <div key={`firstHalf-${i}`} className={styles["clients-img-container"]}>
                     <img src={img} alt="img.svg" className={styles["clients-img"]} />
                 </div>
             )
@@ -17,9 +16,9 @@ const Clients = () => {
     }
 
     const secondHalf = () => {
-        return images.slice(-Math.ceil(images.length / 2)).map((img) => {
+        return images.slice(-Math.ceil(images.length / 2)).map((img, i) => {
             return (
-                <div className={styles["clients-img-container"]}>
+                <div key={`secondHalf-${i}`} className={styles["clients-img-container"]}>
                     <img src={img} alt="img.svg" className={styles["clients-img"]} />
                 </div>
             )

@@ -10,7 +10,7 @@ function Work() {
         <Navbar selected="work" />
         <div className="global-container">
           <p className="global-title">Case studies</p>
-          <div className="global-wrapper" style={{paddingBottom: '0'}}>
+          <div className="global-wrapper" style={{paddingBottom: '0', display: "grid", gridTemplateColumns: "10fr 2fr"}}>
             <h4>With over six years of experience in the industry, I have been fortunate enough to work with 25+ brands. Endeavouring to produce solutions to problems that enable and inspire others.</h4>
           </div>
           <CardView id="null" />

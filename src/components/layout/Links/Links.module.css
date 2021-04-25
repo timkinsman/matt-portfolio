@@ -6,6 +6,7 @@
     height: 100vh;
     justify-content: center;
     left: 0;
+    z-index: 100;
 }
 
 .links-icon {

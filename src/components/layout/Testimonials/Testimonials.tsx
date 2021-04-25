@@ -48,10 +48,10 @@ const Testimonials = () => {
     })
 
     const renderTestimonials = () => {        
-        return testimonials.map((testimonial: any) => {
+        return testimonials.map((testimonial: any, i) => {
             if(testimonial.id === currTestimonial){
                 return (
-                    <div className={styles["testimonials-grid"]}>
+                    <div key={`renderTestimonials-${i}`} className={styles["testimonials-grid"]}>
                         <div className="global-fadein">
                             <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'flex-start'}}>
                                 <h2>{testimonial.quote}</h2>
@@ -65,10 +65,11 @@ const Testimonials = () => {
     }
 
     const renderCarousel = () => {
-        return testimonials.map((testimonial: any) => {
+        return testimonials.map((testimonial: any, i) => {
             return (
                 <React.Fragment>
                     <a
+                        key={`renderCarousel-${i}`}
                         style={{opacity: testimonial.id === currTestimonial ? "1" : "0.4"}}
                         className={styles.icon}
                         onClick={() => setCurrTestimonial(testimonial.id)}

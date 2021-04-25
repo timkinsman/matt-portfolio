@@ -23,6 +23,11 @@ import supremecourt from "./client-supremecourt.svg";
 import sweat from "./client-sweat.svg";
 import vicstategov from "./client-vicstategov.svg";
 
+import childernscourt from "./client-childrenscourt.svg"
+import lumea from "./client-lumea.svg"
+import transgrid from "./client-transgrid.svg"
+import vicpolice from "./client-vicpolice.svg"
+
 const images = [
     australiansuper,
     bankvic,
@@ -36,9 +41,9 @@ const images = [
     frankgreen,
     hesta,
     homely,
-    local,
+    vicpolice,
     lxrp,
-    mch,
+    transgrid,
     nab,
     nissa,
     officeworks,
@@ -46,7 +51,7 @@ const images = [
     smallbusinessvictoria,
     strokefoundation,
     supremecourt,
-    sweat,
+    lumea,
     vicstategov,
 ]
 

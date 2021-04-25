@@ -127,9 +127,9 @@ function CardView(props: {id: string}) {
   const renderMap = (arr: Array<string>) => {
     return (
       <div className={`${styles["card-view-filter"]} global-fadein`}>
-        {arr.map((str: any) => {
+        {arr.map((str: any, i: number) => {
           return (
-            <div>
+            <div key={`renderMap-${i}`}>
               <input className={styles["card-view-chkbox"]} type="checkbox" onChange={(e) => handleOnChange(str, e)} checked={filter.includes(str)} id={str} />
               <label className={styles["card-view-label"]} htmlFor={str}>{str}</label>
             </div>
@@ -163,9 +163,9 @@ function CardView(props: {id: string}) {
     if(filterApply.length > 0){
       return (
         <div className={styles["card-view-filter-apply"]}>
-            {filterApply.map((filter: string) => {
+            {filterApply.map((filter: string, i:number) => {
               return (
-                <div style={{padding: '0 16px'}} className={styles["card-view-filter-apply-div"]}  onClick={() => setFilterApply(filterApply.filter(e => e !== filter))}>
+                <div key={`renderFilterApply-${i}`} style={{padding: '0 16px'}} className={styles["card-view-filter-apply-div"]}  onClick={() => setFilterApply(filterApply.filter(e => e !== filter))}>
                   <p className={styles["card-view-filter-p"]}>{filter} <span style={{paddingLeft: '8px'}}>✕</span></p>
                 </div>
               )
@@ -178,10 +178,10 @@ function CardView(props: {id: string}) {
   const renderOptions = () => {
     if(filter.length > 0){
       return (
-        <React.Fragment>
+        <div className="global-fadein" style={{flexDirection: "row", marginLeft: "auto", gap: "30px"}}>
           <h4 style={{marginLeft: 'auto'}}><a onClick={handleOnClear}>Clear ✕</a></h4>
           <h4><a onClick={handleOnApply}>Apply ✓</a></h4>
-        </React.Fragment>
+        </div>
       )
     }
   }
