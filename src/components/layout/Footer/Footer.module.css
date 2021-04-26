@@ -7,7 +7,7 @@
 }
 
 .footer-outer-container {
-    border-top: 1px solid rgba(255, 255, 255, .05);
+    border-top: 1px solid rgba(255, 255, 255, .1);
     width: -webkit-fill-available;
     padding: 120px 0;
     position: relative;

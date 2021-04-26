@@ -5,13 +5,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: rgba(0, 0, 0, 0) ;
+    color: rgba(255, 255, 255, 0) ;
     position: relative;
 }
 
 .card:hover {
-    background: #ffffff !important;
-    color: rgba(0, 0, 0, 1) ;
+    background: #000000 !important;
+    color: rgba(255, 255, 255, 1) ;
     transition: background 1s, color 1s;
 }
 
@@ -26,12 +26,12 @@
 }
 
 .card-view-case {
-    border-bottom: 2px solid rgba(0, 0, 0, 0); /* here */
+    border-bottom: 2px solid rgba(255, 255, 255, 0); /* here */
     transition: opacity 1s, border-bottom 1s;
 }
 
 .card-view-case:hover {
-    border-bottom: 2px solid rgba(0, 0, 0, 1); /* here */
+    border-bottom: 2px solid rgba(255, 255, 255, 1); /* here */
     transition: opacity 1s, border-bottom 1s;
 }
 
@@ -40,7 +40,7 @@
 }
 
 .card-study-title{
-    margin: 0 0 12px 0
+    margin: -10px 0 12px 0
 }
 
 .card-study-industry{
@@ -57,5 +57,12 @@
 }
 
 .card-image {
-    height: 100%
+    height: 100%;
+    transition: opacity 1s;
+    opacity: 1;
+}
+
+.card:hover > .card-image {
+    opacity: 0;
+    transition: opacity 1s
 }

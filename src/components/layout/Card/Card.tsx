@@ -7,7 +7,7 @@ function Card(props: any) {
   return (
     <Link className={styles["card-link"]} to={{pathname: '/study', hash: `#${props.study.redirect}`, state: { study: props.study }}}>
       <div className={styles["card"]} style={{background: props.study.color}}>
-        <img className={styles["card-img"]} src={props.study.img} alt="img" />
+        <img className={styles["card-image"]} src={props.study.img} alt="img" />
         <div className={styles["card-content"]}>
           <h2 className={styles["card-study-title"]}>{props.study.title}</h2>
           <h4 className={styles["card-study-industry"]}>{props.study.industry}</h4>

@@ -31,11 +31,11 @@ function Home() {
   }
 
   const handleOnMouseMove = (e: any) => {
-    $("#mouse-over-image").css({"transform": "translate3d()"});
+    //$("#mouse-over-image").css({left: e.clientX, top: e.clientY}); //crazy amount of triggers?
   }
 
   return (
-    <div className="global-fadein" onMouseOver={handleOnMouseMove}>
+    <div className="global-fadein" onMouseMove={handleOnMouseMove}>
       <Links />
       <Pagnation />
       
