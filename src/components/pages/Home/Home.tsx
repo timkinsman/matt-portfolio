@@ -30,16 +30,20 @@ function Home() {
         scrollTop: $(id).offset()?.top}, 'slow');
   }
 
+  const handleOnMouseMove = (e: any) => {
+    $("#mouse-over-image").css({"transform": "translate3d()"});
+  }
+
   return (
-    <div className="global-fadein">
+    <div className="global-fadein" onMouseOver={handleOnMouseMove}>
       <Links />
       <Pagnation />
       
       <div className="global-main-container" style={{height: '100vh'}} id="one">
-        <div className={styles["home-div"]}>
+        <div className={styles["home-panel"]}>
           <Navbar selected="home" />
 
-          <h1 style={{margin: 'auto 0'}}>
+          <h1 className={styles["home-panel-text"]}>
             Hello, my name is <Link className="global-border-thick" to="/about">Matthew Kinsman</Link>,<br />
             I’m a multi-disciplinary experience<br />
             designer currently living in Melbourne<br />
@@ -68,6 +72,9 @@ function Home() {
         <Testimonials />
         <Footer />
       </div>
+
+      
+      <img className={styles["mouse-over-image"]} id="mouse-over-image" src="" alt="image" />
     </div>
   );
 }

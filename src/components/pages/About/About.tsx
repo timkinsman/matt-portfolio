@@ -10,6 +10,8 @@ import Bio from '../../layout/Bio/Bio';
 import Education from '../../layout/Education/Education';
 import Experience from '../../layout/Experience/Experience';
 
+import styles from "./About.module.css"
+
 function About() {
   return (
     <div className="global-fadein">
@@ -17,7 +19,7 @@ function About() {
         <Navbar selected="about" />
         <div className="global-container">
           <p className="global-title">About me</p>
-          <div className="global-wrapper" style={{paddingBottom: '0'}}>
+          <div className={`${styles["about-quote"]} global-wrapper`}>
             <h2>“Intuitive design happens when current knowledge is the same as the target knowledge.” – Jarad Spool</h2>
           </div>
           <Bio />

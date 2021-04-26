@@ -144,7 +144,7 @@ a.global-border-thick:hover {
 
 @media only screen and (min-width: 1200px) { /** Large Monitor */
   .global-main-container {
-    width: calc(100% - 376px);
+      width: calc(100% - 376px); /** fix */
   }
 
   .global-container {

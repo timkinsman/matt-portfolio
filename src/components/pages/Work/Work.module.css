@@ -1,0 +1,5 @@
+.work-description {
+    padding-bottom: 0;
+    display: grid;
+    grid-template-columns: 10fr 2fr;
+}

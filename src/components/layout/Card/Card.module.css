@@ -15,24 +15,6 @@
     transition: background 1s, color 1s;
 }
 
-.card p > a {
-    color: rgba(0, 0, 0, 0) !important;
-    transition: color 1s, opacity 1s;
-}
-
-.card:hover p > a {
-    color: rgba(0, 0, 0, 1) !important;
-    transition: color 1s, opacity 1s;
-}
-
-.card-container {
-    display: flex;
-    height: 330px;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
 .card-content {
     position: absolute;
     top: 0;
@@ -53,3 +35,27 @@
     transition: opacity 1s, border-bottom 1s;
 }
 
+.card-link {
+    opacity: 1;
+}
+
+.card-study-title{
+    margin: 0 0 12px 0
+}
+
+.card-study-industry{
+    opacity: 0.8;
+    margin: 0
+}
+
+.card-study-summary{
+    opacity: 0.8
+}
+
+.card-study-link{
+    margin: auto 0 0 0
+}
+
+.card-image {
+    height: 100%
+}
