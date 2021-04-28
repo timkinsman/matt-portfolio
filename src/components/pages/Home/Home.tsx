@@ -73,7 +73,7 @@ function Home() {
         <Footer />
       </div>
       
-      <img className={styles["mouse-over-image"]} style={{pointerEvents: "none"}} id="mouse-over-image" src="" alt="image" />
+      <img className={styles["mouse-over-image"]} style={{pointerEvents: "none", background: 'red'}} id="mouse-over-image" src="" alt="image" />
     </div>
   );
 }
