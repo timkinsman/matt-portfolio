@@ -1,8 +1,6 @@
-import React from 'react';
-
-import styles from './Bio.module.css'
-
-import images from '../../../images/Photos'
+import React from "react";
+import images from "../../../images/Photos";
+import styles from "./Bio.module.css";
 
 function Bio() {
   return (

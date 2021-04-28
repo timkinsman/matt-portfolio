@@ -1,7 +1,7 @@
 .awards-awards {
+    align-items: center;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     gap: 25px;  
 }
 
@@ -11,9 +11,9 @@
 }
 
 .awards-img-container {
+    align-items: center;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .awards-p{

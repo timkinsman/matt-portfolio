@@ -1,10 +1,7 @@
-import React from 'react'
-
-import styles from './Tools.module.css'
-
-import images from "../../../images/Tools"
-
-import $ from 'jquery'
+import React from "react";
+import images from "../../../images/Tools";
+import $ from "jquery";
+import styles from "./Tools.module.css";
 
 const Tools = () => {
     return (
@@ -22,7 +19,7 @@ const Tools = () => {
                     return (
                         <div className={styles["tools-img-container"]}>
                             <img id={`img-${i}`} src={img.img} alt="img.svg" className={styles["tools-img"]} />
-                            <a target="_blank" id={`a-${i}`} href={img.link} className={`global-border-thinnest ${styles["tools-img-text"]}`}>{img.text}</a>
+                            <a target="_blank" id={`a-${i}`} href={img.link} className={`${styles["tools-img-text"]} global-border-thinnest`}>{img.text}</a>
                         </div>
                     )
                 })}
@@ -31,4 +28,4 @@ const Tools = () => {
     )
 }
 
-export default Tools
+export default Tools;

@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from 'react'
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircle } from '@fortawesome/free-solid-svg-icons'
-
-import styles from './Testimonials.module.css'
+import React, { useEffect, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircle } from "@fortawesome/free-solid-svg-icons";
+import styles from "./Testimonials.module.css";
 
 const Testimonials = () => {
     const [currTestimonial, setCurrTestimonial] = useState(0)
@@ -46,33 +44,16 @@ const Testimonials = () => {
         const timer = setInterval(() => setCurrTestimonial((currTestimonial + 1) % testimonials.length), 5000)
         return () => clearInterval(timer)
     })
-
-    const renderTestimonials = () => {        
-        return testimonials.map((testimonial: any, i) => {
-            if(testimonial.id === currTestimonial){
-                return (
-                    <div key={`renderTestimonials-${i}`} className={styles["testimonials-grid"]}>
-                        <div className="global-fadein">
-                            <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'flex-start'}}>
-                                <h2>{testimonial.quote}</h2>
-                                <p style={{opacity: "0.8"}}>{testimonial.from}<br />{testimonial.details}</p>
-                            </div>
-                        </div>
-                    </div>
-                )
-            }
-        })
-    }
-
+    
     const renderCarousel = () => {
-        return testimonials.map((testimonial: any, i) => {
+        return testimonials.map((pobjTestimonial: any, intIndex) => {
             return (
                 <React.Fragment>
                     <a
-                        key={`renderCarousel-${i}`}
-                        style={{opacity: testimonial.id === currTestimonial ? "1" : "0.4"}}
-                        className={styles.icon}
-                        onClick={() => setCurrTestimonial(testimonial.id)}
+                        key={`renderCarousel-${intIndex}`}
+                        style={{opacity: pobjTestimonial.id === currTestimonial ? "1" : "0.4"}}
+                        className={styles["testimonials-icon"]}
+                        onClick={() => setCurrTestimonial(pobjTestimonial.id)}
                     >
                         <FontAwesomeIcon icon={faCircle} />
                     </a>
@@ -81,11 +62,28 @@ const Testimonials = () => {
         })
     }
 
+    const renderTestimonials = () => {        
+        return testimonials.map((pobjTestimonial: any, intIndex: number) => {
+            if(pobjTestimonial.id === currTestimonial){
+                return (
+                    <div key={`renderTestimonials-${intIndex}`} className={styles["testimonials-grid"]}>
+                        <div className="global-fadein">
+                            <div className={styles["testimonials-div"]}>
+                                <h2>{pobjTestimonial.quote}</h2>
+                                <p className={styles["testimonials-from"]}>{pobjTestimonial.from}<br />{pobjTestimonial.details}</p>
+                            </div>
+                        </div>
+                    </div>
+                )
+            }
+        })
+    }
+
     return (
         <div className="global-wrapper">
             <div className={styles["testimonials-container"]}>
                 <h3>Testimonials</h3>
-                <div style={{marginLeft: 'auto'}}>
+                <div className={styles["testimonials-carousel-container"]}>
                     {renderCarousel()}
                 </div>
             </div>
@@ -94,4 +92,4 @@ const Testimonials = () => {
     )
 }
 
-export default Testimonials
+export default Testimonials;

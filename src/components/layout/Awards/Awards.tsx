@@ -1,8 +1,6 @@
-import React from 'react'
-
-import styles from './Awards.module.css'
-
-import images from '../../../images/Awards'
+import React from "react";
+import images from "../../../images/Awards";
+import styles from "./Awards.module.css";
 
 const Awards = () => {
     return (
@@ -24,4 +22,4 @@ const Awards = () => {
     )
 }
 
-export default Awards
+export default Awards;

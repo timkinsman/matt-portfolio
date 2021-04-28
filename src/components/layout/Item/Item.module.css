@@ -1,3 +1,11 @@
+.item-content {
+    opacity: 0.8;
+}
+
+.item-header {
+    margin: 4px 0;
+}
+
 .item-img {
     height: 40px;
 }

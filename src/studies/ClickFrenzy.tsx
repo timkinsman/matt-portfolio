@@ -2,7 +2,7 @@ import img from "../images/Clients/client-clickfrenzy.svg";
 
 import {CLICK_FRENZY} from "../colors"
 
-import { Government } from '../tagging/industry'
+import { Government } from '../tagging/industries'
 import { Strategy, UI___UX } from '../tagging/capabilities'
 import { 
     Artefact_Review,

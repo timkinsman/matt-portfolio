@@ -2,7 +2,7 @@ import img from "../images/Clients/client-homely.svg";
 
 import {HOMELY} from "../colors"
 
-import { Real_Estate } from '../tagging/industry'
+import { Real_Estate } from '../tagging/industries'
 import { 
     Strategy,
     UI___UX,

@@ -67,8 +67,8 @@ function WhatIDo() {
                 <h4>Data Analytics Review</h4>
                 <h4>Diary Studies</h4>
                 <h4>Heuristics Evaluation</h4>
-                <h4>IA: Card Sort</h4>
-                <h4>IA: Tree Test</h4>
+                <h4>Card Sorting</h4>
+                <h4>Tree Testing</h4>
                 <h4>Journey Mapping</h4>
               </div>
               <div>
@@ -76,7 +76,7 @@ function WhatIDo() {
                 <h4>Persona Development</h4>
                 <h4>Requirements Gathering</h4>
                 <h4>Revised User Flows</h4>
-                <h4>Stakeholder Interview</h4>
+                <h4>Stakeholder Interviews</h4>
                 <h4>User Interviews</h4>
               </div>
             </div>

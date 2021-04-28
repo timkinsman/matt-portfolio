@@ -1,18 +1,15 @@
-import React, { useEffect, useState } from 'react';
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircle } from '@fortawesome/free-solid-svg-icons'
-
-import styles from './Pagnation.module.css';
-
-import $ from 'jquery';
+import React, { useEffect, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircle } from "@fortawesome/free-solid-svg-icons";
+import $ from "jquery";
+import styles from "./Pagnation.module.css";
 
 function Pagnation() {
   const [current, setCurrent] = useState("#one")
 
-  const handleOnClick = (id: string) => {
-    $('html,body').animate({
-        scrollTop: $(id).offset()?.top}, 'slow');
+  const handleOnClick = (pstrId: string) => {
+    $("html,body").animate({
+        scrollTop: $(pstrId).offset()?.top}, "slow");
   }
   
   const onScroll = () => {
@@ -32,18 +29,18 @@ function Pagnation() {
   }
 
   useEffect(() => {
-    document.addEventListener('scroll', onScroll);
-
-    return () => { window.removeEventListener('scroll', onScroll) } 
+    document.addEventListener("scroll", onScroll);
+    return () => { window.removeEventListener("scroll", onScroll) } 
   }, [])
 
-  const _scrollTop = (id: string, idNext: string) => {
+  const _scrollTop = (pstrId: string, pstrIdNext: string) => {
     const strDocTop = $(document).scrollTop();
-    const idTop = $(id).offset()?.top
-    const idNextTop = $(idNext).offset()?.top
+    const idTop = $(pstrId).offset()?.top
+    const idNextTop = $(pstrIdNext).offset()?.top
+    const winHeight = $(window).height()
 
-    if(strDocTop !== undefined && idTop !== undefined && idNextTop !== undefined){
-      if(strDocTop >= idTop && strDocTop < idNextTop){
+    if(strDocTop !== undefined && idTop !== undefined && idNextTop !== undefined && winHeight !== undefined){
+      if(strDocTop >= (idTop - (winHeight / 2)) && strDocTop < (idNextTop - (winHeight / 2))){
         return true
       }
     }

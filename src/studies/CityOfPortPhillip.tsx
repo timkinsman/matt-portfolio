@@ -2,7 +2,7 @@ import img from "../images/Clients/client-cityofportphillip.svg";
 
 import {CITY_OF_PORT_PHILLIP} from "../colors"
 
-import { Government } from '../tagging/industry'
+import { Government } from '../tagging/industries'
 import { Strategy, UI___UX } from '../tagging/capabilities'
 import { 
     Artefact_Review,

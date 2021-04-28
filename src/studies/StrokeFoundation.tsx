@@ -2,7 +2,7 @@ import img from "../images/Clients/client-strokefoundation.svg";
 
 import {STROKE_FOUNDATION} from "../colors"
 
-import { Government } from '../tagging/industry'
+import { Government } from '../tagging/industries'
 import { Strategy, UI___UX } from '../tagging/capabilities'
 import { 
     Artefact_Review,

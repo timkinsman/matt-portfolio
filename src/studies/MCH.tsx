@@ -2,7 +2,7 @@ import img from "../images/Clients/client-mch.svg";
 
 import {MCH} from "../colors"
 
-import { Health } from '../tagging/industry'
+import { Health } from '../tagging/industries'
 import { Branding___Identity, Strategy, UI___UX } from '../tagging/capabilities'
 import { 
     Concept_Usability_Testing,

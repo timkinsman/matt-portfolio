@@ -1,13 +1,8 @@
-.socials-socials {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-}
-
 .socials-img {
     height: 150px;
-    width: 150px;
     opacity: 1;
     transition: opacity 1s;
+    width: 150px;
 }
 
 .socials-img:hover{
@@ -18,6 +13,13 @@
 .socials-img:hover + .socials-img-text{
     opacity: 0.4;
     transition: opacity 1s;
+}
+
+.socials-img-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
 }
 
 .socials-img-text{
@@ -36,9 +38,7 @@
     transition: opacity 1s;
 }
 
-.socials-img-container {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    position: relative;
+.socials-socials {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
 }

@@ -2,7 +2,7 @@ import img from "../images/Clients/client-bupa.svg";
 
 import {BUPA} from "../colors"
 
-import { Government } from '../tagging/industry'
+import { Government } from '../tagging/industries'
 import { Strategy, UI___UX } from '../tagging/capabilities'
 import { 
     Artefact_Review,

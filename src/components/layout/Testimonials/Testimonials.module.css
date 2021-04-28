@@ -1,14 +1,28 @@
-.icon {
-    font-size: 10px;
-    margin: 0 12px;
+.testimonials-carousel-container {
+    margin-left: auto;
 }
 
 .testimonials-container {
-    display: flex;
     align-items: center;
+    display: flex;
+}
+
+.testimonials-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.testimonials-from {
+    opacity: 0.8;
 }
 
 .testimonials-grid {
     display: grid;
     grid-template-columns: 10fr 2fr;
+}
+
+.testimonials-icon {
+    font-size: 10px;
+    margin: 0 12px;
 }

@@ -9,3 +9,17 @@ export const Promotional = "Promotional"
 export const Strategy = "Strategy"
 export const UI___UX = "UI & UX"
 export const Wayfinding___Signage = "Wayfinding & Signage"
+
+export const arrCapabilities = [
+    Animation___Motion,
+    Art_Direction,
+    Branding___Identity,
+    Marketing,
+    Packaging,
+    Photography,
+    Print___Publishing,
+    Promotional,
+    Strategy,
+    UI___UX,
+    Wayfinding___Signage,
+]

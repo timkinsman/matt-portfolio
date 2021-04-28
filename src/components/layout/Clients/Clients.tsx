@@ -1,25 +1,23 @@
-import React from 'react'
-
-import styles from './Clients.module.css'
-
-import images from "../../../images/Clients"
+import React from "react";
+import images from "../../../images/Clients";
+import styles from "./Clients.module.css";
 
 const Clients = () => {
     const firstHalf = () => {
-        return images.slice(0, Math.ceil(images.length / 2)).map((img, i) => {
+        return images.slice(0, Math.ceil(images.length / 2)).map((strImageSrc: string, intIndex: number) => {
             return (
-                <div key={`firstHalf-${i}`} className={styles["clients-img-container"]}>
-                    <img src={img} alt="img.svg" className={styles["clients-img"]} />
+                <div key={`firstHalf-${intIndex}`} className={styles["clients-img-container"]}>
+                    <img src={strImageSrc} alt="img.svg" className={styles["clients-img"]} />
                 </div>
             )
         })
     }
 
     const secondHalf = () => {
-        return images.slice(-Math.ceil(images.length / 2)).map((img, i) => {
+        return images.slice(-Math.ceil(images.length / 2)).map((strImageSrc, intIndex: number) => {
             return (
-                <div key={`secondHalf-${i}`} className={styles["clients-img-container"]}>
-                    <img src={img} alt="img.svg" className={styles["clients-img"]} />
+                <div key={`secondHalf-${intIndex}`} className={styles["clients-img-container"]}>
+                    <img src={strImageSrc} alt="img.svg" className={styles["clients-img"]} />
                 </div>
             )
         })
@@ -28,7 +26,7 @@ const Clients = () => {
     return (
         <div className="global-wrapper">
             <h3>Selected Clients</h3>
-            <div style={{position: 'relative'}}>
+            <div className={styles["clients-container"]}>
                 <div className={styles["clients-clients"]}>
                     {firstHalf()}
                 </div>

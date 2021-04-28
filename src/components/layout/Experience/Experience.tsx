@@ -1,7 +1,6 @@
-import React from 'react';
-import Item from '../Item/Item';
-
-import styles from './Experience.module.css'
+import React from "react";
+import Item from "../Item/Item";
+import styles from "./Experience.module.css";
 
 function Experience() {
   return (

@@ -2,6 +2,10 @@
     margin-left: auto;
 }
 
+.home-banner {
+    height: 100vh
+}
+
 .home-container {
     height: 100vh;
 }
@@ -29,6 +33,7 @@
     left: 0;
     opacity: 0;
     transition: opacity 0.5s;
+    pointer-events: none
 }
 
 .home-panel-text {

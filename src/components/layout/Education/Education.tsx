@@ -1,7 +1,6 @@
-import React from 'react';
-import Item from '../Item/Item';
-
-import styles from './Education.module.css'
+import React from "react";
+import Item from "../Item/Item";
+import styles from "./Education.module.css";
 
 function Education() {
   return (

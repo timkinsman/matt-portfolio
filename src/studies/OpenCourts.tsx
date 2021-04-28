@@ -2,7 +2,7 @@ import img from "../images/Clients/client-opencourts.svg";
 
 import {OPEN_COURTS} from "../colors"
 
-import { Legal } from '../tagging/industry'
+import { Legal } from '../tagging/industries'
 import { Branding___Identity, UI___UX } from '../tagging/capabilities'
 import { 
     Artefact_Review,

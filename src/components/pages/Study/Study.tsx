@@ -41,7 +41,7 @@ const Study = (props: any) => {
     const renderContent = (which: string) => {
         return (
             <React.Fragment>
-                <div className="global-wrapper" style={{width: "83.33%", marginLeft: "auto", marginRight: "auto"}}>
+                <div className="global-wrapper" style={{width: "83.33%", marginLeft: "auto", marginRight: "auto", padding: "40px 0"}}>
                     <h3 className={styles["study-capitalize"]}>{which}</h3>
                     {study[which].map((content: string) => {
                         return (
@@ -89,7 +89,7 @@ const Study = (props: any) => {
                             <h2>{study.summary}</h2>
                         </div>
                     </div>
-                    <div className={styles["panel-arrow"]}>
+                    <div className={styles["study-arrow"]}>
                         <a onClick={() => handleOnClick('#content')}><img src={arrow} /></a>
                     </div>
                 </div>
@@ -126,7 +126,7 @@ const Study = (props: any) => {
                 {renderContent("background")}
                 {renderContent("challenge")}
 
-                <div className="global-wrapper" style={{width: "83.33%", marginLeft: "auto", marginRight: "auto"}}>
+                <div className="global-wrapper" style={{width: "83.33%", marginLeft: "auto", marginRight: "auto", padding: "40px 0"}}>
                     <h3>Objective</h3>
                     <h4 style={{opacity: "0.8"}}>{study.objective}</h4>
                 </div>
@@ -139,7 +139,7 @@ const Study = (props: any) => {
                     <div className={styles["img-div"]} style={{background: '#151416'}}></div>
                 </div>
 
-                <div className="global-wrapper" style={{width: "83.33%", marginLeft: "auto", marginRight: "auto"}}>
+                <div className="global-wrapper" style={{width: "83.33%", marginLeft: "auto", marginRight: "auto", padding: "40px 0"}}>
                     <h3>Results</h3>
                     <h4 style={{opacity: "0.8"}}>{study.results}</h4>
                 </div>
@@ -152,7 +152,7 @@ const Study = (props: any) => {
                     <div className={styles["img-div"]} style={{background: '#151416'}}></div>
                 </div>
 
-                <div className="global-wrapper" style={{width: "83.33%", marginLeft: "auto", marginRight: "auto"}}>
+                <div className="global-wrapper" style={{width: "83.33%", marginLeft: "auto", marginRight: "auto", padding: "40px 0"}}>
                     <h3>What I Learnt</h3>
                     <h4 style={{opacity: "0.8"}}>{study.whatilearnt}</h4>
                 </div>
@@ -165,7 +165,7 @@ const Study = (props: any) => {
                     <div className={styles["img-div"]} style={{background: '#151416'}}></div>
                 </div>
 
-                <div className="global-wrapper" style={{width: "83.33%", marginLeft: "auto", marginRight: "auto"}}>
+                <div className="global-wrapper" style={{width: "83.33%", marginLeft: "auto", marginRight: "auto", padding: "40px 0"}}>
                 <h3>Deliverables</h3>
                     <ul style={{paddingLeft: '20px'}}>
                         {study.deliverables !== undefined && study.deliverables.map((deliverable: string) => {
@@ -175,14 +175,14 @@ const Study = (props: any) => {
                     <h4 style={{opacity: "0.8"}}>{study.information}</h4>
                 </div>
 
-                <div className="global-wrapper" style={{width: "83.33%", marginLeft: "auto", marginRight: "auto"}}>
+                <div className="global-wrapper" style={{width: "83.33%", marginLeft: "auto", marginRight: "auto", padding: "40px 0"}}>
                     <h3>Recognition</h3>
                     {study.recognitions !== undefined && study.recognitions.map((recognition: string) => {
                         return <h4 style={{opacity: "0.8"}}>{recognition}</h4>
                     })}
                 </div>
 
-                <div className="global-wrapper" style={{width: "83.33%", marginLeft: "auto", marginRight: "auto"}}>
+                <div className="global-wrapper" style={{width: "83.33%", marginLeft: "auto", marginRight: "auto", padding: "40px 0"}}>
                     <h3>Credits</h3>
                     {study.credits !== undefined && study.credits.map((credit: string) => {
                         return <h4 style={{opacity: "0.8"}}>{credit}</h4>

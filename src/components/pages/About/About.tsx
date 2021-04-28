@@ -1,16 +1,13 @@
-import React from 'react';
-
-import Navbar from '../../layout/Navbar/Navbar';
-import Footer from '../../layout/Footer/Footer';
-
-import Clients from '../../layout/Clients/Clients';
-import Awards from '../../layout/Awards/Awards';
-import CurriculumVitae from '../../layout/CurriculumVitae/CurriculumVitae';
-import Bio from '../../layout/Bio/Bio';
-import Education from '../../layout/Education/Education';
-import Experience from '../../layout/Experience/Experience';
-
-import styles from "./About.module.css"
+import React from "react";
+import Awards from "../../layout/Awards/Awards";
+import Bio from "../../layout/Bio/Bio";
+import Clients from "../../layout/Clients/Clients";
+import CurriculumVitae from "../../layout/CurriculumVitae/CurriculumVitae";
+import Education from "../../layout/Education/Education";
+import Experience from "../../layout/Experience/Experience";
+import Footer from "../../layout/Footer/Footer";
+import Navbar from "../../layout/Navbar/Navbar";
+import styles from "./About.module.css";
 
 function About() {
   return (

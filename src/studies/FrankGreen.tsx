@@ -2,7 +2,7 @@ import img from "../images/Clients/client-frankgreen.svg";
 
 import {FRANK_GREEN} from "../colors"
 
-import { Food___Beverage } from '../tagging/industry'
+import { Food___Beverage } from '../tagging/industries'
 import { UI___UX } from '../tagging/capabilities'
 import {
 } from '../tagging/researchMethods'

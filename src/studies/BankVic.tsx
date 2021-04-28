@@ -2,7 +2,7 @@ import img from "../images/Clients/client-bankvic.svg";
 
 import {BANK_VIC} from "../colors"
 
-import { Banking___Finance } from '../tagging/industry'
+import { Banking___Finance } from '../tagging/industries'
 import { Branding___Identity, Strategy, UI___UX } from '../tagging/capabilities'
 import {
     A_B_Testing,

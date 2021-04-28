@@ -1,13 +1,14 @@
 .bio-grid{
     display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: 60px;
-}
-
-.bio-img {
-    border-radius: 20px;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .bio-heading {
     margin-top: 0;
+}
+
+.bio-img {
+    border-radius: 20px;
+    height: 100%;
 }

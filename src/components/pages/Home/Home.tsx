@@ -1,40 +1,35 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-
-import Panel from '../../layout/Panel/Panel';
-import CardView from '../../layout/CardView/CardView';
-import Navbar from '../../layout/Navbar/Navbar';
-import Footer from '../../layout/Footer/Footer';
-import Spotify from '../../layout/Spotify/Spotify';
-import Pagnation from '../../layout/Pagnation/Pagnation';
-import Links from '../../layout/Links/Links';
-
-import styles from './Home.module.css';
-import Clients from '../../layout/Clients/Clients';
-import Awards from '../../layout/Awards/Awards';
-import Testimonials from '../../layout/Testimonials/Testimonials';
-
-import studies from '../../../studies';
-
-import $ from 'jquery'
-
-import arrow from '../../../images/arrow-down.svg'
+import React from "react";
+import { Link } from "react-router-dom";
+import Awards from "../../layout/Awards/Awards";
+import CardView from "../../layout/CardView/CardView";
+import Clients from "../../layout/Clients/Clients";
+import Footer from "../../layout/Footer/Footer";
+import Panel from "../../layout/Panel/Panel";
+import Pagnation from "../../layout/Pagnation/Pagnation";
+import Links from "../../layout/Links/Links";
+import Navbar from "../../layout/Navbar/Navbar";
+import Spotify from "../../layout/Spotify/Spotify";
+import Testimonials from "../../layout/Testimonials/Testimonials";
+import studies from "../../../studies";
+import arrow from "../../../images/arrow-down.svg";
+import $ from "jquery";
+import styles from "./Home.module.css";
 
 function Home() {
-  const renderPanel = (index: any, id: string, next: string) => {
-      return <Panel study={studies[index]} id={id} next={next} />
+  const renderPanel = (pintIndex: number, pstrId: string, pstrNextId: string) => {
+      return <Panel study={studies[pintIndex]} id={pstrId} next={pstrNextId} />
   }
 
-  const handleOnClick = (id: string) => {
+  const handleOnClick = (pstrId: string) => {
     $('html,body').animate({
-        scrollTop: $(id).offset()?.top}, 'slow');
+        scrollTop: $(pstrId).offset()?.top}, 'slow');
   }
 
-  const handleOnMouseMove = (e: any) => {
-    $("#mouse-over-image-two").css({left: e.clientX + 25, top: e.clientY + 25});
-    $("#mouse-over-image-three").css({left: e.clientX + 25, top: e.clientY + 25});
-    $("#mouse-over-image-four").css({left: e.clientX + 25, top: e.clientY + 25});
-    $("#mouse-over-image-five").css({left: e.clientX + 25, top: e.clientY + 25});
+  const handleOnMouseMove = (pobjEvent: any) => {
+    $("#mouse-over-image-two").css({left: pobjEvent.clientX + 25, top: pobjEvent.clientY + 25});
+    $("#mouse-over-image-three").css({left: pobjEvent.clientX + 25, top: pobjEvent.clientY + 25});
+    $("#mouse-over-image-four").css({left: pobjEvent.clientX + 25, top: pobjEvent.clientY + 25});
+    $("#mouse-over-image-five").css({left: pobjEvent.clientX + 25, top: pobjEvent.clientY + 25});
   }
 
   return (
@@ -42,7 +37,7 @@ function Home() {
       <Links />
       <Pagnation />
       
-      <div className="global-main-container" style={{height: '100vh'}} id="one">
+      <div className={`${styles["home-banner"]} global-main-container`} id="one">
         <div className={styles["home-panel"]}>
           <Navbar selected="home" />
 
@@ -76,10 +71,10 @@ function Home() {
         <Footer />
       </div>
       
-      <img className={styles["mouse-over-image"]} style={{pointerEvents: "none", background: 'red'}} id="mouse-over-image-two" src={studies[4].img} alt={studies[4].title} />
-      <img className={styles["mouse-over-image"]} style={{pointerEvents: "none", background: 'red'}} id="mouse-over-image-three" src={studies[0].img} alt={studies[0].title} />
-      <img className={styles["mouse-over-image"]} style={{pointerEvents: "none", background: 'red'}} id="mouse-over-image-four" src={studies[10].img} alt={studies[10].title} />
-      <img className={styles["mouse-over-image"]} style={{pointerEvents: "none", background: 'red'}} id="mouse-over-image-five" src={studies[1].img} alt={studies[1].title} />
+      <img className={styles["mouse-over-image"]} id="mouse-over-image-two" src={studies[4].img} alt={studies[4].title} />
+      <img className={styles["mouse-over-image"]} id="mouse-over-image-three" src={studies[0].img} alt={studies[0].title} />
+      <img className={styles["mouse-over-image"]} id="mouse-over-image-four" src={studies[10].img} alt={studies[10].title} />
+      <img className={styles["mouse-over-image"]} id="mouse-over-image-five" src={studies[1].img} alt={studies[1].title} />
     </div>
   );
 }

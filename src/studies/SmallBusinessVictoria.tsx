@@ -2,7 +2,7 @@ import img from "../images/Clients/client-smallbusinessvictoria.svg";
 
 import {SMALL_BUSINESS_VICTORIA} from "../colors"
 
-import { Government } from '../tagging/industry'
+import { Government } from '../tagging/industries'
 import { Strategy, UI___UX } from '../tagging/capabilities'
 import { 
     Artefact_Review,

@@ -1,6 +1,6 @@
-import React from 'react';
-import Footer from '../../layout/Footer/Footer';
-import Navbar from '../../layout/Navbar/Navbar';
+import React from "react";
+import Footer from "../../layout/Footer/Footer";
+import Navbar from "../../layout/Navbar/Navbar";
 
 function Blog() {
   return (

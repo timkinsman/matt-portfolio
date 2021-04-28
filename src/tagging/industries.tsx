@@ -17,3 +17,25 @@ export const Sports___Fitness = "Sports & Fitness"
 export const Technology = "Technology"
 export const Transport = "Transport"
 export const Travel___Tourism = "Travel & Tourism"
+
+export const arrIndustries = [
+    Arts_Culture,
+    Banking___Finance,
+    Education,
+    Entertainment,
+    Fashion___Beauty,
+    Food___Beverage,
+    Government,
+    Health,
+    Hospitality___Leisure,
+    Legal,
+    Manufacturing,
+    NGO___Not_for_profit,
+    Publishing,
+    Real_Estate,
+    Retail,
+    Sports___Fitness,
+    Technology,
+    Transport,
+    Travel___Tourism
+]

@@ -2,7 +2,7 @@ import img from "../images/Clients/client-cityofdarebin.svg";
 
 import {CITY_OF_DAREBIN} from "../colors"
 
-import { Government } from '../tagging/industry'
+import { Government } from '../tagging/industries'
 import { Strategy, UI___UX } from '../tagging/capabilities'
 import {
     Heuristics_Evaluation,

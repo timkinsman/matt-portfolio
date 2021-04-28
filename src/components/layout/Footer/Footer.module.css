@@ -1,3 +1,9 @@
+.footer-arrow {
+    position: absolute;
+    right: -10px;
+    top: 140px;
+}
+
 .footer-container {
     align-items: center;
     display: flex;
@@ -8,9 +14,9 @@
 
 .footer-outer-container {
     border-top: 1px solid rgba(255, 255, 255, .1);
-    width: -webkit-fill-available;
     padding: 120px 0;
     position: relative;
+    width: -webkit-fill-available;
 }
 
 .footer-grid {
@@ -18,8 +24,8 @@
     grid-template-columns: 1fr 1fr;
 }
 
-.footer-arrow {
-    position: absolute;
-    top: 140px;
-    right: -10px;
+.footer-grid-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 60px;
 }

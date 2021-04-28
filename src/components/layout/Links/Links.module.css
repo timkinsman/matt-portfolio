@@ -1,11 +1,11 @@
 .links-container {
-    position: fixed;
     display: flex;
     flex-direction: column;
-    padding-left: 50px;
     height: 100vh;
     justify-content: center;
     left: 0;
+    padding-left: 50px;
+    position: fixed;
 }
 
 .links-icon {

@@ -1,13 +1,8 @@
-.tools-tools {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-}
-
 .tools-img {
     height: 150px;
-    width: 150px;
     opacity: 1;
     transition: opacity 1s;
+    width: 150px;
 }
 
 .tools-img:hover{
@@ -20,10 +15,17 @@
     transition: opacity 1s;
 }
 
+.tools-img-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
 .tools-img-text{
     opacity: 0;
-    transition: opacity 1s;
     position: absolute;
+    transition: opacity 1s;
 }
 
 .tools-img-text:hover{
@@ -36,9 +38,7 @@
     transition: opacity 1s;
 }
 
-.tools-img-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+.tools-tools {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
 }

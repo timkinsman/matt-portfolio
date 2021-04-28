@@ -1,8 +1,7 @@
-import React from 'react';
-import Footer from '../../layout/Footer/Footer';
-import Navbar from '../../layout/Navbar/Navbar';
-import Socials from '../../layout/Socials/Socials';
-
+import React from "react";
+import Footer from "../../layout/Footer/Footer";
+import Navbar from "../../layout/Navbar/Navbar";
+import Socials from "../../layout/Socials/Socials";
 import styles from "./Contact.module.css";
 
 function Contact() {

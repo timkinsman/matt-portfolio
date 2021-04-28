@@ -1,16 +1,13 @@
-import React from 'react';
-
-import styles from './Footer.module.css';
-import { Link } from "react-router-dom"
-
-import $ from 'jquery'
-
-import arrow from '../../../images/arrow-down.svg'
+import React from "react";
+import { Link } from "react-router-dom";
+import arrow from "../../../images/arrow-down.svg";
+import $ from "jquery";
+import styles from "./Footer.module.css";
 
 function Footer() {
   const handleOnClick = () => {
-    $('html,body').animate({
-        scrollTop: 0}, 'slow');
+    $("html,body").animate({
+        scrollTop: 0}, "slow");
   }
 
   return (
@@ -40,12 +37,12 @@ function Footer() {
               </div>
             </div>
           </div>
-          <div className={styles["footer-grid"]} style={{paddingTop: '60px'}}>
-            <p>Developed by <a className="global-border-thin" href="https://github.com/timkinsman" target="_blank">Tim Kinsman</a></p>
+          <div className={styles["footer-grid-bottom"]}>
+            <p>Developed by <a className="global-border-thin" href="https://timkinsman.com" target="_blank">Tim Kinsman</a></p>
             <p>© 2021 Matthew Kinsman, Melbourne, Australia</p>
           </div>
           <div className={styles["footer-arrow"]}>
-            <a className="global-arrow" onClick={handleOnClick}><img style={{transform: 'rotate(180deg)'}} src={arrow} /></a>
+            <a className="global-arrow" onClick={handleOnClick}><img style={{transform: "rotate(180deg)"}} src={arrow} /></a>
           </div>
         </div>
     </div>

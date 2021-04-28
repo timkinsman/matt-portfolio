@@ -1,10 +1,8 @@
-import React from 'react';
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
-import { faBehance, faFacebook, faLinkedin, faSpotify } from '@fortawesome/free-brands-svg-icons'
-
-import styles from './Links.module.css';
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBehance, faFacebook, faLinkedin, faSpotify } from "@fortawesome/free-brands-svg-icons";
+import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+import styles from "./Links.module.css";
 
 function Links() {
   return (

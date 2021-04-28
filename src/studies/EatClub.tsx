@@ -2,7 +2,7 @@ import img from "../images/Clients/client-eatclub.svg";
 
 import {EAT_CLUB} from "../colors"
 
-import { Food___Beverage } from '../tagging/industry'
+import { Food___Beverage } from '../tagging/industries'
 import { Strategy, UI___UX, Marketing, Promotional } from '../tagging/capabilities'
 import { 
     Heuristics_Evaluation,

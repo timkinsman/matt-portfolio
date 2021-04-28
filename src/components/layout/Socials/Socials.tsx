@@ -1,28 +1,25 @@
-import React from 'react'
-
-import styles from './Socials.module.css'
-
-import images from "../../../images/Socials"
-
-import $ from 'jquery'
+import React from "react";
+import images from "../../../images/Socials";
+import $ from "jquery";
+import styles from "./Socials.module.css";
 
 const Socials = () => {
     return (
         <div className="global-wrapper">
             <h3>Socials</h3>
             <div className={styles["socials-socials"]}>
-                {images.map((img, i) => {
+                {images.map((pobjImage: any, intIndex: number) => {
                     $(document).ready(function(){
-                        $(`#a-${i}`).hover(
-                            function(){$(`#img-${i}`).css("opacity", "0")},
-                            function(){$(`#img-${i}`).css("opacity", "1")}
+                        $(`#a-${intIndex}`).hover(
+                            function(){$(`#img-${intIndex}`).css("opacity", "0")},
+                            function(){$(`#img-${intIndex}`).css("opacity", "1")}
                         );
                     });
 
                     return (
                         <div className={styles["socials-img-container"]}>
-                            <img id={`img-${i}`} src={img.img} alt="img.svg" className={styles["socials-img"]} />
-                            <a className={`global-border-thinnest ${styles["socials-img-text"]}`} id={`a-${i}`} href={img.link} target="_blank">{img.text}</a>
+                            <img id={`img-${intIndex}`} src={pobjImage.img} alt="img.svg" className={styles["socials-img"]} />
+                            <a className={`${styles["socials-img-text"]} global-border-thinnest`} id={`a-${intIndex}`} href={pobjImage.link} target="_blank">{pobjImage.text}</a>
                         </div>
                     )
                 })}
@@ -31,4 +28,4 @@ const Socials = () => {
     )
 }
 
-export default Socials
+export default Socials;

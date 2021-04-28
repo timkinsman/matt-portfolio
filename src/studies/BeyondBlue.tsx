@@ -2,7 +2,7 @@ import img from "../images/Clients/client-beyondblue.svg";
 
 import {BEYOND_BLUE} from "../colors"
 
-import { NGO___Not_for_profit } from '../tagging/industry'
+import { NGO___Not_for_profit } from '../tagging/industries'
 import { Strategy, UI___UX } from '../tagging/capabilities'
 import { 
     Artefact_Review,

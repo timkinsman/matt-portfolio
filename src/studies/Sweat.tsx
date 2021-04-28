@@ -2,7 +2,7 @@ import img from "../images/Clients/client-sweat.svg";
 
 import {SWEAT} from "../colors"
 
-import { Sports___Fitness } from '../tagging/industry'
+import { Sports___Fitness } from '../tagging/industries'
 import { 
     Strategy,
     UI___UX,

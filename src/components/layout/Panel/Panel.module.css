@@ -3,14 +3,22 @@
 }
 
 .panel-container {
+    align-items: flex-end;    
     background: rgb(19, 103, 111);
-    width: 100%;
-    height: 100vh;
     display: flex;
+    height: 100vh;
     justify-content: center;
-    align-items: flex-end;
+    width: 100%;
 }
 
 .panel-left-slogan {
     max-width: 507px;
+}
+
+.panel-mouseover {
+    align-items: flex-start;
+    display: flex;
+    height: -webkit-fill-available;
+    justify-content: flex-end;
+    margin: 60px 0;
 }

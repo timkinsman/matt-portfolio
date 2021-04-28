@@ -1,8 +1,6 @@
-import React from 'react';
-
-import { Link } from 'react-router-dom'
-
-import styles from './Navbar.module.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import styles from "./Navbar.module.css";
 
 function Navbar(props: any) {
   return (

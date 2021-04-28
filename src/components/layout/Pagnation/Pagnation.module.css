@@ -1,11 +1,11 @@
 .container {
-    position: fixed;
     display: flex;
     flex-direction: column;
     height: 100vh;
     justify-content: center;
-    right: 0;
     padding-right: 50px;
+    position: fixed;
+    right: 0;
 }
 
 .icon {
@@ -15,6 +15,6 @@
 
 .icon:hover {
     cursor: pointer;
-    transition: opacity 1s;
     opacity: 1 !important;
+    transition: opacity 1s;
 }
