@@ -31,7 +31,7 @@ function Home() {
   }
 
   const handleOnMouseMove = (e: any) => {
-    //$("#mouse-over-image").css({left: e.clientX, top: e.clientY}); //crazy amount of triggers?
+    $("#mouse-over-image").css({left: e.clientX + 25, top: e.clientY + 25});
   }
 
   return (
@@ -72,9 +72,8 @@ function Home() {
         <Testimonials />
         <Footer />
       </div>
-
       
-      <img className={styles["mouse-over-image"]} id="mouse-over-image" src="" alt="image" />
+      <img className={styles["mouse-over-image"]} style={{pointerEvents: "none"}} id="mouse-over-image" src="" alt="image" />
     </div>
   );
 }

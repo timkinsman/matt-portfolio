@@ -17,9 +17,9 @@ function Panel(props: any) {
   }
 
   return (
-      <div className={styles["panel-container"]} style={{background: props.study.color}} id={props.id} onMouseOver={handleOnMouseOver} onMouseOut={handleOnMouseOut}>
-        <div className="global-main-container" style={{display: 'flex', alignItems: 'flex-end', flexDirection: 'row', paddingBottom: '60px'}}>
-          <div>
+      <div className={styles["panel-container"]} style={{background: props.study.color}} id={props.id}>
+        <div className="global-main-container" style={{height: "-webkit-fill-available", margin: "60px 0", display: "flex", justifyContent: "flex-end", alignItems: "flex-start"}}  onMouseEnter={handleOnMouseOver} onMouseLeave={handleOnMouseOut}>
+          <div onMouseEnter={handleOnMouseOut} onMouseLeave={handleOnMouseOver}>
               <h4>{props.study.title}</h4>
               <h1 className={styles["panel-left-slogan"]}>{props.study.slogan}</h1>
               <h4><Link className="global-border-thin" to={{pathname: '/study', hash: `#${props.study.redirect}`, state: { study: props.study }}}>View case study →</Link></h4>
