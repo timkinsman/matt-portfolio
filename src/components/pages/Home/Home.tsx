@@ -31,7 +31,10 @@ function Home() {
   }
 
   const handleOnMouseMove = (e: any) => {
-    $("#mouse-over-image").css({left: e.clientX + 25, top: e.clientY + 25});
+    $("#mouse-over-image-two").css({left: e.clientX + 25, top: e.clientY + 25});
+    $("#mouse-over-image-three").css({left: e.clientX + 25, top: e.clientY + 25});
+    $("#mouse-over-image-four").css({left: e.clientX + 25, top: e.clientY + 25});
+    $("#mouse-over-image-five").css({left: e.clientX + 25, top: e.clientY + 25});
   }
 
   return (
@@ -73,7 +76,10 @@ function Home() {
         <Footer />
       </div>
       
-      <img className={styles["mouse-over-image"]} style={{pointerEvents: "none", background: 'red'}} id="mouse-over-image" src="" alt="image" />
+      <img className={styles["mouse-over-image"]} style={{pointerEvents: "none", background: 'red'}} id="mouse-over-image-two" src={studies[4].img} alt={studies[4].title} />
+      <img className={styles["mouse-over-image"]} style={{pointerEvents: "none", background: 'red'}} id="mouse-over-image-three" src={studies[0].img} alt={studies[0].title} />
+      <img className={styles["mouse-over-image"]} style={{pointerEvents: "none", background: 'red'}} id="mouse-over-image-four" src={studies[10].img} alt={studies[10].title} />
+      <img className={styles["mouse-over-image"]} style={{pointerEvents: "none", background: 'red'}} id="mouse-over-image-five" src={studies[1].img} alt={studies[1].title} />
     </div>
   );
 }

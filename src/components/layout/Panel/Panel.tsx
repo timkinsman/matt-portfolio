@@ -9,11 +9,11 @@ import $ from 'jquery'
 
 function Panel(props: any) {
   const handleOnMouseOver = (e: any) => {
-    $("#mouse-over-image").attr("src", props.study.img).css({opacity: "1"})
+    $("#mouse-over-image-" + props.id).css({opacity: "1"})
   }
 
   const handleOnMouseOut = (e: any) => {
-    $("#mouse-over-image").css({opacity: "0"});
+    $("#mouse-over-image-" + props.id).css({opacity: "0"});
   }
 
   return (
