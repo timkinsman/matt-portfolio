@@ -18,7 +18,7 @@
 .panel-mouseover {
     align-items: flex-start;
     display: flex;
-    height: -webkit-fill-available;
+    height: calc(100% - 120px);
     justify-content: flex-end;
     margin: 60px 0;
 }

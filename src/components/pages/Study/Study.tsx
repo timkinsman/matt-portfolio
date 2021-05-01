@@ -1,26 +1,16 @@
 import React, { useEffect, useState } from 'react'
+import Card from '../../layout/Card/Card'
 import Footer from '../../layout/Footer/Footer'
+import Home from '../Home/Home'
 import Links from '../../layout/Links/Links'
 import Navbar from '../../layout/Navbar/Navbar'
-import Home from '../Home/Home'
-
+import studies from '../../../studies'
+import arrow from '../../../images/arrow-down.svg'
+import $ from 'jquery'
 import styles from './Study.module.css'
 
-import studies from '../../../studies'
-import Card from '../../layout/Card/Card'
-
-
-import arrow from '../../../images/arrow-down.svg'
-
-import $ from 'jquery'
-
-const Study = (props: any) => {  
+const Study = (props: any) => { 
     const [limit, setLimit] = useState(2)
-
-    const handleOnClick = (id: string) => {
-        $('html,body').animate({
-            scrollTop: $(id).offset()?.top}, 'slow');
-      }
 
     useEffect(() => { //reset
         $("#divMore").show()
@@ -31,26 +21,31 @@ const Study = (props: any) => {
     if(props.location.state === undefined){
         return <Home />
     }
-
+    
     const study = props.location.state.study
 
-    const renderArr = (arr: Array<string>) => {
-        return arr.join(", ")
+    const handleOnClick = (pstrId: string) => {
+        $('html,body').animate({
+            scrollTop: $(pstrId).offset()?.top}, 'slow');
     }
 
-    const renderContent = (which: string) => {
+    const renderArr = (parrstrArray: Array<string>) => {
+        return parrstrArray.join(", ")
+    }
+
+    const renderContent = (pstrSection: string) => {
         return (
             <React.Fragment>
                 <div className="global-wrapper" style={{width: "83.33%", marginLeft: "auto", marginRight: "auto", padding: "40px 0"}}>
-                    <h3 className={styles["study-capitalize"]}>{which}</h3>
-                    {study[which].map((content: string) => {
+                    <h3 className={styles["study-capitalize"]}>{pstrSection}</h3>
+                    {study[pstrSection].map((content: string) => {
                         return (
                             <h4 style={{opacity: "0.8"}}>{content}</h4>
                         )
                     })}
                 </div>
 
-                {study[which + "Img"] !== undefined && study[which + "Img"].map((src: string) => {
+                {study[pstrSection + "Img"] !== undefined && study[pstrSection + "Img"].map((src: string) => {
                     return (
                         <div className="global-wrapper">
                             <div className={styles["img-div"]} style={{background: '#151416'}}></div>
@@ -61,20 +56,20 @@ const Study = (props: any) => {
         )
     }
 
-    const renderMore = () => {
-        $("#divMore").hide()
-        $("#divLess").show()
-        setLimit(studies.length)
-    }
-
     const renderLess = () => {
         $("#divMore").show()
         $("#divLess").hide()
         setLimit(2)
     }
 
-    const reorder = (data: Array<any>, index: number) => {
-        return data.slice(index).concat(data.slice(0, index))
+    const renderMore = () => {
+        $("#divMore").hide()
+        $("#divLess").show()
+        setLimit(studies.length)
+    }
+
+    const reorderStudyCards = (parranyStudies: Array<any>, pintIndex: number) => {
+        return parranyStudies.slice(pintIndex).concat(parranyStudies.slice(0, pintIndex))
     };
 
     return (
@@ -125,11 +120,7 @@ const Study = (props: any) => {
                 {renderContent("brief")}
                 {renderContent("background")}
                 {renderContent("challenge")}
-
-                <div className="global-wrapper" style={{width: "83.33%", marginLeft: "auto", marginRight: "auto", padding: "40px 0"}}>
-                    <h3>Objective</h3>
-                    <h4 style={{opacity: "0.8"}}>{study.objective}</h4>
-                </div>
+                {renderContent("objective")}
 
                 <div className="global-wrapper">
                     <div className={styles["img-div"]} style={{background: '#151416'}}></div>
@@ -195,7 +186,7 @@ const Study = (props: any) => {
 
                 <div className="global-wrapper">
                     <div className={styles["study-card-view"]}>
-                        {reorder(studies, studies.findIndex(pstudy => pstudy == study) - 1).filter(pstudy => pstudy !== study).slice(0, limit).map(pstudy => {
+                        {reorderStudyCards(studies, studies.findIndex(pstudy => pstudy == study) - 1).filter(pstudy => pstudy !== study).slice(0, limit).map(pstudy => {
                             return <Card study={pstudy} />
                         })}
                     </div>
