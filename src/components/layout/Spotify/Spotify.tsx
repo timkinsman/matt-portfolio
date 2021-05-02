@@ -6,6 +6,7 @@ import styles from "./Spotify.module.css";
 function Spotify() {
   const [lfmName, updateLfmName] = useState("Blush");
   const [lfmText, updateLfmText] = useState("Vynehall");
+  const [sLink, updateSLink] = useState("https://open.spotify.com/user/mskinsm");
 
   /*useEffect(() => {
     axios.post(  
@@ -43,7 +44,7 @@ function Spotify() {
   return (
     <div className={styles["spotify-container"]}>
         <FontAwesomeIcon icon={faSpotify} className={styles["spotify-icon"]} />
-        <h3 className={styles["spotify-text"]}>Currently listening to <a className="global-border-thin">{lfmName}, {lfmText}</a></h3>
+        <h3 className={styles["spotify-text"]}>Currently listening to <a className="global-border-thin" href={sLink} target="_blank">{lfmName}, {lfmText}</a></h3>
     </div>
   );
 }
