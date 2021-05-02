@@ -24,9 +24,7 @@ function Spotify() {
   }, [])*/
 
   useEffect(() => {
-    console.log(process)
-    console.log(process.env)
-    fetch(`https://ws.audioscrobbler.com/2.0/?method=user.getRecentTracks&user=${process.env.USERNAME}&api_key=${process.env.API_KEY}&limit=1&nowplaying=true&format=json`)
+    fetch(`https://ws.audioscrobbler.com/2.0/?method=user.getRecentTracks&user=${process.env.REACT_APP_USERNAME}&api_key=${process.env.REACT_APP_API_KEY}&limit=1&nowplaying=true&format=json`)
       .then(response => {
         if (response.ok) {
           return response.json();
