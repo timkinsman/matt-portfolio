@@ -7,6 +7,22 @@ function Spotify() {
   const [lfmName, updateLfmName] = useState("Blush");
   const [lfmText, updateLfmText] = useState("Vynehall");
 
+  /*useEffect(() => {
+    axios.post(  
+      'https://accounts.spotify.com/api/token',
+      new URLSearchParams({
+        grant_type: "client_credentials"
+      }).toString(),
+      {
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+          'Authorization': 'Basic ' + "YjllZDg4NmY1MzkxNDVlMWIxYTFhODlkZDQyYTc3NTU6MDQ2NTM0OWZjYzMwNGRlYjkzN2NmM2Y1ZDY1ODI5ZGM="
+        },
+      }
+    ).then(function (response) {
+      console.log(response.data.access_token);
+  }, [])*/
+
   useEffect(() => {
     fetch(`https://ws.audioscrobbler.com/2.0/?method=user.getRecentTracks&user=${process.env.USERNAME}&api_key=${process.env.API_KEY}&limit=1&nowplaying=true&format=json`)
       .then(response => {
