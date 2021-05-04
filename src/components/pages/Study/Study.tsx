@@ -23,6 +23,7 @@ const Study = (props: any) => {
     }
     
     const study = props.location.state.study
+    const images = require.context ( "../../../images/Studies/EatClub", true, /\.png$/ )
 
     const handleOnClick = (pstrId: string) => {
         $('html,body').animate({
@@ -35,25 +36,25 @@ const Study = (props: any) => {
 
     const renderContent = (pstrSection: string) => {
         return (
-            <React.Fragment>
-                <div className="global-wrapper" style={{width: "83.33%", marginLeft: "auto", marginRight: "auto", padding: "40px 0"}}>
-                    <h3 className={styles["study-capitalize"]}>{pstrSection}</h3>
-                    {study[pstrSection].map((content: string) => {
-                        return (
-                            <h4 style={{opacity: "0.8"}}>{content}</h4>
-                        )
-                    })}
-                </div>
-
-                {study[pstrSection + "Img"] !== undefined && study[pstrSection + "Img"].map((src: string) => {
+            <div className="global-wrapper" style={{width: "83.33%", marginLeft: "auto", marginRight: "auto", padding: "40px 0"}}>
+                <h3 className={styles["study-capitalize"]}>{pstrSection}</h3>
+                {study[pstrSection].map((content: string) => {
                     return (
-                        <div className="global-wrapper">
-                            <div className={styles["img-div"]} style={{background: '#151416'}}></div>
-                        </div>
+                        <h4 style={{opacity: "0.8"}}>{content}</h4>
                     )
                 })}
-            </React.Fragment>
+            </div>
         )
+    }
+
+    const renderImages = () => {
+        return images.map((image: string) => {
+            return (
+                <div className="global-wrapper">
+                    <img src={image} className={styles["img-div"]} />
+                </div>
+            )
+        })    
     }
 
     const renderLess = () => {
@@ -121,39 +122,16 @@ const Study = (props: any) => {
                 {renderContent("background")}
                 {renderContent("challenge")}
                 {renderContent("objective")}
-
-                <div className="global-wrapper">
-                    <div className={styles["img-div"]} style={{background: '#151416'}}></div>
-                </div>
-
-                <div className="global-wrapper">
-                    <div className={styles["img-div"]} style={{background: '#151416'}}></div>
-                </div>
+                {renderImages()}
 
                 <div className="global-wrapper" style={{width: "83.33%", marginLeft: "auto", marginRight: "auto", padding: "40px 0"}}>
                     <h3>Results</h3>
                     <h4 style={{opacity: "0.8"}}>{study.results}</h4>
                 </div>
 
-                <div className="global-wrapper">
-                    <div className={styles["img-div"]} style={{background: '#151416'}}></div>
-                </div>
-
-                <div className="global-wrapper">
-                    <div className={styles["img-div"]} style={{background: '#151416'}}></div>
-                </div>
-
                 <div className="global-wrapper" style={{width: "83.33%", marginLeft: "auto", marginRight: "auto", padding: "40px 0"}}>
                     <h3>What I Learnt</h3>
                     <h4 style={{opacity: "0.8"}}>{study.whatilearnt}</h4>
-                </div>
-
-                <div className="global-wrapper">
-                    <div className={styles["img-div"]} style={{background: '#151416'}}></div>
-                </div>
-
-                <div className="global-wrapper">
-                    <div className={styles["img-div"]} style={{background: '#151416'}}></div>
                 </div>
 
                 <div className="global-wrapper" style={{width: "83.33%", marginLeft: "auto", marginRight: "auto", padding: "40px 0"}}>
@@ -178,10 +156,6 @@ const Study = (props: any) => {
                     {study.credits !== undefined && study.credits.map((credit: string) => {
                         return <h4 style={{opacity: "0.8"}}>{credit}</h4>
                     })}
-                </div>
-
-                <div className="global-wrapper">
-                    <div className={styles["img-div"]} style={{background: '#151416'}}></div>
                 </div>
 
                 <div className="global-wrapper">

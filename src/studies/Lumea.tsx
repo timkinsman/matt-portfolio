@@ -1,31 +1,53 @@
-import img from "../images/Clients/client-cityofdarebin.svg";
+import img from "../images/Clients/client-lumea.svg";
 
-import {CITY_OF_DAREBIN} from "../colors"
+import {LUMEA} from "../colors"
 
-import { Government } from '../tagging/industries'
-import { Strategy, UI___UX } from '../tagging/capabilities'
+import { Banking___Finance } from '../tagging/industries'
+import { Branding___Identity, Strategy, UI___UX } from '../tagging/capabilities'
 import {
+    A_B_Testing,
+    Artefact_Review,
+    Concept_Usability_Testing,
+    Data_Analytics_Review,
     Heuristics_Evaluation,
     Card_Sort,
     Tree_Test,
-    Stakeholder_Interviews
+    Journey_Mapping,
+    Online_Surveys,
+    Persona_Development,
+    Requirements_Gathering,
+    Revised_User_Flows,
+    Roadmapping,
+    Stakeholder_Interviews,
+    User_Interviews
 } from '../tagging/researchMethods'
 
 export default {
     cardSummary: "A 10 year contact supporting the development of the City's future core web framework.. a custom pattern library supporting 14 sites.",
-    color: CITY_OF_DAREBIN, //color
+    color: LUMEA, //color
     img,
-    redirect: "cod",
-    title: "City of Darebin",
+    redirect: "l",
+    title: "Lumea",
 
     //tagging
-    capabilites: [Strategy, UI___UX],
-    industry: [Government],
+    capabilites: [Branding___Identity, Strategy, UI___UX],
+    industry: [Banking___Finance],
     researchMethods: [
+        A_B_Testing,
+        Artefact_Review,
+        Concept_Usability_Testing,
+        Data_Analytics_Review,
         Heuristics_Evaluation,
         Card_Sort,
         Tree_Test,
-        Stakeholder_Interviews
+        Journey_Mapping,
+        Online_Surveys,
+        Persona_Development,
+        Requirements_Gathering,
+        Revised_User_Flows,
+        Roadmapping,
+        Stakeholder_Interviews,
+        User_Interviews
     ],    
 
     //study
@@ -37,6 +59,7 @@ export default {
         "“The current, clunky system is well and truly past its use-by date. The ageing technology is not meeting the growing demand and expectations from people accessing our websites for everything from requesting services to applying for permits.” - Mayor Gross, City of Port Phillip",
         "VERSA was awarded a ten year contract to support Port Phillip's digital transformation, leading the redesign and development of a new technical ecosystem.",
     ],
+    backgroundImg: [],
     challenge: ["Establish a centralised digital platform for service delivery and engagement that will support the city’s evolution towards a digital-first future."],
     credits: ["Trainer photography by Jeremy Simons", "Back-end development by PixelForce"],
     deliverables: ["App UI design (Both iOS and Android platforms)", "Responsive website design", "Email marketing campaigns", "Editing and exporting of 1000+ Workout videos", "Physical products and apparel", "Signage for launch campaign"],
