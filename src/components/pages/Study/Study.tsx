@@ -23,7 +23,45 @@ const Study = (props: any) => {
     }
     
     const study = props.location.state.study
-    const images = require.context ( "../../../images/Studies/EatClub", true, /\.png$/ )
+
+    const getImages = (pstrTitle: string) => {
+        switch(pstrTitle){
+            case 'BankVic':
+                //return require.context('../../../images/Studies/BankVic', true, /\.png$/)
+            case 'Beyond Blue':
+                //return require.context('../../../images/Studies/BeyondBlue', true, /\.png$/)
+            case 'Bupa':
+                //return require.context('../../../images/Studies/Bupa', true, /\.png$/)
+            case 'City of Darebin':
+                //return require.context('../../../images/Studies/CityOfDarebin', true, /\.png$/)
+            case 'City of Port Phillip':
+                return require.context('../../../images/Studies/CityOfPortPhillip', true, /\.png$/)
+            case 'Click Frenzy':
+                //return require.context('../../../images/Studies/ClickFrenzy', true, /\.png$/)
+            case 'EatClub':
+                return require.context('../../../images/Studies/EatClub', true, /\.png$/)
+            case 'Frank Green':
+                //return require.context('../../../images/Studies/FrankGreen', true, /\.png$/)
+            case 'Homely':
+                //return require.context('../../../images/Studies/Homely', true, /\.png$/)
+            case 'Lumea':
+                //return require.context('../../../images/Studies/Lumea', true, /\.png$/)
+            case 'MCH':
+                //return require.context('../../../images/Studies/MCH', true, /\.png$/)
+            case 'OpenCourts':
+                //return require.context('../../../images/Studies/OpenCourts', true, /\.png$/)
+            case 'OVIC':
+                //return require.context('../../../images/Studies/OVIC', true, /\.png$/)
+            case 'Small Business Victoria':
+                //return require.context('../../../images/Studies/SmallBusinessVictoria', true, /\.png$/)
+            case 'Stroke Foundation':
+                //return require.context('../../../images/Studies/StrokeFoundation', true, /\.png$/)
+            case 'SWEAT':
+                return require.context('../../../images/Studies/SWEAT', true, /\.png$/)
+        }
+    }
+
+    const images = getImages(study.title)
 
     const handleOnClick = (pstrId: string) => {
         $('html,body').animate({
@@ -48,13 +86,15 @@ const Study = (props: any) => {
     }
 
     const renderImages = () => {
-        return images.map((image: string) => {
-            return (
-                <div className="global-wrapper">
-                    <img src={image} className={styles["img-div"]} />
-                </div>
-            )
-        })    
+        if(images){
+            return images.keys().slice(1).map((image: string) => {
+                return (
+                    <div className="global-wrapper">
+                        <img src={images(image).default} className={styles["img-div"]} />
+                    </div>
+                )
+            })
+        }
     }
 
     const renderLess = () => {
@@ -112,14 +152,10 @@ const Study = (props: any) => {
                 </div>
 
                 <div className="global-wrapper">
-                    <div className={styles["img-div"]} style={{background: study.color}}>
-                        <img src={study.img} />
-                    </div>
+                    <img className={styles["img-div"]} src={images ? images(images.keys()[0]).default : ''} />
                 </div>
 
-                {renderContent("about")}
                 {renderContent("brief")}
-                {renderContent("background")}
                 {renderContent("challenge")}
                 {renderContent("objective")}
                 {renderImages()}
@@ -127,11 +163,6 @@ const Study = (props: any) => {
                 <div className="global-wrapper" style={{width: "83.33%", marginLeft: "auto", marginRight: "auto", padding: "40px 0"}}>
                     <h3>Results</h3>
                     <h4 style={{opacity: "0.8"}}>{study.results}</h4>
-                </div>
-
-                <div className="global-wrapper" style={{width: "83.33%", marginLeft: "auto", marginRight: "auto", padding: "40px 0"}}>
-                    <h3>What I Learnt</h3>
-                    <h4 style={{opacity: "0.8"}}>{study.whatilearnt}</h4>
                 </div>
 
                 <div className="global-wrapper" style={{width: "83.33%", marginLeft: "auto", marginRight: "auto", padding: "40px 0"}}>
@@ -145,17 +176,14 @@ const Study = (props: any) => {
                 </div>
 
                 <div className="global-wrapper" style={{width: "83.33%", marginLeft: "auto", marginRight: "auto", padding: "40px 0"}}>
-                    <h3>Recognition</h3>
-                    {study.recognitions !== undefined && study.recognitions.map((recognition: string) => {
-                        return <h4 style={{opacity: "0.8"}}>{recognition}</h4>
-                    })}
-                </div>
-
-                <div className="global-wrapper" style={{width: "83.33%", marginLeft: "auto", marginRight: "auto", padding: "40px 0"}}>
                     <h3>Credits</h3>
                     {study.credits !== undefined && study.credits.map((credit: string) => {
                         return <h4 style={{opacity: "0.8"}}>{credit}</h4>
                     })}
+                </div>
+
+                <div className="global-wrapper" style={{width: "83.33%", marginLeft: "auto", marginRight: "auto", padding: "40px 0"}}>
+                    <h3>Testimonials</h3>
                 </div>
 
                 <div className="global-wrapper">

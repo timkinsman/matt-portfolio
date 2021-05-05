@@ -1,9 +1,6 @@
 .img-div {
-    align-items: center;
     border-radius: 12px;
-    display: flex;
-    height: 557px;
-    justify-content: center;
+    width: 100%;
 }
 
 .study-arrow {
