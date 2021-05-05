@@ -57,7 +57,7 @@ const Study = (props: any) => {
             case 'Stroke Foundation':
                 //return require.context('../../../images/Studies/StrokeFoundation', true, /\.png$/)
             case 'SWEAT':
-                return require.context('../../../images/Studies/SWEAT', true, /\.png$/)
+                return require.context('../../../images/Studies/Sweat', true, /\.png$/)
         }
     }
 
