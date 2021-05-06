@@ -1,39 +1,63 @@
-import img from "../images/Clients/client-eatclub.svg";
+import img from "../images/Clients/client-childrenscourt.svg";
 
-import {EAT_CLUB} from "../colors"
+import {CHILDRENS_COURT} from "../colors"
 
-import { Food___Beverage } from '../tagging/industries'
-import { Strategy, UI___UX, Marketing, Promotional } from '../tagging/capabilities'
-import { 
+import { Banking___Finance } from '../tagging/industries'
+import { Branding___Identity, Strategy, UI___UX } from '../tagging/capabilities'
+import {
+    A_B_Testing,
+    Artefact_Review,
+    Concept_Usability_Testing,
+    Data_Analytics_Review,
     Heuristics_Evaluation,
-    Competitor_Analysis,
-    Revised_User_Flows
+    Card_Sort,
+    Tree_Test,
+    Journey_Mapping,
+    Online_Surveys,
+    Persona_Development,
+    Requirements_Gathering,
+    Revised_User_Flows,
+    Roadmapping,
+    Stakeholder_Interviews,
+    User_Interviews
 } from '../tagging/researchMethods'
 
 export default {
-    color: EAT_CLUB, //color
+    color: CHILDRENS_COURT, //color
     img,
-    redirect: "ec",
+    redirect: "bv",
     thumbnail: "Website redevelopment project to improve functionality and user experience.",
-    title: "EatClub",
+    title: "BankVic",
 
     //tagging
     function: [],
     link: [],
     output:[],
 
-    capabilites: [Strategy, UI___UX, Marketing, Promotional],
-    industry: [Food___Beverage],
+    capabilites: [Branding___Identity, Strategy, UI___UX],
+    industry: [Banking___Finance],
     researchMethods: [
+        A_B_Testing,
+        Artefact_Review,
+        Concept_Usability_Testing,
+        Data_Analytics_Review,
         Heuristics_Evaluation,
-        Competitor_Analysis,
-        Revised_User_Flows
+        Card_Sort,
+        Tree_Test,
+        Journey_Mapping,
+        Online_Surveys,
+        Persona_Development,
+        Requirements_Gathering,
+        Revised_User_Flows,
+        Roadmapping,
+        Stakeholder_Interviews,
+        User_Interviews
     ],    
 
     //study
-    brief: ["Design and implement a digital experience platform as part of the Council’s Customer Experience Program."],
+    brief: [],
     challenge: ["BankVic’s existing website was confusing and complex for both users and staff to use, we helped plan and deliver a future-proof platform, with endless customisation and personalisation, putting the members at the centre of the experience."],
-    credits: ["Trainer photography by Jeremy Simons", "Back-end development by PixelForce"],
+    credits: [],
     deliverables: ["BankVic website re-design which can be viewed here"],
     hero: "BankVic is a 100% member owned bank focused on serving police, health, emergency and public services, as well as their family and friends. Their aim is to build healthy communities that are financially, socially and environmentally sustainable.",
     objective: [

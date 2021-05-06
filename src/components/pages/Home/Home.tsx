@@ -58,9 +58,9 @@ function Home() {
         </div>
       </div>
 
-      {renderPanel(4, "two", "three") /**cityofportphillip */}
+      {renderPanel(5, "two", "three") /**cityofportphillip */}
       {renderPanel(0, "three", "four") /**bankvic */}
-      {renderPanel(10, "four", "five") /**opencourts */}
+      {renderPanel(12, "four", "five") /**opencourts */}
       {renderPanel(1, "five", "six") /**beyondblue */}
 
       <div className="global-container">
@@ -71,9 +71,9 @@ function Home() {
         <Footer />
       </div>
       
-      <img className={styles["mouse-over-image"]} id="mouse-over-image-two" src={studies[4].img} alt={studies[4].title} />
+      <img className={styles["mouse-over-image"]} id="mouse-over-image-two" src={studies[5].img} alt={studies[5].title} />
       <img className={styles["mouse-over-image"]} id="mouse-over-image-three" src={studies[0].img} alt={studies[0].title} />
-      <img className={styles["mouse-over-image"]} id="mouse-over-image-four" src={studies[10].img} alt={studies[10].title} />
+      <img className={styles["mouse-over-image"]} id="mouse-over-image-four" src={studies[12].img} alt={studies[12].title} />
       <img className={styles["mouse-over-image"]} id="mouse-over-image-five" src={studies[1].img} alt={studies[1].title} />
     </div>
   );

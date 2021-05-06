@@ -4,8 +4,8 @@ import { faSpotify } from "@fortawesome/free-brands-svg-icons";
 import styles from "./Spotify.module.css";
 
 function Spotify() {
-  const [lfmName, updateLfmName] = useState("Blush");
-  const [lfmText, updateLfmText] = useState("Vynehall");
+  const [lfmName, updateLfmName] = useState("");
+  const [lfmText, updateLfmText] = useState("");
   const [sLink, updateSLink] = useState("https://open.spotify.com/user/mskinsm");
 
   /*useEffect(() => {
@@ -36,17 +36,25 @@ function Spotify() {
         updateLfmName(data.recenttracks.track[0].name)
         updateLfmText(data.recenttracks.track[0].artist["#text"])
       })
-      .catch(() =>
+      .catch(() => {
         console.log("error: 'Whoops! Something went wrong with Last.fm'")
-      );
+
+        //Default
+        updateLfmName("Blush")
+        updateLfmText("Vynehall")
+      });
   }, []);
 
-  return (
-    <div className={styles["spotify-container"]}>
-        <FontAwesomeIcon icon={faSpotify} className={styles["spotify-icon"]} />
-        <h3 className={styles["spotify-text"]}>Currently listening to <a className="global-border-thin" href={sLink} target="_blank">{lfmName}, {lfmText}</a></h3>
-    </div>
-  );
+  if(lfmName && lfmText){
+    return (
+      <div className={styles["spotify-container"]}>
+          <FontAwesomeIcon icon={faSpotify} className={styles["spotify-icon"]} />
+          <h3 className={styles["spotify-text"]}>Currently listening to <a className="global-border-thin" href={sLink} target="_blank">{lfmName}, {lfmText}</a></h3>
+      </div>
+    );
+  }
+
+  return null
 }
 
 export default Spotify;

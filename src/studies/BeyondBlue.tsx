@@ -21,35 +21,38 @@ import {
 } from '../tagging/researchMethods'
 
 export default {
-    cardSummary: "A 10 year contact supporting the development of the City's future core web framework.. a custom pattern library supporting 14 sites.",
     color: BEYOND_BLUE, //color
     img,
     redirect: "bb",
+    thumbnail: "A learning and resource platform that arms educators with the knowledge to promote and protect student mental health.",
     title: "Beyond Blue",
 
     //tagging
+    function: [],
+    link: [],
+    output:[],
+
     capabilites: [Strategy, UI___UX],
     industry: [NGO___Not_for_profit],
     researchMethods: [
     ],    
 
     //study
-    about: ["A brand new digital ecosystem including multiple websites and customer facing online services."],
-    brief: ["Design and implement a digital experience platform as part of the Council’s Customer Experience Program."],
-    background: [
-        "In 2019 Port Phillip Council’s digital heart was in need of a major upgrade. 53% of customers reported that they were unable to find what they were searching for, or that they required further information following their visit to the website.",
-        "At the same time, legacy systems and platforms were impacting efficiency, meaning Council's digital ecosystem required much more than a new lick of paint.",
-        "“The current, clunky system is well and truly past its use-by date. The ageing technology is not meeting the growing demand and expectations from people accessing our websites for everything from requesting services to applying for permits.” - Mayor Gross, City of Port Phillip",
-        "VERSA was awarded a ten year contract to support Port Phillip's digital transformation, leading the redesign and development of a new technical ecosystem.",
+    brief: [],
+    challenge: ["Create an all-encompassing learning and resource platform that would arm educators with the knowledge to promote and protect student mental health."],
+    credits: [],
+    deliverables: ["BeYou website platform re-design which can be viewed here"],
+    hero: "BeYou is Beyond Blue’s latest youth-focused initiative, it unifies five different sites. This single, integrated resource covers a child’s entire education. BeYou enables teachers to connect with students around mental health.",
+    objective: [
+        "We were responsible for strategy, UX, creative and development for the platform, taking insights from user research to create an audience-focused navigation and design. This included structuring the delivery of learning modules by user persona, allowing each different user group to easily make their way through the program.",
     ],
-    challenge: ["Establish a centralised digital platform for service delivery and engagement that will support the city’s evolution towards a digital-first future."],
-    credits: ["Trainer photography by Jeremy Simons", "Back-end development by PixelForce"],
-    deliverables: ["App UI design (Both iOS and Android platforms)", "Responsive website design", "Email marketing campaigns", "Editing and exporting of 1000+ Workout videos", "Physical products and apparel", "Signage for launch campaign"],
-    information: "The Sweat app can be downloaded from the Apple Store here and the Google Play Store here The Sweat website can be viewed here The Sweat Facebook page can be viewed here",
-    objective: ["I played the principal role of successfully leading the design team whilst forming strong relations with the engineer developers to collaboratively produce the product. Very tight deadlines were needed to be met in an lean working environment, to allow for quick yet high quality succession of results. The general style would change significantly given the rebrand as we moved from one singular trainer to a more encompassing, marketable brand which would house numerous trainers and workout types. This style is evidently more cleaner and minimalistic, allowing it to be characterised by the trainers and the personality of their training styles."],
-    recognitions: ["2016 Apple Watch App of the Year"],
-    results: "I played the principal role of successfully leading the design team whilst forming strong relations with the engineer developers to collaboratively produce the product. Very tight deadlines were needed to be met in an lean working environment, to allow for quick yet high quality succession of results. The general style would change significantly given the rebrand as we moved from one singular trainer to a more encompassing, marketable brand which would house numerous trainers and workout types. This style is evidently more cleaner and minimalistic, allowing it to be characterised by the trainers and the personality of their training styles.",
-    slogan: "For the everyday Member, BankVic's existing website was confusing and complex.",
-    summary: "The City of Port Phillip is an industry leader in both the technology and fitness sectors. Owner of the #1 ranked grossing health and fitness App in the world, Sweat connects women globally by providing them with the tools they need to shape their best and healthiest life.",
-    whatILearnt: "I played the principal role of successfully leading the design team whilst forming strong relations with the engineer developers to collaboratively produce the product. Very tight deadlines were needed to be met in an lean working environment, to allow for quick yet high quality succession of results."
+    results: [
+        "We designed and developed Be You, an education platform that supports resources and online learning for teachers in line with their professional development plans.",
+        "The platform takes users through a series of modules focused on different themes including bullying, self harm and suicide prevention. Once the program is completed, participants gain certification and are able to incorporate their learnings into lesson plans for use in the classroom.",
+        "Our team took insights from user research to create an audience-focused navigation and design. This included structuring the delivery of learning modules by user persona, allowing each different user group to easily make their way through the program in bite-sized modules, at a pace that best suits their busy schedules.",
+        "To avoid attrition and encourage ongoing engagement, simple gamification techniques and notifications are used to motivate users to explore further and complete the entire course.",
+        "Be You and Salesforce are completely interoperable, with all user information captured upon registration being sent to Salesforce, which is in turn utilised for the provision of learning resources, school information, complex user group management, and user notifications."
+    ],
+     
+    testimonials: []
 }

@@ -1,4 +1,5 @@
 export const BANK_VIC = "#279CD0";
+export const CHILDRENS_COURT = "#00698C"
 export const CITY_OF_PORT_PHILLIP = "#13676F";
 export const BEYOND_BLUE = "#007DE0";
 export const BUPA = "#046EBC";
@@ -13,4 +14,5 @@ export const OPEN_COURTS = "#082557";
 export const OVIC = "#551577";
 export const SMALL_BUSINESS_VICTORIA = "#1D3164";
 export const STROKE_FOUNDATION = "#008063";
-export const SWEAT = "#F02580";
+export const SWEAT = "#FF0571";
+export const VIC_POLICE = "#0E1751"

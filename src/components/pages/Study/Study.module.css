@@ -18,6 +18,8 @@
     display: grid;
     grid-gap: 30px;
     grid-template-columns: repeat(2, 1fr);
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    padding-top: 120px;
 }
 
 .study-container {

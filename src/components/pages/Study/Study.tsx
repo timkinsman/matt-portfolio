@@ -32,6 +32,8 @@ const Study = (props: any) => {
                 //return require.context('../../../images/Studies/BeyondBlue', true, /\.png$/)
             case 'Bupa':
                 //return require.context('../../../images/Studies/Bupa', true, /\.png$/)
+            case 'ChildrensCourt':
+                //return require.context('../../../images/Studies/ChildrensCourt', true, /\.png$/)    
             case 'City of Darebin':
                 //return require.context('../../../images/Studies/CityOfDarebin', true, /\.png$/)
             case 'City of Port Phillip':
@@ -57,7 +59,9 @@ const Study = (props: any) => {
             case 'Stroke Foundation':
                 //return require.context('../../../images/Studies/StrokeFoundation', true, /\.png$/)
             case 'SWEAT':
-                return require.context('../../../images/Studies/Sweat', true, /\.png$/)
+                return require.context('../../../images/Studies/SWEAT', true, /\.png$/)
+            case 'VicPolice':
+                //return require.context('../../../images/Studies/VicPolice', true, /\.png$/)
         }
     }
 
@@ -69,27 +73,31 @@ const Study = (props: any) => {
     }
 
     const renderArr = (parrstrArray: Array<string>) => {
-        return parrstrArray.join(", ")
+        if(parrstrArray.length !== 0){
+            return parrstrArray.join(", ")
+        }
     }
 
     const renderContent = (pstrSection: string) => {
-        return (
-            <div className="global-wrapper" style={{width: "83.33%", marginLeft: "auto", marginRight: "auto", padding: "40px 0"}}>
-                <h3 className={styles["study-capitalize"]}>{pstrSection}</h3>
-                {study[pstrSection].map((content: string) => {
-                    return (
-                        <h4 style={{opacity: "0.8"}}>{content}</h4>
-                    )
-                })}
-            </div>
-        )
+        if(study[pstrSection].length !== 0){
+            return (
+                <div className="global-wrapper" style={{padding: pstrSection === "credits" ? '16px 0 40px 0' : '16px 0 13.4px 0', width: "83.33%", marginLeft: "auto", marginRight: "auto"}}>
+                    <h3 className={styles["study-capitalize"]}>{pstrSection}</h3>
+                    {study[pstrSection].map((content: string) => {
+                        return (
+                            <h4 style={{opacity: "0.8", margin: pstrSection === "credits" ? "0 0" : "26.6px 0"}}>{content}</h4>
+                        )
+                    })}
+                </div>
+            )
+        }
     }
 
     const renderImages = () => {
         if(images){
             return images.keys().slice(1).map((image: string) => {
                 return (
-                    <div className="global-wrapper">
+                    <div className="global-wrapper" style={{padding: '30px 0'}}>
                         <img src={images(image).default} className={styles["img-div"]} />
                     </div>
                 )
@@ -122,7 +130,7 @@ const Study = (props: any) => {
                     <Navbar />
                     <div className="global-container" style={{paddingTop: '0', margin: 'auto'}}>
                         <div className={styles["study-content"]}>
-                            <h2>{study.summary}</h2>
+                            <h2>{study.hero}</h2>
                         </div>
                     </div>
                     <div className={styles["study-arrow"]}>
@@ -131,12 +139,26 @@ const Study = (props: any) => {
                 </div>
             </div>
             <div id="content" className="global-container" style={{paddingTop: '0'}}>
-                <div className="global-wrapper">
+                <div className="global-wrapper" style={{padding: '40px 0'}}>
                     <p className="global-title">{study.title}</p>
                 </div>
 
-                
-                <div className={styles["study-space-between"]}>
+                <div className={styles["study-space-between"]} style={{paddingBottom: '29.4px'}}>
+                    <div>
+                        <h3>Link</h3>
+                        <h4 style={{opacity: "0.4"}}>{renderArr(study.link)}</h4>
+                    </div>
+                    <div>
+                        <h3>Function</h3>
+                        <h4 style={{opacity: "0.4"}}>{renderArr(study.function)}</h4>
+                    </div>
+                    <div>
+                        <h3>Output</h3>
+                        <h4 style={{opacity: "0.4"}}>{renderArr(study.output)}</h4>
+                    </div>
+                </div>
+
+                <div className={styles["study-space-between"]} style={{paddingBottom: '13.4px'}}>
                     <div>
                         <h3>Industry</h3>
                         <h4 style={{opacity: "0.4"}}>{renderArr(study.industry)}</h4>
@@ -158,33 +180,13 @@ const Study = (props: any) => {
                 {renderContent("brief")}
                 {renderContent("challenge")}
                 {renderContent("objective")}
-                {renderImages()}
-
-                <div className="global-wrapper" style={{width: "83.33%", marginLeft: "auto", marginRight: "auto", padding: "40px 0"}}>
-                    <h3>Results</h3>
-                    <h4 style={{opacity: "0.8"}}>{study.results}</h4>
+                <div style={{padding: '30px 0'}}>
+                    {renderImages()}
                 </div>
-
-                <div className="global-wrapper" style={{width: "83.33%", marginLeft: "auto", marginRight: "auto", padding: "40px 0"}}>
-                <h3>Deliverables</h3>
-                    <ul style={{paddingLeft: '20px'}}>
-                        {study.deliverables !== undefined && study.deliverables.map((deliverable: string) => {
-                            return <li><h4 style={{margin: '5px 0'}}>{deliverable}</h4></li>
-                        })}
-                    </ul>
-                    <h4 style={{opacity: "0.8"}}>{study.information}</h4>
-                </div>
-
-                <div className="global-wrapper" style={{width: "83.33%", marginLeft: "auto", marginRight: "auto", padding: "40px 0"}}>
-                    <h3>Credits</h3>
-                    {study.credits !== undefined && study.credits.map((credit: string) => {
-                        return <h4 style={{opacity: "0.8"}}>{credit}</h4>
-                    })}
-                </div>
-
-                <div className="global-wrapper" style={{width: "83.33%", marginLeft: "auto", marginRight: "auto", padding: "40px 0"}}>
-                    <h3>Testimonials</h3>
-                </div>
+                {renderContent("results")}
+                {renderContent("deliverables")}
+                {renderContent("credits")}
+                {renderContent("testimonials")}
 
                 <div className="global-wrapper">
                     <div className={styles["study-card-view"]}>
@@ -195,11 +197,11 @@ const Study = (props: any) => {
                 </div>
 
                 <div id="divMore" className="global-wrapper" style={{justifyContent: "center", display: "flex", paddingTop: '0'}}>
-                    <h3><a onClick={renderMore}>Show more</a></h3>
+                    <h3 style={{margin: 0}}><a onClick={renderMore}>Show more</a></h3>
                 </div>
 
                 <div id="divLess" className="global-wrapper" style={{justifyContent: "center", display: "flex", paddingTop: '0'}}>
-                    <h3><a onClick={renderLess}>Show less</a></h3>
+                    <h3 style={{margin: 0}}><a onClick={renderLess}>Show less</a></h3>
                 </div>
 
                 <Footer />

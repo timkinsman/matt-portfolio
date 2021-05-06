@@ -10,7 +10,7 @@ function Card(props: any) {
         <div className={styles["card-content"]}>
           <h2 className={styles["card-study-title"]}>{props.study.title}</h2>
           <h4 className={styles["card-study-industry"]}>{props.study.industry}</h4>
-          <p className={styles["card-study-summary"]}>{props.study.cardSummary}</p>
+          <p className={styles["card-study-summary"]}>{props.study.thumbnail}</p>
           <h4  className={styles["card-study-link"]}><span className={styles["card-view-case"]}>View case study →</span></h4>
         </div>
       </div>
