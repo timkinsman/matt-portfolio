@@ -64,7 +64,7 @@ function Home() {
       {renderPanel(1, "five", "six") /**beyondblue */}
 
       <div className="global-container">
-        <CardView id="six" />
+        <CardView filter="" id="six" />
         <Clients />
         <Awards />
         <Testimonials />

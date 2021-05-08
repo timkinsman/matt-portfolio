@@ -1,17 +1,25 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import Card from "../Card/Card";
 import studies from "../../../studies";
 import { arrCapabilities } from "../../../tagging/capabilities";
 import { arrIndustries } from "../../../tagging/industries";
 import styles from "./CardView.module.css";
 
-function CardView(props: {id: string}) {
+function CardView(props: {id: string, filter: string}) {
   const [filter, setFilter] = useState<Array<string>>([])
   const [filterApply, setFilterApply] = useState<Array<string>>([])
 
   const [showCapability, setShowCapability] = useState(false)
   const [showClient, setShowClient] = useState(false)
   const [showIndustry, setShowIndustry] = useState(false)
+
+  useEffect(() => { //set pre-filter
+    if(props.filter !== ""){
+      setFilterApply([props.filter])
+    }else{
+      handleOnClear()
+    }
+  }, [])
 
   const handleOnApply = () => {
     setShowCapability(false)

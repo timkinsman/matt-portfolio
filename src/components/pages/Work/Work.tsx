@@ -5,7 +5,7 @@ import Navbar from '../../layout/Navbar/Navbar';
 
 import styles from "./Work.module.css"
 
-function Work() {
+function Work(props: any) {
   return (
     <div className="global-fadein">
       <div className="global-main-container">
@@ -15,7 +15,7 @@ function Work() {
           <div className={`${styles["work-description"]} global-wrapper`}>
             <h4>With over six years of experience in the industry, I have been fortunate enough to work with 25+ brands. Endeavouring to produce solutions to problems that enable and inspire others.</h4>
           </div>
-          <CardView id="null" />
+          <CardView filter={props.location.state !== undefined && props.location.state.filter ? props.location.state.filter : ""} id="null" />
           <Footer />
         </div>
       </div>

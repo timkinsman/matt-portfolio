@@ -8,6 +8,7 @@ import studies from '../../../studies'
 import arrow from '../../../images/arrow-down.svg'
 import $ from 'jquery'
 import styles from './Study.module.css'
+import { Link } from 'react-router-dom'
 
 const Study = (props: any) => { 
     const [limit, setLimit] = useState(2)
@@ -74,7 +75,14 @@ const Study = (props: any) => {
 
     const renderArr = (parrstrArray: Array<string>) => {
         if(parrstrArray.length !== 0){
-            return parrstrArray.join(", ")
+            return parrstrArray.map((pstrTag: string, pintIndex: number) => {
+                return (
+                    <React.Fragment>
+                        <Link className="global-border-thin" to={{pathname: "/casestudies", state: { filter: pstrTag }}}>{pstrTag}</Link>
+                        {pintIndex !== parrstrArray.length - 1 ? <span style={{opacity: 0.4}}>, </span> : null}
+                    </React.Fragment>
+                )
+            })
         }
     }
 
@@ -146,30 +154,30 @@ const Study = (props: any) => {
                 <div className={styles["study-space-between"]} style={{paddingBottom: '29.4px'}}>
                     <div>
                         <h3>Link</h3>
-                        <h4 style={{opacity: "0.4"}}>{renderArr(study.link)}</h4>
+                        <h4>{renderArr(study.link)}</h4>
                     </div>
                     <div>
                         <h3>Function</h3>
-                        <h4 style={{opacity: "0.4"}}>{renderArr(study.function)}</h4>
+                        <h4>{renderArr(study.function)}</h4>
                     </div>
                     <div>
                         <h3>Output</h3>
-                        <h4 style={{opacity: "0.4"}}>{renderArr(study.output)}</h4>
+                        <h4>{renderArr(study.output)}</h4>
                     </div>
                 </div>
 
                 <div className={styles["study-space-between"]} style={{paddingBottom: '13.4px'}}>
                     <div>
                         <h3>Industry</h3>
-                        <h4 style={{opacity: "0.4"}}>{renderArr(study.industry)}</h4>
+                        <h4>{renderArr(study.industry)}</h4>
                     </div>
                     <div>
                         <h3>Capabilites</h3>
-                        <h4 style={{opacity: "0.4"}}>{renderArr(study.capabilites)}</h4>
+                        <h4>{renderArr(study.capabilites)}</h4>
                     </div>
                     <div>
                         <h3>Research Methods</h3>
-                        <h4 style={{opacity: "0.4"}}>{renderArr(study.researchMethods)}</h4>
+                        <h4>{renderArr(study.researchMethods)}</h4>
                     </div>
                 </div>
 
