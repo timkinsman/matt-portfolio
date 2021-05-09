@@ -5,16 +5,15 @@
 .clients-clients {
     animation: fadeOut 10s infinite;
     display: grid;
-    gap: 50px;
+    grid-auto-flow: dense;
     grid-template-columns: repeat(4, 1fr);
     margin: 0 auto;
-    width: fit-content;
 }
 
 .clients-clients-second {
     animation: fadeIn 10s infinite;
     display: grid;
-    gap: 50px;
+    grid-auto-flow: dense;
     grid-template-columns: repeat(4, 1fr);
     left: 0;
     margin-left: auto;
@@ -23,7 +22,6 @@
     position: absolute;
     right: 0;
     top: 0;
-    width: fit-content;
 }
 
 .clients-img {

@@ -1,13 +1,21 @@
-import React from 'react';
-import Footer from '../../layout/Footer/Footer';
-import Item from '../../layout/Item/Item';
-import Navbar from '../../layout/Navbar/Navbar';
-import Tools from '../../layout/Tools/Tools';
+import React from "react";
+import Footer from "../../layout/Footer/Footer";
+import Item from "../../layout/Item/Item";
+import Navbar from "../../layout/Navbar/Navbar";
+import Tools from "../../layout/Tools/Tools";
+import { arrResearchMethods } from "../../../tagging/researchMethods";
+import { Link } from "react-router-dom";
 
 import styles from "./WhatIDo.module.css";
 import images from "../../../images/Emojis"
 
 function WhatIDo() {
+  const renderResearchMethods = (parrstrResearchMethods: Array<string>) => {
+    return parrstrResearchMethods.map((pstrResearchMethod) => {
+      return <h4>{pstrResearchMethod}</h4>
+    })
+  }
+
   return (
     <div className="global-fadein">
       <div className="global-main-container">
@@ -54,31 +62,8 @@ function WhatIDo() {
 
           <div className="global-wrapper">
             <h3>Research Methods</h3>
-            <div className={styles["whatido-grid-three"]}>
-              <div>
-                <h4>A/B Testing</h4>
-                <h4>Accessibility Testing</h4>
-                <h4>Artefact Review</h4>
-                <h4>Competitor Analysis</h4>
-                <h4>Concept Usability Testing</h4>
-                <h4>Contextual Inquiry</h4>
-              </div>
-              <div>
-                <h4>Data Analytics Review</h4>
-                <h4>Diary Studies</h4>
-                <h4>Heuristics Evaluation</h4>
-                <h4>Card Sorting</h4>
-                <h4>Tree Testing</h4>
-                <h4>Journey Mapping</h4>
-              </div>
-              <div>
-                <h4>Online Surveys</h4>
-                <h4>Persona Development</h4>
-                <h4>Requirements Gathering</h4>
-                <h4>Revised User Flows</h4>
-                <h4>Stakeholder Interviews</h4>
-                <h4>User Interviews</h4>
-              </div>
+            <div className={styles["whatido-grid-three-no-row-gap"]}>
+              {renderResearchMethods(arrResearchMethods)}
             </div>
           </div>
 

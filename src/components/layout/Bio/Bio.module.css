@@ -9,6 +9,16 @@
 }
 
 .bio-img {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.bio-img-container {
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 20px;
+    overflow: hidden;
+    position: relative;
     width: 100%;
 }

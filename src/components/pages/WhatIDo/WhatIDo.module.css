@@ -9,3 +9,13 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 60px;
 }
+
+.whatido-grid-three-no-row-gap {
+    column-gap: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.whatido-grid-three-no-row-gap > h4 {
+    margin: 13.3px 0;
+}

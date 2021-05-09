@@ -68,6 +68,12 @@ const Study = (props: any) => {
 
     const images = getImages(study.title)
 
+    /** */
+
+    const fadeIn = (pobj: any) => {
+        $(pobj.target).hide().fadeIn(1000)
+    }
+
     const handleOnClick = (pstrId: string) => {
         $('html,body').animate({
             scrollTop: $(pstrId).offset()?.top}, 'slow');
@@ -78,7 +84,7 @@ const Study = (props: any) => {
             return parrstrArray.map((pstrTag: string, pintIndex: number) => {
                 return (
                     <React.Fragment>
-                        <Link className="global-border-thin" to={{pathname: "/casestudies", state: { filter: pstrTag }}}>{pstrTag}</Link>
+                        <Link className="global-border-thin" to={{pathname: "/casestudies", hash: `#${pstrTag.replace(/[^a-zA-Z]/g, "").toLowerCase()}`, state: { filter: pstrTag }}}>{pstrTag}</Link>
                         {pintIndex !== parrstrArray.length - 1 ? <span style={{opacity: 0.4}}>, </span> : null}
                     </React.Fragment>
                 )
@@ -106,7 +112,9 @@ const Study = (props: any) => {
             return images.keys().slice(1).map((image: string) => {
                 return (
                     <div className="global-wrapper" style={{padding: '30px 0'}}>
-                        <img src={images(image).default} className={styles["img-div"]} />
+                        <div className={styles["study-img-container"]}>
+                            <img className={styles["study-img"]} loading="lazy" onLoad={fadeIn} src={images(image).default} />
+                        </div>
                     </div>
                 )
             })
@@ -182,7 +190,9 @@ const Study = (props: any) => {
                 </div>
 
                 <div className="global-wrapper">
-                    <img className={styles["img-div"]} src={images ? images(images.keys()[0]).default : ''} />
+                    <div className={styles["study-img-container"]}>
+                        <img className={styles["study-img"]} loading="lazy" onLoad={fadeIn} src={images ? images(images.keys()[0]).default : ''} />
+                    </div>
                 </div>
 
                 {renderContent("brief")}
