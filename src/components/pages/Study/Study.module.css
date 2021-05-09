@@ -36,6 +36,8 @@
 }
 
 .study-img {
+    border-radius: 20px;
+    display: none;
     left: 0;
     position: absolute;
     top: 0;
@@ -44,7 +46,7 @@
 
 .study-img-container {
     background: rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
+    border-radius: 20px;
     padding-top: calc(59/96 * 100%);
     position: relative;
     width: 100%;

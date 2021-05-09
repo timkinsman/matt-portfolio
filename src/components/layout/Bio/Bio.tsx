@@ -5,7 +5,7 @@ import styles from "./Bio.module.css";
 
 const Bio = () => {
   const fadeIn = (pobj: any) => {
-    $(pobj.target).hide().fadeIn(1000)
+    $(pobj.target).fadeIn(1000)
   }
 
   return (

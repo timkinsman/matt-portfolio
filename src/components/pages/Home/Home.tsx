@@ -41,6 +41,14 @@ function Home() {
   const _intIndexOC = getIndex("OpenCourts")
   const _intIndexBB = getIndex("Beyond Blue")
 
+  const fadeInFirst = (pobj: any) => {
+    $(pobj.target).fadeIn(2000)
+  }
+
+  const fadeInSecond = (pobj: any) => {
+    $(pobj.target).fadeIn(2000) //delay
+  }
+
   return (
     <div className="global-fadein" onMouseMove={handleOnMouseMove}>
       <Links />
