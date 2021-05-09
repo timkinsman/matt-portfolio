@@ -17,3 +17,26 @@ export const Revised_User_Flows = "Revised User Flows"
 export const Roadmapping = "Roadmapping"
 export const Stakeholder_Interviews = "Stakeholder Interviews"
 export const User_Interviews = "User Interviews"
+
+export const arrResearchMethods = [
+    A_B_Testing,
+    Accessibility_Testing,
+    Artefact_Review,
+    Competitor_Analysis,
+    Concept_Usability_Testing,
+    Contextual_Inquiry,
+    Data_Analytics_Review,
+    Diary_Studies,
+    Heuristics_Evaluation,
+    Card_Sort,
+    Tree_Test,
+    Journey_Mapping,
+    Online_Surveys,
+    Persona_Development,
+    Requirements_Gathering,
+    Revised_User_Flows,
+    Roadmapping,
+    Stakeholder_Interviews,
+    User_Interviews
+]
+

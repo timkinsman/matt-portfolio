@@ -12,6 +12,7 @@ import {
 
 export default {
     color: EAT_CLUB, //color
+    homePage: "",
     img,
     redirect: "ec",
     thumbnail: "Website redevelopment project to improve functionality and user experience.",
@@ -23,7 +24,7 @@ export default {
     output:[],
 
     capabilites: [Strategy, UI___UX, Marketing, Promotional],
-    industry: [Food___Beverage],
+    industries: [Food___Beverage],
     researchMethods: [
         Heuristics_Evaluation,
         Competitor_Analysis,

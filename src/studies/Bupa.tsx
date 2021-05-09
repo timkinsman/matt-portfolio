@@ -22,6 +22,7 @@ import {
 
 export default {
     color: BUPA, //color
+    homePage: "",
     img,
     redirect: "b",
     thumbnail: "Website redevelopment project to improve functionality and user experience.",
@@ -33,7 +34,7 @@ export default {
     output:[],
 
     capabilites: [Strategy, UI___UX],
-    industry: [Government],
+    industries: [Government],
     researchMethods: [
         Artefact_Review,
         Concept_Usability_Testing,

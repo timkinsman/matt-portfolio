@@ -13,6 +13,7 @@ import {
 
 export default {
     color: CITY_OF_DAREBIN, //color
+    homePage: "",
     img,
     redirect: "cod",
     thumbnail: "Website redevelopment project to improve functionality and user experience.",
@@ -24,7 +25,7 @@ export default {
     output:[],
 
     capabilites: [Strategy, UI___UX],
-    industry: [Government],
+    industries: [Government],
     researchMethods: [
         Heuristics_Evaluation,
         Card_Sort,

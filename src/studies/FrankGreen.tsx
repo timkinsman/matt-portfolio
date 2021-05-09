@@ -9,6 +9,7 @@ import {
 
 export default {
     color: FRANK_GREEN, //color
+    homePage: "",
     img,
     redirect: "fg",
     thumbnail: "Website redevelopment project to improve functionality and user experience.",
@@ -20,7 +21,7 @@ export default {
     output:[],
 
     capabilites: [UI___UX],
-    industry: [Food___Beverage],
+    industries: [Food___Beverage],
     researchMethods: [
     ],    
 

@@ -1,3 +1,4 @@
+import homePage from "../images/HomePage/beyondblue.png";
 import img from "../images/Clients/client-beyondblue.svg";
 
 import {BEYOND_BLUE} from "../colors"
@@ -22,6 +23,7 @@ import {
 
 export default {
     color: BEYOND_BLUE, //color
+    homePage,
     img,
     redirect: "bb",
     thumbnail: "A learning and resource platform that arms educators with the knowledge to promote and protect student mental health.",
@@ -33,7 +35,7 @@ export default {
     output:[],
 
     capabilites: [Strategy, UI___UX],
-    industry: [NGO___Not_for_profit],
+    industries: [NGO___Not_for_profit],
     researchMethods: [
     ],    
 

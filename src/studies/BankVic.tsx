@@ -1,3 +1,4 @@
+import homePage from "../images/HomePage/bankvic.png";
 import img from "../images/Clients/client-bankvic.svg";
 
 import {BANK_VIC} from "../colors"
@@ -24,6 +25,7 @@ import {
 
 export default {
     color: BANK_VIC, //color
+    homePage,
     img,
     redirect: "bv",
     thumbnail: "Website redevelopment project to improve functionality and user experience.",
@@ -35,7 +37,7 @@ export default {
     output:[],
 
     capabilites: [Branding___Identity, Strategy, UI___UX],
-    industry: [Banking___Finance],
+    industries: [Banking___Finance],
     researchMethods: [
         A_B_Testing,
         Artefact_Review,

@@ -16,6 +16,10 @@ import $ from "jquery";
 import styles from "./Home.module.css";
 
 function Home() {
+  const getIndex = (pstrStudy: string) => {
+    return studies.map(study => study.title).indexOf(pstrStudy);
+  } 
+
   const renderPanel = (pintIndex: number, pstrId: string, pstrNextId: string) => {
       return <Panel study={studies[pintIndex]} id={pstrId} next={pstrNextId} />
   }
@@ -31,6 +35,11 @@ function Home() {
     $("#mouse-over-image-four").css({left: pobjEvent.clientX + 25, top: pobjEvent.clientY + 25});
     $("#mouse-over-image-five").css({left: pobjEvent.clientX + 25, top: pobjEvent.clientY + 25});
   }
+
+  const _intIndexCOPP = getIndex("City of Port Phillip")
+  const _intIndexBV = getIndex("BankVic")
+  const _intIndexOC = getIndex("OpenCourts")
+  const _intIndexBB = getIndex("Beyond Blue")
 
   return (
     <div className="global-fadein" onMouseMove={handleOnMouseMove}>
@@ -58,10 +67,10 @@ function Home() {
         </div>
       </div>
 
-      {renderPanel(5, "two", "three") /**cityofportphillip */}
-      {renderPanel(0, "three", "four") /**bankvic */}
-      {renderPanel(12, "four", "five") /**opencourts */}
-      {renderPanel(1, "five", "six") /**beyondblue */}
+      {renderPanel(_intIndexCOPP, "two", "three") /**cityofportphillip */}
+      {renderPanel(_intIndexBV, "three", "four") /**bankvic */}
+      {renderPanel(_intIndexOC, "four", "five") /**opencourts */}
+      {renderPanel(_intIndexBB, "five", "six") /**beyondblue */}
 
       <div className="global-container">
         <CardView filter="" id="six" />
@@ -71,10 +80,10 @@ function Home() {
         <Footer />
       </div>
       
-      <img className={styles["mouse-over-image"]} id="mouse-over-image-two" src={studies[5].img} alt={studies[5].title} />
-      <img className={styles["mouse-over-image"]} id="mouse-over-image-three" src={studies[0].img} alt={studies[0].title} />
-      <img className={styles["mouse-over-image"]} id="mouse-over-image-four" src={studies[12].img} alt={studies[12].title} />
-      <img className={styles["mouse-over-image"]} id="mouse-over-image-five" src={studies[1].img} alt={studies[1].title} />
+      <img className={styles["mouse-over-image"]} id="mouse-over-image-two" src={studies[_intIndexCOPP].homePage} alt={studies[_intIndexCOPP].title} />
+      <img className={styles["mouse-over-image"]} id="mouse-over-image-three" src={studies[_intIndexBV].homePage} alt={studies[_intIndexBV].title} />
+      <img className={styles["mouse-over-image"]} id="mouse-over-image-four" src={studies[_intIndexOC].homePage} alt={studies[_intIndexOC].title} />
+      <img className={styles["mouse-over-image"]} id="mouse-over-image-five" src={studies[_intIndexBB].homePage} alt={studies[_intIndexBB].title} />
     </div>
   );
 }

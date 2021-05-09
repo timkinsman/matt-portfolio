@@ -22,6 +22,7 @@ import {
 
 export default {
     color: HOMELY, //color
+    homePage: "",
     img,
     redirect: "h",
     title: "Homely",
@@ -40,7 +41,7 @@ export default {
         Promotional,
         Wayfinding___Signage
     ],
-    industry: [Real_Estate],
+    industries: [Real_Estate],
     researchMethods: [
         A_B_Testing,
         Competitor_Analysis,

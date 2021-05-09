@@ -13,6 +13,7 @@ import {
 
 export default {
     color: MCH, //color
+    homePage: "",
     img,
     redirect: "mch",
     thumbnail: "Mobile-first service delivery for parents, providing access to 100 years of expert advice at the touch of a thumb.",
@@ -24,7 +25,7 @@ export default {
     output:[],
 
     capabilites: [Branding___Identity, Strategy, UI___UX],
-    industry: [Health],
+    industries: [Health],
     researchMethods: [
         Concept_Usability_Testing,
         Diary_Studies,

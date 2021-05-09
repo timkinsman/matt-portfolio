@@ -1,3 +1,4 @@
+import homePage from "../images/HomePage/opencourts.png";
 import img from "../images/Clients/client-opencourts.svg";
 
 import {OPEN_COURTS} from "../colors"
@@ -13,6 +14,7 @@ import {
 
 export default {
     color: OPEN_COURTS, //color
+    homePage,
     img,
     redirect: "op",
     thumbnail: "Website redevelopment project to improve functionality and user experience.",
@@ -24,7 +26,7 @@ export default {
     output:[],
 
     capabilites: [Branding___Identity, UI___UX],
-    industry: [Legal],
+    industries: [Legal],
     researchMethods: [
         Artefact_Review,
         Requirements_Gathering,

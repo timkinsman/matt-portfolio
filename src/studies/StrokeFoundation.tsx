@@ -22,6 +22,7 @@ import {
 
 export default {
     color: STROKE_FOUNDATION, //color
+    homePage: "",
     img,
     redirect: "sf",
     thumbnail: "The most accessible platform in Australia, developed in conjunction with stroke survivors.",
@@ -33,7 +34,7 @@ export default {
     output:[],
 
     capabilites: [Strategy, UI___UX],
-    industry: [Government],
+    industries: [Government],
     researchMethods: [
         Artefact_Review,
         Concept_Usability_Testing,

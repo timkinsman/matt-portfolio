@@ -20,6 +20,7 @@ import {
 
 export default {
     color: SWEAT, //color
+    homePage: "",
     img,
     redirect: "s",
     thumbnail: "Website redevelopment project to improve functionality and user experience.",
@@ -41,7 +42,7 @@ export default {
         Promotional,
         Wayfinding___Signage
     ],
-    industry: [Sports___Fitness],
+    industries: [Sports___Fitness],
     researchMethods: [
         Competitor_Analysis
     ],    

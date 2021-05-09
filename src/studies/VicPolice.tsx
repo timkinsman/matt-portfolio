@@ -24,6 +24,7 @@ import {
 
 export default {
     color: VIC_POLICE, //color
+    homePage: "",
     img,
     redirect: "vp",
     thumbnail: "Website redevelopment project to improve functionality and user experience.",
@@ -35,7 +36,7 @@ export default {
     output:[],
 
     capabilites: [Branding___Identity, Strategy, UI___UX],
-    industry: [Banking___Finance],
+    industries: [Banking___Finance],
     researchMethods: [
         A_B_Testing,
         Artefact_Review,

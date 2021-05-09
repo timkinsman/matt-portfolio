@@ -1,3 +1,4 @@
+import homePage from "../images/HomePage/cityofportphilip.png";
 import img from "../images/Clients/client-cityofportphillip.svg";
 
 import {CITY_OF_PORT_PHILLIP} from "../colors"
@@ -22,6 +23,7 @@ import {
 
 export default {
     color: CITY_OF_PORT_PHILLIP, //color
+    homePage,
     img,
     redirect: "copp",
     thumbnail: "Website redevelopment project to improve functionality and user experience.",
@@ -33,7 +35,7 @@ export default {
     output:[],
 
     capabilites: [Strategy, UI___UX],
-    industry: [Government],
+    industries: [Government],
     researchMethods: [
         Artefact_Review,
         Concept_Usability_Testing,

@@ -169,7 +169,7 @@ const Study = (props: any) => {
                 <div className={styles["study-space-between"]} style={{paddingBottom: '13.4px'}}>
                     <div>
                         <h3>Industry</h3>
-                        <h4>{renderArr(study.industry)}</h4>
+                        <h4>{renderArr(study.industries)}</h4>
                     </div>
                     <div>
                         <h3>Capabilites</h3>
