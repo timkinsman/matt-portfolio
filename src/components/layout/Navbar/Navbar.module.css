@@ -7,6 +7,11 @@
     width: -webkit-fill-available;
 }
 
+.navbar-hamburger {
+    display: none;
+    margin-left: auto;
+}
+
 .navbar-right {
     display: flex;
     gap: 60px;

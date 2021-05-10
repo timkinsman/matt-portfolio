@@ -46,7 +46,6 @@ function Home() {
   }
 
   useEffect(() => {
-    fadeIn("#staggerFirst", 0)
     fadeIn("#staggerSecond", 500)
     fadeIn("#staggerThird", 1000)
     fadeIn("#staggerFourth", 1500)
@@ -54,7 +53,7 @@ function Home() {
   }, [])
 
   return (
-    <div className={styles["home-main-container"]} onMouseMove={handleOnMouseMove}>
+    <div className="global-fadein" onMouseMove={handleOnMouseMove}>
       <div id="staggerFifth" className={styles["home-visibility-hidden"]}>
         <Links />
         <Pagnation />
@@ -62,15 +61,13 @@ function Home() {
       
       <div className={`${styles["home-banner"]} global-main-container`} id="one">
         <div className={styles["home-panel"]}>
-          <div id="staggerFirst" className={styles["home-visibility-hidden"]}>
-            <Navbar selected="home" />
-          </div>
+          <Navbar selected="home" />
 
           <h1 id="staggerSecond" className={`${styles["home-panel-text"]} ${styles["home-visibility-hidden"]}`}>
             Hello, my name is <Link className="global-border-thick" to="/about">Matthew Kinsman</Link>,<br />
             I’m a multi-disciplinary experience<br />
             designer currently living in Melbourne<br />
-            and working at <a className="global-border-thick" href="https://versa.agency" target="_blank">Versa Agency</a>.
+            and working at <a className="global-border-thick" href="https://versa.agency" rel="noreferrer" target="_blank">Versa Agency</a>.
           </h1>
 
           <div className={styles["home-panel-bottom"]}>
@@ -79,7 +76,7 @@ function Home() {
             </div>
             
             <div id="staggerFourth" className={`${styles["home-arrow"]} ${styles["home-visibility-hidden"]}`}>
-              <a onClick={() => handleOnClick("#two")}><img src={arrow} /></a>
+              <a onClick={() => handleOnClick("#two")}><img alt="arrow" src={arrow} /></a>
             </div>
           </div>
         </div>

@@ -19,7 +19,9 @@
 .bio-img-container {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 20px;
+    height: 0;
     overflow: hidden;
+    padding-bottom: 100%;
     position: relative;
     width: 100%;
 }

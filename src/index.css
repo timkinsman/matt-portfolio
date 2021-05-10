@@ -115,7 +115,14 @@ a.global-border-thick:hover {
     font-size: 14px;
     line-height: 20px;
   }
-  
+
+  #navbar-hamburger {
+    display: flex;
+  }
+
+  #navbar-right {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) { /** Tablet */
@@ -129,6 +136,14 @@ a.global-border-thick:hover {
 
   .global-hidden {
     display: none !important;
+  }
+
+  #navbar-hamburger {
+    display: flex;
+  }
+
+  #navbar-right {
+    display: none;
   }
 }
 

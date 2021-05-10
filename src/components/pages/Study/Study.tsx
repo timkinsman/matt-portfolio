@@ -8,7 +8,7 @@ import studies from '../../../studies'
 import arrow from '../../../images/arrow-down.svg'
 import $ from 'jquery'
 import styles from './Study.module.css'
-import { Link } from 'react-router-dom'
+import Tagging from '../../layout/Tagging/Tagging'
 
 const Study = (props: any) => { 
     const [limit, setLimit] = useState(2)
@@ -79,19 +79,6 @@ const Study = (props: any) => {
             scrollTop: $(pstrId).offset()?.top}, 'slow');
     }
 
-    const renderArr = (parrstrArray: Array<string>) => {
-        if(parrstrArray.length !== 0){
-            return parrstrArray.map((pstrTag: string, pintIndex: number) => {
-                return (
-                    <React.Fragment>
-                        <Link className="global-border-thin" to={{pathname: "/casestudies", hash: `#${pstrTag.replace(/[^a-zA-Z]/g, "").toLowerCase()}`, state: { filter: pstrTag }}}>{pstrTag}</Link>
-                        {pintIndex !== parrstrArray.length - 1 ? <span style={{opacity: 0.4}}>, </span> : null}
-                    </React.Fragment>
-                )
-            })
-        }
-    }
-
     const renderContent = (pstrSection: string) => {
         if(study[pstrSection].length !== 0){
             return (
@@ -159,35 +146,7 @@ const Study = (props: any) => {
                     <p className="global-title">{study.title}</p>
                 </div>
 
-                <div className={styles["study-space-between"]} style={{paddingBottom: '29.4px'}}>
-                    <div>
-                        <h3>Link</h3>
-                        <h4>{renderArr(study.link)}</h4>
-                    </div>
-                    <div>
-                        <h3>Function</h3>
-                        <h4>{renderArr(study.function)}</h4>
-                    </div>
-                    <div>
-                        <h3>Output</h3>
-                        <h4>{renderArr(study.output)}</h4>
-                    </div>
-                </div>
-
-                <div className={styles["study-space-between"]} style={{paddingBottom: '13.4px'}}>
-                    <div>
-                        <h3>Industry</h3>
-                        <h4>{renderArr(study.industries)}</h4>
-                    </div>
-                    <div>
-                        <h3>Capabilites</h3>
-                        <h4>{renderArr(study.capabilites)}</h4>
-                    </div>
-                    <div>
-                        <h3>Research Methods</h3>
-                        <h4>{renderArr(study.researchMethods)}</h4>
-                    </div>
-                </div>
+                <Tagging study={study} />
 
                 <div className="global-wrapper">
                     <div className={styles["study-img-container"]}>

@@ -18,9 +18,8 @@ function CardView(props: {id: string, filter: string}) {
   useEffect(() => { //set pre-filter
     if(props.filter !== ""){
       setFilterApply([props.filter])
-    }else{
-      handleOnClear()
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const handleOnApply = () => {
@@ -142,14 +141,14 @@ function CardView(props: {id: string, filter: string}) {
     }
   }
 
-  const renderStudies = (pobjStudy: any) => {
+  const renderStudies = (pobjStudy: any, pintIndex: number) => {
     if(filterApply.length > 0){
       let arrFilters = [...pobjStudy.capabilites, ...pobjStudy.industries, ...pobjStudy.researchMethods, pobjStudy.title]
       if(arrFilters.some((strFilter: string) => filterApply.includes(strFilter))){
-        return <Card study={pobjStudy} />
+        return <div key={`renderStudies-${pintIndex}`}><Card study={pobjStudy} /></div>
       }
     }else{
-      return <Card study={pobjStudy} />
+      return <div key={`renderStudies-${pintIndex}`}><Card study={pobjStudy} /></div>
     }
   }
 
@@ -167,8 +166,8 @@ function CardView(props: {id: string, filter: string}) {
         {render()}
         {renderFilterApply()}
         <div className={styles["card-view"]}>
-          {studies.map(objStudy => {
-            return renderStudies(objStudy)
+          {studies.map((pobjStudy: any, pintIndex: number) => {
+            return renderStudies(pobjStudy, pintIndex)
           })}
         </div>
     </div>

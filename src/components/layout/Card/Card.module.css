@@ -3,8 +3,8 @@
     border-radius: 12px;
     color: rgba(255, 255, 255, 0) ;
     display: flex;
-    height: 330px;
     justify-content: center;
+    padding-bottom: calc(59/96 * 100%);
     position: relative;
     transition: background 1s, color 1s;
 }
@@ -19,7 +19,7 @@
     transition: background 1s, color 1s;
 }
 
-.card:hover > .card-image {
+.card:hover > .card-inner > .card-image {
     opacity: 0;
     transition: opacity 1s;
 }
@@ -37,7 +37,18 @@
 .card-image {
     height: 100%;
     opacity: 1;
+    position: absolute;
+    top: 0;
     transition: opacity 1s;
+    width: 100%;
+}
+
+.card-inner {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
 
 .card-study-industry{

@@ -30,9 +30,9 @@ export default {
     title: "Beyond Blue",
 
     //tagging
-    function: [],
-    link: [],
-    output:[],
+    function: {text: "VERSA angency", link: ""},
+    link: "https://www.portphillip.vic.gov.au",
+    output: [{text: "Website", link: ""}, {text: "Platform", link: ""}],
 
     capabilites: [Strategy, UI___UX],
     industries: [NGO___Not_for_profit],

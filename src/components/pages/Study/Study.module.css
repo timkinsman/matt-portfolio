@@ -12,7 +12,7 @@
 .study-card-view{
     display: grid;
     grid-gap: 30px;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(430px, 1fr));
     border-top: 1px solid rgba(255, 255, 255, .1);
     padding-top: 120px;
 }
@@ -50,10 +50,4 @@
     padding-top: calc(59/96 * 100%);
     position: relative;
     width: 100%;
-}
-
-.study-space-between {
-    display: grid;
-    gap: 60px;
-    grid-template-columns: repeat(3, 1fr);
 }

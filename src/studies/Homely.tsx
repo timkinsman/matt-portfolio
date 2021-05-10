@@ -29,9 +29,9 @@ export default {
     thumbnail: "Website redevelopment project to improve functionality and user experience.",
 
     //tagging
-    function: [],
-    link: [],
-    output:[],
+    function: {text: "VERSA angency", link: ""},
+    link: "https://www.portphillip.vic.gov.au",
+    output: [{text: "Website", link: ""}, {text: "Platform", link: ""}],
 
     capabilites: [
         Strategy,
