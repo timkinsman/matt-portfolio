@@ -37,11 +37,11 @@
 
 .study-img {
     border-radius: 20px;
-    display: none;
     left: 0;
     position: absolute;
     top: 0;
     width: 100%;
+    visibility: hidden;
 }
 
 .study-img-container {

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Awards from "../../layout/Awards/Awards";
 import CardView from "../../layout/CardView/CardView";
@@ -41,34 +41,44 @@ function Home() {
   const _intIndexOC = getIndex("OpenCourts")
   const _intIndexBB = getIndex("Beyond Blue")
 
-  const fadeInFirst = (pobj: any) => {
-    $(pobj.target).fadeIn(2000)
+  const fadeIn = (pstrId: string, pintDelay: number) => {
+    $(pstrId).delay(pintDelay).css('visibility','visible').hide().fadeIn(2000); 
   }
 
-  const fadeInSecond = (pobj: any) => {
-    $(pobj.target).fadeIn(2000) //delay
-  }
+  useEffect(() => {
+    fadeIn("#staggerFirst", 0)
+    fadeIn("#staggerSecond", 500)
+    fadeIn("#staggerThird", 1000)
+    fadeIn("#staggerFourth", 1500)
+    fadeIn("#staggerFifth", 2000)
+  }, [])
 
   return (
-    <div className="global-fadein" onMouseMove={handleOnMouseMove}>
-      <Links />
-      <Pagnation />
+    <div className={styles["home-main-container"]} onMouseMove={handleOnMouseMove}>
+      <div id="staggerFifth" className={styles["home-visibility-hidden"]}>
+        <Links />
+        <Pagnation />
+      </div>
       
       <div className={`${styles["home-banner"]} global-main-container`} id="one">
         <div className={styles["home-panel"]}>
-          <Navbar selected="home" />
+          <div id="staggerFirst" className={styles["home-visibility-hidden"]}>
+            <Navbar selected="home" />
+          </div>
 
-          <h1 className={styles["home-panel-text"]}>
+          <h1 id="staggerSecond" className={`${styles["home-panel-text"]} ${styles["home-visibility-hidden"]}`}>
             Hello, my name is <Link className="global-border-thick" to="/about">Matthew Kinsman</Link>,<br />
             I’m a multi-disciplinary experience<br />
             designer currently living in Melbourne<br />
             and working at <a className="global-border-thick" href="https://versa.agency" target="_blank">Versa Agency</a>.
-          </h1> 
+          </h1>
 
           <div className={styles["home-panel-bottom"]}>
-            <Spotify />
+            <div id="staggerThird" className={styles["home-visibility-hidden"]}>
+              <Spotify />
+            </div>
             
-            <div className={styles["home-arrow"]}>
+            <div id="staggerFourth" className={`${styles["home-arrow"]} ${styles["home-visibility-hidden"]}`}>
               <a onClick={() => handleOnClick("#two")}><img src={arrow} /></a>
             </div>
           </div>

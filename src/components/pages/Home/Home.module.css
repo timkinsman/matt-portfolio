@@ -14,6 +14,12 @@
     margin: auto;
 }
 
+.home-main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .home-panel {
     height: 100%;
     display: flex;
@@ -27,6 +33,14 @@
     align-items: center;
 }
 
+.home-panel-text {
+    margin: auto 0;
+}
+
+.home-visibility-hidden {
+    visibility: hidden;
+}
+
 .mouse-over-image {
     position: fixed;
     top: 0;
@@ -35,8 +49,4 @@
     transition: opacity 0.5s;
     pointer-events: none;
     width: 786px;
-}
-
-.home-panel-text {
-    margin: auto 0;
 }

@@ -71,7 +71,7 @@ const Study = (props: any) => {
     /** */
 
     const fadeIn = (pobj: any) => {
-        $(pobj.target).fadeIn(1000)
+        $(pobj.target).css('visibility','visible').hide().fadeIn(1000);
     }
 
     const handleOnClick = (pstrId: string) => {
