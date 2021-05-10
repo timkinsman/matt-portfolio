@@ -99,7 +99,7 @@ const Study = (props: any) => {
             return images.keys().slice(1).map((image: string) => {
                 return (
                     <div className="global-wrapper" style={{padding: '30px 0'}}>
-                        <div className={styles["study-img-container"]}>
+                        <div className={styles["study-img-container"]} style={{background: study.color}}>
                             <img className={styles["study-img"]} loading="lazy" onLoad={fadeIn} src={images(image).default} />
                         </div>
                     </div>
@@ -149,7 +149,7 @@ const Study = (props: any) => {
                 <Tagging study={study} />
 
                 <div className="global-wrapper">
-                    <div className={styles["study-img-container"]}>
+                    <div className={styles["study-img-container"]} style={{background: study.color}}>
                         <img className={styles["study-img"]} loading="lazy" onLoad={fadeIn} src={images ? images(images.keys()[0]).default : ''} />
                     </div>
                 </div>
