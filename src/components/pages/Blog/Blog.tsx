@@ -5,10 +5,12 @@ import Navbar from "../../layout/Navbar/Navbar";
 function Blog() {
   return (
     <div className="global-fadein">
-      <Navbar selected="stuff" />
-      <div className="global-container">
-        <p className="global-title">Other Work</p>
-        <Footer />
+      <div className="global-main-container">
+        <Navbar selected="stuff" />
+        <div className="global-container">
+          <p className="global-title">Other Work</p>
+          <Footer />
+        </div>
       </div>
     </div>
   );

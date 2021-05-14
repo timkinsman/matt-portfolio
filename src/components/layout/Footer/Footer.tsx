@@ -21,7 +21,7 @@ function Footer() {
                 <h4><Link to="/casestudies" className="global-border-thin">Case studies</Link></h4>
                 <h4><Link to="/about" className="global-border-thin">About me</Link></h4>
                 <h4><Link to="/whatido" className="global-border-thin">What I do</Link></h4>
-                {/*<h4><Link to="/otherwork" className="global-border-thin">Other work</Link></h4>*/}
+                <h4><Link to="/otherwork" className="global-border-thin">Other work</Link></h4>
                 <h4><Link to="/contact" className="global-border-thin">Contact</Link></h4>
               </div>
             </div>
@@ -38,8 +38,8 @@ function Footer() {
             </div>
           </div>
           <div className={styles["footer-grid-bottom"]}>
-            <p>Developed by <a className="global-border-thin" href="https://timkinsman.com" target="_blank">Tim Kinsman</a></p>
-            <p>© 2021 Matthew Kinsman, Melbourne, Australia</p>
+            <h4>Developed by <a className="global-border-thin" href="https://timkinsman.com" target="_blank">Tim Kinsman</a></h4>
+            <h4>© 2021 Matthew Kinsman, Melbourne, Australia</h4>
           </div>
           <div className={styles["footer-arrow"]}>
             <a className="global-arrow" onClick={handleOnClick}><img style={{transform: "rotate(180deg)"}} src={arrow} /></a>

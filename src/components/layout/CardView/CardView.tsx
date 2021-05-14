@@ -3,6 +3,7 @@ import Card from "../Card/Card";
 import studies from "../../../studies";
 import { arrCapabilities } from "../../../tagging/capabilities";
 import { arrIndustries } from "../../../tagging/industries";
+import { arrOutput } from "../../../tagging/output";
 import { arrResearchMethods } from "../../../tagging/researchMethods";
 import styles from "./CardView.module.css";
 
@@ -13,6 +14,7 @@ function CardView(props: {id: string, filter: string}) {
   const [showCapability, setShowCapability] = useState(false)
   const [showClient, setShowClient] = useState(false)
   const [showIndustry, setShowIndustry] = useState(false)
+  const [showOutput, setShowOutput] = useState(false)
   const [showResearchMethod, setShowResearchMethod] = useState(false)
 
   useEffect(() => { //set pre-filter
@@ -26,6 +28,7 @@ function CardView(props: {id: string, filter: string}) {
     setShowCapability(false)
     setShowClient(false)
     setShowIndustry(false)
+    setShowOutput(false)
     setShowResearchMethod(false)
     setFilterApply(filter)
     setFilter([])
@@ -50,6 +53,7 @@ function CardView(props: {id: string, filter: string}) {
         setShowCapability(!showCapability)
         setShowClient(false)
         setShowIndustry(false)
+        setShowOutput(false)
         setShowResearchMethod(false)
         break;
       case "client":
@@ -57,6 +61,7 @@ function CardView(props: {id: string, filter: string}) {
         setShowCapability(false)
         setShowClient(!showClient)
         setShowIndustry(false)
+        setShowOutput(false)
         setShowResearchMethod(false)
         break;
       case "industry":
@@ -64,6 +69,15 @@ function CardView(props: {id: string, filter: string}) {
         setShowCapability(false)
         setShowClient(false)
         setShowIndustry(!showIndustry)
+        setShowOutput(false)
+        setShowResearchMethod(false)
+        break;
+      case "output":
+        setFilterApply([])
+        setShowCapability(false)
+        setShowClient(false)
+        setShowIndustry(false)
+        setShowOutput(!showOutput)
         setShowResearchMethod(false)
         break;
       case "researchMethod":
@@ -71,6 +85,7 @@ function CardView(props: {id: string, filter: string}) {
         setShowCapability(false)
         setShowClient(false)
         setShowIndustry(false)
+        setShowOutput(false)
         setShowResearchMethod(!showResearchMethod)
         break;
     }
@@ -82,6 +97,9 @@ function CardView(props: {id: string, filter: string}) {
     }
     if(showIndustry === true){
       return renderMap(arrIndustries)
+    }
+    if(showOutput === true){
+      return renderMap(arrOutput)
     }
     if(showResearchMethod === true){
       return renderMap(arrResearchMethods.filter((pstrMethod) => pstrMethod != "Roadmapping"))
@@ -143,7 +161,11 @@ function CardView(props: {id: string, filter: string}) {
 
   const renderStudies = (pobjStudy: any, pintIndex: number) => {
     if(filterApply.length > 0){
-      let arrFilters = [...pobjStudy.capabilites, ...pobjStudy.industries, ...pobjStudy.researchMethods, pobjStudy.title]
+      let arrOutput = pobjStudy.output.reduce((acc: Array<string>, item: any) => {
+          acc.push(item.text);
+          return acc
+      }, [])
+      let arrFilters = [...pobjStudy.capabilites, ...pobjStudy.industries, ...arrOutput, ...pobjStudy.researchMethods, pobjStudy.title]
       if(arrFilters.some((strFilter: string) => filterApply.includes(strFilter))){
         return <div key={`renderStudies-${pintIndex}`}><Card study={pobjStudy} /></div>
       }
@@ -161,6 +183,7 @@ function CardView(props: {id: string, filter: string}) {
           <h4><a onClick={() => handleOnClick("industry")} style={{opacity: showIndustry === true ? 1 : 0.4}}>Industry {showIndustry === true ? "↑" : "↓"}</a></h4>
           <h4><a onClick={() => handleOnClick("client")} style={{opacity: showClient === true ? 1 : 0.4}}>Client {showClient === true ? "↑" : "↓"}</a></h4>
           <h4><a onClick={() => handleOnClick("researchMethod")} style={{opacity: showResearchMethod === true ? 1 : 0.4}}>Research {showResearchMethod === true ? "↑" : "↓"}</a></h4>
+          <h4><a onClick={() => handleOnClick("output")} style={{opacity: showOutput === true ? 1 : 0.4}}>Output {showOutput === true ? "↑" : "↓"}</a></h4>
           {renderOptions()}
         </div>
         {render()}

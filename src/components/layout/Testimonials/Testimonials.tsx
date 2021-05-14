@@ -21,13 +21,13 @@ const Testimonials = () => {
         },
         {
             id: 2,
-            quote: "“I worked with Matt at Sweat and he was an absolute pleasure to work with. Professionally he's smart, thoughtful, passionate and honest. He's also really easy to work with, as he is a fun, sincere, authentic and easy going person. We work together on a complex Design System documentation that became the foundation of a whole methodology that I still use to this day. He is well versed in UX, and he is a super talented artist. A great mix of both left + right brain. I would hire him any day given the opportunity.”",
+            quote: "“I worked with Matt at Sweat, professionally he's smart, thoughtful, passionate and honest. He is well versed in UX encompassing a great mix of both left & right brain. I would hire him any day given the opportunity.”",
             from: "Edgar Anzaldua",
             details: "Head of Product Design, Sniip"
         },
         {
             id: 3,
-            quote: "“We still talk about how glad we are that we settled on Matt to create our brand. We think it has been a major contributor to our early success with the clean, professional logo providing legitimacy to our new brand. Would work with Matt in the future and recommend to anyone looking for design strategy and creative work done.”",
+            quote: "“We still talk about how glad we are that we settled on Matt to create our brand. He has been a major contributor to our early success and would work with him in the future and recommend to anyone looking for strategy and creative work.”",
             from: "Panayioti Koutlakis",
             details: "CEO, EatClub"
         },

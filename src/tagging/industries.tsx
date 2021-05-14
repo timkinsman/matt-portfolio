@@ -1,6 +1,7 @@
 export const Arts_Culture = "Arts & Culture"
 export const Banking___Finance = "Banking & Finance"
 export const Education = "Education"
+export const Energy = "Energy"
 export const Entertainment = "Entertainment"
 export const Fashion___Beauty = "Fashion & Beauty"
 export const Food___Beverage = "Food & Beverage"
@@ -22,6 +23,7 @@ export const arrIndustries = [
     Arts_Culture,
     Banking___Finance,
     Education,
+    Energy,
     Entertainment,
     Fashion___Beauty,
     Food___Beverage,

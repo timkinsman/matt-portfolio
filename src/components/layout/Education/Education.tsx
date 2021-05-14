@@ -8,7 +8,7 @@ function Education() {
         <h3>Education</h3>
         <div className={styles["education-space-between"]}>
           <Item emoji="" header="St. Michael's College" content="Year 8 - Year 12" footer="January 2005 - December 2010" />
-          <Item emoji="" header="TAFE" content="Certificate IV Visual Arts" footer="January 2011 - December 2011" />
+          <Item emoji="" header="TAFE SA" content="Certificate IV Visual Arts" footer="January 2011 - December 2011" />
           <Item emoji="" header="UniSA" content="Bachelor of Design" footer="March 2012 - November 2014" />
         </div>
     </div>
