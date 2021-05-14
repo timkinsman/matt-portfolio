@@ -61,18 +61,13 @@ function WhatIDo() {
           </div>
 
           <div className="global-wrapper">
-            <h3>Research Methods</h3>
+            <h3>Research Methods & Workshops</h3>
             <div className={styles["whatido-grid-three-no-row-gap"]}>
               {renderResearchMethods(arrResearchMethods)}
             </div>
           </div>
 
           <Tools />
-
-          <div className="global-wrapper">
-            <h3>Mentoring</h3>
-            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-          </div>
 
           <Footer />
         </div>

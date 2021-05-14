@@ -32,7 +32,7 @@ const Tagging = (props: any) => {
             return (
                 <div>
                     <h3>Link</h3>
-                    <h4><a className="global-border-thin" href={props.study.link}>{props.study.link.replace("http://", "").replace("https://", "")}</a></h4>
+                    <h4><a className="global-border-thin" href={props.study.link}>{props.study.link.replace("http://www.", "").replace("https://www.", "")}</a></h4>
                 </div>
             )
         }

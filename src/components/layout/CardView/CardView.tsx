@@ -84,7 +84,7 @@ function CardView(props: {id: string, filter: string}) {
       return renderMap(arrIndustries)
     }
     if(showResearchMethod === true){
-      return renderMap(arrResearchMethods)
+      return renderMap(arrResearchMethods.filter((pstrMethod) => pstrMethod != "Roadmapping"))
     }
     if(showClient === true){
       const arrStudyClients = studies.map((objStudy) => {
@@ -160,7 +160,7 @@ function CardView(props: {id: string, filter: string}) {
           <h4><a onClick={() => handleOnClick("capability")} style={{opacity: showCapability === true ? 1 : 0.4}}>Capability {showCapability === true ? "↑" : "↓"}</a></h4>
           <h4><a onClick={() => handleOnClick("industry")} style={{opacity: showIndustry === true ? 1 : 0.4}}>Industry {showIndustry === true ? "↑" : "↓"}</a></h4>
           <h4><a onClick={() => handleOnClick("client")} style={{opacity: showClient === true ? 1 : 0.4}}>Client {showClient === true ? "↑" : "↓"}</a></h4>
-          <h4><a onClick={() => handleOnClick("researchMethod")} style={{opacity: showResearchMethod === true ? 1 : 0.4}}>Research Method {showResearchMethod === true ? "↑" : "↓"}</a></h4>
+          <h4><a onClick={() => handleOnClick("researchMethod")} style={{opacity: showResearchMethod === true ? 1 : 0.4}}>Research {showResearchMethod === true ? "↑" : "↓"}</a></h4>
           {renderOptions()}
         </div>
         {render()}

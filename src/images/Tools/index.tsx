@@ -3,6 +3,7 @@ import adobeillustrator from "./tools-adobeillustrator.svg";
 import adobephotoshop from "./tools-adobephotoshop.svg";
 import airtable from "./tools-airtable.svg";
 import askable from "./tools-askable.svg";
+import contraste from "./tools-contraste.png";
 import dscout from "./tools-dscout.svg";
 import figma from "./tools-figma.svg";
 import googleAnalytics from "./tools-google-analytics.svg";
@@ -22,7 +23,7 @@ import squarespace from "./tools-squarespace.svg";
 import surveymonkey from "./tools-surveymonkey.svg";
 import typeform from "./tools-typeform.svg";
 import wordpress from "./tools-wordpress.svg";
-import zendesk from "./tools-zendesk.svg";
+//import zendesk from "./tools-zendesk.svg";
 
 const images = [
     {img: adobeaftereffects, text: "Adobe After Effects", link: "https://www.adobe.com/products/aftereffects.html"},
@@ -30,6 +31,7 @@ const images = [
     {img: adobephotoshop, text: "Adobe Photoshop", link: "https://www.adobe.com/products/photoshop.html"},
     {img: airtable, text: "Airtable", link: "https://airtable.com/"},
     {img: askable, text: "Askable", link: "https://www.askable.com/"},
+    {img: contraste, text: 'Contraste', link: "https://contrasteapp.com/"},
     {img: dscout, text: "dScout", link: "https://dscout.com/"},
     {img: figma, text: "Figma", link: "https://www.figma.com/"},
     {img: googleAnalytics, text: "Google Analytics", link: "https://analytics.google.com/"},
@@ -49,7 +51,7 @@ const images = [
     {img: surveymonkey, text: "Survey Monkey", link: "https://www.surveymonkey.com/"},
     {img: typeform, text: "Typeform", link: "https://www.typeform.com/"},
     {img: wordpress, text: "Wordpress", link: "https://wordpress.com/"},
-    {img: zendesk, text: 'Zendesk', link: "https://www.zendesk.com/"}
+    //{img: zendesk, text: 'Zendesk', link: "https://www.zendesk.com/"}
 ]
 
 export default images;

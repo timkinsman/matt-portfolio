@@ -17,10 +17,10 @@ export default {
     img,
     redirect: "mch",
     thumbnail: "Mobile-first service delivery for parents, providing access to 100 years of expert advice at the touch of a thumb.",
-    title: "MCH",
+    title: "Maternal & Child Health",
 
     //tagging
-    function: {text: "VERSA angency", link: ""},
+    function: {text: "VERSA Agency", link: ""},
     link: "https://www.portphillip.vic.gov.au",
     output: [{text: "Website", link: ""}, {text: "Platform", link: ""}],
 

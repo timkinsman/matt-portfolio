@@ -10,8 +10,8 @@ import {
     Concept_Usability_Testing,
     Data_Analytics_Review,
     Heuristics_Evaluation,
-    Card_Sort,
-    Tree_Test,
+    Card_Sorting,
+    Tree_Testing,
     Journey_Mapping,
     Online_Surveys,
     Persona_Development,
@@ -31,7 +31,7 @@ export default {
     title: "OVIC",
 
     //tagging
-    function: {text: "VERSA angency", link: ""},
+    function: {text: "VERSA Agency", link: ""},
     link: "https://www.portphillip.vic.gov.au",
     output: [{text: "Website", link: ""}, {text: "Platform", link: ""}],
 
@@ -43,8 +43,8 @@ export default {
         Concept_Usability_Testing,
         Data_Analytics_Review,
         Heuristics_Evaluation,
-        Card_Sort,
-        Tree_Test,
+        Card_Sorting,
+        Tree_Testing,
         Journey_Mapping,
         Online_Surveys,
         Persona_Development,

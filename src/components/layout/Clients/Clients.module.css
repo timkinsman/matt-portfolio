@@ -3,14 +3,14 @@
 }
 
 .clients-clients {
-    animation: fadeOut 10s infinite;
+    animation: fadeOut 5s infinite;
     display: grid;
     grid-auto-flow: dense;
     grid-template-columns: repeat(4, 1fr);
 }
 
 .clients-clients-second {
-    animation: fadeIn 10s infinite;
+    animation: fadeIn 5s infinite;
     display: grid;
     grid-auto-flow: dense;
     grid-template-columns: repeat(4, 1fr);

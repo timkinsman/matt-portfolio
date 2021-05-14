@@ -7,15 +7,17 @@ export const Contextual_Inquiry = "Contextual Inquiry"
 export const Data_Analytics_Review = "Data Analytics Review"
 export const Diary_Studies = "Diary Studies"
 export const Heuristics_Evaluation = "Heuristics Evaluation"
-export const Card_Sort = "Card Sort"
-export const Tree_Test = "Tree Test"
+export const Card_Sorting = "Card Sorting"
+export const Tree_Testing = "Tree Testing"
 export const Journey_Mapping = "Journey Mapping"
 export const Online_Surveys = "Online Surveys"
 export const Persona_Development = "Persona Development"
 export const Requirements_Gathering = "Requirements Gathering"
 export const Revised_User_Flows = "Revised User Flows"
 export const Roadmapping = "Roadmapping"
+export const Service_Blueprinting = "Service Blueprinting"
 export const Stakeholder_Interviews = "Stakeholder Interviews"
+export const Thematic_Analysis = "Thematic Analysis"
 export const User_Interviews = "User Interviews"
 
 export const arrResearchMethods = [
@@ -28,15 +30,17 @@ export const arrResearchMethods = [
     Data_Analytics_Review,
     Diary_Studies,
     Heuristics_Evaluation,
-    Card_Sort,
-    Tree_Test,
+    Card_Sorting,
+    Tree_Testing,
     Journey_Mapping,
     Online_Surveys,
     Persona_Development,
     Requirements_Gathering,
     Revised_User_Flows,
     Roadmapping,
+    Service_Blueprinting,
     Stakeholder_Interviews,
+    Thematic_Analysis,
     User_Interviews
 ]
 

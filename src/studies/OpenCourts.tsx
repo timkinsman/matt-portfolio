@@ -21,7 +21,7 @@ export default {
     title: "OpenCourts",
 
     //tagging
-    function: {text: "VERSA angency", link: ""},
+    function: {text: "VERSA Agency", link: ""},
     link: "https://www.portphillip.vic.gov.au",
     output: [{text: "Website", link: ""}, {text: "Platform", link: ""}],
 

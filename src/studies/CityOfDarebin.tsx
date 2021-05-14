@@ -6,8 +6,8 @@ import { Government } from '../tagging/industries'
 import { Strategy, UI___UX } from '../tagging/capabilities'
 import {
     Heuristics_Evaluation,
-    Card_Sort,
-    Tree_Test,
+    Card_Sorting,
+    Tree_Testing,
     Stakeholder_Interviews
 } from '../tagging/researchMethods'
 
@@ -20,7 +20,7 @@ export default {
     title: "City of Darebin",
 
     //tagging
-    function: {text: "VERSA angency", link: ""},
+    function: {text: "VERSA Agency", link: ""},
     link: "https://www.portphillip.vic.gov.au",
     output: [{text: "Website", link: ""}, {text: "Platform", link: ""}],
 
@@ -28,8 +28,8 @@ export default {
     industries: [Government],
     researchMethods: [
         Heuristics_Evaluation,
-        Card_Sort,
-        Tree_Test,
+        Card_Sorting,
+        Tree_Testing,
         Stakeholder_Interviews
     ],    
 
