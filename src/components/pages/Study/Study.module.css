@@ -5,6 +5,11 @@
     margin-left: 100%;
 }
 
+.study-border{
+    border-top: 1px solid;
+    opacity: 0.1;
+}
+
 .study-capitalize {
     text-transform: capitalize;
 }
@@ -13,7 +18,6 @@
     display: grid;
     grid-gap: 30px;
     grid-template-columns: repeat(auto-fill, minmax(430px, 1fr));
-    border-top: 1px solid rgba(255, 255, 255, .1);
     padding-top: 120px;
 }
 

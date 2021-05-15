@@ -31,7 +31,7 @@ export default {
     //tagging
     function: {text: "VERSA Agency", link: ""},
     link: "https://www.portphillip.vic.gov.au",
-    output: [{text: "Website", link: ""}, {text: "Platform", link: ""}],
+    output:  ["Website", "Platform"],
 
     capabilites: [
         Strategy,

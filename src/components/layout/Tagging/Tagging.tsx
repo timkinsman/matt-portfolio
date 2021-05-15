@@ -38,32 +38,15 @@ const Tagging = (props: any) => {
         }
     }
 
-    const renderOutput = () => {
-        if(props.study.output.length !== 0){
-            return (
-                <div>
-                    <h3>Output</h3>
-                    <h4>
-                        {props.study.output.map((pobjOutput: any, pintIndex: number) => {
-                            return (
-                                <span>
-                                    <a className="global-border-thin" href={pobjOutput.link}>{pobjOutput.text}</a>
-                                    <span style={{opacity: 0.4}}>{pintIndex !== props.study.output.length - 1 ? ', ' : ''}</span>
-                                </span>
-                            )
-                        })}
-                    </h4>
-                </div>
-            )
-        }
-    }
-
     return (
         <div>
             <div className={styles["tagging-grid"]} style={{paddingBottom: '29.4px'}}>
                 {renderLink()}
                 {renderFunction()}
-                {renderOutput()}
+                <div>
+                    <h3>Output</h3>
+                    <h4>{renderArrFilters(props.study.output)}</h4>
+                </div>
             </div>
 
             <div className={styles["tagging-grid"]} style={{paddingBottom: '13.4px'}}>

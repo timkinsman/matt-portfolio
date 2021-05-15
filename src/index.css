@@ -12,7 +12,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #ffffff; /* here */
+  transition: background 1s, color 1s;
 }
 
 code {
@@ -21,7 +21,7 @@ code {
 }
 
 a {
-  color: #ffffff; /* here */
+  color: inherit;
   opacity: 0.4;
   text-decoration: none;
   transition: opacity 1s;
@@ -38,32 +38,32 @@ a:hover {
 }
 
 a.global-border-thinnest {
-  border-bottom: 1px solid rgba(255, 255, 255, 0); /* here */
+  border-bottom: 1px solid transparent;
   transition: opacity 1s, border-bottom 1s;
 }
 
 a.global-border-thinnest:hover {
-  border-bottom: 1px solid rgba(255, 255, 255, 1); /* here */
+  border-bottom: 1px solid;
   transition: opacity 1s, border-bottom 1s;
 }
 
 a.global-border-thin {
-  border-bottom: 2px solid rgba(255, 255, 255, 0); /* here */
+  border-bottom: 2px solid transparent;
   transition: opacity 1s, border-bottom 1s;
 }
 
 a.global-border-thin:hover {
-  border-bottom: 2px solid rgba(255, 255, 255, 1); /* here */
+  border-bottom: 2px solid;
   transition: opacity 1s, border-bottom 1s;
 }
 
 a.global-border-thick {
-  border-bottom: 4px solid rgba(255, 255, 255, 0); /* here */
+  border-bottom: 4px solid transparent;
   transition: opacity 1s, border-bottom 1s;
 }
 
 a.global-border-thick:hover {
-  border-bottom: 4px solid rgba(255, 255, 255, 1); /* here */
+  border-bottom: 4px solid;
   transition: opacity 1s, border-bottom 1s;
 }
 

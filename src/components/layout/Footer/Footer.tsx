@@ -3,16 +3,31 @@ import { Link } from "react-router-dom";
 import arrow from "../../../images/arrow-down.svg";
 import $ from "jquery";
 import styles from "./Footer.module.css";
+import { updateTheme } from "../../../actions";
+import {connect} from "react-redux";
 
-function Footer() {
-  const handleOnClick = () => {
+const Footer = (props: any) => {
+
+  const handleOnClickArrow = () => {
     $("html,body").animate({
         scrollTop: 0}, "slow");
   }
 
+  const handleOnClickTheme = () => {
+      switch(props.portfolio.theme){
+        case "LIGHT":
+          props.updateTheme("DARK")
+          break;
+        case "DARK":
+          props.updateTheme("LIGHT")
+          break;
+      }
+  }
+
   return (
-    <div className={styles["footer-container"]}>
-        <div className={styles["footer-outer-container"]}>
+    <div>
+        <div className={styles["footer-border"]} />
+        <div className={styles["footer-container"]}>
           <div className={styles["footer-grid"]}>
             <div>
               <h3>Go to</h3>
@@ -38,15 +53,27 @@ function Footer() {
             </div>
           </div>
           <div className={styles["footer-grid-bottom"]}>
-            <h4>Developed by <a className="global-border-thin" href="https://timkinsman.com" target="_blank">Tim Kinsman</a></h4>
             <h4>© 2021 Matthew Kinsman, Melbourne, Australia</h4>
+            <h4>Developed by <a className="global-border-thin" href="https://timkinsman.com" target="_blank">Tim Kinsman</a></h4>
           </div>
           <div className={styles["footer-arrow"]}>
-            <a className="global-arrow" onClick={handleOnClick}><img style={{transform: "rotate(180deg)"}} src={arrow} /></a>
+            <a className="global-arrow" onClick={handleOnClickArrow}><img style={{transform: "rotate(180deg)"}} src={arrow} /></a>
+          </div>
+          <div className={styles["footer-theme"]}>
+            <a onClick={handleOnClickTheme}>{props.portfolio.theme === "DARK" ? "LIGHT" : "DARK"}</a>
           </div>
         </div>
     </div>
   );
 }
 
-export default Footer;
+
+const mapStateToProps = ( state: { portfolio: any; } ) => {
+  return {
+    portfolio: state.portfolio
+  }
+}
+
+export default connect(mapStateToProps, { 
+  updateTheme
+})(Footer);

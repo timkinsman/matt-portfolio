@@ -161,11 +161,7 @@ function CardView(props: {id: string, filter: string}) {
 
   const renderStudies = (pobjStudy: any, pintIndex: number) => {
     if(filterApply.length > 0){
-      let arrOutput = pobjStudy.output.reduce((acc: Array<string>, item: any) => {
-          acc.push(item.text);
-          return acc
-      }, [])
-      let arrFilters = [...pobjStudy.capabilites, ...pobjStudy.industries, ...arrOutput, ...pobjStudy.researchMethods, pobjStudy.title]
+      let arrFilters = [...pobjStudy.capabilites, ...pobjStudy.industries, ...pobjStudy.output, ...pobjStudy.researchMethods, pobjStudy.title]
       if(arrFilters.some((strFilter: string) => filterApply.includes(strFilter))){
         return <div key={`renderStudies-${pintIndex}`}><Card study={pobjStudy} /></div>
       }

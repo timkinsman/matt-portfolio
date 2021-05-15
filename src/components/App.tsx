@@ -1,7 +1,6 @@
-import React from 'react';
-
+import React, { useEffect } from 'react';
+import {connect} from "react-redux";
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-
 import About from './pages/About/About';
 import Home from './pages/Home/Home';
 import Work from './pages/Work/Work';
@@ -10,8 +9,20 @@ import Blog from './pages/Blog/Blog';
 import Contact from './pages/Contact/Contact';
 import ScrollToTop from './util/ScrollToTop';
 import Study from './pages/Study/Study';
+import $ from "jquery";
 
-function App() {
+const App = (props: any) => {
+  useEffect(() => {
+    switch(props.portfolio.theme){
+      case "LIGHT":
+        $("body").css({"background": "#FFFFFF", "color": "#0B0B0C"})
+        break;
+      case "DARK":
+        $("body").css({"background": "#0B0B0C", "color": "#FFFFFF"})
+        break;
+    }
+  }, [props.portfolio.theme])
+
   window.onbeforeunload = function () {
     window.scrollTo(0, 0);
   }
@@ -33,4 +44,10 @@ function App() {
   );
 }
 
-export default App;
+const mapStateToProps = ( state: { portfolio: any; } ) => {
+  return {
+    portfolio: state.portfolio
+  }
+}
+
+export default connect(mapStateToProps, null)(App);

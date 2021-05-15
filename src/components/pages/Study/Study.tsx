@@ -166,6 +166,7 @@ const Study = (props: any) => {
                 {renderContent("testimonials")}
 
                 <div className="global-wrapper">
+                    <div className={styles["study-border"]} />
                     <div className={styles["study-card-view"]}>
                         {reorderStudyCards(studies, studies.findIndex(pstudy => pstudy == study) - 1).filter(pstudy => pstudy !== study).slice(0, limit).map(pstudy => {
                             return <Card study={pstudy} />

@@ -1,16 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './components/App';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
 import reportWebVitals from './reportWebVitals';
+import App from './components/App';
+import reducers from './reducers';
+import './index.css';
+import './fonts/Moderat-Light.ttf';
+import './fonts/Moderat-Regular.ttf';
+import './fonts/Moderat-Thin.ttf';
 
-import './fonts//Moderat-Light.ttf';
-import './fonts//Moderat-Regular.ttf';
-import './fonts//Moderat-Thin.ttf';
+const store = createStore(
+  reducers
+);
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
