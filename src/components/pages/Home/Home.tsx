@@ -95,7 +95,7 @@ const Home = (props: any) => {
             <div id="staggerFourth" className={`${styles["home-arrow"]} ${styles["home-visibility-hidden"]}`}>
               {props.portfolio.theme === "DARK" ? <a><img onClick={() => props.updateTheme("LIGHT")} alt="sun" src={sun} /></a> :
               <a><img onClick={() => props.updateTheme("DARK")} alt="moon" src={moon} /></a>}
-              <a onClick={() => handleOnClick("#two")}><img alt="arrow" src={props.portfolio.theme === "DARK" ? arrow : arrowLight} /></a>
+              <a style={{marginLeft: "15px"}} onClick={() => handleOnClick("#two")}><img alt="arrow" src={props.portfolio.theme === "DARK" ? arrow : arrowLight} /></a>
             </div>
           </div>
         </div>

@@ -150,14 +150,12 @@ function CardView(props: any) {
   }
 
   const renderOptions = () => {
-    if(filter.length > 0){
-      return (
-        <div className="global-fadein" style={{flexDirection: "row", marginLeft: "auto", gap: "50px"}}>
-          <h4 style={{marginLeft: "auto"}}><a onClick={handleOnClear}>Clear ✕</a></h4>
-          <h4><a onClick={handleOnApply}>Apply ✓</a></h4>
-        </div>
-      )
-    }
+    return (
+      <div className={styles["card-view-options"]} style={{opacity: filter.length > 0 ? 1 : 0, pointerEvents: filter.length > 0 ? "auto" : "none"}}>
+        <h4 style={{marginLeft: "auto"}}><a onClick={handleOnClear}>Clear ✕</a></h4>
+        <h4><a onClick={handleOnApply}>Apply ✓</a></h4>
+      </div>
+    )
   }
 
   const renderStudies = (pobjStudy: any, pintIndex: number) => {

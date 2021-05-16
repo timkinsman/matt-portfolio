@@ -157,3 +157,11 @@
 .card-view-filter-x {
     padding-left: 8px;
 }
+
+.card-view-options {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    gap: 50px;
+    transition: opacity 1s;
+}

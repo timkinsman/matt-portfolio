@@ -126,7 +126,7 @@ const Study = (props: any) => {
 
     return (
         <div className="global-fadein">
-            <Links />
+            {/*<Links />*/}
         
             <div className={styles["study-container"]} style={{background: study.color, color: "#FFFFFF"}}>
                 <div className="global-main-container">
