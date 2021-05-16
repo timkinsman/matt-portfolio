@@ -128,7 +128,7 @@ const Study = (props: any) => {
         <div className="global-fadein">
             <Links />
         
-            <div className={styles["study-container"]} style={{background: study.color}}>
+            <div className={styles["study-container"]} style={{background: study.color, color: "#FFFFFF"}}>
                 <div className="global-main-container">
                     <Navbar />
                     <div className="global-container" style={{paddingTop: '0', margin: 'auto'}}>
