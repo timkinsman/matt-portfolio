@@ -10,6 +10,9 @@ import strategy from "./emoji-strategy.png";
 import systemsthinking from "./emoji-systemsthinking.png";
 import unlock from "./emoji-unlock.png";
 import validation from "./emoji-validation.png";
+import email from "./emoji-email.png";
+import enquiries from "./emoji-enquiries.png";
+import phone from "./emoji-phone.png";
 
 const images = {
     analyse,
@@ -24,6 +27,9 @@ const images = {
     systemsthinking,
     unlock,
     validation,
+    email,
+    enquiries,
+    phone
 }
 
 export default images;

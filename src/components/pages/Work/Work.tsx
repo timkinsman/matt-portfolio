@@ -13,7 +13,7 @@ function Work(props: any) {
         <div className="global-container">
           <p className="global-title">Case studies</p>
           <div className={`${styles["work-description"]} global-wrapper`}>
-            <h4>With over six years of experience in the industry, I have been fortunate enough to work with 25+ brands. Endeavouring to produce solutions to problems that enable and inspire others.</h4>
+            <h4>With over six years of experience in the industry, I have been fortunate enough to work with 25+ brands. Endeavouring to create optimise experiences through products and services that exist to solve genuine problems and serve user needs.</h4>
           </div>
           <CardView filter={props.location.state !== undefined && props.location.state.filter ? props.location.state.filter : ""} id="null" />
           <Footer />

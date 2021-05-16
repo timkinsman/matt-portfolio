@@ -4,6 +4,8 @@ import Navbar from "../../layout/Navbar/Navbar";
 import Socials from "../../layout/Socials/Socials";
 import styles from "./Contact.module.css";
 
+import images from "../../../images/Emojis";
+
 function Contact() {
   return (
     <div className="global-fadein">
@@ -18,14 +20,17 @@ function Contact() {
           <div className="global-wrapper">
             <div className={styles["contact-grid"]}>
               <div>
+                <img className={styles["contact-img"]} src={images.enquiries} />
                 <h3>Enquiries</h3>
                 <h4><a className="global-border-thin" href="https://www.google.com.au/forms/about/" target="_blank">Client brief form</a></h4>
               </div>
               <div>
+                <img className={styles["contact-img"]} src={images.phone} />
                 <h3>Phone</h3>
                 <h4><a className="global-border-thin" href="tel:+61424792708" target="_blank">+61 424 792 708</a></h4>
               </div>
               <div>
+                <img className={styles["contact-img"]} src={images.email} />
                 <h3>Email</h3>
                 <h4><a className="global-border-thin" href="mailto:hello@matthewkinsman.com">hello@matthewkinsman.com</a></h4>
               </div>

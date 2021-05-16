@@ -2,3 +2,8 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
+
+.contact-img {
+    height: 40px;
+    margin-bottom: 16px;
+}

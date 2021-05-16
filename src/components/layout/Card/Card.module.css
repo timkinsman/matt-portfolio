@@ -1,7 +1,15 @@
+.card-dark:hover {
+    background: #000000 !important;
+}
+  
+.card-light:hover {
+    background: #FFFFFF !important;
+}
+
 .card {
     align-items: center;
     border-radius: 12px;
-    color: rgba(255, 255, 255, 0) ;
+    color: transparent;
     display: flex;
     justify-content: center;
     padding-bottom: calc(59/96 * 100%);
@@ -14,8 +22,7 @@
 }
 
 .card:hover {
-    background: #000000 !important;
-    color: rgba(255, 255, 255, 1) ;
+    color: inherit ;
     transition: background 1s, color 1s;
 }
 
@@ -69,11 +76,11 @@
 }
 
 .card-view-case {
-    border-bottom: 2px solid rgba(255, 255, 255, 0); /* here */
+    border-bottom: 2px solid transparent; /* here */
     transition: opacity 1s, border-bottom 1s;
 }
 
 .card-view-case:hover {
-    border-bottom: 2px solid rgba(255, 255, 255, 1); /* here */
+    border-bottom: 2px solid; /* here */
     transition: opacity 1s, border-bottom 1s;
 }

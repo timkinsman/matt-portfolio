@@ -34,7 +34,7 @@
 }
 
 .home-panel-text {
-    margin: auto 0;
+    font-size: 52px;
 }
 
 .home-visibility-hidden {
@@ -48,5 +48,17 @@
     opacity: 0;
     transition: opacity 0.5s;
     pointer-events: none;
-    width: 550.2px;
+    width: 600.2px;
+}
+
+.gif {
+    height: 450px;
+    width: 600px;
+    margin: auto;
+}
+
+.home-banner-content {
+    display: flex;
+    align-items: center;
+    margin: auto 0;
 }

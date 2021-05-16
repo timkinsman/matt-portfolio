@@ -5,6 +5,7 @@
 .panel-container {
     align-items: flex-end;    
     background: rgb(19, 103, 111);
+    color: #FFFFFF;
     display: flex;
     height: 100vh;
     justify-content: center;

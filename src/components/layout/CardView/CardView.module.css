@@ -28,6 +28,29 @@
     transition: background 1s;
 }
 
+.card-view-chkbox-light {
+    opacity: 0;
+    position: absolute; 
+}
+
+.card-view-chkbox-light + label {
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+}
+
+.card-view-chkbox-light + label:before {
+    background:none;
+    border: 1px solid;
+    border-radius: 2px;
+    content: '';
+    display: inline-block;
+    height: 10px;
+    margin-right: 10px;
+    width: 10px;
+    transition: background 1s;
+}
+
 .card-view-chkbox:checked + .card-view-label {
     opacity: 1;
     transition: opacity 1s;
@@ -46,15 +69,34 @@
     top: 1px;
 }
 
-.card-view-chkbox:focus {
+.card-view-chkbox-light:checked + .card-view-label {
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.card-view-chkbox-light:checked + label:before {
+    background: #000;
+    transition: background 1s
+}
+
+.card-view-chkbox-light:checked + label:after {
+    color: #0B0B0C;
+    font-size: 14px;
+    left: 0;
+    position: absolute;
+    top: 1px;
 }
 
 .card-view-chkbox:focus + label:before {
-    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+    box-shadow: none;
+}
+
+.card-view-chkbox-light:focus + label:before {
+    box-shadow: none;
 }
 
 .card-view-filter {
-    display: grid;
+    display: grid !important;
     grid-row-gap: 40px;
     grid-template-columns: repeat(4, 1fr);
     padding-bottom: 100px;
@@ -91,7 +133,7 @@
 .card-view-filter-by {
     display: flex;
     gap: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 60px;
 }
 
 .card-view-label {

@@ -1,7 +1,10 @@
 import apple from "./awards-apple.svg";
+import appleLight from "./awards-apple-light.png";
 
-const images = [
+export const images = [
     apple,
 ]
 
-export default images;
+export const imagesLight = [
+    appleLight,
+]

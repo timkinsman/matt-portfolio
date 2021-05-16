@@ -6,8 +6,9 @@ import { arrIndustries } from "../../../tagging/industries";
 import { arrOutput } from "../../../tagging/output";
 import { arrResearchMethods } from "../../../tagging/researchMethods";
 import styles from "./CardView.module.css";
+import {connect} from "react-redux";
 
-function CardView(props: {id: string, filter: string}) {
+function CardView(props: any) {
   const [filter, setFilter] = useState<Array<string>>([])
   const [filterApply, setFilterApply] = useState<Array<string>>([])
 
@@ -139,7 +140,7 @@ function CardView(props: {id: string, filter: string}) {
         {parrCategoryFilters.map((strFilter: any, intIndex: number) => {
           return (
             <div key={`renderMap-${intIndex}`}>
-              <input className={styles["card-view-chkbox"]} type="checkbox" onChange={(e) => handleOnChange(strFilter, e)} checked={filter.includes(strFilter)} id={strFilter} />
+              <input className={props.portfolio.theme === "DARK" ? styles["card-view-chkbox"] : styles["card-view-chkbox-light"]} type="checkbox" onChange={(e) => handleOnChange(strFilter, e)} checked={filter.includes(strFilter)} id={strFilter} />
               <label className={styles["card-view-label"]} htmlFor={strFilter}>{strFilter}</label>
             </div>
           )
@@ -151,7 +152,7 @@ function CardView(props: {id: string, filter: string}) {
   const renderOptions = () => {
     if(filter.length > 0){
       return (
-        <div className="global-fadein" style={{flexDirection: "row", marginLeft: "auto", gap: "30px"}}>
+        <div className="global-fadein" style={{flexDirection: "row", marginLeft: "auto", gap: "50px"}}>
           <h4 style={{marginLeft: "auto"}}><a onClick={handleOnClear}>Clear ✕</a></h4>
           <h4><a onClick={handleOnApply}>Apply ✓</a></h4>
         </div>
@@ -175,11 +176,13 @@ function CardView(props: {id: string, filter: string}) {
         <div className={styles["card-view-filter-by"]}>
           <h4>Filter by</h4>
           <h4>/</h4>
-          <h4><a onClick={() => handleOnClick("capability")} style={{opacity: showCapability === true ? 1 : 0.4}}>Capability {showCapability === true ? "↑" : "↓"}</a></h4>
-          <h4><a onClick={() => handleOnClick("industry")} style={{opacity: showIndustry === true ? 1 : 0.4}}>Industry {showIndustry === true ? "↑" : "↓"}</a></h4>
-          <h4><a onClick={() => handleOnClick("client")} style={{opacity: showClient === true ? 1 : 0.4}}>Client {showClient === true ? "↑" : "↓"}</a></h4>
-          <h4><a onClick={() => handleOnClick("researchMethod")} style={{opacity: showResearchMethod === true ? 1 : 0.4}}>Research {showResearchMethod === true ? "↑" : "↓"}</a></h4>
-          <h4><a onClick={() => handleOnClick("output")} style={{opacity: showOutput === true ? 1 : 0.4}}>Output {showOutput === true ? "↑" : "↓"}</a></h4>
+          <div style={{display: "flex", gap: "50px"}}>
+            <h4><a onClick={() => handleOnClick("capability")} style={{opacity: showCapability === true ? 1 : 0.4}}>Capability {showCapability === true ? "↑" : "↓"}</a></h4>
+            <h4><a onClick={() => handleOnClick("industry")} style={{opacity: showIndustry === true ? 1 : 0.4}}>Industry {showIndustry === true ? "↑" : "↓"}</a></h4>
+            <h4><a onClick={() => handleOnClick("client")} style={{opacity: showClient === true ? 1 : 0.4}}>Client {showClient === true ? "↑" : "↓"}</a></h4>
+            <h4><a onClick={() => handleOnClick("researchMethod")} style={{opacity: showResearchMethod === true ? 1 : 0.4}}>Research {showResearchMethod === true ? "↑" : "↓"}</a></h4>
+            <h4><a onClick={() => handleOnClick("output")} style={{opacity: showOutput === true ? 1 : 0.4}}>Output {showOutput === true ? "↑" : "↓"}</a></h4>
+          </div>
           {renderOptions()}
         </div>
         {render()}
@@ -193,4 +196,10 @@ function CardView(props: {id: string, filter: string}) {
   );
 }
 
-export default CardView;
+const mapStateToProps = ( state: { portfolio: any; }, ownProps: any ) => {
+  return {
+      portfolio: state.portfolio
+  }
+}
+
+export default connect(mapStateToProps, null)(CardView);

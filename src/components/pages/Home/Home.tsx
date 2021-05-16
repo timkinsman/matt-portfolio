@@ -12,10 +12,16 @@ import Spotify from "../../layout/Spotify/Spotify";
 import Testimonials from "../../layout/Testimonials/Testimonials";
 import studies from "../../../studies";
 import arrow from "../../../images/arrow-down.svg";
+import moon from "../../../images/moon.svg";
+import sun from "../../../images/sun.svg";
 import $ from "jquery";
 import styles from "./Home.module.css";
+import { updateTheme } from "../../../actions";
+import {connect} from "react-redux";
+import memeoji from "../../../videos/memeoji.gif";
+import arrowLight from "../../../images/arrow-down-light.svg";
 
-function Home() {
+const Home = (props: any) => {
   const getIndex = (pstrStudy: string) => {
     return studies.map(study => study.title).indexOf(pstrStudy);
   } 
@@ -30,10 +36,17 @@ function Home() {
   }
 
   const handleOnMouseMove = (pobjEvent: any) => {
-    $("#mouse-over-image-two").css({left: pobjEvent.clientX + 25, top: pobjEvent.clientY + 25});
-    $("#mouse-over-image-three").css({left: pobjEvent.clientX + 25, top: pobjEvent.clientY + 25});
-    $("#mouse-over-image-four").css({left: pobjEvent.clientX + 25, top: pobjEvent.clientY + 25});
-    $("#mouse-over-image-five").css({left: pobjEvent.clientX + 25, top: pobjEvent.clientY + 25});
+    const moiTwo = $("#mouse-over-image-two").width()
+    const moiThree = $("#mouse-over-image-three").width()
+    const moiFour = $("#mouse-over-image-four").width()
+    const moiFive = $("#mouse-over-image-five").width()
+
+    if(moiTwo && moiThree && moiFour && moiFive){
+      $("#mouse-over-image-two").css({left: pobjEvent.clientX - (moiTwo / 2), top: pobjEvent.clientY + 25});
+      $("#mouse-over-image-three").css({left: pobjEvent.clientX - (moiThree / 2), top: pobjEvent.clientY + 25});
+      $("#mouse-over-image-four").css({left: pobjEvent.clientX - (moiFour / 2), top: pobjEvent.clientY + 25});
+      $("#mouse-over-image-five").css({left: pobjEvent.clientX - (moiFive / 2), top: pobjEvent.clientY + 25});
+    }
   }
 
   const _intIndexCOPP = getIndex("City of Port Phillip")
@@ -63,12 +76,16 @@ function Home() {
         <div className={styles["home-panel"]}>
           <Navbar selected="home" />
 
-          <h1 id="staggerSecond" className={`${styles["home-panel-text"]} ${styles["home-visibility-hidden"]}`}>
-            Hello, my name is <Link className="global-border-thick" to="/about">Matthew Kinsman</Link>,<br />
-            I’m a multi-disciplinary experience<br />
-            designer currently living in Melbourne<br />
-            and working at <a className="global-border-thick" href="https://versa.agency" rel="noreferrer" target="_blank">Versa Agency</a>.
-          </h1>
+          <div id="staggerSecond" className={`${styles["home-banner-content"]} ${styles["home-visibility-hidden"]}`}>
+            <h1 className={styles["home-panel-text"]}>
+              Hello, my name is <Link className="global-border-thick" to="/about">Matthew Kinsman</Link>,<br />
+              I’m a senior product designer<br />
+              currently living in Melbourne and<br />
+              and working at <a className="global-border-thick" href="https://www.mindsethealth.com" rel="noreferrer" target="_blank">Mindset Health</a>.
+            </h1>
+
+            <img className={styles["gif"]} src={memeoji} />
+          </div>
 
           <div className={styles["home-panel-bottom"]}>
             <div id="staggerThird" className={styles["home-visibility-hidden"]}>
@@ -76,7 +93,9 @@ function Home() {
             </div>
             
             <div id="staggerFourth" className={`${styles["home-arrow"]} ${styles["home-visibility-hidden"]}`}>
-              <a onClick={() => handleOnClick("#two")}><img alt="arrow" src={arrow} /></a>
+              {props.portfolio.theme === "DARK" ? <a><img onClick={() => props.updateTheme("LIGHT")} alt="sun" src={sun} /></a> :
+              <a><img onClick={() => props.updateTheme("DARK")} alt="moon" src={moon} /></a>}
+              <a onClick={() => handleOnClick("#two")}><img alt="arrow" src={props.portfolio.theme === "DARK" ? arrow : arrowLight} /></a>
             </div>
           </div>
         </div>
@@ -103,4 +122,12 @@ function Home() {
   );
 }
 
-export default Home;
+const mapStateToProps = ( state: { portfolio: any; } ) => {
+  return {
+    portfolio: state.portfolio
+  }
+}
+
+export default connect(mapStateToProps, { 
+  updateTheme
+})(Home);

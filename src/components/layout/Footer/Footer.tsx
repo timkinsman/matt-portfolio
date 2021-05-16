@@ -1,10 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import arrow from "../../../images/arrow-down.svg";
+import arrowLight from "../../../images/arrow-down-light.svg";
 import $ from "jquery";
 import styles from "./Footer.module.css";
 import { updateTheme } from "../../../actions";
 import {connect} from "react-redux";
+import moon from "../../../images/moon.svg";
+import sun from "../../../images/sun.svg";
 
 const Footer = (props: any) => {
 
@@ -57,10 +60,11 @@ const Footer = (props: any) => {
             <h4>Developed by <a className="global-border-thin" href="https://timkinsman.com" target="_blank">Tim Kinsman</a></h4>
           </div>
           <div className={styles["footer-arrow"]}>
-            <a className="global-arrow" onClick={handleOnClickArrow}><img style={{transform: "rotate(180deg)"}} src={arrow} /></a>
+            <a className="global-arrow" onClick={handleOnClickArrow}><img style={{transform: "rotate(180deg)"}} src={props.portfolio.theme === "DARK" ? arrow : arrowLight} /></a>
           </div>
           <div className={styles["footer-theme"]}>
-            <a onClick={handleOnClickTheme}>{props.portfolio.theme === "DARK" ? "LIGHT" : "DARK"}</a>
+            {props.portfolio.theme === "DARK" ? <a><img onClick={() => props.updateTheme("LIGHT")} alt="sun" src={sun} /></a> :
+            <a><img onClick={() => props.updateTheme("DARK")} alt="moon" src={moon} /></a>}
           </div>
         </div>
     </div>
