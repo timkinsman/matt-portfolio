@@ -174,7 +174,7 @@ function CardView(props: any) {
         <div className={styles["card-view-filter-by"]}>
           <h4>Filter by</h4>
           <h4>/</h4>
-          <div style={{display: "flex", gap: "50px"}}>
+          <div style={{display: "flex", gap: "40px"}}>
             <h4><a onClick={() => handleOnClick("capability")} style={{opacity: showCapability === true ? 1 : 0.4}}>Capability {showCapability === true ? "↑" : "↓"}</a></h4>
             <h4><a onClick={() => handleOnClick("industry")} style={{opacity: showIndustry === true ? 1 : 0.4}}>Industry {showIndustry === true ? "↑" : "↓"}</a></h4>
             <h4><a onClick={() => handleOnClick("client")} style={{opacity: showClient === true ? 1 : 0.4}}>Client {showClient === true ? "↑" : "↓"}</a></h4>

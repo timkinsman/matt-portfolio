@@ -18,7 +18,7 @@ import $ from "jquery";
 import styles from "./Home.module.css";
 import { updateTheme } from "../../../actions";
 import {connect} from "react-redux";
-import memeoji from "../../../videos/memeoji.gif";
+import video from "../../../videos/memeoji.mp4";
 import arrowLight from "../../../images/arrow-down-light.svg";
 
 const Home = (props: any) => {
@@ -84,7 +84,9 @@ const Home = (props: any) => {
               and working at <a className="global-border-thick" href="https://www.mindsethealth.com" rel="noreferrer" target="_blank">Mindset Health</a>.
             </h1>
 
-            <img className={styles["gif"]} src={memeoji} />
+            <video autoPlay loop muted style={{marginLeft: 'auto'}}>
+              <source src={video} type="video/mp4" />
+            </video>
           </div>
 
           <div className={styles["home-panel-bottom"]}>

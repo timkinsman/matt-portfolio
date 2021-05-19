@@ -15,7 +15,7 @@ const Testimonials = () => {
         },
         {
             id: 1,
-            quote: "“Matt functioned as part of the team, helping to crystalise our vision and delivering incredible results in a record time.”",
+            quote: "“Matt functioned as part of the team, helping to crystalise our vision and delivering incredible results in a record time. Matt functioned as part of the team, helping to crystalise our vision and delivering incredible results in a record time.”",
             from: "Kevin Hwang",
             details: "Product Owner, BankVic"
         },
@@ -33,7 +33,7 @@ const Testimonials = () => {
         },
         {
             id: 4,
-            quote: "“Matt functioned as part of the team, helping to crystalise our vision and delivering incredible results in a record time.”",
+            quote: "“Matt functioned as part of the team, helping to crystalise our vision and delivering incredible results in a record time. Matt functioned as part of the team, helping to crystalise our vision and delivering incredible results in a record time.”",
             from: "Stephen Clarke",
             details: "Head of Project Management, VERSA Agency"
         },

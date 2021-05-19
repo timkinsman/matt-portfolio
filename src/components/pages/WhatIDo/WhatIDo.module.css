@@ -7,7 +7,7 @@
 .whatido-grid-three {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 60px;
+    gap: 50px;
 }
 
 .whatido-grid-three-no-row-gap {
