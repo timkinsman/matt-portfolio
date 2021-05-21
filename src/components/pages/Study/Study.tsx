@@ -38,7 +38,7 @@ const Study = (props: any) => {
             case 'City of Darebin':
                 return require.context('../../../images/Studies/CityofDarebin', true, /\.png$/)
             case 'City of Port Phillip':
-                return require.context('../../../images/Studies/CityofPortPhillip', true, /\.png$/)
+                return require.context('../../../images/Studies/CityOfPortPhillip', true, /\.png$/)
             case 'Click Frenzy':
                 return require.context('../../../images/Studies/ClickFrenzy', true, /\.png$/)
             case 'EatClub':
