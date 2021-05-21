@@ -58,7 +58,7 @@ const Footer = (props: any) => {
           </div>
           <div className={styles["footer-grid-bottom"]}>
             <h4>© 2021 Matthew Kinsman, Melbourne, Australia</h4>
-            <h4>Developed by <a className="global-border-thin" href="https://www.linkedin.com/in/timothykinsman/" target="_blank">Tim Kinsman</a>, Powered by React</h4>
+            <h4>Developed by <a className="global-border-thin" href="https://www.linkedin.com/in/timothykinsman/" target="_blank">Tim Kinsman</a></h4>
           </div>
           <div className={styles["footer-arrow"]}>
             <a className="global-arrow" onClick={handleOnClickArrow}><img style={{transform: "rotate(180deg)"}} src={props.portfolio.theme === "DARK" ? arrow : arrowLight} /></a>

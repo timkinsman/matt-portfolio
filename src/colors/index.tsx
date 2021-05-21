@@ -15,4 +15,6 @@ export const OVIC = "#551577";
 export const SMALL_BUSINESS_VICTORIA = "#1D3164";
 export const STROKE_FOUNDATION = "#008063";
 export const SWEAT = "#FF0571";
-export const VIC_POLICE = "#0E1751"
+export const VIC_POLICE = "#0E1751";
+export const NAB = "#BF1220";
+export const TRANSGRID = "#1A1A1A";

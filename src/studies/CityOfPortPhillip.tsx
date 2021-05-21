@@ -1,10 +1,12 @@
-import homePage from "../images/HomePage/cityofportphilip.png";
+import {CITY_OF_PORT_PHILLIP} from "../colors"
+import hover from "../images/Hover/copp.gif";
 import img from "../images/Clients/client-cityofportphillip.svg";
 
-import {CITY_OF_PORT_PHILLIP} from "../colors"
+import { VERSA_Agency } from "../tagging/function";
+import { Website, Intranet } from "../tagging/output";
 
-import { Government } from '../tagging/industries'
-import { Strategy, UI___UX } from '../tagging/capabilities'
+import { Government, NGO___Not_for_profit } from '../tagging/industries'
+import { Strategy } from '../tagging/capabilities'
 import { 
     Artefact_Review,
     Concept_Usability_Testing,
@@ -16,29 +18,31 @@ import {
     Persona_Development,
     Requirements_Gathering,
     Revised_User_Flows,
-    Roadmapping,
-    Stakeholder_Interviews,
-    User_Interviews
+    Competitor_Analysis,
+    Contextual_Inquiry,
+    Thematic_Analysis
 } from '../tagging/researchMethods'
 
 export default {
     color: CITY_OF_PORT_PHILLIP, //color
-    homePage,
+    hover,
     img,
     redirect: "copp",
-    thumbnail: "Website redevelopment project to improve functionality and user experience.",
+    thumbnail: "A brand new digital ecosystem including multiple websites and customer facing online services.",
     title: "City of Port Phillip",
 
     //tagging
-    function: {text: "VERSA Agency", link: ""},
+    function: VERSA_Agency,
     link: "https://www.portphillip.vic.gov.au",
-    output:  ["Website", "Platform"],
+    output:  [Website, Intranet],
 
-    capabilites: [Strategy, UI___UX],
-    industries: [Government],
+    capabilites: [Strategy],
+    industries: [Government, NGO___Not_for_profit],
     researchMethods: [
         Artefact_Review,
+        Competitor_Analysis,
         Concept_Usability_Testing,
+        Contextual_Inquiry,
         Data_Analytics_Review,
         Heuristics_Evaluation,
         Card_Sorting,
@@ -47,9 +51,7 @@ export default {
         Persona_Development,
         Requirements_Gathering,
         Revised_User_Flows,
-        Roadmapping,
-        Stakeholder_Interviews,
-        User_Interviews
+        Thematic_Analysis
     ],    
 
     //study

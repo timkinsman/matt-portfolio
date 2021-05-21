@@ -16,6 +16,8 @@ import SmallBusinessVictoria from "./SmallBusinessVictoria";
 import StrokeFoundation from "./StrokeFoundation";
 import SWEAT from "./SWEAT";
 import VicPolice from "./VicPolice"
+import NAB from "./NAB";
+import Transgrid from "./Transgrid"
 
 const studies = [
     BankVic,
@@ -30,11 +32,13 @@ const studies = [
     Homely,
     Lumea,
     MCH,
+    NAB,
     OpenCourts,
     OVIC,
     SmallBusinessVictoria,
     StrokeFoundation,
     SWEAT,
+    Transgrid,
     VicPolice
 ]
 

@@ -1,34 +1,40 @@
+import {EAT_CLUB} from "../colors"
 import img from "../images/Clients/client-eatclub.svg";
 
-import {EAT_CLUB} from "../colors"
+import { EatClub } from "../tagging/function";
+import { Website, App, Assets } from "../tagging/output";
 
 import { Food___Beverage } from '../tagging/industries'
-import { Strategy, UI___UX, Marketing, Promotional } from '../tagging/capabilities'
+import { Strategy, UI___UX, Marketing, Promotional, Animation___Motion } from '../tagging/capabilities'
 import { 
     Heuristics_Evaluation,
     Competitor_Analysis,
-    Revised_User_Flows
+    Revised_User_Flows,
+    Journey_Mapping,
+    Design_System
 } from '../tagging/researchMethods'
 
 export default {
     color: EAT_CLUB, //color
-    homePage: "",
+    hover: "",
     img,
     redirect: "ec",
-    thumbnail: "Website redevelopment project to improve functionality and user experience.",
+    thumbnail: "",
     title: "EatClub",
 
     //tagging
-    function: {text: "VERSA Agency", link: ""},
-    link: "https://www.portphillip.vic.gov.au",
-    output:  ["Website", "Platform"],
+    function: EatClub,
+    link: "https://eatclub.com.au",
+    output:  [Website, App, Assets],
 
-    capabilites: [Strategy, UI___UX, Marketing, Promotional],
+    capabilites: [Strategy, UI___UX, Marketing, Promotional, Animation___Motion],
     industries: [Food___Beverage],
     researchMethods: [
         Heuristics_Evaluation,
         Competitor_Analysis,
-        Revised_User_Flows
+        Revised_User_Flows,
+        Journey_Mapping,
+        Design_System
     ],    
 
     //study

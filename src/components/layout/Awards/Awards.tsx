@@ -10,7 +10,7 @@ const Awards = (props: any) => {
                 <div key={pintIndex} className={styles["awards-img-container"]}>
                     <img src={pstrImg} alt="img.svg" className={styles["awards-img"]} />
                     <div>
-                        <p>2016 Apple Watch<br />App of the Year</p>
+                        <p>Apple Watch<br />App of the Year</p>
                     </div>
                 </div>
             )

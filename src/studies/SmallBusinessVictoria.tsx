@@ -1,54 +1,34 @@
+import {SMALL_BUSINESS_VICTORIA} from "../colors"
 import img from "../images/Clients/client-smallbusinessvictoria.svg";
 
-import {SMALL_BUSINESS_VICTORIA} from "../colors"
+import { VERSA_Agency } from "../tagging/function";
+import { Website } from "../tagging/output";
 
-import { Government } from '../tagging/industries'
-import { Strategy, UI___UX } from '../tagging/capabilities'
+import { Government, NGO___Not_for_profit } from '../tagging/industries'
+import { Strategy } from '../tagging/capabilities'
 import { 
     Artefact_Review,
-    Concept_Usability_Testing,
-    Data_Analytics_Review,
-    Heuristics_Evaluation,
-    Card_Sorting,
-    Tree_Testing,
-    Journey_Mapping,
-    Persona_Development,
-    Requirements_Gathering,
-    Revised_User_Flows,
-    Roadmapping,
-    Stakeholder_Interviews,
-    User_Interviews
+    Heuristics_Evaluation
 } from '../tagging/researchMethods'
 
 export default {
     color: SMALL_BUSINESS_VICTORIA, //color
-    homePage: "",
+    hover: "",
     img,
     redirect: "sbv",
-    thumbnail: "Website redevelopment project to improve functionality and user experience.",
+    thumbnail: "",
     title: "Small Business Victoria",
 
     //tagging
-    function: {text: "VERSA Agency", link: ""},
-    link: "https://www.portphillip.vic.gov.au",
-    output:  ["Website", "Platform"],
+    function: VERSA_Agency,
+    link: "https://business.vic.gov.au",
+    output:  [Website],
 
-    capabilites: [Strategy, UI___UX],
-    industries: [Government],
+    capabilites: [Strategy],
+    industries: [Government, NGO___Not_for_profit],
     researchMethods: [
         Artefact_Review,
-        Concept_Usability_Testing,
-        Data_Analytics_Review,
-        Heuristics_Evaluation,
-        Card_Sorting,
-        Tree_Testing,
-        Journey_Mapping,
-        Persona_Development,
-        Requirements_Gathering,
-        Revised_User_Flows,
-        Roadmapping,
-        Stakeholder_Interviews,
-        User_Interviews
+        Heuristics_Evaluation
     ],    
 
     //study

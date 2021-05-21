@@ -8,7 +8,7 @@ export const Print___Publishing = "Print & Publishing"
 export const Promotional = "Promotional"
 export const Strategy = "UX & Strategy"
 export const UI___UX = "UI & Visual Design"
-export const Video = "Video"
+export const Video = "Video & Editing"
 export const Wayfinding___Signage = "Wayfinding & Signage"
 
 export const arrCapabilities = [

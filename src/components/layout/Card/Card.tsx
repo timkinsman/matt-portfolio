@@ -11,7 +11,7 @@ const Card = (props: any) => {
           <img className={styles["card-image"]} src={props.study.img} alt="img" />
           <div className={styles["card-content"]}>
             <h2 className={styles["card-study-title"]}>{props.study.title}</h2>
-            <h4 className={styles["card-study-industry"]}>{props.study.industries}</h4>
+            <h4 className={styles["card-study-industry"]}>{props.study.industries.join(", ")}</h4>
             <p className={styles["card-study-summary"]}>{props.study.thumbnail}</p>
             <h4  className={styles["card-study-link"]}><span className={styles["card-view-case"]}>View case study →</span></h4>
           </div>

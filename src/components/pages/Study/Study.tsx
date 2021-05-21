@@ -28,41 +28,45 @@ const Study = (props: any) => {
     const getImages = (pstrTitle: string) => {
         switch(pstrTitle){
             case 'BankVic':
-                //return require.context('../../../images/Studies/BankVic', true, /\.png$/)
+                return require.context('../../../images/Studies/BankVic', true, /\.png$/)
             case 'Beyond Blue':
-                //return require.context('../../../images/Studies/BeyondBlue', true, /\.png$/)
+                return require.context('../../../images/Studies/BeyondBlue', true, /\.png$/)
             case 'Bupa':
-                //return require.context('../../../images/Studies/Bupa', true, /\.png$/)
-            case 'ChildrensCourt':
-                //return require.context('../../../images/Studies/ChildrensCourt', true, /\.png$/)    
+                return require.context('../../../images/Studies/Bupa', true, /\.png$/)
+            case 'Children\'s Court':
+                return require.context('../../../images/Studies/ChildrensCourt', true, /\.png$/)    
             case 'City of Darebin':
-                //return require.context('../../../images/Studies/CityOfDarebin', true, /\.png$/)
+                return require.context('../../../images/Studies/CityofDarebin', true, /\.png$/)
             case 'City of Port Phillip':
-                return require.context('../../../images/Studies/CityOfPortPhillip', true, /\.png$/)
+                return require.context('../../../images/Studies/CityofPortPhillip', true, /\.png$/)
             case 'Click Frenzy':
-                //return require.context('../../../images/Studies/ClickFrenzy', true, /\.png$/)
+                return require.context('../../../images/Studies/ClickFrenzy', true, /\.png$/)
             case 'EatClub':
                 return require.context('../../../images/Studies/EatClub', true, /\.png$/)
             case 'Frank Green':
-                //return require.context('../../../images/Studies/FrankGreen', true, /\.png$/)
+                return require.context('../../../images/Studies/FrankGreen', true, /\.png$/)
             case 'Homely':
-                //return require.context('../../../images/Studies/Homely', true, /\.png$/)
+                return require.context('../../../images/Studies/Homely', true, /\.png$/)
             case 'Lumea':
-                //return require.context('../../../images/Studies/Lumea', true, /\.png$/)
-            case 'MCH':
-                //return require.context('../../../images/Studies/MCH', true, /\.png$/)
+                return require.context('../../../images/Studies/Lumea', true, /\.png$/)
+            case 'Maternal & Child Health':
+                return require.context('../../../images/Studies/MCH', true, /\.png$/)
+            case 'NAB':
+                return require.context('../../../images/Studies/NAB', true, /\.png$/)
             case 'OpenCourts':
-                //return require.context('../../../images/Studies/OpenCourts', true, /\.png$/)
+                return require.context('../../../images/Studies/OpenCourts', true, /\.png$/)
             case 'OVIC':
-                //return require.context('../../../images/Studies/OVIC', true, /\.png$/)
+                return require.context('../../../images/Studies/OVIC', true, /\.png$/)
             case 'Small Business Victoria':
-                //return require.context('../../../images/Studies/SmallBusinessVictoria', true, /\.png$/)
+                return require.context('../../../images/Studies/SmallBusinessVictoria', true, /\.png$/)
             case 'Stroke Foundation':
-                //return require.context('../../../images/Studies/StrokeFoundation', true, /\.png$/)
+                return require.context('../../../images/Studies/StrokeFoundation', true, /\.png$/)
             case 'SWEAT':
                 return require.context('../../../images/Studies/SWEAT', true, /\.png$/)
-            case 'VicPolice':
-                //return require.context('../../../images/Studies/VicPolice', true, /\.png$/)
+            //case 'Transgrid':
+                //return require.context('../../../images/Studies/Transgrid', true, /\.png$/)
+            case 'Victoria Police':
+                return require.context('../../../images/Studies/VictoriaPolice', true, /\.png$/)
         }
     }
 

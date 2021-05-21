@@ -1,54 +1,54 @@
+import {HOMELY} from "../colors"
 import img from "../images/Clients/client-homely.svg";
 
-import {HOMELY} from "../colors"
+import { Homely } from "../tagging/function";
+import { Website, App, Assets } from "../tagging/output";
 
 import { Real_Estate } from '../tagging/industries'
 import { 
     Strategy,
     UI___UX,
-    Animation___Motion,
     Marketing,
     Promotional,
     Wayfinding___Signage
 } from '../tagging/capabilities'
 import { 
     A_B_Testing,
-    Competitor_Analysis,
+    Design_System,
+    Heuristics_Evaluation,
     Journey_Mapping,
     Revised_User_Flows,
-    Roadmapping,
     Stakeholder_Interviews
 } from '../tagging/researchMethods'
 
 export default {
     color: HOMELY, //color
-    homePage: "",
+    hover: "",
     img,
     redirect: "h",
+    thumbnail: "",
     title: "Homely",
-    thumbnail: "Website redevelopment project to improve functionality and user experience.",
 
     //tagging
-    function: {text: "VERSA Agency", link: ""},
-    link: "https://www.portphillip.vic.gov.au",
-    output:  ["Website", "Platform"],
+    function: Homely,
+    link: "https://www.homely.com.au",
+    output:  [Website, App, Assets],
 
     capabilites: [
         Strategy,
         UI___UX,
-        Animation___Motion,
         Marketing,
         Promotional,
         Wayfinding___Signage
     ],
     industries: [Real_Estate],
     researchMethods: [
-        A_B_Testing,
-        Competitor_Analysis,
+        Heuristics_Evaluation,
         Journey_Mapping,
         Revised_User_Flows,
-        Roadmapping,
-        Stakeholder_Interviews
+        Stakeholder_Interviews,
+        A_B_Testing,
+        Design_System
     ],    
 
     //study

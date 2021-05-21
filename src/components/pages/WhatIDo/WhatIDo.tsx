@@ -26,10 +26,12 @@ function WhatIDo() {
           <div className="global-wrapper">
             <div className={styles["whatido-grid-two"]}>
               <div>
+                <img style={{height: "40px"}} src={images.whatitry} />
                 <h3>What I Try to do</h3>
-                <p>Listen, have at least showered before my first zoom call, solve complex problems, have fun, question everything, create transformative and memorable experiences, enable meaningful conversations between a brand and their audience, tell a story, dissolve ego, communicate clearly, consider everyone for accessibility, make a positive impact in improving the livelihood of all beings.</p>
+                <p>Listen, have at least showered before my first zoom call, solve complex problems, have fun, question everything, create transformative and memorable experiences, enable meaningful conversations between a brand and their audience, tell a story, dissolve ego, communicate clearly, consider everyone for accessibility, make a positive impact.</p>
               </div>
               <div>
+                <img style={{height: "40px"}} src={images.whatidonttry} />
                 <h3>What I <i>Don't</i> Try to do</h3>
                 <p>Make assumptions, ask leading questions, use too many buzzwords, go over budget, abbreviate things, bite off more than I can chew, worry about success, let my perfectionism seap in, take a ‘waterfall’ approach, take the easier path, make arbitrary decisions, add to the world’s noise.</p>
               </div>
@@ -39,7 +41,7 @@ function WhatIDo() {
           <div className="global-wrapper">
             <h3>Process</h3>
             <div className={styles["whatido-grid-three"]}>
-              <Item emoji={images.strategy} header="1. Strategy" content="Planning sounds rigid and what you have the luxury of doing when you’re in control. In this line of work, things change and they change quickly and often. You need to be able to adapt. A strategy is more like a vision of what you hope to achieve as opposed to the precise steps on how to get there." footer=""/>
+              <Item emoji={images.strategy} header="1. Strategise" content="Planning sounds rigid and what you have the luxury of doing when you’re in control. In this line of work, things change and they change quickly and often. You need to be able to adapt. A strategy is more like a vision of what you hope to achieve as opposed to the precise steps on how to get there." footer=""/>
               <Item emoji={images.research} header="2. Research" content="Understanding your target audience is the key to knowing how to best communicate with them. Reading, observing and listening are your superpowers here, use them. Absorb the critical information detailing what their needs, perceptions and behaviours are and where their pain points lie." footer=""/>
               <Item emoji={images.analyse} header="3. Analyse" content="By this point you should have the lie of the land. You’ll then need to synthesise and distil the information so it can be easier managed and interpreted into insights, themes and opportunity areas. One or more problems should be defined and framed so that you can formulate a prioritized approach." footer=""/>
               <Item emoji={images.ideation} header="4. Ideate" content="Things will begin to take shape. You and your team using a divergent mindset will brainstorm concepts and potential solutions. This is where you will see utilising different perspectives thrives. The end-user is kept front of mind or may join in collaboration to ensure a level of confidence that output is desirable." footer=""/>

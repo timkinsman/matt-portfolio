@@ -178,7 +178,7 @@ function CardView(props: any) {
             <h4><a onClick={() => handleOnClick("capability")} style={{opacity: showCapability === true ? 1 : 0.4}}>Capability {showCapability === true ? "↑" : "↓"}</a></h4>
             <h4><a onClick={() => handleOnClick("industry")} style={{opacity: showIndustry === true ? 1 : 0.4}}>Industry {showIndustry === true ? "↑" : "↓"}</a></h4>
             <h4><a onClick={() => handleOnClick("client")} style={{opacity: showClient === true ? 1 : 0.4}}>Client {showClient === true ? "↑" : "↓"}</a></h4>
-            <h4><a onClick={() => handleOnClick("researchMethod")} style={{opacity: showResearchMethod === true ? 1 : 0.4}}>Research {showResearchMethod === true ? "↑" : "↓"}</a></h4>
+            <h4><a onClick={() => handleOnClick("researchMethod")} style={{opacity: showResearchMethod === true ? 1 : 0.4}}>Method {showResearchMethod === true ? "↑" : "↓"}</a></h4>
             <h4><a onClick={() => handleOnClick("output")} style={{opacity: showOutput === true ? 1 : 0.4}}>Output {showOutput === true ? "↑" : "↓"}</a></h4>
           </div>
           {renderOptions()}

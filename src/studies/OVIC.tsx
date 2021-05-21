@@ -1,58 +1,34 @@
+import {OVIC} from "../colors"
 import img from "../images/Clients/client-ovic.svg";
 
-import {OVIC} from "../colors"
+import { VERSA_Agency } from "../tagging/function";
+import { Website } from "../tagging/output";
 
-import { Banking___Finance } from '../tagging/industries'
-import { Branding___Identity, Strategy, UI___UX } from '../tagging/capabilities'
+import { Government, NGO___Not_for_profit } from '../tagging/industries'
+import { Strategy } from '../tagging/capabilities'
 import {
-    A_B_Testing,
     Artefact_Review,
-    Concept_Usability_Testing,
-    Data_Analytics_Review,
-    Heuristics_Evaluation,
-    Card_Sorting,
-    Tree_Testing,
-    Journey_Mapping,
-    Online_Surveys,
-    Persona_Development,
-    Requirements_Gathering,
-    Revised_User_Flows,
-    Roadmapping,
-    Stakeholder_Interviews,
-    User_Interviews
+    Heuristics_Evaluation
 } from '../tagging/researchMethods'
 
 export default {
     color: OVIC, //color
-    homePage: "",
+    hover: "",
     img,
     redirect: "ovic",
-    thumbnail: "Website redevelopment project to improve functionality and user experience.",
+    thumbnail: "",
     title: "OVIC",
 
     //tagging
-    function: {text: "VERSA Agency", link: ""},
-    link: "https://www.portphillip.vic.gov.au",
-    output:  ["Website", "Platform"],
+    function: VERSA_Agency,
+    link: "https://ovic.vic.gov.au",
+    output:  [Website],
 
-    capabilites: [Branding___Identity, Strategy, UI___UX],
-    industries: [Banking___Finance],
+    capabilites: [Strategy],
+    industries: [Government, NGO___Not_for_profit],
     researchMethods: [
-        A_B_Testing,
         Artefact_Review,
-        Concept_Usability_Testing,
-        Data_Analytics_Review,
-        Heuristics_Evaluation,
-        Card_Sorting,
-        Tree_Testing,
-        Journey_Mapping,
-        Online_Surveys,
-        Persona_Development,
-        Requirements_Gathering,
-        Revised_User_Flows,
-        Roadmapping,
-        Stakeholder_Interviews,
-        User_Interviews
+        Heuristics_Evaluation
     ],    
 
     //study

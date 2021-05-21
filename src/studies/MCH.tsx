@@ -1,36 +1,36 @@
+import {MCH} from "../colors"
 import img from "../images/Clients/client-mch.svg";
 
-import {MCH} from "../colors"
+import { VERSA_Agency } from "../tagging/function";
+import { App } from "../tagging/output";
 
 import { Health } from '../tagging/industries'
-import { Branding___Identity, Strategy, UI___UX } from '../tagging/capabilities'
+import { Strategy } from '../tagging/capabilities'
 import { 
-    Concept_Usability_Testing,
-    Diary_Studies,
-    Roadmapping,
-    User_Interviews
+    Artefact_Review,
+    Requirements_Gathering,
+    Revised_User_Flows
 } from '../tagging/researchMethods'
 
 export default {
     color: MCH, //color
-    homePage: "",
+    hover: "",
     img,
     redirect: "mch",
-    thumbnail: "Mobile-first service delivery for parents, providing access to 100 years of expert advice at the touch of a thumb.",
+    thumbnail: "",
     title: "Maternal & Child Health",
 
     //tagging
-    function: {text: "VERSA Agency", link: ""},
-    link: "https://www.portphillip.vic.gov.au",
-    output:  ["Website", "Platform"],
+    function: VERSA_Agency,
+    link: "https://www.betterhealth.vic.gov.au/mchapp",
+    output:  [App],
 
-    capabilites: [Branding___Identity, Strategy, UI___UX],
+    capabilites: [Strategy],
     industries: [Health],
     researchMethods: [
-        Concept_Usability_Testing,
-        Diary_Studies,
-        Roadmapping,
-        User_Interviews
+        Artefact_Review,
+        Requirements_Gathering,
+        Revised_User_Flows
     ],    
 
     //study

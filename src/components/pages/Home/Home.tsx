@@ -51,8 +51,8 @@ const Home = (props: any) => {
 
   const _intIndexCOPP = getIndex("City of Port Phillip")
   const _intIndexBV = getIndex("BankVic")
-  const _intIndexOC = getIndex("OpenCourts")
-  const _intIndexBB = getIndex("Beyond Blue")
+  const _intIndexL = getIndex("Lumea")
+  const _intIndexB = getIndex("Bupa")
 
   const fadeIn = (pstrId: string, pintDelay: number) => {
     $(pstrId).delay(pintDelay).css('visibility','visible').hide().fadeIn(2000); 
@@ -105,8 +105,8 @@ const Home = (props: any) => {
 
       {renderPanel(_intIndexCOPP, "two", "three") /**cityofportphillip */}
       {renderPanel(_intIndexBV, "three", "four") /**bankvic */}
-      {renderPanel(_intIndexOC, "four", "five") /**opencourts */}
-      {renderPanel(_intIndexBB, "five", "six") /**beyondblue */}
+      {renderPanel(_intIndexL, "four", "five") /**opencourts */}
+      {renderPanel(_intIndexB, "five", "six") /**beyondblue */}
 
       <div className="global-container">
         <CardView filter="" id="six" />
@@ -116,10 +116,10 @@ const Home = (props: any) => {
         <Footer />
       </div>
       
-      <img className={styles["mouse-over-image"]} id="mouse-over-image-two" src={studies[_intIndexCOPP].homePage} alt={studies[_intIndexCOPP].title} />
-      <img className={styles["mouse-over-image"]} id="mouse-over-image-three" src={studies[_intIndexBV].homePage} alt={studies[_intIndexBV].title} />
-      <img className={styles["mouse-over-image"]} id="mouse-over-image-four" src={studies[_intIndexOC].homePage} alt={studies[_intIndexOC].title} />
-      <img className={styles["mouse-over-image"]} id="mouse-over-image-five" src={studies[_intIndexBB].homePage} alt={studies[_intIndexBB].title} />
+      <img className={styles["mouse-over-image"]} id="mouse-over-image-two" src={studies[_intIndexCOPP].hover} alt={studies[_intIndexCOPP].title} />
+      <img className={styles["mouse-over-image"]} id="mouse-over-image-three" src={studies[_intIndexBV].hover} alt={studies[_intIndexBV].title} />
+      <img className={styles["mouse-over-image"]} id="mouse-over-image-four" src={studies[_intIndexL].hover} alt={studies[_intIndexL].title} />
+      <img className={styles["mouse-over-image"]} id="mouse-over-image-five" src={studies[_intIndexB].hover} alt={studies[_intIndexB].title} />
     </div>
   );
 }

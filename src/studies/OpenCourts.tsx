@@ -1,37 +1,36 @@
-import homePage from "../images/HomePage/opencourts.png";
+import {OPEN_COURTS} from "../colors"
 import img from "../images/Clients/client-opencourts.svg";
 
-import {OPEN_COURTS} from "../colors"
+import { VERSA_Agency } from "../tagging/function";
+import { Portal } from "../tagging/output";
 
 import { Legal } from '../tagging/industries'
-import { Branding___Identity, UI___UX } from '../tagging/capabilities'
+import { Strategy } from '../tagging/capabilities'
 import { 
     Artefact_Review,
     Requirements_Gathering,
-    Revised_User_Flows,
-    Roadmapping,
+    Revised_User_Flows
 } from '../tagging/researchMethods'
 
 export default {
     color: OPEN_COURTS, //color
-    homePage,
+    hover: "",
     img,
     redirect: "op",
-    thumbnail: "Website redevelopment project to improve functionality and user experience.",
+    thumbnail: "",
     title: "OpenCourts",
 
     //tagging
-    function: {text: "VERSA Agency", link: ""},
-    link: "https://www.portphillip.vic.gov.au",
-    output:  ["Website", "Platform"],
+    function: VERSA_Agency,
+    link: "https://engage.vic.gov.au/open-courts-act-review",
+    output:  [Portal],
 
-    capabilites: [Branding___Identity, UI___UX],
+    capabilites: [Strategy],
     industries: [Legal],
     researchMethods: [
         Artefact_Review,
         Requirements_Gathering,
-        Revised_User_Flows,
-        Roadmapping,
+        Revised_User_Flows
     ],    
 
     //study

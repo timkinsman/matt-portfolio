@@ -1,36 +1,36 @@
+import {CITY_OF_DAREBIN} from "../colors"
 import img from "../images/Clients/client-cityofdarebin.svg";
 
-import {CITY_OF_DAREBIN} from "../colors"
+import { VERSA_Agency } from "../tagging/function";
+import { Website } from "../tagging/output";
 
-import { Government } from '../tagging/industries'
-import { Strategy, UI___UX } from '../tagging/capabilities'
+import { Government, NGO___Not_for_profit } from '../tagging/industries'
+import { Strategy } from '../tagging/capabilities'
 import {
     Heuristics_Evaluation,
-    Card_Sorting,
     Tree_Testing,
-    Stakeholder_Interviews
+    Revised_User_Flows
 } from '../tagging/researchMethods'
 
 export default {
     color: CITY_OF_DAREBIN, //color
-    homePage: "",
+    hover: "",
     img,
     redirect: "cod",
-    thumbnail: "Website redevelopment project to improve functionality and user experience.",
+    thumbnail: "",
     title: "City of Darebin",
 
     //tagging
-    function: {text: "VERSA Agency", link: ""},
-    link: "https://www.portphillip.vic.gov.au",
-    output:  ["Website", "Platform"],
+    function: VERSA_Agency,
+    link: "http://www.darebin.vic.gov.au",
+    output:  [Website],
 
-    capabilites: [Strategy, UI___UX],
-    industries: [Government],
+    capabilites: [Strategy],
+    industries: [Government, NGO___Not_for_profit],
     researchMethods: [
         Heuristics_Evaluation,
-        Card_Sorting,
         Tree_Testing,
-        Stakeholder_Interviews
+        Revised_User_Flows
     ],    
 
     //study

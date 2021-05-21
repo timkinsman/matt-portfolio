@@ -106,7 +106,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    padding-bottom: 60px;
+    padding-bottom: 80px;
 }
 
 .card-view-filter-apply-div {
@@ -133,7 +133,7 @@
 .card-view-filter-by {
     display: flex;
     gap: 30px;
-    padding-bottom: 60px;
+    padding-bottom: 20px;
 }
 
 .card-view-label {

@@ -1,54 +1,36 @@
+import {STROKE_FOUNDATION} from "../colors"
 import img from "../images/Clients/client-strokefoundation.svg";
 
-import {STROKE_FOUNDATION} from "../colors"
+import { VERSA_Agency } from "../tagging/function";
+import { Website, Portal } from "../tagging/output";
 
-import { Government } from '../tagging/industries'
+import { Health } from '../tagging/industries'
 import { Strategy, UI___UX } from '../tagging/capabilities'
 import { 
     Artefact_Review,
-    Concept_Usability_Testing,
-    Data_Analytics_Review,
     Heuristics_Evaluation,
-    Card_Sorting,
-    Tree_Testing,
-    Journey_Mapping,
-    Persona_Development,
-    Requirements_Gathering,
-    Revised_User_Flows,
-    Roadmapping,
-    Stakeholder_Interviews,
-    User_Interviews
+    Revised_User_Flows
 } from '../tagging/researchMethods'
 
 export default {
     color: STROKE_FOUNDATION, //color
-    homePage: "",
+    hover: "",
     img,
     redirect: "sf",
-    thumbnail: "The most accessible platform in Australia, developed in conjunction with stroke survivors.",
+    thumbnail: "",
     title: "Stroke Foundation",
 
     //tagging
-    function: {text: "VERSA Agency", link: ""},
-    link: "https://www.portphillip.vic.gov.au",
-    output:  ["Website", "Platform"],
+    function: VERSA_Agency,
+    link: "https://strokefoundation.org.au",
+    output:  [Website, Portal],
 
     capabilites: [Strategy, UI___UX],
-    industries: [Government],
+    industries: [Health],
     researchMethods: [
         Artefact_Review,
-        Concept_Usability_Testing,
-        Data_Analytics_Review,
         Heuristics_Evaluation,
-        Card_Sorting,
-        Tree_Testing,
-        Journey_Mapping,
-        Persona_Development,
-        Requirements_Gathering,
-        Revised_User_Flows,
-        Roadmapping,
-        Stakeholder_Interviews,
-        User_Interviews
+        Revised_User_Flows
     ],    
 
     //study

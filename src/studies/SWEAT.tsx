@@ -1,8 +1,10 @@
+import {SWEAT} from "../colors"
 import img from "../images/Clients/client-sweat.svg";
 
-import {SWEAT} from "../colors"
+import { SWEAT as SWEAT_FUNCTION } from "../tagging/function";
+import { Website, App, Assets, eBooks } from "../tagging/output";
 
-import { Sports___Fitness } from '../tagging/industries'
+import { Sports___Fitness, Health } from '../tagging/industries'
 import { 
     Strategy,
     UI___UX,
@@ -12,24 +14,29 @@ import {
     Marketing,
     Packaging,
     Promotional,
-    Wayfinding___Signage
+    Wayfinding___Signage,
+    Print___Publishing
 } from '../tagging/capabilities'
 import { 
-    Competitor_Analysis
+    A_B_Testing,
+    Competitor_Analysis,
+    Design_System,
+    Heuristics_Evaluation,
+    Revised_User_Flows
 } from '../tagging/researchMethods'
 
 export default {
     color: SWEAT, //color
-    homePage: "",
+    hover: "",
     img,
     redirect: "s",
-    thumbnail: "Website redevelopment project to improve functionality and user experience.",
+    thumbnail: "",
     title: "SWEAT",
 
     //tagging
-    function: {text: "VERSA Agency", link: ""},
-    link: "https://www.portphillip.vic.gov.au",
-    output:  ["Website", "Platform"],
+    function: SWEAT_FUNCTION,
+    link: "https://www.sweat.com",
+    output:  [Website, App, Assets, eBooks],
 
     capabilites: [
         Strategy,
@@ -40,11 +47,16 @@ export default {
         Marketing,
         Packaging,
         Promotional,
-        Wayfinding___Signage
+        Wayfinding___Signage,
+        Print___Publishing
     ],
-    industries: [Sports___Fitness],
+    industries: [Sports___Fitness, Health],
     researchMethods: [
-        Competitor_Analysis
+        A_B_Testing,
+        Competitor_Analysis,
+        Heuristics_Evaluation,
+        Revised_User_Flows,
+        Design_System
     ],    
 
     //study

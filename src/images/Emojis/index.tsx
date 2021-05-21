@@ -13,6 +13,8 @@ import validation from "./emoji-validation.png";
 import email from "./emoji-email.png";
 import enquiries from "./emoji-enquiries.png";
 import phone from "./emoji-phone.png";
+import whatidonttry from "./emoji-whatidonttry.png";
+import whatitry from "./emoji-whatitry.png";
 
 const images = {
     analyse,
@@ -29,7 +31,9 @@ const images = {
     validation,
     email,
     enquiries,
-    phone
+    phone,
+    whatidonttry,
+    whatitry
 }
 
 export default images;

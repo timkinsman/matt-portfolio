@@ -1,12 +1,13 @@
-import homePage from "../images/HomePage/bankvic.png";
+import { BANK_VIC } from "../colors"
+import hover from "../images/Hover/bankvic.gif";
 import img from "../images/Clients/client-bankvic.svg";
 
-import {BANK_VIC} from "../colors"
+import { VERSA_Agency } from "../tagging/function";
 
+import { Website } from "../tagging/output";
 import { Banking___Finance } from '../tagging/industries'
-import { Branding___Identity, Strategy, UI___UX } from '../tagging/capabilities'
+import { Strategy } from '../tagging/capabilities'
 import {
-    A_B_Testing,
     Artefact_Review,
     Concept_Usability_Testing,
     Data_Analytics_Review,
@@ -14,46 +15,41 @@ import {
     Card_Sorting,
     Tree_Testing,
     Journey_Mapping,
-    Online_Surveys,
     Persona_Development,
     Requirements_Gathering,
-    Revised_User_Flows,
-    Roadmapping,
     Stakeholder_Interviews,
-    User_Interviews
+    User_Interviews,
+    Competitor_Analysis
 } from '../tagging/researchMethods'
 
 export default {
     color: BANK_VIC, //color
-    homePage,
+    hover,
     img,
     redirect: "bv",
-    thumbnail: "Website redevelopment project to improve functionality and user experience.",
+    thumbnail: "A future-proof platform, with endless customisation and personalisation puts members at the centre of the experience.",
     title: "BankVic",
 
     //tagging
-    function: {text: "VERSA Agency", link: ""},
-    link: "https://www.portphillip.vic.gov.au",
-    output:  ["Website", "Platform"],
+    function: VERSA_Agency,
+    link: "https://www.bankvic.com.au",
+    output:  [Website],
 
-    capabilites: [Branding___Identity, Strategy, UI___UX],
+    capabilites: [Strategy],
     industries: [Banking___Finance],
     researchMethods: [
-        A_B_Testing,
         Artefact_Review,
+        Competitor_Analysis,
         Concept_Usability_Testing,
         Data_Analytics_Review,
         Heuristics_Evaluation,
-        Card_Sorting,
         Tree_Testing,
         Journey_Mapping,
-        Online_Surveys,
         Persona_Development,
         Requirements_Gathering,
-        Revised_User_Flows,
-        Roadmapping,
         Stakeholder_Interviews,
-        User_Interviews
+        User_Interviews,
+        Card_Sorting
     ],    
 
     //study

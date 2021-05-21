@@ -1,42 +1,36 @@
-import homePage from "../images/HomePage/beyondblue.png";
+import { BEYOND_BLUE } from "../colors"
 import img from "../images/Clients/client-beyondblue.svg";
 
-import {BEYOND_BLUE} from "../colors"
+import { VERSA_Agency } from "../tagging/function";
+import { Website } from "../tagging/output";
 
-import { NGO___Not_for_profit } from '../tagging/industries'
-import { Strategy, UI___UX } from '../tagging/capabilities'
+import { Health } from '../tagging/industries'
+import { Strategy } from '../tagging/capabilities'
 import { 
-    Artefact_Review,
-    Concept_Usability_Testing,
-    Data_Analytics_Review,
     Heuristics_Evaluation,
-    Card_Sorting,
-    Tree_Testing,
     Journey_Mapping,
-    Persona_Development,
-    Requirements_Gathering,
-    Revised_User_Flows,
-    Roadmapping,
-    Stakeholder_Interviews,
-    User_Interviews
+    Revised_User_Flows
 } from '../tagging/researchMethods'
 
 export default {
     color: BEYOND_BLUE, //color
-    homePage,
+    hover: "",
     img,
     redirect: "bb",
-    thumbnail: "A learning and resource platform that arms educators with the knowledge to promote and protect student mental health.",
+    thumbnail: "",
     title: "Beyond Blue",
 
     //tagging
-    function: {text: "VERSA Agency", link: ""},
-    link: "https://www.portphillip.vic.gov.au",
-    output:  ["Website", "Platform"],
+    function: VERSA_Agency,
+    link: "https://beyou.edu.au",
+    output:  [Website],
 
-    capabilites: [Strategy, UI___UX],
-    industries: [NGO___Not_for_profit],
+    capabilites: [Strategy],
+    industries: [Health],
     researchMethods: [
+        Journey_Mapping,
+        Revised_User_Flows,
+        Heuristics_Evaluation
     ],    
 
     //study

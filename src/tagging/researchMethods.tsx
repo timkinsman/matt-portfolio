@@ -1,5 +1,5 @@
 export const A_B_Testing = "A/B Testing"
-export const Accessibility_Testing = "Accessibility Testing"
+export const Design_System = "Design System"
 export const Artefact_Review = "Artefact Review"
 export const Competitor_Analysis = "Competitor Analysis"
 export const Concept_Usability_Testing = "Concept Usability Testing"
@@ -22,12 +22,12 @@ export const User_Interviews = "User Interviews"
 
 export const arrResearchMethods = [
     A_B_Testing,
-    Accessibility_Testing,
     Artefact_Review,
     Competitor_Analysis,
     Concept_Usability_Testing,
     Contextual_Inquiry,
     Data_Analytics_Review,
+    Design_System,
     Diary_Studies,
     Heuristics_Evaluation,
     Card_Sorting,

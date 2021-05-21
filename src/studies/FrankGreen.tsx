@@ -1,28 +1,32 @@
+import {FRANK_GREEN} from "../colors"
 import img from "../images/Clients/client-frankgreen.svg";
 
-import {FRANK_GREEN} from "../colors"
+import { IE } from "../tagging/function";
+import { Website, App } from "../tagging/output";
 
-import { Food___Beverage } from '../tagging/industries'
-import { UI___UX } from '../tagging/capabilities'
+import { Food___Beverage, Retail } from '../tagging/industries'
+import { Strategy, UI___UX } from '../tagging/capabilities'
 import {
 } from '../tagging/researchMethods'
 
 export default {
     color: FRANK_GREEN, //color
-    homePage: "",
+    hover: "",
     img,
     redirect: "fg",
-    thumbnail: "Website redevelopment project to improve functionality and user experience.",
+    thumbnail: "",
     title: "Frank Green",
 
     //tagging
-    function: {text: "VERSA Agency", link: ""},
-    link: "https://www.portphillip.vic.gov.au",
-    output:  ["Website", "Platform"],
+    function: IE,
+    link: "https://frankgreen.com.au",
+    output:  [Website, App],
 
     capabilites: [UI___UX],
-    industries: [Food___Beverage],
+    industries: [Food___Beverage, Retail],
     researchMethods: [
+        Strategy,
+        UI___UX
     ],    
 
     //study
