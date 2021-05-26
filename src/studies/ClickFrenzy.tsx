@@ -5,7 +5,7 @@ import { IE } from "../tagging/function";
 import { Website } from "../tagging/output";
 
 import { Retail } from '../tagging/industries'
-import { Strategy, UI___UX } from '../tagging/capabilities'
+import { UX___Strategy, UI___Visual_Design } from '../tagging/capabilities'
 import { 
     Artefact_Review,
     Concept_Usability_Testing,
@@ -33,7 +33,7 @@ export default {
     link: "https://www.clickfrenzy.com.au",
     output:  [Website],
 
-    capabilites: [Strategy, UI___UX],
+    capabilites: [UX___Strategy, UI___Visual_Design],
     industries: [Retail],
     researchMethods: [
         A_B_Testing,

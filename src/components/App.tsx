@@ -7,18 +7,19 @@ import Work from './pages/Work/Work';
 import WhatIDo from './pages/WhatIDo/WhatIDo';
 import Blog from './pages/Blog/Blog';
 import Contact from './pages/Contact/Contact';
-import ScrollToTop from './util/ScrollToTop';
 import Study from './pages/Study/Study';
+import { DARK, LIGHT } from "../colors"
+import ScrollToTop from './util/ScrollToTop';
 import $ from "jquery";
 
 const App = (props: any) => {
   useEffect(() => {
     switch(props.portfolio.theme){
       case "LIGHT":
-        $("body").css({"background": "#F5F5F5", "color": "#000000"})
+        $("body").css({"background": LIGHT, "color": "#000000"})
         break;
       case "DARK":
-        $("body").css({"background": "#0B0B0C", "color": "#FFFFFF"})
+        $("body").css({"background": DARK, "color": "#FFFFFF"})
         break;
     }
   }, [props.portfolio.theme])

@@ -6,7 +6,7 @@ import { IE } from "../tagging/function";
 import { Website } from "../tagging/output";
 
 import { Health, Retail } from '../tagging/industries'
-import { Strategy } from '../tagging/capabilities'
+import { UX___Strategy } from '../tagging/capabilities'
 import { 
     Concept_Usability_Testing,
     Thematic_Analysis
@@ -25,7 +25,7 @@ export default {
     link: "https://bupaoptical.bupa.com.au",
     output:  [Website],
 
-    capabilites: [Strategy],
+    capabilites: [UX___Strategy],
     industries: [Health, Retail],
     researchMethods: [
         Concept_Usability_Testing,

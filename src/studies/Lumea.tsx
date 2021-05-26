@@ -6,7 +6,7 @@ import { VERSA_Agency } from "../tagging/function";
 import { Website } from "../tagging/output";
 
 import { Energy } from '../tagging/industries'
-import { Strategy } from '../tagging/capabilities'
+import { UX___Strategy } from '../tagging/capabilities'
 import {
     Artefact_Review,
     Data_Analytics_Review,
@@ -27,7 +27,7 @@ export default {
     link: "http://www.lumea.com.au",
     output:  [Website],
 
-    capabilites: [Strategy],
+    capabilites: [UX___Strategy],
     industries: [Energy],
     researchMethods: [
         Artefact_Review,

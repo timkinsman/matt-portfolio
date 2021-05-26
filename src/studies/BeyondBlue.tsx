@@ -5,7 +5,7 @@ import { VERSA_Agency } from "../tagging/function";
 import { Website } from "../tagging/output";
 
 import { Health } from '../tagging/industries'
-import { Strategy } from '../tagging/capabilities'
+import { UX___Strategy } from '../tagging/capabilities'
 import { 
     Heuristics_Evaluation,
     Journey_Mapping,
@@ -25,7 +25,7 @@ export default {
     link: "https://beyou.edu.au",
     output:  [Website],
 
-    capabilites: [Strategy],
+    capabilites: [UX___Strategy],
     industries: [Health],
     researchMethods: [
         Journey_Mapping,

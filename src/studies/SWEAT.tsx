@@ -6,8 +6,8 @@ import { Website, App, Assets, eBooks } from "../tagging/output";
 
 import { Sports___Fitness, Health } from '../tagging/industries'
 import { 
-    Strategy,
-    UI___UX,
+    UX___Strategy,
+    UI___Visual_Design,
     Animation___Motion,
     Art_Direction,
     Branding___Identity,
@@ -39,8 +39,8 @@ export default {
     output:  [Website, App, Assets, eBooks],
 
     capabilites: [
-        Strategy,
-        UI___UX,
+        UX___Strategy,
+        UI___Visual_Design,
         Animation___Motion,
         Art_Direction,
         Branding___Identity,

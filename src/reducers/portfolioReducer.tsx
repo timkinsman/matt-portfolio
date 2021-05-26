@@ -8,7 +8,6 @@ const INITIAL_STATE = {
 
 // eslint-disable-next-line
 export default (state = INITIAL_STATE, action: { type: string; payload: any; }) => {
-    console.log(action)
     switch (action.type) {
         case UPDATE_THEME:
             return {...state, theme: action.payload }

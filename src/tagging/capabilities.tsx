@@ -6,8 +6,8 @@ export const Packaging = "Packaging"
 export const Photography = "Photography"
 export const Print___Publishing = "Print & Publishing"
 export const Promotional = "Promotional"
-export const Strategy = "UX & Strategy"
-export const UI___UX = "UI & Visual Design"
+export const UX___Strategy = "UX & Strategy"
+export const UI___Visual_Design = "UI & Visual Design"
 export const Video = "Video & Editing"
 export const Wayfinding___Signage = "Wayfinding & Signage"
 
@@ -20,8 +20,8 @@ export const arrCapabilities = [
     Photography,
     Print___Publishing,
     Promotional,
-    Strategy,
-    UI___UX,
+    UX___Strategy,
+    UI___Visual_Design,
     Video,
     Wayfinding___Signage,
 ]

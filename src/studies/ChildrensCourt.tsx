@@ -5,7 +5,7 @@ import { VERSA_Agency } from "../tagging/function";
 import { Website } from "../tagging/output";
 
 import { Legal } from '../tagging/industries'
-import { Strategy } from '../tagging/capabilities'
+import { UX___Strategy } from '../tagging/capabilities'
 import {
     Heuristics_Evaluation
 } from '../tagging/researchMethods'
@@ -23,7 +23,7 @@ export default {
     link: "https://www.childrenscourt.vic.gov.au",
     output:  [Website],
 
-    capabilites: [Strategy],
+    capabilites: [UX___Strategy],
     industries: [Legal],
     researchMethods: [
         Heuristics_Evaluation

@@ -5,7 +5,7 @@ import { VERSA_Agency } from "../tagging/function";
 import { App } from "../tagging/output";
 
 import { Health } from '../tagging/industries'
-import { Strategy } from '../tagging/capabilities'
+import { UX___Strategy } from '../tagging/capabilities'
 import { 
     Artefact_Review,
     Requirements_Gathering,
@@ -25,7 +25,7 @@ export default {
     link: "https://www.betterhealth.vic.gov.au/mchapp",
     output:  [App],
 
-    capabilites: [Strategy],
+    capabilites: [UX___Strategy],
     industries: [Health],
     researchMethods: [
         Artefact_Review,

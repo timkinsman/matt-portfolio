@@ -5,7 +5,7 @@ import { VERSA_Agency } from "../tagging/function";
 import { Portal } from "../tagging/output";
 
 import { Legal } from '../tagging/industries'
-import { Strategy } from '../tagging/capabilities'
+import { UX___Strategy } from '../tagging/capabilities'
 import { 
     Artefact_Review,
     Requirements_Gathering,
@@ -25,7 +25,7 @@ export default {
     link: "https://engage.vic.gov.au/open-courts-act-review",
     output:  [Portal],
 
-    capabilites: [Strategy],
+    capabilites: [UX___Strategy],
     industries: [Legal],
     researchMethods: [
         Artefact_Review,

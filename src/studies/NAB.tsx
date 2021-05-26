@@ -5,7 +5,7 @@ import { AKQA } from "../tagging/function";
 import { Website, Assets } from "../tagging/output";
 
 import { Banking___Finance } from '../tagging/industries'
-import { Marketing, Promotional, UI___UX } from '../tagging/capabilities'
+import { Marketing, Promotional, UI___Visual_Design } from '../tagging/capabilities'
 import {
     Artefact_Review
 } from '../tagging/researchMethods'
@@ -23,7 +23,7 @@ export default {
     link: "https://www.nab.com.au",
     output:  [Website, Assets],
 
-    capabilites: [ UI___UX, Marketing, Promotional ],
+    capabilites: [ UI___Visual_Design, Marketing, Promotional ],
     industries: [Banking___Finance],
     researchMethods: [
         Artefact_Review

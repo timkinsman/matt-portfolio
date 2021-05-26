@@ -5,7 +5,7 @@ import { VERSA_Agency } from "../tagging/function";
 import { Website, Portal } from "../tagging/output";
 
 import { Health } from '../tagging/industries'
-import { Strategy, UI___UX } from '../tagging/capabilities'
+import { UX___Strategy, UI___Visual_Design } from '../tagging/capabilities'
 import { 
     Artefact_Review,
     Heuristics_Evaluation,
@@ -25,7 +25,7 @@ export default {
     link: "https://strokefoundation.org.au",
     output:  [Website, Portal],
 
-    capabilites: [Strategy, UI___UX],
+    capabilites: [UX___Strategy, UI___Visual_Design],
     industries: [Health],
     researchMethods: [
         Artefact_Review,

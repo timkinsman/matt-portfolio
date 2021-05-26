@@ -5,7 +5,7 @@ import { IE } from "../tagging/function";
 import { Website, App } from "../tagging/output";
 
 import { Food___Beverage, Retail } from '../tagging/industries'
-import { Strategy, UI___UX } from '../tagging/capabilities'
+import { UX___Strategy, UI___Visual_Design } from '../tagging/capabilities'
 import {
 } from '../tagging/researchMethods'
 
@@ -22,11 +22,11 @@ export default {
     link: "https://frankgreen.com.au",
     output:  [Website, App],
 
-    capabilites: [UI___UX],
+    capabilites: [UI___Visual_Design],
     industries: [Food___Beverage, Retail],
     researchMethods: [
-        Strategy,
-        UI___UX
+        UX___Strategy,
+        UI___Visual_Design
     ],    
 
     //study

@@ -5,7 +5,7 @@ import { EatClub } from "../tagging/function";
 import { Website, App, Assets } from "../tagging/output";
 
 import { Food___Beverage } from '../tagging/industries'
-import { Strategy, UI___UX, Marketing, Promotional, Animation___Motion } from '../tagging/capabilities'
+import { UX___Strategy, UI___Visual_Design, Marketing, Promotional, Animation___Motion } from '../tagging/capabilities'
 import { 
     Heuristics_Evaluation,
     Competitor_Analysis,
@@ -27,7 +27,7 @@ export default {
     link: "https://eatclub.com.au",
     output:  [Website, App, Assets],
 
-    capabilites: [Strategy, UI___UX, Marketing, Promotional, Animation___Motion],
+    capabilites: [UX___Strategy, UI___Visual_Design, Marketing, Promotional, Animation___Motion],
     industries: [Food___Beverage],
     researchMethods: [
         Heuristics_Evaluation,

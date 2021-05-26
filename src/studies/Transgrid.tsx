@@ -5,7 +5,7 @@ import { VERSA_Agency } from "../tagging/function";
 import { Website } from "../tagging/output";
 
 import { Energy } from '../tagging/industries'
-import { Strategy, UI___UX } from '../tagging/capabilities'
+import { UX___Strategy, UI___Visual_Design } from '../tagging/capabilities'
 import {
     Artefact_Review,
     Data_Analytics_Review,
@@ -27,7 +27,7 @@ export default {
     link: "https://www.transgrid.com.au",
     output:  [Website],
 
-    capabilites: [Strategy, UI___UX],
+    capabilites: [UX___Strategy, UI___Visual_Design],
     industries: [Energy],
     researchMethods: [
         Artefact_Review,

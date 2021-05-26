@@ -5,7 +5,7 @@ import { VERSA_Agency } from "../tagging/function";
 import { Website } from "../tagging/output";
 
 import { Government, NGO___Not_for_profit } from '../tagging/industries'
-import { Strategy } from '../tagging/capabilities'
+import { UX___Strategy } from '../tagging/capabilities'
 import {
     Heuristics_Evaluation,
     Tree_Testing,
@@ -25,7 +25,7 @@ export default {
     link: "http://www.darebin.vic.gov.au",
     output:  [Website],
 
-    capabilites: [Strategy],
+    capabilites: [UX___Strategy],
     industries: [Government, NGO___Not_for_profit],
     researchMethods: [
         Heuristics_Evaluation,

@@ -6,7 +6,7 @@ import { VERSA_Agency } from "../tagging/function";
 
 import { Website } from "../tagging/output";
 import { Banking___Finance } from '../tagging/industries'
-import { Strategy } from '../tagging/capabilities'
+import { UX___Strategy } from '../tagging/capabilities'
 import {
     Artefact_Review,
     Concept_Usability_Testing,
@@ -35,7 +35,7 @@ export default {
     link: "https://www.bankvic.com.au",
     output:  [Website],
 
-    capabilites: [Strategy],
+    capabilites: [UX___Strategy],
     industries: [Banking___Finance],
     researchMethods: [
         Artefact_Review,

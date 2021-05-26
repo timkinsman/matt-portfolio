@@ -6,8 +6,8 @@ import { Website, App, Assets } from "../tagging/output";
 
 import { Real_Estate } from '../tagging/industries'
 import { 
-    Strategy,
-    UI___UX,
+    UX___Strategy,
+    UI___Visual_Design,
     Marketing,
     Promotional,
     Wayfinding___Signage
@@ -35,8 +35,8 @@ export default {
     output:  [Website, App, Assets],
 
     capabilites: [
-        Strategy,
-        UI___UX,
+        UX___Strategy,
+        UI___Visual_Design,
         Marketing,
         Promotional,
         Wayfinding___Signage

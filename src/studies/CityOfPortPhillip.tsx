@@ -6,7 +6,7 @@ import { VERSA_Agency } from "../tagging/function";
 import { Website, Intranet } from "../tagging/output";
 
 import { Government, NGO___Not_for_profit } from '../tagging/industries'
-import { Strategy } from '../tagging/capabilities'
+import { UX___Strategy } from '../tagging/capabilities'
 import { 
     Artefact_Review,
     Concept_Usability_Testing,
@@ -36,7 +36,7 @@ export default {
     link: "https://www.portphillip.vic.gov.au",
     output:  [Website, Intranet],
 
-    capabilites: [Strategy],
+    capabilites: [UX___Strategy],
     industries: [Government, NGO___Not_for_profit],
     researchMethods: [
         Artefact_Review,
