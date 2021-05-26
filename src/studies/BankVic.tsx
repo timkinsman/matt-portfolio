@@ -27,7 +27,7 @@ export default {
     hover,
     img,
     redirect: "bv",
-    thumbnail: "A future-proof platform, with endless customisation and personalisation puts members at the centre of the experience.",
+    thumbnail: "A future-proof platform, with endless customisation and a personalised experience.",
     title: "BankVic",
 
     //tagging

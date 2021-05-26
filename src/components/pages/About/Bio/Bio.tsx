@@ -1,8 +1,8 @@
 import React from "react";
-import images from "../../../images/Photos";
+import { Link } from "react-router-dom";
+import images from "../../../../images/Photos";
 import $ from "jquery";
 import styles from "./Bio.module.css";
-import { Link } from "react-router-dom";
 
 const Bio = () => {
   const fadeIn = (pobj: any) => {

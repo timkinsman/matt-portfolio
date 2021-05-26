@@ -1,7 +1,7 @@
 import React from "react";
+import {connect} from "react-redux";
 import { Link } from "react-router-dom";
 import styles from "./Card.module.css";
-import {connect} from "react-redux";
 
 const Card = (props: any) => {
   return (

@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from "react";
+import {connect} from "react-redux";
 import Card from "../Card/Card";
 import studies from "../../../studies";
 import { arrCapabilities } from "../../../tagging/capabilities";
@@ -6,7 +7,6 @@ import { arrIndustries } from "../../../tagging/industries";
 import { arrOutput } from "../../../tagging/output";
 import { arrResearchMethods } from "../../../tagging/researchMethods";
 import styles from "./CardView.module.css";
-import {connect} from "react-redux";
 
 function CardView(props: any) {
   const [filter, setFilter] = useState<Array<string>>([])

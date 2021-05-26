@@ -1,7 +1,7 @@
 import React from "react";
+import {connect} from "react-redux";
 import {images, imagesLight} from "../../../images/Awards";
 import styles from "./Awards.module.css";
-import {connect} from "react-redux";
 
 const Awards = (props: any) => {
     const render = (parrAwards: Array<string>) => {

@@ -1,5 +1,5 @@
 import React from "react";
-import Item from "../Item/Item";
+import Item from "../../../global/Item/Item";
 import styles from "./Education.module.css";
 
 function Education() {

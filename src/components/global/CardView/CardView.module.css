@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(430px, 1fr));
     grid-gap: 20px;
-    padding-top: 0;
+    padding-top: 100px;
 }
 
 .card-view-chkbox {
@@ -99,14 +99,12 @@
     display: grid !important;
     grid-row-gap: 40px;
     grid-template-columns: repeat(4, 1fr);
-    padding-bottom: 100px;
 }
 
 .card-view-filter-apply {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    padding-bottom: 80px;
 }
 
 .card-view-filter-apply-div {
@@ -133,7 +131,6 @@
 .card-view-filter-by {
     display: flex;
     gap: 30px;
-    padding-bottom: 20px;
 }
 
 .card-view-label {

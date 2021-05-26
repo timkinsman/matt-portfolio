@@ -1,6 +1,6 @@
 import React from "react";
-import Footer from "../../layout/Footer/Footer";
-import Navbar from "../../layout/Navbar/Navbar";
+import Footer from "../../global/Footer/Footer";
+import Navbar from "../../global/Navbar/Navbar";
 
 function Blog() {
   return (

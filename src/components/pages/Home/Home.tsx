@@ -1,15 +1,15 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import Awards from "../../layout/Awards/Awards";
-import CardView from "../../layout/CardView/CardView";
-import Clients from "../../layout/Clients/Clients";
-import Footer from "../../layout/Footer/Footer";
-import Panel from "../../layout/Panel/Panel";
-import Pagnation from "../../layout/Pagnation/Pagnation";
-import Links from "../../layout/Links/Links";
-import Navbar from "../../layout/Navbar/Navbar";
-import Spotify from "../../layout/Spotify/Spotify";
-import Testimonials from "../../layout/Testimonials/Testimonials";
+import Awards from "../../global/Awards/Awards";
+import CardView from "../../global/CardView/CardView";
+import Clients from "../../global/Clients/Clients";
+import Footer from "../../global/Footer/Footer";
+import Pagnation from "../../global/Pagnation/Pagnation";
+import Links from "../../global/Links/Links";
+import Navbar from "../../global/Navbar/Navbar";
+import Testimonials from "../../global/Testimonials/Testimonials";
+import Panel from "./Panel/Panel";
+import Spotify from "./Spotify/Spotify";
 import studies from "../../../studies";
 import arrow from "../../../images/arrow-down.svg";
 import moon from "../../../images/moon.svg";
@@ -36,16 +36,16 @@ const Home = (props: any) => {
   }
 
   const handleOnMouseMove = (pobjEvent: any) => {
-    const moiTwo = $("#mouse-over-image-two").width()
-    const moiThree = $("#mouse-over-image-three").width()
-    const moiFour = $("#mouse-over-image-four").width()
-    const moiFive = $("#mouse-over-image-five").width()
+    const moiTwo = {width: $("#mouse-over-image-two").width(), height: $("#mouse-over-image-two").height()}
+    const moiThree = {width: $("#mouse-over-image-three").width(), height: $("#mouse-over-image-three").height()}
+    const moiFour = {width: $("#mouse-over-image-four").width(), height: $("#mouse-over-image-four").height()}
+    const moiFive = {width: $("#mouse-over-image-five").width(), height: $("#mouse-over-image-five").height()}
 
-    if(moiTwo && moiThree && moiFour && moiFive){
-      $("#mouse-over-image-two").css({left: pobjEvent.clientX - (moiTwo / 2), top: pobjEvent.clientY + 25});
-      $("#mouse-over-image-three").css({left: pobjEvent.clientX - (moiThree / 2), top: pobjEvent.clientY + 25});
-      $("#mouse-over-image-four").css({left: pobjEvent.clientX - (moiFour / 2), top: pobjEvent.clientY + 25});
-      $("#mouse-over-image-five").css({left: pobjEvent.clientX - (moiFive / 2), top: pobjEvent.clientY + 25});
+    if(moiTwo.width && moiThree.width && moiFour.width && moiFive.width && moiTwo.height && moiThree.height && moiFour.height && moiFive.height){
+      $("#mouse-over-image-two").css({left: pobjEvent.clientX - (moiTwo.width / 2), top: pobjEvent.clientY - (moiTwo.height / 2)});
+      $("#mouse-over-image-three").css({left: pobjEvent.clientX - (moiThree.width / 2), top: pobjEvent.clientY - (moiTwo.height / 2)});
+      $("#mouse-over-image-four").css({left: pobjEvent.clientX - (moiFour.width / 2), top: pobjEvent.clientY - (moiTwo.height / 2)});
+      $("#mouse-over-image-five").css({left: pobjEvent.clientX - (moiFive.width / 2), top: pobjEvent.clientY - (moiTwo.height / 2)});
     }
   }
 
@@ -115,7 +115,7 @@ const Home = (props: any) => {
         <Testimonials />
         <Footer />
       </div>
-      
+    
       <img className={styles["mouse-over-image"]} id="mouse-over-image-two" src={studies[_intIndexCOPP].hover} alt={studies[_intIndexCOPP].title} />
       <img className={styles["mouse-over-image"]} id="mouse-over-image-three" src={studies[_intIndexBV].hover} alt={studies[_intIndexBV].title} />
       <img className={styles["mouse-over-image"]} id="mouse-over-image-four" src={studies[_intIndexL].hover} alt={studies[_intIndexL].title} />

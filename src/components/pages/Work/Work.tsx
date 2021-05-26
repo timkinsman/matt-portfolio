@@ -1,8 +1,7 @@
 import React from 'react';
-import CardView from '../../layout/CardView/CardView';
-import Footer from '../../layout/Footer/Footer';
-import Navbar from '../../layout/Navbar/Navbar';
-
+import Footer from '../../global/Footer/Footer';
+import Navbar from '../../global/Navbar/Navbar';
+import CardView from '../../global/CardView/CardView';
 import styles from "./Work.module.css"
 
 function Work(props: any) {

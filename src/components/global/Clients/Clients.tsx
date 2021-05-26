@@ -1,8 +1,8 @@
 import React from "react";
+import {connect} from "react-redux";
 import images from "../../../images/Clients";
 import imagesLight from "../../../images/Clients/Light"
 import styles from "./Clients.module.css";
-import {connect} from "react-redux";
 
 const Clients = (props: any) => {
     const firstHalf = (parrImages: Array<string>) => {

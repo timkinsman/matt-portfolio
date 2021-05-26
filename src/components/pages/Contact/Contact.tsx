@@ -1,10 +1,9 @@
 import React from "react";
-import Footer from "../../layout/Footer/Footer";
-import Navbar from "../../layout/Navbar/Navbar";
-import Socials from "../../layout/Socials/Socials";
-import styles from "./Contact.module.css";
-
+import Footer from "../../global/Footer/Footer";
+import Navbar from "../../global/Navbar/Navbar";
+import Socials from "./Socials/Socials";
 import images from "../../../images/Emojis";
+import styles from "./Contact.module.css";
 
 function Contact() {
   return (

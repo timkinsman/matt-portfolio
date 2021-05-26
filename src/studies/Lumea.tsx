@@ -19,7 +19,7 @@ export default {
     hover,
     img,
     redirect: "l",
-    thumbnail: "Lumea has a track record for delivering market first solutions that accelerate Australia toward a smarter energy future.",
+    thumbnail: "A market first solution that's accelerate Australia toward a smarter energy future.",
     title: "Lumea",
 
     //tagging

@@ -6,10 +6,12 @@ import styles from "./Panel.module.css";
 function Panel(props: any) {
   const handleOnMouseOver = () => {
     $("#mouse-over-image-" + props.id).css({opacity: "1"})
+    $('body').css('cursor', 'none');
   }
 
   const handleOnMouseOut = () => {
     $("#mouse-over-image-" + props.id).css({opacity: "0"});
+    $('body').css('cursor', 'auto');
   }
 
   return (

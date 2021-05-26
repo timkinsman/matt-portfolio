@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react'
-import Card from '../../layout/Card/Card'
-import Footer from '../../layout/Footer/Footer'
+import Card from '../../global/Card/Card'
+import Footer from '../../global/Footer/Footer'
 import Home from '../Home/Home'
-import Links from '../../layout/Links/Links'
-import Navbar from '../../layout/Navbar/Navbar'
+import Navbar from '../../global/Navbar/Navbar'
+import Tagging from './Tagging/Tagging'
 import studies from '../../../studies'
 import arrow from '../../../images/arrow-down.svg'
 import $ from 'jquery'
 import styles from './Study.module.css'
-import Tagging from '../../layout/Tagging/Tagging'
 
 const Study = (props: any) => { 
     const [limit, setLimit] = useState(2)

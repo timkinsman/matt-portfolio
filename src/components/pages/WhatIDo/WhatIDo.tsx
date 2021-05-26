@@ -1,13 +1,11 @@
 import React from "react";
-import Footer from "../../layout/Footer/Footer";
-import Item from "../../layout/Item/Item";
-import Navbar from "../../layout/Navbar/Navbar";
-import Tools from "../../layout/Tools/Tools";
+import Footer from "../../global/Footer/Footer";
+import Item from "../../global/Item/Item";
+import Navbar from "../../global/Navbar/Navbar";
+import Tools from "./Tools/Tools";
 import { arrResearchMethods } from "../../../tagging/researchMethods";
-import { Link } from "react-router-dom";
-
-import styles from "./WhatIDo.module.css";
 import images from "../../../images/Emojis"
+import styles from "./WhatIDo.module.css";
 
 function WhatIDo() {
   const renderResearchMethods = (parrstrResearchMethods: Array<string>) => {
@@ -27,12 +25,12 @@ function WhatIDo() {
             <div className={styles["whatido-grid-two"]}>
               <div>
                 <img style={{height: "40px"}} src={images.whatitry} />
-                <h3>What I Try to do</h3>
+                <h3>What I try to do</h3>
                 <p>Listen, have at least showered before my first zoom call, solve complex problems, have fun, question everything, create transformative and memorable experiences, enable meaningful conversations between a brand and their audience, tell a story, dissolve ego, communicate clearly, consider everyone for accessibility, make a positive impact.</p>
               </div>
               <div>
                 <img style={{height: "40px"}} src={images.whatidonttry} />
-                <h3>What I <i>Don't</i> Try to do</h3>
+                <h3>What I <i>don't</i> try to do</h3>
                 <p>Make assumptions, ask leading questions, use too many buzzwords, go over budget, abbreviate things, bite off more than I can chew, worry about success, let my perfectionism seap in, take a ‘waterfall’ approach, take the easier path, make arbitrary decisions, add to the world’s noise.</p>
               </div>
             </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import images from "../../../images/Socials";
+import images from "../../../../images/Socials";
 import $ from "jquery";
 import styles from "./Socials.module.css";
 

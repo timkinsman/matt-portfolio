@@ -1,5 +1,5 @@
 import React from "react";
-import images from "../../../images/Tools";
+import images from "../../../../images/Tools";
 import $ from "jquery";
 import styles from "./Tools.module.css";
 
