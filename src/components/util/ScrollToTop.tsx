@@ -12,7 +12,7 @@ const usePrevious = (value: any) => {
 }
 
 const ScrollToTop = (props:any) => {
-  const previousLocation = usePrevious(location)
+  const previousLocation = usePrevious(window.location)
 
   useEffect(() => {
     if (props.location !== previousLocation) {

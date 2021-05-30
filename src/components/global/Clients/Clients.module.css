@@ -3,20 +3,22 @@
 }
 
 .clients-clients {
-    animation: fadeOut 5s infinite;
+    animation: fadeOut 9s infinite;
     display: grid;
     grid-auto-flow: dense;
     grid-template-columns: repeat(4, 1fr);
+    row-gap: 10px;
 }
 
 .clients-clients-second {
-    animation: fadeIn 5s infinite;
+    animation: fadeIn 9s infinite;
     display: grid;
     grid-auto-flow: dense;
     grid-template-columns: repeat(4, 1fr);
     left: 0;
     opacity: 0;
     position: absolute;
+    row-gap: 10px;
     top: 0;
 }
 

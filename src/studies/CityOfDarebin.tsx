@@ -4,7 +4,7 @@ import img from "../images/Clients/client-cityofdarebin.svg";
 import { VERSA_Agency } from "../tagging/function";
 import { Website } from "../tagging/output";
 
-import { Government, NGO___Not_for_profit } from '../tagging/industries'
+import { Government, Not_for_profit } from '../tagging/industries'
 import { UX___Strategy } from '../tagging/capabilities'
 import {
     Heuristics_Evaluation,
@@ -26,7 +26,7 @@ export default {
     output:  [Website],
 
     capabilites: [UX___Strategy],
-    industries: [Government, NGO___Not_for_profit],
+    industries: [Government, Not_for_profit],
     researchMethods: [
         Heuristics_Evaluation,
         Tree_Testing,

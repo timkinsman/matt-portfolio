@@ -21,7 +21,7 @@ const Tagging = (props: any) => {
             return (
                 <div>
                     <h3>Function</h3>
-                    <h4><a className="global-border-thin" href={props.study.function.link}>{props.study.function.text}</a></h4>
+                    <h4><a target="_blank" className="global-border-thin" href={props.study.function.link}>{props.study.function.text}</a></h4>
                 </div>
             )
         }
@@ -31,8 +31,8 @@ const Tagging = (props: any) => {
         if(props.study.link){
             return (
                 <div>
-                    <h3>Link</h3>
-                    <h4><a className="global-border-thin" href={props.study.link}>{props.study.link.replace("http://www.", "").replace("https://www.", "").replace("https://", "")}</a></h4>
+                    <h3>Visit</h3>
+                    <h4><a target="_blank" className="global-border-thin" href={props.study.link}>{props.study.link.replace("http://www.", "").replace("https://www.", "").replace("https://", "")}</a></h4>
                 </div>
             )
         }
@@ -55,11 +55,11 @@ const Tagging = (props: any) => {
                     <h4>{renderArrFilters(props.study.industries)}</h4>
                 </div>
                 <div>
-                    <h3>Capabilites</h3>
+                    <h3>Capability</h3>
                     <h4>{renderArrFilters(props.study.capabilites)}</h4>
                 </div>
                 <div>
-                    <h3>Research Methods</h3>
+                    <h3>Method</h3>
                     <h4>{renderArrFilters(props.study.researchMethods)}</h4>
                 </div>
             </div>

@@ -4,7 +4,7 @@ import img from "../images/Clients/client-vicpolice.svg";
 import { VERSA_Agency } from "../tagging/function";
 import { Website } from "../tagging/output";
 
-import { Government, Health, NGO___Not_for_profit } from '../tagging/industries'
+import { Government, Health, Not_for_profit } from '../tagging/industries'
 import { UX___Strategy } from '../tagging/capabilities'
 import {
     Heuristics_Evaluation,
@@ -25,7 +25,7 @@ export default {
     output:  [Website],
 
     capabilites: [UX___Strategy],
-    industries: [Government, Health, NGO___Not_for_profit],
+    industries: [Government, Health, Not_for_profit],
     researchMethods: [
         Heuristics_Evaluation,
         Revised_User_Flows

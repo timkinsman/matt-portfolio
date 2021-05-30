@@ -5,7 +5,7 @@ import img from "../images/Clients/client-cityofportphillip.svg";
 import { VERSA_Agency } from "../tagging/function";
 import { Website, Intranet } from "../tagging/output";
 
-import { Government, NGO___Not_for_profit } from '../tagging/industries'
+import { Government, Not_for_profit } from '../tagging/industries'
 import { UX___Strategy } from '../tagging/capabilities'
 import { 
     Artefact_Review,
@@ -37,7 +37,7 @@ export default {
     output:  [Website, Intranet],
 
     capabilites: [UX___Strategy],
-    industries: [Government, NGO___Not_for_profit],
+    industries: [Government, Not_for_profit],
     researchMethods: [
         Artefact_Review,
         Competitor_Analysis,

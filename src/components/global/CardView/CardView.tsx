@@ -170,9 +170,9 @@ function CardView(props: any) {
   }
 
   return (
-    <div className="global-wrapper" id={props.id}>
+    <div style={{paddingTop: "46.8px"}} className="global-wrapper" id={props.id}>
         <div className={styles["card-view-filter-by"]}>
-          <h4>Filter by</h4>
+          <h4 style={{ marginBottom: "40px" }}>Filter by</h4>
           <h4>/</h4>
           <div style={{display: "flex", gap: "40px"}}>
             <h4><a onClick={() => handleOnClick("capability")} style={{opacity: showCapability === true ? 1 : 0.4}}>Capability {showCapability === true ? "↑" : "↓"}</a></h4>

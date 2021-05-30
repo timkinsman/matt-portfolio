@@ -10,7 +10,7 @@ export const Health = "Health"
 export const Hospitality___Leisure = "Hospitality & Leisure"
 export const Legal = "Legal"
 export const Manufacturing = "Manufacturing"
-export const NGO___Not_for_profit = "NGO & Not-for-profit"
+export const Not_for_profit = "Not-for-profit"
 export const Publishing = "Publishing"
 export const Real_Estate = "Real Estate"
 export const Retail = "Retail"
@@ -32,7 +32,7 @@ export const arrIndustries = [
     Hospitality___Leisure,
     Legal,
     Manufacturing,
-    NGO___Not_for_profit,
+    Not_for_profit,
     Publishing,
     Real_Estate,
     Retail,

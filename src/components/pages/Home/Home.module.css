@@ -44,24 +44,25 @@
 }
 
 .mouse-over-image {
-    position: fixed;
-    top: 0;
+    border-radius: 12px;
     left: 0;
     opacity: 0;
-    transition: opacity 0.5s;
     pointer-events: none;
+    position: fixed;
+    top: 0;
+    transition: opacity 0.5s;
     width: 720.2px;
 }
 
 .gif {
     height: 450px;
-    width: 600px;
     margin: auto;
     mix-blend-mode: difference;
+    width: 600px;
 }
 
 .home-banner-content {
-    display: flex;
     align-items: center;
+    display: flex;
     margin: auto 0;
 }
