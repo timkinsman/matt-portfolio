@@ -152,8 +152,8 @@ function CardView(props: any) {
   const renderOptions = () => {
     return (
       <div className={styles["card-view-options"]} style={{opacity: filter.length > 0 ? 1 : 0, pointerEvents: filter.length > 0 ? "auto" : "none"}}>
-        <h4 style={{marginLeft: "auto"}}><a onClick={handleOnClear}>Clear ✕</a></h4>
-        <h4><a onClick={handleOnApply}>Apply ✓</a></h4>
+        <h4 style={{ margin: "0 0 40px auto" }}><a onClick={handleOnClear}>Clear ✕</a></h4>
+        <h4 style={{ margin: "0 0 40px 0" }}><a onClick={handleOnApply}>Apply ✓</a></h4>
       </div>
     )
   }
@@ -170,16 +170,16 @@ function CardView(props: any) {
   }
 
   return (
-    <div style={{paddingTop: "46.8px"}} className="global-wrapper" id={props.id}>
+    <div className="global-wrapper" id={props.id}>
         <div className={styles["card-view-filter-by"]}>
-          <h4 style={{ marginBottom: "40px" }}>Filter by</h4>
-          <h4>/</h4>
+          <h4 style={{ margin: "0 0 40px 0" }}>Filter by</h4>
+          <h4 style={{ margin: "0 0 40px 0" }}>/</h4>
           <div style={{display: "flex", gap: "40px"}}>
-            <h4><a onClick={() => handleOnClick("capability")} style={{opacity: showCapability === true ? 1 : 0.4}}>Capability {showCapability === true ? "↑" : "↓"}</a></h4>
-            <h4><a onClick={() => handleOnClick("industry")} style={{opacity: showIndustry === true ? 1 : 0.4}}>Industry {showIndustry === true ? "↑" : "↓"}</a></h4>
-            <h4><a onClick={() => handleOnClick("client")} style={{opacity: showClient === true ? 1 : 0.4}}>Client {showClient === true ? "↑" : "↓"}</a></h4>
-            <h4><a onClick={() => handleOnClick("researchMethod")} style={{opacity: showResearchMethod === true ? 1 : 0.4}}>Method {showResearchMethod === true ? "↑" : "↓"}</a></h4>
-            <h4><a onClick={() => handleOnClick("output")} style={{opacity: showOutput === true ? 1 : 0.4}}>Output {showOutput === true ? "↑" : "↓"}</a></h4>
+            <h4 style={{ margin: "0 0 40px 0" }}><a onClick={() => handleOnClick("capability")} style={{opacity: showCapability === true ? 1 : 0.4}}>Capability {showCapability === true ? "↑" : "↓"}</a></h4>
+            <h4 style={{ margin: "0 0 40px 0" }}><a onClick={() => handleOnClick("industry")} style={{opacity: showIndustry === true ? 1 : 0.4}}>Industry {showIndustry === true ? "↑" : "↓"}</a></h4>
+            <h4 style={{ margin: "0 0 40px 0" }}><a onClick={() => handleOnClick("client")} style={{opacity: showClient === true ? 1 : 0.4}}>Client {showClient === true ? "↑" : "↓"}</a></h4>
+            <h4 style={{ margin: "0 0 40px 0" }}><a onClick={() => handleOnClick("researchMethod")} style={{opacity: showResearchMethod === true ? 1 : 0.4}}>Method {showResearchMethod === true ? "↑" : "↓"}</a></h4>
+            <h4 style={{ margin: "0 0 40px 0" }}><a onClick={() => handleOnClick("output")} style={{opacity: showOutput === true ? 1 : 0.4}}>Output {showOutput === true ? "↑" : "↓"}</a></h4>
           </div>
           {renderOptions()}
         </div>

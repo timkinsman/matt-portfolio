@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(430px, 1fr));
     grid-gap: 20px;
-    padding-top: 60px;
+    padding-top: 20px;
 }
 
 .card-view-chkbox {
@@ -106,6 +106,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+    margin-bottom: 40px;
 }
 
 .card-view-filter-apply-div {

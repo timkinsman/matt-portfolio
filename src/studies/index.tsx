@@ -20,26 +20,26 @@ import NAB from "./NAB";
 import Transgrid from "./Transgrid"
 
 const studies = [
-    BankVic,
-    BeyondBlue,
-    Bupa,
-    ChildrensCourt,
-    CityOfDarebin,
     CityOfPortPhillip,
-    ClickFrenzy,
-    EatClub,
-    FrankGreen,
-    Homely,
-    Lumea,
-    MCH,
-    NAB,
-    OpenCourts,
-    OVIC,
-    SmallBusinessVictoria,
-    StrokeFoundation,
+    BankVic,
+    Bupa,
     SWEAT,
+    EatClub,
+    StrokeFoundation,
+    Lumea,
     Transgrid,
-    VicPolice
+    OpenCourts,
+    Homely,
+    MCH,
+    OVIC,
+    ChildrensCourt,
+    VicPolice,
+    NAB,
+    BeyondBlue,
+    ClickFrenzy,
+    FrankGreen,
+    SmallBusinessVictoria,
+    CityOfDarebin
 ]
 
 export default studies;
