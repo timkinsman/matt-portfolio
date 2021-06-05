@@ -18,7 +18,7 @@ import $ from "jquery";
 import styles from "./Home.module.css";
 import { updateTheme } from "../../../actions";
 import {connect} from "react-redux";
-import video from "../../../videos/memeoji.mp4";
+import video from "../../../videos/EmojiMovie.mov";
 import arrowLight from "../../../images/arrow-down-light.svg";
 
 const Home = (props: any) => {
@@ -61,7 +61,7 @@ const Home = (props: any) => {
   useEffect(() => {
     fadeIn("#staggerSecond", 500)
     fadeIn("#staggerThird", 1000)
-    fadeIn("#staggerFourth", 1500)
+    fadeIn("#staggerFourth", 1500) 
     fadeIn("#staggerFifth", 2000)
   }, [])
 
@@ -84,9 +84,7 @@ const Home = (props: any) => {
               and working at <a className="global-border-bold" href="https://www.mindsethealth.com" rel="noreferrer" target="_blank">Mindset Health</a>.
             </h1>
 
-            <video autoPlay loop muted style={{marginLeft: 'auto'}}>
-              <source src={video} type="video/mp4" />
-            </video>
+            <video id="home-video" autoPlay loop muted style={{marginLeft: 'auto', width: "40%"}} src={video} />
           </div>
 
           <div className={styles["home-panel-bottom"]}>

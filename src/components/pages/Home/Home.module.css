@@ -52,6 +52,7 @@
     top: 0;
     transition: opacity 0.5s;
     width: 720.2px;
+    z-index: 1;
 }
 
 .gif {

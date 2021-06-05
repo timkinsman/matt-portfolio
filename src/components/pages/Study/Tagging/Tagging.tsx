@@ -20,7 +20,7 @@ const Tagging = (props: any) => {
         if(props.study.function){
             return (
                 <div>
-                    <h3>Function</h3>
+                    <h3 className="global-header">Function</h3>
                     <h4><a target="_blank" className="global-border-regular" href={props.study.function.link}>{props.study.function.text}</a></h4>
                 </div>
             )
@@ -31,7 +31,7 @@ const Tagging = (props: any) => {
         if(props.study.link){
             return (
                 <div>
-                    <h3>Visit</h3>
+                    <h3 className="global-header">Visit</h3>
                     <h4><a target="_blank" className="global-border-regular" href={props.study.link}>{props.study.link.replace("http://www.", "").replace("https://www.", "").replace("https://", "")}</a></h4>
                 </div>
             )
@@ -40,26 +40,26 @@ const Tagging = (props: any) => {
 
     return (
         <div>
-            <div className={styles["tagging-grid"]} style={{paddingBottom: '29.4px'}}>
+            <div className={styles["tagging-grid"]} style={{paddingBottom: '60px'}}>
                 {renderLink()}
                 {renderFunction()}
                 <div>
-                    <h3>Output</h3>
+                    <h3 className="global-header">Output</h3>
                     <h4>{renderArrFilters(props.study.output)}</h4>
                 </div>
             </div>
 
-            <div className={styles["tagging-grid"]} style={{paddingBottom: '13.4px'}}>
+            <div className={styles["tagging-grid"]}>
                 <div>
-                    <h3>Industry</h3>
+                    <h3 className="global-header">Industry</h3>
                     <h4>{renderArrFilters(props.study.industries)}</h4>
                 </div>
                 <div>
-                    <h3>Capability</h3>
+                    <h3 className="global-header">Capability</h3>
                     <h4>{renderArrFilters(props.study.capabilites)}</h4>
                 </div>
                 <div>
-                    <h3>Method</h3>
+                    <h3 className="global-header">Method</h3>
                     <h4>{renderArrFilters(props.study.researchMethods)}</h4>
                 </div>
             </div>

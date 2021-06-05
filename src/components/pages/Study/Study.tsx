@@ -86,7 +86,7 @@ const Study = (props: any) => {
         if(study[pstrSection].length !== 0){
             return (
                 <div className="global-wrapper" style={{width: "83.33%", marginLeft: "auto", marginRight: "auto"}}>
-                    <h3 className={styles["study-capitalize"]}>{pstrSection}</h3>
+                    <h3 className={`${styles["study-capitalize"]} global-header`}>{pstrSection}</h3>
                     {study[pstrSection].map((content: string) => {
                         return (
                             <h4 style={{opacity: "0.8"}}>{content}</h4>
@@ -134,7 +134,7 @@ const Study = (props: any) => {
             <div className={styles["study-container"]} style={{background: study.color, color: "#FFFFFF"}}>
                 <div className="global-main-container">
                     <Navbar />
-                    <div className="global-container" style={{paddingTop: '0', margin: 'auto'}}>
+                    <div className="global-container" style={{margin: 'auto'}}>
                         <div className={styles["study-content"]}>
                             <h2>{study.hero}</h2>
                         </div>
@@ -144,10 +144,8 @@ const Study = (props: any) => {
                     </div>
                 </div>
             </div>
-            <div id="content" className="global-container" style={{paddingTop: '0'}}>
-                <div className="global-wrapper" style={{padding: '40px 0'}}>
-                    <p className="global-title">{study.title}</p>
-                </div>
+            <div id="content" className="global-container">
+                <p className="global-title">{study.title}</p>
 
                 <Tagging study={study} />
 

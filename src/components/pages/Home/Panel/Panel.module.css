@@ -16,11 +16,11 @@
     max-width: 589px;
 }
 
-.panel-mouseover {
+.panel-content {
     align-items: flex-start !important;
     display: flex;
     height: calc(100% - 120px);
     justify-content: flex-end;
-    margin: 60px 48px 60px 0;
-    width: calc(100% - 424px) !important;
+    margin: 60px 0 60px 0;
+    width: 100%;
 }

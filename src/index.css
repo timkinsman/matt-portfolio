@@ -118,6 +118,10 @@ p {
 }
 
 @media only screen and (max-width: 768px) { /** Mobile */
+  #home-video {
+    display: none;
+  }
+
   .global-main-container {
     width: 100%;
   }
@@ -170,6 +174,10 @@ p {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) { /** Tablet */
+  #home-video {
+    display: none;
+  }
+
   .global-main-container {
     width: 723px;
   }
@@ -192,6 +200,10 @@ p {
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) { /** Small Monitor */
+  #home-video {
+    display: none;
+  }
+  
   .global-main-container {
     width: 933px;
   }
@@ -207,7 +219,7 @@ p {
 
 @media only screen and (min-width: 1200px) { /** Large Monitor */
   .global-main-container {
-      width: calc(100% - 376px); /** fix */
+      width: 1527px; /** fix */
   }
 
   .global-container {
