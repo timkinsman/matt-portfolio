@@ -48,9 +48,9 @@ function CardView(props: any) {
   }
 
   const handleOnClick = (pstrCategory: string) => {
+    setFilterApply([])
     switch(pstrCategory){
       case "capability":
-        setFilterApply([])
         setShowCapability(!showCapability)
         setShowClient(false)
         setShowIndustry(false)
@@ -58,7 +58,6 @@ function CardView(props: any) {
         setShowResearchMethod(false)
         break;
       case "client":
-        setFilterApply([])
         setShowCapability(false)
         setShowClient(!showClient)
         setShowIndustry(false)
@@ -66,7 +65,6 @@ function CardView(props: any) {
         setShowResearchMethod(false)
         break;
       case "industry":
-        setFilterApply([])
         setShowCapability(false)
         setShowClient(false)
         setShowIndustry(!showIndustry)
@@ -74,15 +72,13 @@ function CardView(props: any) {
         setShowResearchMethod(false)
         break;
       case "output":
-        setFilterApply([])
         setShowCapability(false)
         setShowClient(false)
         setShowIndustry(false)
         setShowOutput(!showOutput)
         setShowResearchMethod(false)
         break;
-      case "researchMethod":
-        setFilterApply([])
+      case "method":
         setShowCapability(false)
         setShowClient(false)
         setShowIndustry(false)
@@ -169,17 +165,37 @@ function CardView(props: any) {
     }
   }
 
+  const renderFilterHeader = (pstrfilter: string, pboolfilter: boolean) => {
+    return (
+      <h4 style={{ margin: "0 0 40px 0" }}>
+        <a onClick={() => handleOnClick(pstrfilter)} style={{opacity: pboolfilter === true ? 1 : 0.4}}>
+          <span style={{textTransform: 'capitalize'}}>{pstrfilter}</span> <span className={styles["card-view-filter-arrow"]} style={{display: "inline-block", transform: pboolfilter === true ? "rotate(180deg)" : "rotate(0deg)"}}>↑</span>
+        </a>
+      </h4>
+    )
+  }
+
+  const renderFilterHeaderFade = (pstrfilter: string, pboolfilter: boolean) => {
+    return (
+      <h4 style={{ margin: "0 0 40px 0" }}>
+        <a onClick={() => handleOnClick(pstrfilter)} style={{opacity: pboolfilter === true ? 1 : 0.4}}>
+          <span style={{textTransform: 'capitalize', paddingRight: '5px'}}>{pstrfilter}</span> <span className={styles["card-view-filter-arrow"]} style={{ opacity: pboolfilter === true ? 0 : 1, position: 'absolute'}}>↑</span><span className={styles["card-view-filter-arrow"]} style={{ opacity: pboolfilter === true ? 1 : 0, position: 'absolute'}}>↓</span>
+        </a>
+      </h4>
+    )
+  }
+
   return (
     <div className="global-wrapper" id={props.id}>
         <div className={styles["card-view-filter-by"]}>
           <h4 style={{ margin: "0 0 40px 0" }}>Filter by</h4>
           <h4 style={{ margin: "0 0 40px 0" }}>/</h4>
           <div style={{display: "flex", gap: "40px"}}>
-            <h4 style={{ margin: "0 0 40px 0" }}><a onClick={() => handleOnClick("capability")} style={{opacity: showCapability === true ? 1 : 0.4}}>Capability {showCapability === true ? "↑" : "↓"}</a></h4>
-            <h4 style={{ margin: "0 0 40px 0" }}><a onClick={() => handleOnClick("industry")} style={{opacity: showIndustry === true ? 1 : 0.4}}>Industry {showIndustry === true ? "↑" : "↓"}</a></h4>
-            <h4 style={{ margin: "0 0 40px 0" }}><a onClick={() => handleOnClick("client")} style={{opacity: showClient === true ? 1 : 0.4}}>Client {showClient === true ? "↑" : "↓"}</a></h4>
-            <h4 style={{ margin: "0 0 40px 0" }}><a onClick={() => handleOnClick("researchMethod")} style={{opacity: showResearchMethod === true ? 1 : 0.4}}>Method {showResearchMethod === true ? "↑" : "↓"}</a></h4>
-            <h4 style={{ margin: "0 0 40px 0" }}><a onClick={() => handleOnClick("output")} style={{opacity: showOutput === true ? 1 : 0.4}}>Output {showOutput === true ? "↑" : "↓"}</a></h4>
+            {renderFilterHeaderFade("capability", showCapability)}
+            {renderFilterHeaderFade("industry", showIndustry)}
+            {renderFilterHeader("client", showClient)}
+            {renderFilterHeader("method", showResearchMethod)}
+            {renderFilterHeader("output", showOutput)}
           </div>
           {renderOptions()}
         </div>
