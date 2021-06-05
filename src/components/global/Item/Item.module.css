@@ -1,12 +1,9 @@
 .item-content {
     opacity: 0.8;
-}
-
-.item-header {
-    margin: 4px 0;
+    margin: 10px 0;
 }
 
 .item-img {
     height: 40px;
-    margin-bottom: 16px;
+    margin: 16px 0;
 }

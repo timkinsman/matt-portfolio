@@ -165,21 +165,21 @@ function CardView(props: any) {
     }
   }
 
-  const renderFilterHeaderRotate = (pstrfilter: string, pboolfilter: boolean) => {
-    return (
-      <h4>
-        <a onClick={() => handleOnClick(pstrfilter)} style={{opacity: pboolfilter === true ? 1 : 0.4}}>
-          <span style={{textTransform: 'capitalize'}}>{pstrfilter}</span> <span className={styles["card-view-filter-arrow"]} style={{display: "inline-block", transform: pboolfilter === true ? "rotate(180deg)" : "rotate(0deg)"}}>↑</span>
-        </a>
-      </h4>
-    )
-  }
-
   const renderFilterHeaderFade = (pstrfilter: string, pboolfilter: boolean) => {
     return (
       <h4>
         <a onClick={() => handleOnClick(pstrfilter)} style={{opacity: pboolfilter === true ? 1 : 0.4}}>
           <span style={{textTransform: 'capitalize', paddingRight: '5px'}}>{pstrfilter}</span> <span className={styles["card-view-filter-arrow"]} style={{ opacity: pboolfilter === true ? 0 : 1, position: 'absolute'}}>↑</span><span className={styles["card-view-filter-arrow"]} style={{ opacity: pboolfilter === true ? 1 : 0, position: 'absolute'}}>↓</span>
+        </a>
+      </h4>
+    )
+  }
+
+  const renderFilterHeaderRotate = (pstrfilter: string, pboolfilter: boolean) => {
+    return (
+      <h4>
+        <a onClick={() => handleOnClick(pstrfilter)} style={{opacity: pboolfilter === true ? 1 : 0.4}}>
+          <span style={{textTransform: 'capitalize'}}>{pstrfilter}</span> <span className={styles["card-view-filter-arrow"]} style={{display: "inline-block", transform: pboolfilter === true ? "rotate(180deg)" : "rotate(0deg)"}}>↑</span>
         </a>
       </h4>
     )
@@ -193,9 +193,9 @@ function CardView(props: any) {
           <div style={{display: "flex", gap: "40px"}}>
             {renderFilterHeaderFade("capability", showCapability)}
             {renderFilterHeaderFade("industry", showIndustry)}
-            {renderFilterHeaderRotate("client", showClient)}
-            {renderFilterHeaderRotate("method", showResearchMethod)}
-            {renderFilterHeaderRotate("output", showOutput)}
+            {renderFilterHeaderFade("client", showClient)}
+            {renderFilterHeaderFade("method", showResearchMethod)}
+            {renderFilterHeaderFade("output", showOutput)}
           </div>
           {renderOptions()}
         </div>

@@ -34,7 +34,7 @@ const Footer = (props: any) => {
         <div className={styles["footer-container"]}>
           <div className={styles["footer-grid"]}>
             <div>
-              <h3>Go to</h3>
+              <h3 className="global-header">Go to</h3>
               <div className={styles["footer-grid"]}>
                 <h4><Link to="/" className="global-border-regular">Home</Link></h4>
                 <h4><Link to="/casestudies" className="global-border-regular">Case studies</Link></h4>
@@ -45,7 +45,7 @@ const Footer = (props: any) => {
               </div>
             </div>
             <div>
-              <h3>Social</h3>
+              <h3 className="global-header">Social</h3>
               <div className={styles["footer-grid"]}>
                 <h4><a href="mailto:mskinsm@gmail.com" target="_blank" className="global-border-regular">Email</a></h4>
                 <h4><a href="https://www.facebook.com/mskinsm/" target="_blank" className="global-border-regular">Facebook</a></h4>

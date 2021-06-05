@@ -19,7 +19,7 @@ const Awards = (props: any) => {
 
     return (
         <div className="global-wrapper">
-            <h3>Awards & Recognition</h3>
+            <h3 className="global-header">Awards & Recognition</h3>
             <div className={styles["awards-awards"]}>
                 {props.portfolio.theme === "DARK" ? render(images) : render(imagesLight)}
             </div>

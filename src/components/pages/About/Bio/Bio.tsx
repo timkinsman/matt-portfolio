@@ -13,7 +13,7 @@ const Bio = () => {
     <div className="global-wrapper">
       <div className={styles["bio-grid"]}>
           <div>
-              <h3 className={styles["bio-heading"]}>Bio</h3>
+              <h3 className={`${styles["bio-heading"]} global-header`}>Bio</h3>
               <h4>
                 A highly creative multidisciplinary designer who is driven to create products and services that are desirable for people, feasible for development and viable for business. Focused on championing a collaborative approach to validate solutions by employing diverse research methods and continuous improvement.
                 <br /><br />

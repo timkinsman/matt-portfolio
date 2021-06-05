@@ -6,7 +6,7 @@ import styles from "./Socials.module.css";
 const Socials = () => {
     return (
         <div className="global-wrapper">
-            <h3>Socials</h3>
+            <h3 className="global-header">Socials</h3>
             <div className={styles["socials-socials"]}>
                 {images.map((pobjImage: any, intIndex: number) => {
                     $(document).ready(function(){

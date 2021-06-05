@@ -82,7 +82,7 @@ const Testimonials = () => {
     return (
         <div className="global-wrapper">
             <div className={styles["testimonials-container"]}>
-                <h3>Testimonials</h3>
+                <h3 className="global-header">Testimonials</h3>
                 <div className={styles["testimonials-carousel-container"]}>
                     {renderCarousel()}
                 </div>

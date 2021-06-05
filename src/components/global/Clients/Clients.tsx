@@ -27,7 +27,7 @@ const Clients = (props: any) => {
 
     return (
         <div className="global-wrapper">
-            <h3>Selected Clients</h3>
+            <h3 className="global-header">Selected Clients</h3>
             <div className={styles["clients-container"]}>
                 <div className={styles["clients-clients"]}>
                     {props.portfolio.theme === "DARK" ? firstHalf(images) : firstHalf(imagesLight)}

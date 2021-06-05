@@ -6,7 +6,7 @@ import styles from "./Tools.module.css";
 const Tools = () => {
     return (
         <div className="global-wrapper">
-            <h3>Tools</h3>
+            <h3 className="global-header">Tools</h3>
             <div className={styles["tools-tools"]}>
                 {images.map((img, i) => {
                     $(document).ready(function(){

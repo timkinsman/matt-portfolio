@@ -77,6 +77,10 @@ a.global-border-bold:hover {
   align-items: center;
 }
 
+.global-header {
+  padding-bottom: 30px;
+}
+
 .global-title, h1, h2, h3, h4, h5, p {
   font-weight: 400;
   margin: 0;
