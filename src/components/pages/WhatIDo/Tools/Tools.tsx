@@ -19,7 +19,7 @@ const Tools = () => {
                     return (
                         <div className={styles["tools-img-container"]}>
                             <img id={`img-${i}`} src={img.img} alt="img.svg" className={styles["tools-img"]} />
-                            <a target="_blank" id={`a-${i}`} href={img.link} className={`${styles["tools-img-text"]} global-border-thinnest`}>{img.text}</a>
+                            <a target="_blank" id={`a-${i}`} href={img.link} className={`${styles["tools-img-text"]} global-border-light`}>{img.text}</a>
                         </div>
                     )
                 })}

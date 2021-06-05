@@ -19,7 +19,7 @@ const Socials = () => {
                     return (
                         <div className={styles["socials-img-container"]}>
                             <img id={`img-${intIndex}`} src={pobjImage.img} alt="img.svg" className={styles["socials-img"]} />
-                            <a className={`${styles["socials-img-text"]} global-border-thinnest`} id={`a-${intIndex}`} href={pobjImage.link} target="_blank">{pobjImage.text}</a>
+                            <a className={`${styles["socials-img-text"]} global-border-light`} id={`a-${intIndex}`} href={pobjImage.link} target="_blank">{pobjImage.text}</a>
                         </div>
                     )
                 })}

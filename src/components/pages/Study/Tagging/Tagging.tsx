@@ -8,7 +8,7 @@ const Tagging = (props: any) => {
             return parrstrArray.map((pstrTag: string, pintIndex: number) => {
                 return (
                     <span>
-                        <Link className="global-border-thin" to={{pathname: "/casestudies", hash: `#${pstrTag.replace(/[^a-zA-Z]/g, "").toLowerCase()}`, state: { filter: pstrTag }}}>{pstrTag}</Link>
+                        <Link className="global-border-regular" to={{pathname: "/casestudies", hash: `#${pstrTag.replace(/[^a-zA-Z]/g, "").toLowerCase()}`, state: { filter: pstrTag }}}>{pstrTag}</Link>
                         <span style={{opacity: 0.4}}>{pintIndex !== parrstrArray.length - 1 ? ', ' : ''}</span>
                     </span>
                 )
@@ -21,7 +21,7 @@ const Tagging = (props: any) => {
             return (
                 <div>
                     <h3>Function</h3>
-                    <h4><a target="_blank" className="global-border-thin" href={props.study.function.link}>{props.study.function.text}</a></h4>
+                    <h4><a target="_blank" className="global-border-regular" href={props.study.function.link}>{props.study.function.text}</a></h4>
                 </div>
             )
         }
@@ -32,7 +32,7 @@ const Tagging = (props: any) => {
             return (
                 <div>
                     <h3>Visit</h3>
-                    <h4><a target="_blank" className="global-border-thin" href={props.study.link}>{props.study.link.replace("http://www.", "").replace("https://www.", "").replace("https://", "")}</a></h4>
+                    <h4><a target="_blank" className="global-border-regular" href={props.study.link}>{props.study.link.replace("http://www.", "").replace("https://www.", "").replace("https://", "")}</a></h4>
                 </div>
             )
         }

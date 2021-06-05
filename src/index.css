@@ -37,34 +37,38 @@ a:hover {
   transition: opacity 1s;
 }
 
-a.global-border-thinnest {
+a.global-border-light,
+a.global-border-light:hover,
+a.global-border-regular,
+a.global-border-regular:hover,
+a.global-border-bold,
+a.global-border-bold:hover {
+  transition: opacity 1s, border-bottom 1s;
+}
+
+
+a.global-border-light {
   border-bottom: 1px solid transparent;
-  transition: opacity 1s, border-bottom 1s;
 }
 
-a.global-border-thinnest:hover {
+a.global-border-light:hover {
   border-bottom: 1px solid;
-  transition: opacity 1s, border-bottom 1s;
 }
 
-a.global-border-thin {
+a.global-border-regular {
   border-bottom: 2px solid transparent;
-  transition: opacity 1s, border-bottom 1s;
 }
 
-a.global-border-thin:hover {
+a.global-border-regular:hover {
   border-bottom: 2px solid;
-  transition: opacity 1s, border-bottom 1s;
 }
 
-a.global-border-thick {
+a.global-border-bold {
   border-bottom: 4px solid transparent;
-  transition: opacity 1s, border-bottom 1s;
 }
 
-a.global-border-thick:hover {
+a.global-border-bold:hover {
   border-bottom: 4px solid;
-  transition: opacity 1s, border-bottom 1s;
 }
 
 .global-main-container {
@@ -73,13 +77,49 @@ a.global-border-thick:hover {
   align-items: center;
 }
 
+.global-title, h1, h2, h3, h4, h5, p {
+  font-weight: 400;
+  margin: 0;
+}
+
+.global-title {
+  font-size: 60px;
+  line-height: 80px;
+  padding: 80px 0;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 56px;
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 48px;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+h4 {
+  font-size: 20px;
+  line-height: 32px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 28px;
+}
+
 @media only screen and (max-width: 768px) { /** Mobile */
   .global-main-container {
     width: 100%;
   }
 
   .global-container {
-      width: 100%;
+    width: 100%;
   }
 
   .global-hidden {
@@ -171,47 +211,6 @@ a.global-border-thick:hover {
   }
 }
 
-.global-title {
-  font-size: 60px;
-  font-weight: 400;
-  line-height: 80px;
-}
-
-h1 {
-  font-size: 40px;
-  font-weight: 400;
-  line-height: 56px;
-}
-
-h2 {
-  font-size: 32px;
-  font-weight: 400;
-  line-height: 48px;
-}
-
-h3 {
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 32px;
-  margin-bottom: 36px;
-}
-
-h4 {
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 32px;
-}
-
-p {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 28px;
-}
-
-.global-wrapper {
-  padding: 60px 0;
-}
-
 .global-fadein {
   -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein 2s; /* Firefox < 16 */
@@ -251,4 +250,8 @@ p {
 @-o-keyframes fadein {
   from { opacity: 0; }
   to   { opacity: 1; }
+}
+
+.global-wrapper {
+  padding: 60px 0;
 }

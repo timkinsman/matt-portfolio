@@ -78,10 +78,10 @@ const Home = (props: any) => {
 
           <div id="staggerSecond" className={`${styles["home-banner-content"]} ${styles["home-visibility-hidden"]}`}>
             <h1 className={styles["home-panel-text"]}>
-              Hello, my name is <Link className="global-border-thick" to="/about">Matthew Kinsman</Link>,<br />
+              Hello, my name is <Link className="global-border-bold" to="/about">Matthew Kinsman</Link>,<br />
               I’m a senior product designer<br />
               currently living in Melbourne and<br />
-              and working at <a className="global-border-thick" href="https://www.mindsethealth.com" rel="noreferrer" target="_blank">Mindset Health</a>.
+              and working at <a className="global-border-bold" href="https://www.mindsethealth.com" rel="noreferrer" target="_blank">Mindset Health</a>.
             </h1>
 
             <video autoPlay loop muted style={{marginLeft: 'auto'}}>

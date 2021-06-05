@@ -85,11 +85,11 @@ const Study = (props: any) => {
     const renderContent = (pstrSection: string) => {
         if(study[pstrSection].length !== 0){
             return (
-                <div className="global-wrapper" style={{padding: pstrSection === "credits" ? '16px 0 40px 0' : '16px 0 13.4px 0', width: "83.33%", marginLeft: "auto", marginRight: "auto"}}>
+                <div className="global-wrapper" style={{width: "83.33%", marginLeft: "auto", marginRight: "auto"}}>
                     <h3 className={styles["study-capitalize"]}>{pstrSection}</h3>
                     {study[pstrSection].map((content: string) => {
                         return (
-                            <h4 style={{opacity: "0.8", margin: pstrSection === "credits" ? "0 0" : "26.6px 0"}}>{content}</h4>
+                            <h4 style={{opacity: "0.8"}}>{content}</h4>
                         )
                     })}
                 </div>

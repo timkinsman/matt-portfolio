@@ -10,7 +10,7 @@ function Item(props: any) {
 
     const renderLink = (pstrRedirectUrl: string) => {
         if(pstrRedirectUrl){
-            return <span><a href={pstrRedirectUrl} target="_blank" className="global-border-thin">View website →</a></span>
+            return <span><a href={pstrRedirectUrl} target="_blank" className="global-border-regular">View website →</a></span>
         }
     }
 

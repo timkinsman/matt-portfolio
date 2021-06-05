@@ -148,8 +148,8 @@ function CardView(props: any) {
   const renderOptions = () => {
     return (
       <div className={styles["card-view-options"]} style={{opacity: filter.length > 0 ? 1 : 0, pointerEvents: filter.length > 0 ? "auto" : "none"}}>
-        <h4 style={{ margin: "0 0 40px auto" }}><a onClick={handleOnClear}>Clear ✕</a></h4>
-        <h4 style={{ margin: "0 0 40px 0" }}><a onClick={handleOnApply}>Apply ✓</a></h4>
+        <h4 style={{ margin: "0 0 0 auto" }}><a onClick={handleOnClear}>Clear ✕</a></h4>
+        <h4><a onClick={handleOnApply}>Apply ✓</a></h4>
       </div>
     )
   }
@@ -165,9 +165,9 @@ function CardView(props: any) {
     }
   }
 
-  const renderFilterHeader = (pstrfilter: string, pboolfilter: boolean) => {
+  const renderFilterHeaderRotate = (pstrfilter: string, pboolfilter: boolean) => {
     return (
-      <h4 style={{ margin: "0 0 40px 0" }}>
+      <h4>
         <a onClick={() => handleOnClick(pstrfilter)} style={{opacity: pboolfilter === true ? 1 : 0.4}}>
           <span style={{textTransform: 'capitalize'}}>{pstrfilter}</span> <span className={styles["card-view-filter-arrow"]} style={{display: "inline-block", transform: pboolfilter === true ? "rotate(180deg)" : "rotate(0deg)"}}>↑</span>
         </a>
@@ -177,7 +177,7 @@ function CardView(props: any) {
 
   const renderFilterHeaderFade = (pstrfilter: string, pboolfilter: boolean) => {
     return (
-      <h4 style={{ margin: "0 0 40px 0" }}>
+      <h4>
         <a onClick={() => handleOnClick(pstrfilter)} style={{opacity: pboolfilter === true ? 1 : 0.4}}>
           <span style={{textTransform: 'capitalize', paddingRight: '5px'}}>{pstrfilter}</span> <span className={styles["card-view-filter-arrow"]} style={{ opacity: pboolfilter === true ? 0 : 1, position: 'absolute'}}>↑</span><span className={styles["card-view-filter-arrow"]} style={{ opacity: pboolfilter === true ? 1 : 0, position: 'absolute'}}>↓</span>
         </a>
@@ -188,14 +188,14 @@ function CardView(props: any) {
   return (
     <div className="global-wrapper" id={props.id}>
         <div className={styles["card-view-filter-by"]}>
-          <h4 style={{ margin: "0 0 40px 0" }}>Filter by</h4>
-          <h4 style={{ margin: "0 0 40px 0" }}>/</h4>
+          <h4>Filter by</h4>
+          <h4>/</h4>
           <div style={{display: "flex", gap: "40px"}}>
             {renderFilterHeaderFade("capability", showCapability)}
             {renderFilterHeaderFade("industry", showIndustry)}
-            {renderFilterHeader("client", showClient)}
-            {renderFilterHeader("method", showResearchMethod)}
-            {renderFilterHeader("output", showOutput)}
+            {renderFilterHeaderRotate("client", showClient)}
+            {renderFilterHeaderRotate("method", showResearchMethod)}
+            {renderFilterHeaderRotate("output", showOutput)}
           </div>
           {renderOptions()}
         </div>
