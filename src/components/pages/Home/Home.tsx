@@ -84,7 +84,7 @@ const Home = (props: any) => {
               and working at <a className="global-border-bold" href="https://www.mindsethealth.com" rel="noreferrer" target="_blank">Mindset Health</a>.
             </h1>
 
-            <video id="home-video" autoPlay loop muted style={{marginLeft: 'auto', width: "40%"}} src={video} />
+            <video id="home-video" autoPlay loop muted style={{marginLeft: 'auto', width: "30%"}} src={video} />
           </div>
 
           <div className={styles["home-panel-bottom"]}>
