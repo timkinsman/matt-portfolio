@@ -18,7 +18,7 @@ import $ from "jquery";
 import styles from "./Home.module.css";
 import { updateTheme } from "../../../actions";
 import {connect} from "react-redux";
-import video from "../../../videos/EmojiMovie.mov";
+import video from "../../../videos/Memoji.webm";
 import arrowLight from "../../../images/arrow-down-light.svg";
 
 const Home = (props: any) => {
