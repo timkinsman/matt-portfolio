@@ -34,7 +34,7 @@
 }
 
 .home-panel-text {
-    font-size: 44px;
+    font-size: 54px;
     line-height: 64px;
     width: fit-content;
 }
@@ -64,6 +64,17 @@
 
 .home-banner-content {
     align-items: center;
-    display: flex;
+    display: grid;
     margin: auto 0;
+    grid-template-columns: 2fr 1fr;
+}
+
+.video-container {
+    margin-left: auto;
+    overflow: hidden;
+    height: 450px;
+    width: 450px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }

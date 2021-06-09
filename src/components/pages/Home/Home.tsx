@@ -83,8 +83,9 @@ const Home = (props: any) => {
               currently living in Melbourne and<br />
               and working at <a className="global-border-bold" href="https://www.mindsethealth.com" rel="noreferrer" target="_blank">Mindset Health</a>.
             </h1>
-
-            <video id="home-video" autoPlay loop muted style={{marginLeft: 'auto', width: "30%"}} src={video} />
+            <div className={styles["video-container"]}>
+              <video id="home-video" style={{height: "700px", width: "700px"}} autoPlay loop muted src={video} />
+            </div>
           </div>
 
           <div className={styles["home-panel-bottom"]}>

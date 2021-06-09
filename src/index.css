@@ -219,11 +219,11 @@ p {
 
 @media only screen and (min-width: 1200px) { /** Large Monitor */
   .global-main-container {
-      width: 1527px; /** fix */
+    width: calc(100% - 245px); /** fix */
   }
 
   .global-container {
-      width: 1127px;
+    width: 1127px;
   }
 }
 
