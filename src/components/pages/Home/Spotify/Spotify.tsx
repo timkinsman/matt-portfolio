@@ -33,7 +33,7 @@ function Spotify() {
           }
           throw new Error('error')
         }).then(o => {
-          fetch(`https://api.spotify.com/v1/search?q=${o.recenttracks.track[0].name.replaceAll(' ', "%20")}%20${data.recenttracks.track[0].artist["#text"].replaceAll(' ', "%20")}&type=track&limit=1`, {
+          fetch(`https://api.spotify.com/v1/search?q=${data.recenttracks.track[0].name.replaceAll(' ', "%20")}%20${data.recenttracks.track[0].artist["#text"].replaceAll(' ', "%20")}&type=track&limit=1`, {
             method: "GET",
             headers: {
               'Content-Type': 'application/x-www-form-urlencoded',
@@ -47,7 +47,7 @@ function Spotify() {
           }).then(d => {
             updateSLink(d.tracks.items[0].external_urls.spotify)
           }).catch((err) => {
-            console.log("error: 'Whoops! Something went wrong with Spotify' " + err)
+            console.log("error: 'Whoops! Something went wrong with Spotify'")
             updateSLink("https://open.spotify.com/user/mskinsm?si=38e3cd9499194388")
           })
         }).catch(() => {
