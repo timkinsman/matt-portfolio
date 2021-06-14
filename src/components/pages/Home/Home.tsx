@@ -19,6 +19,7 @@ import styles from "./Home.module.css";
 import { updateTheme } from "../../../actions";
 import {connect} from "react-redux";
 import video from "../../../videos/Memoji.webm";
+import videoLight from "../../../videos/MemojiLight.webm";
 import arrowLight from "../../../images/arrow-down-light.svg";
 
 const Home = (props: any) => {
@@ -84,7 +85,7 @@ const Home = (props: any) => {
               and working at <a className="global-border-bold" href="https://www.mindsethealth.com" rel="noreferrer" target="_blank">Mindset Health</a>.
             </h1>
             <div className={styles["video-container"]}>
-              <video id="home-video" style={{height: "700px", width: "700px"}} autoPlay loop muted src={video} />
+              <video id="home-video" style={{height: "700px", width: "700px"}} autoPlay loop muted src={props.portfolio.theme === "DARK" ? video : videoLight} />
             </div>
           </div>
 

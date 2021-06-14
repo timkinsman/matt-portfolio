@@ -17,6 +17,7 @@ const App = (props: any) => {
     switch(props.portfolio.theme){
       case "LIGHT":
         $("body").css({"background": LIGHT, "color": "#000000"})
+        $("a").css({opacity: "0.5"})
         break;
       case "DARK":
         $("body").css({"background": DARK, "color": "#FFFFFF"})

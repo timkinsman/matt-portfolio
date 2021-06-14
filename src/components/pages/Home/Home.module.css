@@ -29,13 +29,13 @@
 
 .home-panel-bottom {
     display: flex;
-    height: 120px;
+    height: 160px;
     align-items: center;
 }
 
 .home-panel-text {
-    font-size: 54px;
-    line-height: 64px;
+    font-size: 58px;
+    line-height: 68px;
     width: fit-content;
 }
 
@@ -44,7 +44,7 @@
 }
 
 .mouse-over-image {
-    border-radius: 12px;
+    border-radius: 6px;
     left: 0;
     opacity: 0;
     pointer-events: none;

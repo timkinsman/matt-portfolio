@@ -85,7 +85,7 @@ const Study = (props: any) => {
     const renderContent = (pstrSection: string) => {
         if(study[pstrSection].length !== 0){
             return (
-                <div className="global-wrapper" style={{width: "83.33%", marginLeft: "auto", marginRight: "auto"}}>
+                <div className="global-wrapper" style={{width: "83.33%", marginLeft: "auto", marginRight: "auto", padding: "30px 0"}}>
                     <h3 className={`${styles["study-capitalize"]} global-header`}>{pstrSection}</h3>
                     {study[pstrSection].map((content: string) => {
                         return (
@@ -166,7 +166,7 @@ const Study = (props: any) => {
                 {renderContent("credits")}
                 {renderContent("testimonials")}
 
-                <div className="global-wrapper">
+                <div className="global-wrapper" style={{paddingTop: "60px"}}>
                     <div className={styles["study-border"]} />
                     <div className={styles["study-card-view"]}>
                         {reorderStudyCards(studies, studies.findIndex(pstudy => pstudy == study) - 1).filter(pstudy => pstudy !== study).slice(0, limit).map(pstudy => {
