@@ -32,12 +32,12 @@ function Spotify() {
             return response.json();
           }
           throw new Error('error')
-        }).then(data => {
-          fetch(`https://api.spotify.com/v1/search?q=${lfmName.replaceAll(' ', "%20")}%20${lfmText.replaceAll(' ', "%20")}&type=track&limit=1`, {
+        }).then(o => {
+          fetch(`https://api.spotify.com/v1/search?q=${o.recenttracks.track[0].name.replaceAll(' ', "%20")}%20${data.recenttracks.track[0].artist["#text"].replaceAll(' ', "%20")}&type=track&limit=1`, {
             method: "GET",
-            headers: { 
+            headers: {
               'Content-Type': 'application/x-www-form-urlencoded',
-              "Authorization": "Bearer " + data.access_token 
+              "Authorization": "Bearer " + o.access_token 
             }
           }).then(response => {
             if (response.ok) {
