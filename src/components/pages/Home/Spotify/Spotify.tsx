@@ -24,7 +24,7 @@ function Spotify() {
           method: "POST",
           headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
-          'Authorization': 'Basic ' + "YjllZDg4NmY1MzkxNDVlMWIxYTFhODlkZDQyYTc3NTU6MDQ2NTM0OWZjYzMwNGRlYjkzN2NmM2Y1ZDY1ODI5ZGM="
+          'Authorization': 'Basic ' + "YjllZDg4NmY1MzkxNDVlMWIxYTFhODlkZDQyYTc3NTU6MDQ2NTM0OWZjYzMwNGRlYjkzN2NmM2Y1ZDY1ODI5ZGM=" //process.env.REACT_APP_SPOTIFY_CLIENT //Basic <base64 encoded client_id:client_secret>
           },
           body: "grant_type=client_credentials"
         }).then(response => {
