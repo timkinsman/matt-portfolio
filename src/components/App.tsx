@@ -34,14 +34,14 @@ const App = (props: any) => {
     <Router>
       <ScrollToTop>
         <Switch>
-          {/*<Route exact path="/about" component={About} />
+          <Route exact path="/about" component={About} />
           <Route exact path="/casestudies" component={Work} />
           <Route exact path="/whatido" component={WhatIDo} />
           <Route exact path="/otherwork" component={Blog} />
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/study" component={Study} />
-  <Route component={Home} />*/}
-          <Route component={Maintenance} />
+          <Route component={Home} />
+          {/*<Route component={Maintenance} />*/}
         </Switch>
       </ScrollToTop>
     </Router>

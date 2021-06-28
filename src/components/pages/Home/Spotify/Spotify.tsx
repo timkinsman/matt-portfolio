@@ -9,7 +9,7 @@ function Spotify() {
   const [sLink, updateSLink] = useState("");
 
   useEffect(() => {
-    fetch(`https://ws.audioscrobbler.com/2.0/?method=user.getRecentTracks&user=${process.env.REACT_APP_USERNAME}&api_key=${process.env.REACT_APP_API_KEY}&limit=1&nowplaying=true&format=json`)
+    fetch(`https://ws.audioscrobbler.com/2.0/?method=user.getRecentTracks&user=Mskinsm&api_key=4a39313f838bef1fc27fe98dced12ded&limit=1&nowplaying=true&format=json`)
       .then(response => {
         if (response.ok) {
           return response.json();
