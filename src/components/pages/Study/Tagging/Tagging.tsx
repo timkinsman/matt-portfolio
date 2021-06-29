@@ -39,7 +39,7 @@ const Tagging = (props: any) => {
     }
 
     return (
-        <div>
+        <div style={{paddingBottom: "20px"}}>
             <div className={styles["tagging-grid"]} style={{paddingBottom: '60px'}}>
                 {renderLink()}
                 {renderFunction()}

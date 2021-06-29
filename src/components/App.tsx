@@ -8,6 +8,7 @@ import WhatIDo from './pages/WhatIDo/WhatIDo';
 import Blog from './pages/Blog/Blog';
 import Contact from './pages/Contact/Contact';
 import Study from './pages/Study/Study';
+import Maintenance from './pages/Maintenance/Maintenance';
 import { DARK, LIGHT } from "../colors"
 import ScrollToTop from './util/ScrollToTop';
 import $ from "jquery";
@@ -17,6 +18,7 @@ const App = (props: any) => {
     switch(props.portfolio.theme){
       case "LIGHT":
         $("body").css({"background": LIGHT, "color": "#000000"})
+        $("a").css({opacity: "0.5"})
         break;
       case "DARK":
         $("body").css({"background": DARK, "color": "#FFFFFF"})
@@ -39,6 +41,7 @@ const App = (props: any) => {
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/study" component={Study} />
           <Route component={Home} />
+          {/*<Route component={Maintenance} />*/}
         </Switch>
       </ScrollToTop>
     </Router>

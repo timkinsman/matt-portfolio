@@ -31,7 +31,7 @@ function Contact() {
               <div>
                 <img className={styles["contact-img"]} src={images.email} />
                 <h3 style={{marginBottom: "10px"}}>Email</h3>
-                <h4><a className="global-border-regular" href="mailto:hello@matthewkinsman.com">hello@matthewkinsman.com</a></h4>
+                <h4><a className="global-border-regular" href="mailto:hello@matthewkinsman.com" target="_blank">hello@matthewkinsman.com</a></h4>
               </div>
             </div>
           </div>
