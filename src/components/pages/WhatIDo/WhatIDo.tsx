@@ -31,7 +31,7 @@ function WhatIDo() {
               <div>
                 <img style={{height: "40px", margin: "16px 0"}} src={images.whatidonttry} />
                 <h3 className="global-header">What I <i>don't</i> try to do</h3>
-                <p>Make assumptions, ask leading questions, use too many buzzwords, go over budget, abbreviate things, bite off more than I can chew, worry about success, let my perfectionism seap in, take a ‘waterfall’ approach, take the easier path, make arbitrary decisions, add to the world’s noise.</p>
+                <p>Make assumptions, ask leading questions, use too many buzzwords, go over budget, abbreviate things, bite off more than I can chew, worry about success, let my perfectionism seep in, take a ‘waterfall’ approach, take the easier path, make arbitrary decisions, add to the world’s noise.</p>
               </div>
             </div>
           </div>

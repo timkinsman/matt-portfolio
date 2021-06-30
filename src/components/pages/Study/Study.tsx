@@ -10,6 +10,7 @@ import $ from 'jquery'
 import styles from './Study.module.css'
 
 const Study = (props: any) => { 
+    console.log(props)
     const [limit, setLimit] = useState(2)
 
     useEffect(() => { //reset
@@ -128,7 +129,7 @@ const Study = (props: any) => {
     };
 
     return (
-        <div className="global-fadein">
+        <div className="global-fadein" key={window.location.hash}>
             {/*<Links />*/}
         
             <div className={styles["study-container"]} style={{background: study.color, color: "#FFFFFF"}}>
