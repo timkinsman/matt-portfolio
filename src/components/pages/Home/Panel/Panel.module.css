@@ -3,8 +3,7 @@
 }
 
 .panel-container {
-    align-items: flex-end;    
-    background: rgb(19, 103, 111);
+    align-items: flex-end;
     color: #FFFFFF;
     display: flex;
     height: 100vh;

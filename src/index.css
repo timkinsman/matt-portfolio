@@ -12,7 +12,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transition: background 1s, color 1s;
+  transition: color 1s;
+}
+
+#root {
+  transition: background 1s;
 }
 
 code {

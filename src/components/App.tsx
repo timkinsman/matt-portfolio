@@ -11,6 +11,7 @@ import Study from './pages/Study/Study';
 import Maintenance from './pages/Maintenance/Maintenance';
 import { DARK, LIGHT } from "../colors"
 import ScrollToTop from './util/ScrollToTop';
+import studies from "../studies"
 import $ from "jquery";
 
 const App = (props: any) => {

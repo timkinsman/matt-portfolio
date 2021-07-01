@@ -15,7 +15,7 @@ function Panel(props: any) {
   }
 
   return (
-      <div className={styles["panel-container"]} style={{background: props.study.color}} id={props.id}>
+      <div className={styles["panel-container"]} id={props.id}>
         <div style={{position: "relative"}} className={`${styles["panel-content"]} global-main-container`}>
           <div style={{position: "absolute", height: "100%", width: "-webkit-fill-available", margin: "0 48px"}} onMouseEnter={handleOnMouseOver} onMouseLeave={handleOnMouseOut} />
           <div onMouseEnter={handleOnMouseOut} style={{zIndex: 1}}>

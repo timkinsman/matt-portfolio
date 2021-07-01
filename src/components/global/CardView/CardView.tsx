@@ -7,6 +7,7 @@ import { arrIndustries } from "../../../tagging/industries";
 import { arrOutput } from "../../../tagging/output";
 import { arrResearchMethods } from "../../../tagging/researchMethods";
 import styles from "./CardView.module.css";
+import $ from "jquery";
 
 function CardView(props: any) {
   const [filter, setFilter] = useState<Array<string>>([])
@@ -90,23 +91,23 @@ function CardView(props: any) {
 
   const render = () => {
     if(showCapability === true){
-      return renderMap(arrCapabilities)
+      return renderMap("capabilities", arrCapabilities)
     }
     if(showIndustry === true){
-      return renderMap(arrIndustries)
+      return renderMap("industries", arrIndustries)
     }
     if(showOutput === true){
-      return renderMap(arrOutput)
+      return renderMap("output", arrOutput)
     }
     if(showResearchMethod === true){
-      return renderMap(arrResearchMethods.filter((pstrMethod) => pstrMethod != "Roadmapping"))
+      return renderMap("researchMethods", arrResearchMethods.filter((pstrMethod) => pstrMethod != "Roadmapping"))
     }
     if(showClient === true){
       const arrStudyClients = studies.map((objStudy) => {
         return objStudy.title;
       });
 
-      return renderMap(arrStudyClients)
+      return renderMap("clients", arrStudyClients)
     }
   }
 
@@ -130,12 +131,13 @@ function CardView(props: any) {
     }
   }
 
-  const renderMap = (parrCategoryFilters: Array<string>) => {
+  const renderMap = (pstrCategory: string, parrCategoryFilters: Array<string>) => {
+    console.log($("#cards").position())
     return (
-      <div className={`${styles["card-view-filter"]} global-fadein`}>
+      <div key={pstrCategory} className={styles["card-view-filter"]}>
         {parrCategoryFilters.map((strFilter: any, intIndex: number) => {
           return (
-            <div key={`renderMap-${intIndex}`}>
+            <div key={`renderMap-${intIndex}`} style={{opacity: 0, animationDelay : 0.25 * (Math.floor(intIndex / 4)) + 's'}}>
               <input className={props.portfolio.theme === "DARK" ? styles["card-view-chkbox"] : styles["card-view-chkbox-light"]} type="checkbox" onChange={(e) => handleOnChange(strFilter, e)} checked={filter.includes(strFilter)} id={strFilter} />
               <label className={styles["card-view-label"]} htmlFor={strFilter}>{strFilter}</label>
             </div>
@@ -175,7 +177,7 @@ function CardView(props: any) {
     )
   }
 
-  const renderFilterHeaderRotate = (pstrfilter: string, pboolfilter: boolean) => {
+  /*const renderFilterHeaderRotate = (pstrfilter: string, pboolfilter: boolean) => {
     return (
       <h4>
         <a onClick={() => handleOnClick(pstrfilter)} style={{opacity: pboolfilter === true ? 1 : 0.4}}>
@@ -183,7 +185,7 @@ function CardView(props: any) {
         </a>
       </h4>
     )
-  }
+  }*/
 
   return (
     <div className="global-wrapper" id={props.id}>
@@ -201,7 +203,7 @@ function CardView(props: any) {
         </div>
         {render()}
         {renderFilterApply()}
-        <div className={styles["card-view"]}>
+        <div id="cards" className={styles["card-view"]}>
           {studies.map((pobjStudy: any, pintIndex: number) => {
             return renderStudies(pobjStudy, pintIndex)
           })}

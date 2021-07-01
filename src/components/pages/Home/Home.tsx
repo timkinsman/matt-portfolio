@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Awards from "../../global/Awards/Awards";
 import CardView from "../../global/CardView/CardView";
@@ -21,6 +21,7 @@ import {connect} from "react-redux";
 import video from "../../../videos/Memoji.webm";
 import videoLight from "../../../videos/MemojiLight.webm";
 import arrowLight from "../../../images/arrow-down-light.svg";
+import {DARK, LIGHT} from "../../../colors"
 
 const Home = (props: any) => {
   const getIndex = (pstrStudy: string) => {
@@ -70,7 +71,7 @@ const Home = (props: any) => {
     <div className="global-fadein" onMouseMove={handleOnMouseMove}>
       <div id="staggerFifth" className={styles["home-visibility-hidden"]}>
         <Links />
-        <Pagnation />
+        <Pagnation index={[_intIndexCOPP, _intIndexBV, _intIndexL, _intIndexB]} />
       </div>
       
       <div className={`${styles["home-banner"]} global-main-container`} id="one">
@@ -124,7 +125,7 @@ const Home = (props: any) => {
   );
 }
 
-const mapStateToProps = ( state: { portfolio: any; } ) => {
+const mapStateToProps = ( state: { portfolio: any; }, ownProps: any ) => {
   return {
     portfolio: state.portfolio
   }

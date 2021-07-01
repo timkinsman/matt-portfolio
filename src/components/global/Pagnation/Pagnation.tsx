@@ -3,8 +3,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import $ from "jquery";
 import styles from "./Pagnation.module.css";
+import studies from "../../../studies"
 
-function Pagnation() {
+function Pagnation(props: any) {
   const [current, setCurrent] = useState("#one")
 
   const handleOnClick = (pstrId: string) => {
@@ -15,16 +16,22 @@ function Pagnation() {
   const onScroll = () => {
     if(_scrollTop("#one", "#two")){
       setCurrent("#one")
+      $("#root").css("background", "inherit")
     }else if(_scrollTop("#two", "#three")){
       setCurrent("#two")
+      $("#root").css("background", studies[props.index[0]].color)
     }else if(_scrollTop("#three", "#four")){
       setCurrent("#three")
+      $("#root").css("background", studies[props.index[1]].color)
     }else if(_scrollTop("#four", "#five")){
       setCurrent("#four")
+      $("#root").css("background", studies[props.index[2]].color)
     }else if(_scrollTop("#five", "#six")){
       setCurrent("#five")
+      $("#root").css("background", studies[props.index[3]].color)
     }else{
       setCurrent("#six")
+      $("#root").css("background", "inherit")
     }
   }
 
