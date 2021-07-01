@@ -9,7 +9,7 @@ function Spotify() {
   const [sLink, updateSLink] = useState("");
 
   useEffect(() => {
-    fetch(`https://ws.audioscrobbler.com/2.0/?method=user.getRecentTracks&user=Mskinsm&api_key=4a39313f838bef1fc27fe98dced12ded&limit=1&nowplaying=true&format=json`)
+    fetch(`https://ws.audioscrobbler.com/2.0/?method=user.getRecentTracks&user=${process.env.REACT_APP_USER}&api_key=${process.env.REACT_APP_API_KEY}&limit=1&nowplaying=true&format=json`)
       .then(response => {
         if (response.ok) {
           return response.json();
@@ -24,7 +24,7 @@ function Spotify() {
           method: "POST",
           headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
-          'Authorization': 'Basic ' + "YjllZDg4NmY1MzkxNDVlMWIxYTFhODlkZDQyYTc3NTU6MDQ2NTM0OWZjYzMwNGRlYjkzN2NmM2Y1ZDY1ODI5ZGM=" //process.env.REACT_APP_SPOTIFY_CLIENT //Basic <base64 encoded client_id:client_secret>
+          'Authorization': 'Basic ' + process.env.REACT_APP_AUTH //process.env.REACT_APP_SPOTIFY_CLIENT //Basic <base64 encoded client_id:client_secret>
           },
           body: "grant_type=client_credentials"
         }).then(response => {
