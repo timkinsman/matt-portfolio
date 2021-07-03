@@ -24,16 +24,9 @@ import { DARK, LIGHT } from "../../../colors";
 
 const Home = (props: any) => {
   useEffect(() => {
-    fadeIn("#staggerSecond", 500)
-    fadeIn("#staggerThird", 1000)
-    fadeIn("#staggerFourth", 1500) 
-    fadeIn("#staggerFifth", 2000)
-  }, [])
-
-  useEffect(() => {
-    document.addEventListener("scroll", onScroll);
+    document.addEventListener("scroll", onScroll, true);
     return () => { window.removeEventListener("scroll", onScroll) } 
-  }, [props.portfolio.theme])
+  }, [])
 
   const getIndexByTitle = (pstrStudy: string) => {
     return studies.map(study => study.title).indexOf(pstrStudy);
@@ -44,13 +37,8 @@ const Home = (props: any) => {
   const _objPanelThree = studies[getIndexByTitle("Lumea")]
   const _objPanelFour = studies[getIndexByTitle("Bupa")]
 
-  const fadeIn = (pstrId: string, pintDelay: number) => {
-    $(pstrId).delay(pintDelay).css('visibility','visible').hide().fadeIn(2000); 
-  }
-
   const handleOnClick = (pstrId: string) => {
-    $('html,body').animate({
-        scrollTop: $(pstrId).offset()?.top}, 'slow');
+    $('html,body').animate({scrollTop: $(pstrId).offset()?.top}, 'slow');
   }
 
   const handleOnMouseMove = (pobjEvent: any) => {
@@ -68,6 +56,7 @@ const Home = (props: any) => {
   }
 
   const onScroll = () => {
+    console.log("TEST")
     var background = "inherit"
 
     if(_scrollTop("#two", "#three")){
@@ -83,7 +72,7 @@ const Home = (props: any) => {
     }
 
     $("#home").css("background", background)
-    $("body").css("color", isBright(background === "inherit" ? (props.portfolio.theme === "DARK" ? DARK : LIGHT) : background) ? "#000000" : "#FFFFFF")
+    $("#home").css("color", background === "inherit" ? "inherit" : isBright(background) ? "#000000" : "#FFFFFF")
   }
 
   const isBright = (pstrHex: string): Boolean => {
@@ -112,59 +101,61 @@ const Home = (props: any) => {
   }
 
   return (
-    <div id="home" style={{transition: "background 1s"}} className="global-fadein" onMouseMove={handleOnMouseMove}>
-      <div id="staggerFifth" className={styles["home-visibility-hidden"]}>
-        <Links />
-        <Pagnation />
-      </div>
-      
-      <div className={`${styles["home-banner"]} global-main-container`} id="one">
-        <div className={styles["home-panel"]}>
-          <Navbar selected="home" />
+    <div id="container" style={{background: props.portfolio.theme === "DARK" ? DARK : LIGHT, color: props.portfolio.theme === "DARK" ? "#FFFFFF" : "#000000" }}>
+      <div id="home" style={{transition: "background 1s, color 1s"}} className="global-fadein" onMouseMove={handleOnMouseMove}>
+        <div style={{opacity: 0, animationDelay : '2s'}} className={styles["home-visibility-hidden"]}>
+          <Links />
+          <Pagnation />
+        </div>
+        
+        <div className={`${styles["home-banner"]} global-main-container`} id="one">
+          <div className={styles["home-panel"]}>
+            <Navbar selected="home" />
 
-          <div id="staggerSecond" className={`${styles["home-banner-content"]} ${styles["home-visibility-hidden"]}`}>
-            <h1 className={styles["home-panel-text"]}>
-              Hello, my name is <Link className="global-border-bold" to="/about">Matthew Kinsman</Link>,<br />
-              I’m a senior product designer<br />
-              currently living in Melbourne and<br />
-              and working at <a className="global-border-bold" href="https://www.mindsethealth.com" rel="noreferrer" target="_blank">Mindset Health</a>.
-            </h1>
-            <div id="home-video" className={styles["video-container"]}>
-              <video style={{height: "700px", width: "700px"}} autoPlay loop muted src={video} />
+            <div style={{opacity: 0, animationDelay : '0.5s'}} className={`${styles["home-banner-content"]} ${styles["home-visibility-hidden"]}`}>
+              <h1 className={styles["home-panel-text"]}>
+                Hello, my name is <Link className="global-border-bold" to="/about">Matthew Kinsman</Link>,<br />
+                I’m a senior product designer<br />
+                currently living in Melbourne and<br />
+                and working at <a className="global-border-bold" href="https://www.mindsethealth.com" rel="noreferrer" target="_blank">Mindset Health</a>.
+              </h1>
+              <div id="home-video" className={styles["video-container"]}>
+                <video id="video" style={{height: "700px", width: "700px"}} autoPlay loop muted src={video} />
+              </div>
             </div>
-          </div>
 
-          <div className={styles["home-panel-bottom"]}>
-            <div id="staggerThird" className={styles["home-visibility-hidden"]}>
-              <Spotify />
-            </div>
-            
-            <div id="staggerFourth" className={`${styles["home-arrow"]} ${styles["home-visibility-hidden"]}`}>
-              {props.portfolio.theme === "DARK" ? <a><img onClick={() => {props.updateTheme("LIGHT")}} alt="sun" src={sun} /></a> :
-              <a><img onClick={() => {props.updateTheme("DARK")}} alt="moon" src={moon} /></a>}
-              <a style={{marginLeft: "15px"}} onClick={() => handleOnClick("#two")}><img alt="arrow" src={props.portfolio.theme === "DARK" ? arrow : arrowLight} /></a>
+            <div className={styles["home-panel-bottom"]}>
+              <div style={{opacity: 0, animationDelay : '1s'}} className={styles["home-visibility-hidden"]}>
+                <Spotify />
+              </div>
+              
+              <div style={{opacity: 0, animationDelay : '1.5s'}} className={`${styles["home-arrow"]} ${styles["home-visibility-hidden"]}`}>
+                {props.portfolio.theme === "DARK" ? <a><img onClick={() => {props.updateTheme("LIGHT")}} alt="sun" src={sun} /></a> :
+                <a><img onClick={() => {props.updateTheme("DARK")}} alt="moon" src={moon} /></a>}
+                <a style={{marginLeft: "15px"}} onClick={() => handleOnClick("#two")}><img alt="arrow" src={props.portfolio.theme === "DARK" ? arrow : arrowLight} /></a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <Panel study={_objPanelOne} id="two" next="three" />
-      <Panel study={_objPanelTwo} id="three" next="four" />
-      <Panel study={_objPanelThree} id="four" next="five" />
-      <Panel study={_objPanelFour} id="five" next="six" />
+        <Panel study={_objPanelOne} id="two" next="three" />
+        <Panel study={_objPanelTwo} id="three" next="four" />
+        <Panel study={_objPanelThree} id="four" next="five" />
+        <Panel study={_objPanelFour} id="five" next="six" />
 
-      <div className="global-container" style={{paddingTop: "120px"}}>
-        <CardView filter="" id="six" />
-        <Clients />
-        <Awards />
-        <Testimonials />
-        <Footer />
+        <div className="global-container" style={{paddingTop: "120px"}}>
+          <CardView filter="" id="six" />
+          <Clients />
+          <Awards />
+          <Testimonials />
+          <Footer />
+        </div>
+      
+        <img className={styles["mouse-over-image"]} id="mouse-over-image-two" src={_objPanelOne.hover} alt={_objPanelOne.title} />
+        <img className={styles["mouse-over-image"]} id="mouse-over-image-three" src={_objPanelTwo.hover} alt={_objPanelTwo.title} />
+        <img className={styles["mouse-over-image"]} id="mouse-over-image-four" src={_objPanelThree.hover} alt={_objPanelThree.title} />
+        <img className={styles["mouse-over-image"]} id="mouse-over-image-five" src={_objPanelFour.hover} alt={_objPanelFour.title} />
       </div>
-    
-      <img className={styles["mouse-over-image"]} id="mouse-over-image-two" src={_objPanelOne.hover} alt={_objPanelOne.title} />
-      <img className={styles["mouse-over-image"]} id="mouse-over-image-three" src={_objPanelTwo.hover} alt={_objPanelTwo.title} />
-      <img className={styles["mouse-over-image"]} id="mouse-over-image-four" src={_objPanelThree.hover} alt={_objPanelThree.title} />
-      <img className={styles["mouse-over-image"]} id="mouse-over-image-five" src={_objPanelFour.hover} alt={_objPanelFour.title} />
     </div>
   );
 }

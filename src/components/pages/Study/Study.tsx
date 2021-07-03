@@ -9,18 +9,23 @@ import studies from '../../../studies'
 import arrow from '../../../images/arrow-down.svg'
 import $ from 'jquery'
 import styles from './Study.module.css'
+import {connect} from "react-redux";
+import { DARK, LIGHT } from '../../../colors';
 
 const Study = (props: any) => {
     const [limit, setLimit] = useState(2)
     const study = props.location.state.study
 
+    useEffect(() => {
+        console.log("HELLO")
+        document.addEventListener("scroll", onScroll);
+        return () => { window.removeEventListener("scroll", onScroll) } 
+    }, [])
+
     useEffect(() => { //reset
-        $("#study").css("background", study.color)
         $("#divMore").show()
         $("#divLess").hide()
         setLimit(2)
-        document.addEventListener("scroll", onScroll);
-        return () => { window.removeEventListener("scroll", onScroll) } 
     }, [props.location.state])
 
     if(props.location.state === undefined){
@@ -125,86 +130,106 @@ const Study = (props: any) => {
     const onScroll = () => {
         if(_scrollTop("#hero", "#content")){
             $("#study").css("background", study.color)
+            $("#study").css("color", isBright(study.color) ? "#000000" : "#FFFFFF")
         }else{
             $("#study").css("background", "inherit")
+            $("#study").css("color", "inherit")
         }
     }
 
     const _scrollTop = (pstrId: string, pstrIdNext: string) => {
-    const strDocTop = $(document).scrollTop();
-    const idTop = $(pstrId).offset()?.top
-    const idNextTop = $(pstrIdNext).offset()?.top
-    const winHeight = $(window).height()
+        const strDocTop = $(document).scrollTop();
+        const idTop = $(pstrId).offset()?.top
+        const idNextTop = $(pstrIdNext).offset()?.top
+        const winHeight = $(window).height()
 
-    if(strDocTop !== undefined && idTop !== undefined && idNextTop !== undefined && winHeight !== undefined){
-        if(strDocTop >= (idTop - (winHeight / 2)) && strDocTop < (idNextTop - (winHeight / 2))){
-        return true
+        if(strDocTop !== undefined && idTop !== undefined && idNextTop !== undefined && winHeight !== undefined){
+            if(strDocTop >= (idTop - (winHeight / 2)) && strDocTop < (idNextTop - (winHeight / 2))){
+            return true
+            }
         }
+
+        return false    
     }
 
-    return false    
-    }
+    const isBright = (pstrHex: string): Boolean => {
+        var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(pstrHex);
+        if(result){
+          //0.2126 R + 0.7152 G + 0.0722 B
+          //console.log((0.2126 * parseInt(result[1], 16)) + (0.7152 * parseInt(result[2], 16)) + (0.0722 * parseInt(result[3], 16)))
+          return (0.2126 * parseInt(result[1], 16)) + (0.7152 * parseInt(result[2], 16)) + (0.0722 * parseInt(result[3], 16)) > 224 ? true : false
+        }
+        return true
+      }
 
     return (
-        <div id="study" style={{transition: "background 1s"}} className="global-fadein" key={window.location.hash}>      
-            <div id="hero" className={styles["study-container"]} style={{color: "#FFFFFF"}}>
-                <div className="global-main-container">
-                    <Navbar />
-                    <div className="global-container" style={{margin: 'auto'}}>
-                        <div className={styles["study-content"]}>
-                            <h2>{study.hero}</h2>
+        <div id="sContainer" style={{background: props.portfolio.theme === "DARK" ? DARK : LIGHT, color: props.portfolio.theme === "DARK" ? "#FFFFFF" : "#000000" }}>
+            <div id="study" style={{transition: "background 1s, color 1s", background: study.color, color: isBright(study.color) ? "#000000" : "#FFFFFF"}} className="global-fadein">      
+                <div id="hero" className={styles["study-container"]}>
+                    <div className="global-main-container">
+                        <Navbar />
+                        <div className="global-container" style={{margin: 'auto'}}>
+                            <div className={styles["study-content"]}>
+                                <h2>{study.hero}</h2>
+                            </div>
+                        </div>
+                        <div className={styles["study-arrow"]}>
+                            <a onClick={() => handleOnClick('#content')}><img src={arrow} /></a>
                         </div>
                     </div>
-                    <div className={styles["study-arrow"]}>
-                        <a onClick={() => handleOnClick('#content')}><img src={arrow} /></a>
+                </div>
+                <div id="content" className="global-container">
+                    <p className="global-title">{study.title}</p>
+
+                    <Tagging study={study} />
+
+                    <div className="global-wrapper">
+                        <Image src={images ? images(images.keys()[0]).default : ''} color={study.color} />
                     </div>
-                </div>
-            </div>
-            <div id="content" className="global-container">
-                <p className="global-title">{study.title}</p>
 
-                <Tagging study={study} />
-
-                <div className="global-wrapper">
-                    <Image src={images ? images(images.keys()[0]).default : ''} color={study.color} />
-                </div>
-
-                {renderContent("brief")}
-                {renderContent("challenge")}
-                {renderContent("objective")}
-                <div style={{padding: '30px 0'}}>
-                    {renderImages()}
-                </div>
-                {renderContent("results")}
-                {renderContent("deliverables")}
-                {renderContent("credits")}
-                {renderContent("testimonials")}
-
-                <div className="global-wrapper" style={{paddingTop: "60px"}}>
-                    <div className={styles["study-border"]} />
-                    <div className={styles["study-card-view"]}>
-                        {reorderStudyCards(studies, studies.findIndex(pstudy => pstudy == study) - 1).filter(pstudy => pstudy !== study).slice(0, limit).map((pstudy, intIndex: any) => {
-                            return (
-                                <div className={styles["study-card"]} style={{opacity: 0, animationDelay : intIndex < 3 ? "0s" : 0.25 * (Math.floor(intIndex - 3 / 2)) + 's'}}>
-                                    <Card study={pstudy} />
-                                </div>
-                            )
-                        })}
+                    {renderContent("brief")}
+                    {renderContent("challenge")}
+                    {renderContent("objective")}
+                    <div style={{padding: '30px 0'}}>
+                        {renderImages()}
                     </div>
-                </div>
+                    {renderContent("results")}
+                    {renderContent("deliverables")}
+                    {renderContent("credits")}
+                    {renderContent("testimonials")}
 
-                <div id="divMore" className="global-wrapper" style={{justifyContent: "center", display: "flex", paddingTop: '0'}}>
-                    <h3 style={{margin: 0}}><a onClick={renderMore}>Show more</a></h3>
-                </div>
+                    <div className="global-wrapper" style={{paddingTop: "60px"}}>
+                        <div className={styles["study-border"]} />
+                        <div className={styles["study-card-view"]}>
+                            {reorderStudyCards(studies, studies.findIndex(pstudy => pstudy == study) - 1).filter(pstudy => pstudy !== study).slice(0, limit).map((pstudy, intIndex: any) => {
+                                return (
+                                    <div className={styles["study-card"]} style={{opacity: 0, animationDelay : intIndex < 3 ? "0s" : 0.25 * (Math.floor(intIndex - 3 / 2)) + 's'}}>
+                                        <Card study={pstudy} />
+                                    </div>
+                                )
+                            })}
+                        </div>
+                    </div>
 
-                <div id="divLess" className="global-wrapper" style={{justifyContent: "center", display: "flex", paddingTop: '0'}}>
-                    <h3 style={{margin: 0}}><a onClick={renderLess}>Show less</a></h3>
-                </div>
+                    <div id="divMore" className="global-wrapper" style={{justifyContent: "center", display: "flex", paddingTop: '0'}}>
+                        <h3 style={{margin: 0}}><a onClick={renderMore}>Show more</a></h3>
+                    </div>
 
-                <Footer />
+                    <div id="divLess" className="global-wrapper" style={{justifyContent: "center", display: "flex", paddingTop: '0'}}>
+                        <h3 style={{margin: 0}}><a onClick={renderLess}>Show less</a></h3>
+                    </div>
+
+                    <Footer />
+                </div>
             </div>
         </div>
     )
 }
 
-export default Study;
+const mapStateToProps = ( state: { portfolio: any; }, ownProps: any ) => {
+    return {
+        portfolio: state.portfolio
+    }
+}
+  
+export default connect(mapStateToProps, null)(Study);
