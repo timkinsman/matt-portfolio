@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Card from '../../global/Card/Card'
 import Footer from '../../global/Footer/Footer'
 import Home from '../Home/Home'
+import Image from "./Image/Image";
 import Navbar from '../../global/Navbar/Navbar'
 import Tagging from './Tagging/Tagging'
 import studies from '../../../studies'
@@ -9,21 +10,22 @@ import arrow from '../../../images/arrow-down.svg'
 import $ from 'jquery'
 import styles from './Study.module.css'
 
-const Study = (props: any) => { 
-    console.log(props)
+const Study = (props: any) => {
     const [limit, setLimit] = useState(2)
+    const study = props.location.state.study
 
     useEffect(() => { //reset
+        $("#study").css("background", study.color)
         $("#divMore").show()
         $("#divLess").hide()
         setLimit(2)
+        document.addEventListener("scroll", onScroll);
+        return () => { window.removeEventListener("scroll", onScroll) } 
     }, [props.location.state])
 
     if(props.location.state === undefined){
         return <Home />
     }
-    
-    const study = props.location.state.study
 
     const getImages = (pstrTitle: string) => {
         switch(pstrTitle){
@@ -72,12 +74,6 @@ const Study = (props: any) => {
 
     const images = getImages(study.title)
 
-    /** */
-
-    const fadeIn = (pobj: any) => {
-        $(pobj.target).css('visibility','visible').hide().fadeIn(1000);
-    }
-
     const handleOnClick = (pstrId: string) => {
         $('html,body').animate({
             scrollTop: $(pstrId).offset()?.top}, 'slow');
@@ -103,9 +99,7 @@ const Study = (props: any) => {
             return images.keys().slice(1).map((image: string) => {
                 return (
                     <div className="global-wrapper" style={{padding: '30px 0'}}>
-                        <div className={styles["study-img-container"]} style={{background: study.color}}>
-                            <img className={styles["study-img"]} loading="lazy" onLoad={fadeIn} src={images(image).default} />
-                        </div>
+                        <Image src={images(image).default} color={study.color} />
                     </div>
                 )
             })
@@ -128,11 +122,32 @@ const Study = (props: any) => {
         return parranyStudies.slice(pintIndex).concat(parranyStudies.slice(0, pintIndex))
     };
 
+    const onScroll = () => {
+        if(_scrollTop("#hero", "#content")){
+            $("#study").css("background", study.color)
+        }else{
+            $("#study").css("background", "inherit")
+        }
+    }
+
+    const _scrollTop = (pstrId: string, pstrIdNext: string) => {
+    const strDocTop = $(document).scrollTop();
+    const idTop = $(pstrId).offset()?.top
+    const idNextTop = $(pstrIdNext).offset()?.top
+    const winHeight = $(window).height()
+
+    if(strDocTop !== undefined && idTop !== undefined && idNextTop !== undefined && winHeight !== undefined){
+        if(strDocTop >= (idTop - (winHeight / 2)) && strDocTop < (idNextTop - (winHeight / 2))){
+        return true
+        }
+    }
+
+    return false    
+    }
+
     return (
-        <div className="global-fadein" key={window.location.hash}>
-            {/*<Links />*/}
-        
-            <div className={styles["study-container"]} style={{background: study.color, color: "#FFFFFF"}}>
+        <div id="study" style={{transition: "background 1s"}} className="global-fadein" key={window.location.hash}>      
+            <div id="hero" className={styles["study-container"]} style={{color: "#FFFFFF"}}>
                 <div className="global-main-container">
                     <Navbar />
                     <div className="global-container" style={{margin: 'auto'}}>
@@ -151,9 +166,7 @@ const Study = (props: any) => {
                 <Tagging study={study} />
 
                 <div className="global-wrapper">
-                    <div className={styles["study-img-container"]} style={{background: study.color}}>
-                        <img className={styles["study-img"]} loading="lazy" onLoad={fadeIn} src={images ? images(images.keys()[0]).default : ''} />
-                    </div>
+                    <Image src={images ? images(images.keys()[0]).default : ''} color={study.color} />
                 </div>
 
                 {renderContent("brief")}
@@ -172,7 +185,7 @@ const Study = (props: any) => {
                     <div className={styles["study-card-view"]}>
                         {reorderStudyCards(studies, studies.findIndex(pstudy => pstudy == study) - 1).filter(pstudy => pstudy !== study).slice(0, limit).map((pstudy, intIndex: any) => {
                             return (
-                                <div className={styles["study-card"]} style={{opacity: 0, animationDelay : 0.25 * (Math.floor(intIndex / 2)) + 's'}}>
+                                <div className={styles["study-card"]} style={{opacity: 0, animationDelay : intIndex < 3 ? "0s" : 0.25 * (Math.floor(intIndex - 3 / 2)) + 's'}}>
                                     <Card study={pstudy} />
                                 </div>
                             )
@@ -194,4 +207,4 @@ const Study = (props: any) => {
     )
 }
 
-export default Study
+export default Study;

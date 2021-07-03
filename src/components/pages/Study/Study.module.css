@@ -39,23 +39,6 @@
     height: -webkit-fill-available;
 }
 
-.study-img {
-    border-radius: 20px;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    visibility: hidden;
-}
-
-.study-img-container {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    padding-top: calc(59/96 * 100%);
-    position: relative;
-    width: 100%;
-}
-
 .study-card {
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadein 2s; /* Firefox < 16 */
@@ -64,7 +47,6 @@
     animation: fadein 2s;
     animation-fill-mode: forwards;
 }
-
   
 @keyframes fadein {
     from { opacity: 0; }

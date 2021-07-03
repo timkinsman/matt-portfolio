@@ -3,7 +3,7 @@
 }
 
 .clients-clients {
-    animation: fadeOut 9s infinite;
+    animation: fadeOutIn 9s infinite;
     display: grid;
     grid-auto-flow: dense;
     grid-template-columns: repeat(4, 1fr);
@@ -11,7 +11,7 @@
 }
 
 .clients-clients-second {
-    animation: fadeIn 9s infinite;
+    animation: fadeInOut 9s infinite;
     display: grid;
     grid-auto-flow: dense;
     grid-template-columns: repeat(4, 1fr);
@@ -31,13 +31,13 @@
     height: 180px;
 }
 
-@keyframes fadeIn {
+@keyframes fadeInOut {
     0%   { opacity:0; }
     50%  { opacity:1; }
     100% { opacity:0; }
 }
 
-@keyframes fadeOut {
+@keyframes fadeOutIn {
     0%   { opacity:1; }
     50%  { opacity:0; }
     100% { opacity:1; }

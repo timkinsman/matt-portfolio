@@ -160,7 +160,7 @@ function CardView(props: any) {
     if(filterApply.length > 0){
       let arrFilters = [...pobjStudy.capabilites, ...pobjStudy.industries, ...pobjStudy.output, ...pobjStudy.researchMethods, pobjStudy.title]
       if(arrFilters.some((strFilter: string) => filterApply.includes(strFilter))){
-        return <div key={`renderStudies-${pintIndex}`}><Card study={pobjStudy} /></div>
+        return <div key={`renderStudies-${pintIndex}`} className={styles["study-card"]} style={{opacity: 0, animationDelay : 0.25 * (Math.floor(pintIndex / 2)) + 's'}}><Card study={pobjStudy} /></div>
       }
     }else{
       return <div key={`renderStudies-${pintIndex}`}><Card study={pobjStudy} /></div>

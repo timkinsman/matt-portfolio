@@ -61,7 +61,7 @@ function WhatIDo() {
           </div>
 
           <div className="global-wrapper">
-            <h3 className="global-header">Research Methods & Workshops</h3>
+            <h3 className="global-header">Research Methods</h3>
             <div className={styles["whatido-grid-three-no-row-gap"]}>
               {renderResearchMethods(arrResearchMethods)}
             </div>

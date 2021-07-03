@@ -11,7 +11,6 @@ import Study from './pages/Study/Study';
 import Maintenance from './pages/Maintenance/Maintenance';
 import { DARK, LIGHT } from "../colors"
 import ScrollToTop from './util/ScrollToTop';
-import studies from "../studies"
 import $ from "jquery";
 
 const App = (props: any) => {
@@ -19,7 +18,6 @@ const App = (props: any) => {
     switch(props.portfolio.theme){
       case "LIGHT":
         $("body").css({"background": LIGHT, "color": "#000000"})
-        //$("a").css({opacity: "0.5"})
         break;
       case "DARK":
         $("body").css({"background": DARK, "color": "#FFFFFF"})

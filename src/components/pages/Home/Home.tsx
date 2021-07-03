@@ -19,17 +19,33 @@ import styles from "./Home.module.css";
 import { updateTheme } from "../../../actions";
 import {connect} from "react-redux";
 import video from "../../../videos/Memoji.webm";
-import videoLight from "../../../videos/MemojiLight.webm";
 import arrowLight from "../../../images/arrow-down-light.svg";
-import {DARK, LIGHT} from "../../../colors"
+import { DARK, LIGHT } from "../../../colors";
 
 const Home = (props: any) => {
-  const getIndex = (pstrStudy: string) => {
-    return studies.map(study => study.title).indexOf(pstrStudy);
-  } 
+  useEffect(() => {
+    fadeIn("#staggerSecond", 500)
+    fadeIn("#staggerThird", 1000)
+    fadeIn("#staggerFourth", 1500) 
+    fadeIn("#staggerFifth", 2000)
+  }, [])
 
-  const renderPanel = (pintIndex: number, pstrId: string, pstrNextId: string) => {
-      return <Panel study={studies[pintIndex]} id={pstrId} next={pstrNextId} />
+  useEffect(() => {
+    document.addEventListener("scroll", onScroll);
+    return () => { window.removeEventListener("scroll", onScroll) } 
+  }, [props.portfolio.theme])
+
+  const getIndexByTitle = (pstrStudy: string) => {
+    return studies.map(study => study.title).indexOf(pstrStudy);
+  }
+  
+  const _objPanelOne = studies[getIndexByTitle("City of Port Phillip")]
+  const _objPanelTwo = studies[getIndexByTitle("BankVic")]
+  const _objPanelThree = studies[getIndexByTitle("Lumea")]
+  const _objPanelFour = studies[getIndexByTitle("Bupa")]
+
+  const fadeIn = (pstrId: string, pintDelay: number) => {
+    $(pstrId).delay(pintDelay).css('visibility','visible').hide().fadeIn(2000); 
   }
 
   const handleOnClick = (pstrId: string) => {
@@ -51,27 +67,55 @@ const Home = (props: any) => {
     }
   }
 
-  const _intIndexCOPP = getIndex("City of Port Phillip")
-  const _intIndexBV = getIndex("BankVic")
-  const _intIndexL = getIndex("Lumea")
-  const _intIndexB = getIndex("Bupa")
+  const onScroll = () => {
+    var background = "inherit"
 
-  const fadeIn = (pstrId: string, pintDelay: number) => {
-    $(pstrId).delay(pintDelay).css('visibility','visible').hide().fadeIn(2000); 
+    if(_scrollTop("#two", "#three")){
+      background = _objPanelOne.color
+    }else if(_scrollTop("#three", "#four")){
+      background = _objPanelTwo.color
+    }else if(_scrollTop("#four", "#five")){
+      background = _objPanelThree.color
+    }else if(_scrollTop("#five", "#six")){
+      background = _objPanelFour.color
+    }else{
+      background = "inherit"
+    }
+
+    $("#home").css("background", background)
+    $("body").css("color", isBright(background === "inherit" ? (props.portfolio.theme === "DARK" ? DARK : LIGHT) : background) ? "#000000" : "#FFFFFF")
   }
 
-  useEffect(() => {
-    fadeIn("#staggerSecond", 500)
-    fadeIn("#staggerThird", 1000)
-    fadeIn("#staggerFourth", 1500) 
-    fadeIn("#staggerFifth", 2000)
-  }, [])
+  const isBright = (pstrHex: string): Boolean => {
+    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(pstrHex);
+    if(result){
+      //0.2126 R + 0.7152 G + 0.0722 B
+      //console.log((0.2126 * parseInt(result[1], 16)) + (0.7152 * parseInt(result[2], 16)) + (0.0722 * parseInt(result[3], 16)))
+      return (0.2126 * parseInt(result[1], 16)) + (0.7152 * parseInt(result[2], 16)) + (0.0722 * parseInt(result[3], 16)) > 224 ? true : false
+    }
+    return true
+  }
+
+  const _scrollTop = (pstrId: string, pstrIdNext: string) => {
+    const strDocTop = $(document).scrollTop();
+    const idTop = $(pstrId).offset()?.top
+    const idNextTop = $(pstrIdNext).offset()?.top
+    const winHeight = $(window).height()
+
+    if(strDocTop !== undefined && idTop !== undefined && idNextTop !== undefined && winHeight !== undefined){
+      if(strDocTop >= (idTop - (winHeight / 2)) && strDocTop < (idNextTop - (winHeight / 2))){
+        return true
+      }
+    }
+
+    return false    
+  }
 
   return (
-    <div className="global-fadein" onMouseMove={handleOnMouseMove}>
+    <div id="home" style={{transition: "background 1s"}} className="global-fadein" onMouseMove={handleOnMouseMove}>
       <div id="staggerFifth" className={styles["home-visibility-hidden"]}>
         <Links />
-        <Pagnation index={[_intIndexCOPP, _intIndexBV, _intIndexL, _intIndexB]} />
+        <Pagnation />
       </div>
       
       <div className={`${styles["home-banner"]} global-main-container`} id="one">
@@ -85,8 +129,8 @@ const Home = (props: any) => {
               currently living in Melbourne and<br />
               and working at <a className="global-border-bold" href="https://www.mindsethealth.com" rel="noreferrer" target="_blank">Mindset Health</a>.
             </h1>
-            <div className={styles["video-container"]}>
-              <video id="home-video" style={{height: "700px", width: "700px"}} autoPlay loop muted src={props.portfolio.theme === "DARK" ? video : videoLight} />
+            <div id="home-video" className={styles["video-container"]}>
+              <video style={{height: "700px", width: "700px"}} autoPlay loop muted src={video} />
             </div>
           </div>
 
@@ -96,20 +140,20 @@ const Home = (props: any) => {
             </div>
             
             <div id="staggerFourth" className={`${styles["home-arrow"]} ${styles["home-visibility-hidden"]}`}>
-              {props.portfolio.theme === "DARK" ? <a><img onClick={() => props.updateTheme("LIGHT")} alt="sun" src={sun} /></a> :
-              <a><img onClick={() => props.updateTheme("DARK")} alt="moon" src={moon} /></a>}
+              {props.portfolio.theme === "DARK" ? <a><img onClick={() => {props.updateTheme("LIGHT")}} alt="sun" src={sun} /></a> :
+              <a><img onClick={() => {props.updateTheme("DARK")}} alt="moon" src={moon} /></a>}
               <a style={{marginLeft: "15px"}} onClick={() => handleOnClick("#two")}><img alt="arrow" src={props.portfolio.theme === "DARK" ? arrow : arrowLight} /></a>
             </div>
           </div>
         </div>
       </div>
 
-      {renderPanel(_intIndexCOPP, "two", "three") /**cityofportphillip */}
-      {renderPanel(_intIndexBV, "three", "four") /**bankvic */}
-      {renderPanel(_intIndexL, "four", "five") /**opencourts */}
-      {renderPanel(_intIndexB, "five", "six") /**beyondblue */}
+      <Panel study={_objPanelOne} id="two" next="three" />
+      <Panel study={_objPanelTwo} id="three" next="four" />
+      <Panel study={_objPanelThree} id="four" next="five" />
+      <Panel study={_objPanelFour} id="five" next="six" />
 
-      <div className="global-container">
+      <div className="global-container" style={{paddingTop: "120px"}}>
         <CardView filter="" id="six" />
         <Clients />
         <Awards />
@@ -117,10 +161,10 @@ const Home = (props: any) => {
         <Footer />
       </div>
     
-      <img className={styles["mouse-over-image"]} id="mouse-over-image-two" src={studies[_intIndexCOPP].hover} alt={studies[_intIndexCOPP].title} />
-      <img className={styles["mouse-over-image"]} id="mouse-over-image-three" src={studies[_intIndexBV].hover} alt={studies[_intIndexBV].title} />
-      <img className={styles["mouse-over-image"]} id="mouse-over-image-four" src={studies[_intIndexL].hover} alt={studies[_intIndexL].title} />
-      <img className={styles["mouse-over-image"]} id="mouse-over-image-five" src={studies[_intIndexB].hover} alt={studies[_intIndexB].title} />
+      <img className={styles["mouse-over-image"]} id="mouse-over-image-two" src={_objPanelOne.hover} alt={_objPanelOne.title} />
+      <img className={styles["mouse-over-image"]} id="mouse-over-image-three" src={_objPanelTwo.hover} alt={_objPanelTwo.title} />
+      <img className={styles["mouse-over-image"]} id="mouse-over-image-four" src={_objPanelThree.hover} alt={_objPanelThree.title} />
+      <img className={styles["mouse-over-image"]} id="mouse-over-image-five" src={_objPanelFour.hover} alt={_objPanelFour.title} />
     </div>
   );
 }
