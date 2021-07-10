@@ -1,30 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import arrow from "../../../images/arrow-down.svg";
-import arrowLight from "../../../images/arrow-down-light.svg";
 import $ from "jquery";
 import styles from "./Footer.module.css";
 import { updateTheme } from "../../../actions";
 import {connect} from "react-redux";
-import moon from "../../../images/moon.svg";
-import sun from "../../../images/sun.svg";
+import { HiOutlineArrowNarrowUp, HiOutlineSun, HiOutlineMoon } from "react-icons/hi"
 
 const Footer = (props: any) => {
 
   const handleOnClickArrow = () => {
     $("html,body").animate({
         scrollTop: 0}, "slow");
-  }
-
-  const handleOnClickTheme = () => {
-      switch(props.portfolio.theme){
-        case "LIGHT":
-          props.updateTheme("DARK")
-          break;
-        case "DARK":
-          props.updateTheme("LIGHT")
-          break;
-      }
   }
 
   return (
@@ -61,11 +47,11 @@ const Footer = (props: any) => {
             <h4>Developed by <a className="global-border-regular" href="https://www.linkedin.com/in/timothykinsman/" target="_blank">Tim Kinsman</a></h4>
           </div>
           <div className={styles["footer-arrow"]}>
-            <a className="global-arrow" onClick={handleOnClickArrow}><img style={{transform: "rotate(180deg)"}} src={props.portfolio.theme === "DARK" ? arrow : arrowLight} /></a>
+            <a className="global-arrow" onClick={handleOnClickArrow}><HiOutlineArrowNarrowUp style={{fontSize: "40px"}} /></a>
           </div>
           <div className={styles["footer-theme"]}>
-            {props.portfolio.theme === "DARK" ? <a><img onClick={() => props.updateTheme("LIGHT")} alt="sun" src={sun} /></a> :
-            <a><img onClick={() => props.updateTheme("DARK")} alt="moon" src={moon} /></a>}
+            {props.portfolio.theme === "DARK" ? <a><HiOutlineSun style={{fontSize: "40px"}} onClick={() => props.updateTheme("LIGHT")} /></a> :
+            <a><HiOutlineMoon style={{fontSize: "40px"}} onClick={() => props.updateTheme("DARK")} /></a>}
           </div>
         </div>
     </div>

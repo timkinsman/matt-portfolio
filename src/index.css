@@ -27,6 +27,11 @@ a {
   transition: opacity 1s;
 }
 
+.global-inherit {
+  background: inherit !important;
+  color: inherit !important;
+}
+
 a:focus {
   outline: none;
 }

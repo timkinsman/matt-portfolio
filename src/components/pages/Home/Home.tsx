@@ -11,16 +11,13 @@ import Testimonials from "../../global/Testimonials/Testimonials";
 import Panel from "./Panel/Panel";
 import Spotify from "./Spotify/Spotify";
 import studies from "../../../studies";
-import arrow from "../../../images/arrow-down.svg";
-import moon from "../../../images/moon.svg";
-import sun from "../../../images/sun.svg";
 import $ from "jquery";
 import styles from "./Home.module.css";
 import { updateTheme } from "../../../actions";
 import {connect} from "react-redux";
 import video from "../../../videos/Memoji.webm";
-import arrowLight from "../../../images/arrow-down-light.svg";
 import { DARK, LIGHT } from "../../../colors";
+import { HiOutlineArrowNarrowDown, HiOutlineSun, HiOutlineMoon } from "react-icons/hi"
 
 const Home = (props: any) => {
   useEffect(() => {
@@ -56,7 +53,6 @@ const Home = (props: any) => {
   }
 
   const onScroll = () => {
-    console.log("TEST")
     var background = "inherit"
 
     if(_scrollTop("#two", "#three")){
@@ -67,8 +63,6 @@ const Home = (props: any) => {
       background = _objPanelThree.color
     }else if(_scrollTop("#five", "#six")){
       background = _objPanelFour.color
-    }else{
-      background = "inherit"
     }
 
     $("#home").css("background", background)
@@ -130,9 +124,9 @@ const Home = (props: any) => {
               </div>
               
               <div style={{opacity: 0, animationDelay : '1.5s'}} className={`${styles["home-arrow"]} ${styles["home-visibility-hidden"]}`}>
-                {props.portfolio.theme === "DARK" ? <a><img onClick={() => {props.updateTheme("LIGHT")}} alt="sun" src={sun} /></a> :
-                <a><img onClick={() => {props.updateTheme("DARK")}} alt="moon" src={moon} /></a>}
-                <a style={{marginLeft: "15px"}} onClick={() => handleOnClick("#two")}><img alt="arrow" src={props.portfolio.theme === "DARK" ? arrow : arrowLight} /></a>
+                {props.portfolio.theme === "DARK" ? <a><HiOutlineSun style={{fontSize: "40px"}} onClick={() => {props.updateTheme("LIGHT")}} /></a> :
+                <a><HiOutlineMoon style={{fontSize: "40px"}} onClick={() => {props.updateTheme("DARK")}} /></a>}
+                <a style={{marginLeft: "15px"}} onClick={() => handleOnClick("#two")}><HiOutlineArrowNarrowDown style={{fontSize: "40px"}} /></a>
               </div>
             </div>
           </div>

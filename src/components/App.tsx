@@ -38,7 +38,7 @@ const App = (props: any) => {
           <Route exact path="/whatido" component={WhatIDo} />
           <Route exact path="/otherwork" component={Blog} />
           <Route exact path="/contact" component={Contact} />
-          <Route exact path="/study" component={(props:any) => <Study {...props} key={window.location.hash} />} />
+          <Route exact path="/study" component={Study} />
           <Route component={Home} />
           {/*<Route component={Maintenance} />*/}
         </Switch>

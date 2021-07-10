@@ -11,18 +11,22 @@ import $ from 'jquery'
 import styles from './Study.module.css'
 import {connect} from "react-redux";
 import { DARK, LIGHT } from '../../../colors';
+import { HiOutlineArrowNarrowDown } from "react-icons/hi"
+
+
+//add/remove important class!
 
 const Study = (props: any) => {
     const [limit, setLimit] = useState(2)
     const study = props.location.state.study
 
     useEffect(() => {
-        console.log("HELLO")
         document.addEventListener("scroll", onScroll);
         return () => { window.removeEventListener("scroll", onScroll) } 
     }, [])
 
     useEffect(() => { //reset
+        console.log(props.location.state.study.color)
         $("#divMore").show()
         $("#divLess").hide()
         setLimit(2)
@@ -129,11 +133,9 @@ const Study = (props: any) => {
 
     const onScroll = () => {
         if(_scrollTop("#hero", "#content")){
-            $("#study").css("background", study.color)
-            $("#study").css("color", isBright(study.color) ? "#000000" : "#FFFFFF")
+            $("#study").removeClass("global-inherit")
         }else{
-            $("#study").css("background", "inherit")
-            $("#study").css("color", "inherit")
+            $("#study").addClass("global-inherit")
         }
     }
 
@@ -163,8 +165,8 @@ const Study = (props: any) => {
       }
 
     return (
-        <div id="sContainer" style={{background: props.portfolio.theme === "DARK" ? DARK : LIGHT, color: props.portfolio.theme === "DARK" ? "#FFFFFF" : "#000000" }}>
-            <div id="study" style={{transition: "background 1s, color 1s", background: study.color, color: isBright(study.color) ? "#000000" : "#FFFFFF"}} className="global-fadein">      
+        <div key={props.location.state.study.redirect} id="sContainer" style={{background: props.portfolio.theme === "DARK" ? DARK : LIGHT, color: props.portfolio.theme === "DARK" ? "#FFFFFF" : "#000000" }}>
+            <div id="study" style={{transition: "background 1s, color 1s", background:  study.color, color: isBright(study.color) ? "#000000" : "#FFFFFF"}} className="global-fadein">      
                 <div id="hero" className={styles["study-container"]}>
                     <div className="global-main-container">
                         <Navbar />
@@ -174,7 +176,7 @@ const Study = (props: any) => {
                             </div>
                         </div>
                         <div className={styles["study-arrow"]}>
-                            <a onClick={() => handleOnClick('#content')}><img src={arrow} /></a>
+                            <a onClick={() => handleOnClick('#content')}><HiOutlineArrowNarrowDown style={{fontSize: "40px"}} /></a>
                         </div>
                     </div>
                 </div>
