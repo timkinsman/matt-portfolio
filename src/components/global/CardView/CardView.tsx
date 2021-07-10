@@ -111,15 +111,16 @@ function CardView(props: any) {
     }
   }
 
-  const renderFilterApply = () => {
+  const renderChip = () => {
     if(filterApply.length > 0){
       return (
-        <div className={styles["card-view-filter-apply"]}>
+        <div className={styles["card-view-chip"]}>
             {filterApply.map((strSelectedFilter: string, intIndex: number) => {
               return (
                 <div
-                  className={styles["card-view-filter-apply-div"]}
-                  key={`renderFilterApply-${intIndex}`}
+                  id={`renderChip-${intIndex}`}
+                  className={styles["card-view-chip-div"]}
+                  key={`renderChip-${intIndex}`}
                   onClick={() => setFilterApply(filterApply.filter(strExistingFilter => strExistingFilter !== strSelectedFilter))}
                 >
                   <p className={styles["card-view-filter-p"]}>{strSelectedFilter} <span className={styles["card-view-filter-x"]}>✕</span></p>
@@ -202,7 +203,7 @@ function CardView(props: any) {
           {renderOptions()}
         </div>
         {render()}
-        {renderFilterApply()}
+        {renderChip()}
         <div id="cards" className={styles["card-view"]}>
           {studies.map((pobjStudy: any, pintIndex: number) => {
             return renderStudies(pobjStudy, pintIndex)
