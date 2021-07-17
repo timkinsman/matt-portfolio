@@ -4,10 +4,10 @@ import Awards from "../../global/Awards/Awards";
 import CardView from "../../global/CardView/CardView";
 import Clients from "../../global/Clients/Clients";
 import Footer from "../../global/Footer/Footer";
-import Pagnation from "../../global/Pagnation/Pagnation";
-import Links from "../../global/Links/Links";
+import Pagnation from "./Pagnation/Pagnation";
+import Links from "./Links/Links";
 import Navbar from "../../global/Navbar/Navbar";
-import Testimonials from "../../global/Testimonials/Testimonials";
+import Testimonials from "./Testimonials/Testimonials";
 import Panel from "./Panel/Panel";
 import Spotify from "./Spotify/Spotify";
 import studies from "../../../studies";
@@ -94,6 +94,10 @@ const Home = (props: any) => {
     return false    
   }
 
+  const fadeIn = (pobj: any) => {
+      $(pobj.target).css('visibility','visible').hide().fadeIn(1000);
+  }
+
   return (
     <div id="container" style={{background: props.portfolio.theme === "DARK" ? DARK : LIGHT, color: props.portfolio.theme === "DARK" ? "#FFFFFF" : "#000000" }}>
       <div id="home" style={{transition: "background 1s, color 1s"}} className="global-fadein" onMouseMove={handleOnMouseMove}>
@@ -114,7 +118,7 @@ const Home = (props: any) => {
                 and working at <a className="global-border-bold" href="https://www.mindsethealth.com" rel="noreferrer" target="_blank">Mindset Health</a>.
               </h1>
               <div id="home-video" className={styles["video-container"]}>
-                <video id="video" style={{height: "700px", width: "700px"}} autoPlay loop muted src={video} />
+                <video className={styles["video"]} onCanPlayThrough={fadeIn} id="video" autoPlay loop muted src={video} />
               </div>
             </div>
 

@@ -102,6 +102,12 @@
     margin: auto 0;
 }
 
+.video {
+    height: 700px;
+    visibility: hidden;
+    width: 700px;
+}
+
 .video-container {
     margin: 0 auto;
     overflow: hidden;

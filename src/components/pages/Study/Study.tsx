@@ -12,6 +12,7 @@ import styles from './Study.module.css'
 import {connect} from "react-redux";
 import { DARK, LIGHT } from '../../../colors';
 import { HiOutlineArrowNarrowDown } from "react-icons/hi"
+import Carousel from './Carousel/Carousel';
 
 
 //add/remove important class!
@@ -115,6 +116,12 @@ const Study = (props: any) => {
         }
     }
 
+    const renderCarousel = () => {
+        if(images){
+            return <Carousel images={images} keys={images.keys().slice(0, 5)} color={study.color} />
+        }
+    }
+
     const renderLess = () => {
         $("#divMore").show()
         $("#divLess").hide()
@@ -193,6 +200,7 @@ const Study = (props: any) => {
                     {renderContent("challenge")}
                     {renderContent("objective")}
                     <div style={{padding: '30px 0'}}>
+                        {/*renderCarousel()*/}
                         {renderImages()}
                     </div>
                     {renderContent("results")}

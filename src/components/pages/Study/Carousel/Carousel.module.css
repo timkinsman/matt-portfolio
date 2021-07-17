@@ -1,0 +1,19 @@
+.carousel-container {
+    position: relative;
+}
+
+.carousel-ctrl {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.carousel-pagnation-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 30px 0;
+}
